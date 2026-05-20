@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anandam Ventures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1F35;overflow-x:hidden;font-size:16px;line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+
+:root{
+  --navy:#0D1F35;
+  --blue:#1648B0;
+  --blue-md:#2B5CE6;
+  --blue-lt:#EBF1FD;
+  --blue-pale:#F4F7FE;
+  --white:#FFFFFF;
+  --border:#D8E3F0;
+  --text:#0D1F35;
+  --t2:#4A6080;
+  --t3:#8A9BB0;
+  --gold:#C49B3C;
+  --nav-h:72px;
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:var(--nav-h);background:var(--white);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;
+  padding:0 64px;gap:48px;
+  transition:box-shadow .3s;
+}
+nav.up{box-shadow:0 4px 24px rgba(22,72,176,.06);}
+.logo{
+  font-size:17px;font-weight:800;letter-spacing:.5px;
+  color:var(--navy);white-space:nowrap;
+}
+.logo span{color:var(--blue);}
+.nav-links{display:flex;gap:4px;list-style:none;flex:1;}
+.nav-links a{
+  padding:8px 16px;font-size:13px;font-weight:500;
+  color:var(--t2);border-radius:6px;
+  transition:color .2s,background .2s;
+}
+.nav-links a:hover{color:var(--navy);background:var(--blue-pale);}
+.nav-r{margin-left:auto;display:flex;align-items:center;gap:12px;}
+.nav-phone{font-size:13px;color:var(--t2);font-weight:400;}
+.nav-btn{
+  background:var(--blue);color:#fff;
+  padding:10px 22px;border-radius:7px;
+  font-size:13px;font-weight:600;
+  transition:background .2s;
+}
+.nav-btn:hover{background:var(--navy);}
+
+/* HERO */
+#hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  padding-top:var(--nav-h);
+}
+.hero-l{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 64px 80px 64px;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--blue-lt);color:var(--blue);
+  border-radius:100px;padding:6px 14px;
+  font-size:12px;font-weight:600;letter-spacing:.5px;
+  text-transform:uppercase;margin-bottom:28px;width:fit-content;
+}
+.hero-badge::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--blue);}
+.hero-h{
+  font-size:clamp(40px,5.5vw,72px);
+  font-weight:800;line-height:1.08;
+  color:var(--navy);letter-spacing:-.5px;
+  margin-bottom:20px;
+}
+.hero-h em{color:var(--blue);font-style:normal;}
+.hero-p{
+  font-size:17px;line-height:1.75;
+  color:var(--t2);max-width:460px;
+  margin-bottom:40px;font-weight:400;
+}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{
+  background:var(--blue);color:#fff;
+  padding:14px 28px;border-radius:8px;
+  font-size:14px;font-weight:600;
+  display:inline-flex;align-items:center;gap:10px;
+  transition:background .2s,transform .2s;
+}
+.btn-primary:hover{background:var(--navy);transform:translateY(-1px);}
+.btn-secondary{
+  background:var(--white);color:var(--navy);
+  border:1.5px solid var(--border);
+  padding:14px 28px;border-radius:8px;
+  font-size:14px;font-weight:600;
+  display:inline-flex;align-items:center;gap:10px;
+  transition:border-color .2s,color .2s;
+}
+.btn-secondary:hover{border-color:var(--blue);color:var(--blue);}
+.hero-r{
+  background:var(--blue-pale);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  border-left:1px solid var(--border);
+}
+.hero-r-inner{
+  display:flex;flex-direction:column;gap:16px;
+  padding:60px 48px;width:100%;
+}
+.hero-card{
+  background:var(--white);border-radius:12px;
+  border:1px solid var(--border);
+  padding:24px 28px;
+  display:flex;align-items:center;gap:16px;
+  box-shadow:0 2px 16px rgba(22,72,176,.05);
+  transition:transform .25s,box-shadow .25s;
+}
+.hero-card:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(22,72,176,.1);}
+.hero-card-icon{
+  width:44px;height:44px;border-radius:10px;
+  background:var(--blue-lt);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.hero-card-body{}
+.hero-card-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.hero-card-sub{font-size:12px;color:var(--t2);}
+.hero-card-num{
+  margin-left:auto;
+  font-size:20px;font-weight:800;color:var(--blue);
+  flex-shrink:0;
+}
+
+/* SECTION COMMON */
+section{padding:96px 64px;}
+.chip{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--blue);margin-bottom:16px;
+}
+.chip::before{content:'';display:block;width:20px;height:2px;background:var(--blue);border-radius:2px;}
+h2.sh{
+  font-size:clamp(32px,4vw,48px);
+  font-weight:800;color:var(--navy);
+  line-height:1.1;letter-spacing:-.3px;
+}
+h2.sh em{color:var(--blue);font-style:normal;}
+.divider{height:1px;background:var(--border);margin:0 64px;}
+.r{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease;}
+.r.on{opacity:1;transform:none;}
+
+/* SERVICES */
+#services{background:var(--white);}
+.svc-top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;gap:40px;}
+.svc-top-r{font-size:14px;color:var(--t2);max-width:380px;line-height:1.75;text-align:right;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.svc-card{
+  background:var(--white);padding:36px 32px;
+  transition:background .2s;cursor:default;
+}
+.svc-card:hover{background:var(--blue-pale);}
+.svc-num{
+  font-size:13px;font-weight:700;color:var(--blue);
+  margin-bottom:20px;letter-spacing:.5px;
+}
+.svc-icon{
+  width:48px;height:48px;border-radius:10px;
+  background:var(--blue-lt);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+}
+.svc-name{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px;}
+.svc-desc{font-size:14px;color:var(--t2);line-height:1.75;}
+.svc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px;}
+.svc-tag{
+  font-size:11px;font-weight:600;letter-spacing:.5px;
+  background:var(--blue-pale);color:var(--blue);
+  padding:4px 10px;border-radius:100px;
+}
+
+/* LAHORI ADDA */
+#lahori{background:var(--blue-pale);padding:0;}
+.lahori-grid{display:grid;grid-template-columns:1fr 1fr;min-height:580px;}
+.lahori-l{
+  background:var(--blue);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;padding:60px;
+}
+.lahori-l-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,#0D2B6B 0%,#1648B0 60%,#1E5AC8 100%);
+}
+.lahori-l-content{position:relative;z-index:1;text-align:center;}
+.la-tag{
+  font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(255,255,255,.5);margin-bottom:16px;
+}
+.la-name{
+  font-size:64px;font-weight:800;color:#fff;
+  letter-spacing:-1px;line-height:1;margin-bottom:4px;
+}
+.la-sub{
+  font-size:28px;font-weight:300;color:rgba(255,255,255,.6);
+  letter-spacing:2px;margin-bottom:24px;
+}
+.la-line{
+  width:48px;height:2px;background:rgba(255,255,255,.3);
+  margin:0 auto 20px;border-radius:2px;
+}
+.la-tagline{
+  font-size:14px;font-style:italic;
+  color:rgba(255,255,255,.55);line-height:1.6;
+}
+.lahori-r{
+  padding:72px 64px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.lahori-r .chip{margin-bottom:16px;}
+.lahori-r h2{margin-bottom:20px;}
+.lahori-r p{font-size:15px;line-height:1.8;color:var(--t2);margin-bottom:32px;}
+.la-points{display:flex;flex-direction:column;gap:14px;margin-bottom:36px;}
+.la-point{
+  display:flex;align-items:center;gap:12px;
+  font-size:14px;color:var(--navy);font-weight:500;
+}
+.la-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--blue);flex-shrink:0;
+}
+
+/* STATS */
+#stats{background:var(--navy);padding:72px 64px;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.stat{
+  padding:40px 36px;
+  border-right:1px solid rgba(255,255,255,.08);
+}
+.stat:last-child{border-right:none;}
+.stat-n{
+  font-size:52px;font-weight:800;color:#fff;
+  line-height:1;margin-bottom:6px;letter-spacing:-1px;
+}
+.stat-n sub{font-size:24px;vertical-align:-.1em;}
+.stat-l{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.35);}
+.stat-d{font-size:13px;color:rgba(255,255,255,.25);margin-top:6px;line-height:1.5;}
+
+/* WHY */
+#why{background:var(--white);}
+.why-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;}
+.why-l h2{margin-bottom:16px;}
+.why-l p{font-size:15px;color:var(--t2);line-height:1.75;margin-top:16px;}
+.why-items{display:flex;flex-direction:column;gap:0;}
+.why-item{
+  display:grid;grid-template-columns:48px 1fr;gap:24px;
+  padding:32px 0;border-bottom:1px solid var(--border);
+  align-items:start;
+}
+.why-item:first-child{border-top:1px solid var(--border);}
+.why-n{
+  font-size:13px;font-weight:700;color:var(--blue-md);
+  padding-top:2px;
+}
+.why-body{}
+.why-title{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.why-desc{font-size:14px;color:var(--t2);line-height:1.75;}
+
+/* DIRECTORS */
+#directors{background:var(--blue-pale);padding:96px 64px;}
+.dir-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:56px;align-items:end;}
+.dir-head p{font-size:15px;color:var(--t2);line-height:1.75;}
+.dir-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.dir-card{
+  background:var(--white);border-radius:12px;
+  border:1px solid var(--border);
+  padding:44px 40px;
+  transition:box-shadow .3s,transform .3s;
+}
+.dir-card:hover{box-shadow:0 12px 48px rgba(22,72,176,.1);transform:translateY(-3px);}
+.dir-avatar{
+  width:64px;height:64px;border-radius:50%;
+  background:var(--blue-lt);border:2px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:700;color:var(--blue);
+  margin-bottom:24px;
+}
+.dir-name{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.dir-role{
+  font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  color:var(--blue);margin-bottom:20px;
+}
+.dir-line{width:36px;height:2px;background:var(--border);border-radius:2px;margin-bottom:20px;}
+.dir-bio{font-size:13.5px;color:var(--t2);line-height:1.85;}
+.dir-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--blue-lt);border-radius:100px;
+  padding:8px 16px;font-size:13px;font-weight:600;color:var(--blue);
+  margin-top:24px;
+}
+
+/* FRANCHISE */
+#franchise{background:var(--navy);padding:96px 64px;}
+.fran-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.fran-l .chip{color:rgba(255,255,255,.5);}
+.fran-l .chip::before{background:rgba(255,255,255,.4);}
+.fran-l h2{color:#fff;margin-bottom:20px;}
+.fran-l p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:36px;}
+.btn-white{
+  background:#fff;color:var(--navy);
+  padding:14px 28px;border-radius:8px;
+  font-size:14px;font-weight:700;
+  display:inline-flex;align-items:center;gap:10px;
+  transition:background .2s;
+}
+.btn-white:hover{background:var(--blue-lt);}
+.fran-r{display:flex;flex-direction:column;gap:0;}
+.fran-item{
+  padding:28px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;
+}
+.fran-item:first-child{border-top:1px solid rgba(255,255,255,.08);}
+.fi-n{font-size:12px;font-weight:700;color:rgba(255,255,255,.25);padding-top:2px;}
+.fi-b{}
+.fi-t{font-size:15px;font-weight:600;color:#fff;margin-bottom:4px;}
+.fi-d{font-size:13px;color:rgba(255,255,255,.45);line-height:1.65;}
+
+/* CONTACT */
+#contact{background:var(--white);padding:96px 64px;text-align:center;}
+.con-inner{max-width:600px;margin:0 auto;}
+.con-inner .chip{justify-content:center;}
+.con-h{font-size:clamp(32px,4vw,48px);font-weight:800;color:var(--navy);line-height:1.1;margin-bottom:16px;}
+.con-h em{color:var(--blue);font-style:normal;}
+.con-p{font-size:16px;color:var(--t2);line-height:1.75;margin-bottom:40px;}
+.con-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:56px;}
+.con-meta{
+  display:flex;justify-content:center;gap:0;
+  border-top:1px solid var(--border);padding-top:40px;flex-wrap:wrap;
+}
+.cm{padding:0 32px;border-right:1px solid var(--border);}
+.cm:last-child{border-right:none;}
+.cm-l{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);margin-bottom:6px;}
+.cm-v{font-size:14px;color:var(--t2);font-weight:500;}
+
+/* FOOTER */
+footer{
+  background:var(--navy);
+  padding:64px;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+.foot-top{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:56px;padding-bottom:48px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  margin-bottom:32px;
+}
+.foot-logo{font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:.3px;}
+.foot-logo span{color:var(--blue-md);}
+.foot-about{font-size:13px;color:rgba(255,255,255,.25);line-height:1.7;margin-top:10px;max-width:280px;}
+.foot-col h4{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:18px;}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.foot-col a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s;}
+.foot-col a:hover{color:rgba(255,255,255,.7);}
+.foot-bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.2);}
+.foot-links{display:flex;gap:20px;}
+.foot-links a{font-size:12px;color:rgba(255,255,255,.2);transition:color .2s;}
+.foot-links a:hover{color:rgba(255,255,255,.5);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+.hero-l > *{animation:fadeUp .6s ease both;}
+.hero-badge{animation-delay:.1s;}
+.hero-h{animation-delay:.2s;}
+.hero-p{animation-delay:.3s;}
+.hero-btns{animation-delay:.4s;}
+.hero-r .hero-card:nth-child(1){animation:fadeUp .6s .35s ease both;}
+.hero-r .hero-card:nth-child(2){animation:fadeUp .6s .45s ease both;}
+.hero-r .hero-card:nth-child(3){animation:fadeUp .6s .55s ease both;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  nav{padding:0 24px;gap:16px;}
+  .nav-links,.nav-phone{display:none;}
+  section{padding:64px 24px;}
+  .divider{margin:0 24px;}
+  #hero{grid-template-columns:1fr;}
+  .hero-l{padding:48px 24px;}
+  .hero-r{display:none;}
+  .svc-grid{grid-template-columns:1fr;}
+  .svc-grid{border-radius:0;}
+  .lahori-grid,.why-grid,.fran-grid,.dir-head,.dir-grid,.foot-top{grid-template-columns:1fr;}
+  #stats .stats-grid{grid-template-columns:1fr 1fr;}
+  .con-meta{gap:20px;}.cm{border:none;}
+  footer{padding:40px 24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">Anandam<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">What We Do</a></li>
+    <li><a href="#lahori">Lahori Adda</a></li>
+    <li><a href="#directors">Leadership</a></li>
+    <li><a href="#franchise">Franchise</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <span class="nav-phone">+91 95186 04324</span>
+    <a href="#contact" class="nav-btn">Get in Touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-l">
+    <div class="hero-badge">Est. 2025 · Panipat, Haryana</div>
+    <h1 class="hero-h">Building ventures<br>that <em>last.</em></h1>
+    <p class="hero-p">A multi-venture company building authentic brands across hospitality, food, and business consultancy — rooted in Haryana, built for North India.</p>
+    <div class="hero-btns">
+      <a href="#lahori" class="btn-primary">
+        Explore Lahori Adda
+        <svg width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M0 4.5H14M14 4.5L10 1M14 4.5L10 8" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
+      <a href="#services" class="btn-secondary">What We Do</a>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="hero-r-inner">
+      <div class="hero-card">
+        <div class="hero-card-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="8" height="8" rx="1.5" fill="#1648B0"/><rect x="12" y="2" width="8" height="8" rx="1.5" fill="#1648B0" opacity=".4"/><rect x="2" y="12" width="8" height="8" rx="1.5" fill="#1648B0" opacity=".4"/><rect x="12" y="12" width="8" height="8" rx="1.5" fill="#1648B0"/></svg>
+        </div>
+        <div class="hero-card-body">
+          <div class="hero-card-title">Lahori Adda</div>
+          <div class="hero-card-sub">Chole Bhature Franchise</div>
+        </div>
+        <div class="hero-card-num">25</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 17L8 12L12 16L19 8" stroke="#1648B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="hero-card-body">
+          <div class="hero-card-title">Consultancy</div>
+          <div class="hero-card-sub">Strategy & Growth</div>
+        </div>
+        <div class="hero-card-num">∞</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="#1648B0" stroke-width="1.5"/><path d="M11 7V11L14 13" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="hero-card-body">
+          <div class="hero-card-title">Experience</div>
+          <div class="hero-card-sub">Food & Hospitality</div>
+        </div>
+        <div class="hero-card-num">30+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="svc-top r">
+    <div>
+      <p class="chip">What We Do</p>
+      <h2 class="sh">Our <em>capabilities</em></h2>
+    </div>
+    <p class="svc-top-r">Three distinct verticals, one shared philosophy — build only what brings lasting value to the people it serves.</p>
+  </div>
+  <div class="svc-grid r" style="transition-delay:.1s">
+    <div class="svc-card">
+      <div class="svc-num">01</div>
+      <div class="svc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 21L3 13C3 11.9 3.9 11 5 11H8C9.1 11 10 11.9 10 13V21M14 21V7C14 5.9 14.9 5 16 5H19C20.1 5 21 5.9 21 7V21M3 21H21" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="svc-name">Hospitality & Food</div>
+      <div class="svc-desc">Franchise-ready food brands with authentic culinary heritage. We own the brand, recipe, supply chain, and quality standards — so every franchisee launches with confidence.</div>
+      <div class="svc-tags">
+        <span class="svc-tag">Franchise</span>
+        <span class="svc-tag">Brand</span>
+        <span class="svc-tag">Supply Chain</span>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">02</div>
+      <div class="svc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 3H4C3.4 3 3 3.4 3 4V9C3 9.6 3.4 10 4 10H9C9.6 10 10 9.6 10 9V4C10 3.4 9.6 3 9 3Z" stroke="#1648B0" stroke-width="1.5"/><path d="M20 3H15C14.4 3 14 3.4 14 4V9C14 9.6 14.4 10 15 10H20C20.6 10 21 9.6 21 9V4C21 3.4 20.6 3 20 3Z" stroke="#1648B0" stroke-width="1.5"/><path d="M9 14H4C3.4 14 3 14.4 3 15V20C3 20.6 3.4 21 4 21H9C9.6 21 10 20.6 10 20V15C10 14.4 9.6 14 9 14Z" stroke="#1648B0" stroke-width="1.5"/><path d="M17.5 14V21M14 17.5H21" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="svc-name">Strategy & Consulting</div>
+      <div class="svc-desc">Growth strategy, brand positioning, and revenue architecture for founders and CXOs. We embed with your business to build systems that generate sustainable, scalable growth.</div>
+      <div class="svc-tags">
+        <span class="svc-tag">Growth Strategy</span>
+        <span class="svc-tag">Brand</span>
+        <span class="svc-tag">Revenue</span>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">03</div>
+      <div class="svc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="svc-name">Venture Building</div>
+      <div class="svc-desc">New businesses built from the ground up — from brand conception and market research through to launch and franchise rollout. Each venture is stress-tested before a rupee is committed.</div>
+      <div class="svc-tags">
+        <span class="svc-tag">Incubation</span>
+        <span class="svc-tag">Go-To-Market</span>
+        <span class="svc-tag">Rollout</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LAHORI ADDA -->
+<section id="lahori" style="padding:0;">
+  <div class="lahori-grid">
+    <div class="lahori-l">
+      <div class="lahori-l-bg"></div>
+      <div class="lahori-l-content r">
+        <div class="la-tag">Flagship Brand</div>
+        <div class="la-name">LAHORI</div>
+        <div class="la-sub">ADDA</div>
+        <div class="la-line"></div>
+        <div class="la-tagline">Kuch cheezein border par nahi rukti.</div>
+      </div>
+    </div>
+    <div class="lahori-r r" style="transition-delay:.15s">
+      <p class="chip">Hospitality Vertical</p>
+      <h2 class="sh">Our <em>flagship</em><br>brand</h2>
+      <br>
+      <p>Born from the rich culinary legacy of Lahore, Lahori Adda is an authentic chole bhature franchise built on a recipe that crossed the border in 1947. Backed by 30+ years of food industry expertise, we are rolling out 25 outlets across the NH-44 corridor in Phase 1.</p>
+      <div class="la-points">
+        <div class="la-point"><div class="la-dot"></div>Central masala kitchen — consistent taste across all outlets</div>
+        <div class="la-point"><div class="la-dot"></div>Complete setup support and 90-day onboarding programme</div>
+        <div class="la-point"><div class="la-dot"></div>Investment starting at ₹10 lakhs, payback in 18–30 months</div>
+        <div class="la-point"><div class="la-dot"></div>Phase 1: Panipat · Karnal · Sonipat · Kurukshetra · Ambala</div>
+      </div>
+      <a href="#franchise" class="btn-primary" style="width:fit-content;">
+        Franchise Enquiry
+        <svg width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M0 4.5H14M14 4.5L10 1M14 4.5L10 8" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats" style="padding:72px 64px;">
+  <div class="stats-grid r">
+    <div class="stat">
+      <div class="stat-n">30<sub>+</sub></div>
+      <div class="stat-l">Years Experience</div>
+      <div class="stat-d">Food & hospitality industry, North India</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">25</div>
+      <div class="stat-l">Franchise Outlets</div>
+      <div class="stat-d">Lahori Adda Phase 1 target, Year 1</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">₹10<sub>L</sub></div>
+      <div class="stat-l">Entry Investment</div>
+      <div class="stat-d">All-inclusive franchise starting cost</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">5</div>
+      <div class="stat-l">Phase 1 Cities</div>
+      <div class="stat-d">NH-44 corridor, Haryana</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHY -->
+<section id="why">
+  <div class="why-grid">
+    <div class="why-l r">
+      <p class="chip">Why Anandam</p>
+      <h2 class="sh">What makes<br>us <em>different</em></h2>
+      <p>We don't build businesses to flip them. We build them to last — which changes every decision we make along the way.</p>
+    </div>
+    <div class="why-items r" style="transition-delay:.1s">
+      <div class="why-item">
+        <div class="why-n">01</div>
+        <div class="why-body">
+          <div class="why-title">Real experience, not theory</div>
+          <div class="why-desc">30+ years in India's food industry means every system we build is grounded in what actually works — supply chains, quality control, consumer behaviour, and franchisee management at scale in North India.</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-n">02</div>
+        <div class="why-body">
+          <div class="why-title">Authentic brands with real stories</div>
+          <div class="why-desc">Lahori Adda isn't a manufactured brand — it's a recipe with a 1947 origin story and 30 years of institutional knowledge behind it. We only build brands that have a reason to exist.</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-n">03</div>
+        <div class="why-body">
+          <div class="why-title">Built for scale from day one</div>
+          <div class="why-desc">Every system — central kitchen, supply chain, training, brand standards — is designed to work at 10x before we open outlet number one. Scale is not an afterthought. It's the foundation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DIRECTORS -->
+<section id="directors">
+  <div class="dir-head r">
+    <div>
+      <p class="chip">Leadership</p>
+      <h2 class="sh">The people<br>behind <em>Anandam</em></h2>
+    </div>
+    <p>Our founders bring decades of real-world experience in food, hospitality, and business — not theory, but the ground truth of what works in North India's markets.</p>
+  </div>
+  <div class="dir-grid">
+    <div class="dir-card r" style="transition-delay:.05s">
+      <div class="dir-avatar">YA</div>
+      <div class="dir-name">Yudhishter Anand</div>
+      <div class="dir-role">Co-Founder & Director</div>
+      <div class="dir-line"></div>
+      <div class="dir-bio">With over 30 years of hands-on experience in India's hospitality and sweets industry, Mr. Yudhishter Anand brings rare operational depth to Anandam Ventures. Currently serving as General Manager at Ahuja Sweets, Panipat — one of Haryana's most trusted sweet brands — he has spent three decades mastering supply chain integrity, food quality standards, and consumer-facing operations at scale. His expertise is not academic; it has been earned day by day across one of India's most demanding food markets. He leads Anandam's hospitality and food vertical.</div>
+      <div class="dir-badge">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1648B0" stroke-width="1.2"/><path d="M4 7L6 9L10 5" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        30+ Years · Food & Hospitality
+      </div>
+    </div>
+    <div class="dir-card r" style="transition-delay:.15s">
+      <div class="dir-avatar">PA</div>
+      <div class="dir-name">Mrs. Parveen Anand</div>
+      <div class="dir-role">Co-Founder & Director</div>
+      <div class="dir-line"></div>
+      <div class="dir-bio">Mrs. Parveen Anand co-leads Anandam Ventures with a values-first approach that ensures every business built under the Anandam name remains anchored in principles that matter — trust, authenticity, and long-term thinking over short-term gain. She provides the strategic steadiness that balances ambition with care, ensuring that the spirit of Anandam — building ventures that bring genuine value — is never compromised in the pursuit of scale. Her leadership ensures every decision at Anandam passes a simple test: will we still be proud of this in ten years?</div>
+      <div class="dir-badge">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1648B0" stroke-width="1.2"/><path d="M4 7L6 9L10 5" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Values · Culture · Direction
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRANCHISE -->
+<section id="franchise">
+  <div class="fran-grid">
+    <div class="fran-l r">
+      <p class="chip">Lahori Adda Franchise</p>
+      <h2 class="sh" style="color:#fff;margin-bottom:20px;">Own a piece of<br><em style="color:#6B9FE8">something real.</em></h2>
+      <p>Lahori Adda is franchising its first 25 outlets across NH-44. We handle the brand, recipe, supply chain, and training. You bring the location and the ambition.</p>
+      <a href="#contact" class="btn-white">
+        Apply for Franchise
+        <svg width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M0 4.5H14M14 4.5L10 1M14 4.5L10 8" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
+    </div>
+    <div class="fran-r r" style="transition-delay:.15s">
+      <div class="fran-item">
+        <div class="fi-n">01</div>
+        <div class="fi-b">
+          <div class="fi-t">Complete Brand & Recipe Support</div>
+          <div class="fi-d">Full brand identity, standardised Lahori recipe, and central masala supply. Consistent taste guaranteed across every outlet, every day.</div>
+        </div>
+      </div>
+      <div class="fran-item">
+        <div class="fi-n">02</div>
+        <div class="fi-b">
+          <div class="fi-t">Full Setup + 90-Day Onboarding</div>
+          <div class="fi-d">End-to-end outlet setup support and a structured 90-day onboarding programme. You open confident, not guessing.</div>
+        </div>
+      </div>
+      <div class="fran-item">
+        <div class="fi-n">03</div>
+        <div class="fi-b">
+          <div class="fi-t">₹10–20 Lakhs All-Inclusive</div>
+          <div class="fi-d">Transparent, all-inclusive investment. 18–30 month projected payback period. No hidden costs, no surprises.</div>
+        </div>
+      </div>
+      <div class="fran-item">
+        <div class="fi-n">04</div>
+        <div class="fi-b">
+          <div class="fi-t">Phase 1 Territory Now Open</div>
+          <div class="fi-d">Panipat · Karnal · Sonipat · Kurukshetra · Ambala. Limited slots. Enquire to secure your city.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="con-inner">
+    <p class="chip r" style="justify-content:center">Contact Us</p>
+    <h2 class="con-h r" style="transition-delay:.1s">Let's build something<br><em>together.</em></h2>
+    <p class="con-p r" style="transition-delay:.2s">Whether you're interested in a Lahori Adda franchise, a consulting engagement, or a longer partnership — we'd love to hear from you.</p>
+    <div class="con-btns r" style="transition-delay:.3s">
+      <a href="mailto:hello@anandamventures.com" class="btn-primary">Send a Message</a>
+      <a href="tel:+919518604324" class="btn-secondary">Call Us</a>
+    </div>
+    <div class="con-meta r" style="transition-delay:.4s">
+      <div class="cm"><div class="cm-l">Email</div><div class="cm-v">hello@anandamventures.com</div></div>
+      <div class="cm"><div class="cm-l">Phone</div><div class="cm-v">+91 95186 04324</div></div>
+      <div class="cm"><div class="cm-l">Location</div><div class="cm-v">Panipat, Haryana</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <div>
+      <div class="foot-logo">Anandam<span>.</span></div>
+      <p class="foot-about">Building ventures that last. Hospitality · Consultancy · Brand Ventures. Registered in Haryana, India.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#why">About Us</a></li>
+        <li><a href="#directors">Leadership</a></li>
+        <li><a href="#services">What We Do</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Ventures</h4>
+      <ul>
+        <li><a href="#lahori">Lahori Adda</a></li>
+        <li><a href="#services">Consultancy</a></li>
+        <li><a href="#franchise">Franchise Model</a></li>
+        <li><a href="#">Future Ventures</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="mailto:hello@anandamventures.com">Email Us</a></li>
+        <li><a href="tel:+919518604324">+91 95186 04324</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <div class="foot-copy">© 2025 Anandam Ventures Private Limited. All rights reserved.</div>
+    <div class="foot-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('up',scrollY>60),{passive:true});
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=a.getAttribute('href');if(t==='#')return;e.preventDefault();document.querySelector(t)?.scrollIntoView({behavior:'smooth'});}));
+</script>
+</body>
+</html>
