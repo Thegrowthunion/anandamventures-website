@@ -9,10 +9,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1F35;overflow-x:hidden;font-size:16px;line-height:1.6;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1F35;overflow-x:hidden;font-size:16px;line-height:1.6;max-width:100vw;}
 a{text-decoration:none;color:inherit;}
 img{display:block;max-width:100%;height:auto;}
+
+/* ── LOGO ── */
+.logo-wrap{display:flex;align-items:center;gap:10px;margin-right:40px;flex-shrink:0;}
+.logo-icon{width:38px;height:38px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.logo-text{}
+.logo-name{font-size:15px;font-weight:800;color:var(--navy);letter-spacing:.3px;line-height:1.1;}
+.logo-name span{color:var(--blue);}
+.logo-sub{font-size:9px;font-weight:600;color:var(--t3);letter-spacing:2px;text-transform:uppercase;}
+
+/* ── MARQUEE TRUST BAR ── */
+.trust-bar{background:var(--navy);padding:0;overflow:hidden;border-top:1px solid rgba(255,255,255,.04);}
+.tb-inner{display:flex;align-items:stretch;}
+.tb-label-box{
+  padding:18px 28px;background:rgba(255,255,255,.04);
+  border-right:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;
+  font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  color:rgba(255,255,255,.3);white-space:nowrap;flex-shrink:0;
+}
+.tb-track-wrap{flex:1;overflow:hidden;display:flex;align-items:center;padding:18px 0;}
+.tb-track{
+  display:flex;gap:0;
+  animation:marqueeRun 28s linear infinite;
+  width:max-content;
+}
+.tb-track:hover{animation-play-state:paused;}
+.tb-item{
+  display:flex;align-items:center;gap:10px;
+  padding:0 36px;
+  border-right:1px solid rgba(255,255,255,.06);
+  font-size:13px;font-weight:500;color:rgba(255,255,255,.5);
+  white-space:nowrap;
+}
+.tb-item:last-child{border-right:1px solid rgba(255,255,255,.06);}
+.tb-dot{width:5px;height:5px;border-radius:50%;background:var(--blue2);flex-shrink:0;}
+@keyframes marqueeRun{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 
 :root{
   --navy:#0D1F35;
@@ -36,19 +72,19 @@ nav{
   height:72px;background:rgba(255,255,255,.97);
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
-  display:flex;align-items:center;padding:0 60px;
+  display:flex;align-items:center;padding:0 48px;
   transition:box-shadow .3s;
 }
 nav.scrolled{box-shadow:0 4px 32px rgba(22,72,176,.08);}
 .nav-logo{font-size:18px;font-weight:800;color:var(--navy);white-space:nowrap;margin-right:48px;}
 .nav-logo span{color:var(--blue);}
 .nav-logo small{font-size:10px;font-weight:500;color:var(--t3);display:block;letter-spacing:1.5px;text-transform:uppercase;margin-top:-2px;}
-.nav-links{display:flex;list-style:none;gap:2px;flex:1;}
-.nav-links a{padding:8px 14px;font-size:12.5px;font-weight:500;color:var(--t2);border-radius:6px;transition:all .2s;}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1;overflow:hidden;}
+.nav-links a{padding:8px 12px;font-size:12px;font-weight:500;color:var(--t2);border-radius:6px;transition:all .2s;white-space:nowrap;}
 .nav-links a:hover{color:var(--navy);background:var(--blue-pale);}
-.nav-r{margin-left:auto;display:flex;align-items:center;gap:12px;}
-.nav-phone{font-size:13px;color:var(--t2);display:flex;align-items:center;gap:6px;}
-.nav-cta{background:var(--blue);color:#fff;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:600;transition:background .2s;}
+.nav-r{margin-left:auto;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-phone{font-size:12px;color:var(--t2);display:flex;align-items:center;gap:6px;white-space:nowrap;}
+.nav-cta{background:var(--blue);color:#fff;padding:9px 18px;border-radius:8px;font-size:12px;font-weight:600;transition:background .2s;white-space:nowrap;}
 .nav-cta:hover{background:var(--navy);}
 
 /* ── HERO ── */
@@ -107,16 +143,6 @@ nav.scrolled{box-shadow:0 4px 32px rgba(22,72,176,.08);}
 }
 .hf-btn:hover{background:var(--navy);}
 .hf-note{font-size:11px;color:var(--t3);text-align:center;margin-top:10px;}
-
-/* ── TRUST BAR ── */
-.trust-bar{
-  background:var(--navy);padding:20px 60px;
-  display:flex;align-items:center;gap:0;overflow:hidden;
-}
-.tb-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);white-space:nowrap;margin-right:32px;padding-right:32px;border-right:1px solid rgba(255,255,255,.1);}
-.tb-items{display:flex;gap:48px;align-items:center;}
-.tb-item{font-size:13px;color:rgba(255,255,255,.45);white-space:nowrap;display:flex;align-items:center;gap:8px;}
-.tb-item::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue2);flex-shrink:0;}
 
 /* ── SECTION COMMON ── */
 section{padding:96px 60px;}
@@ -242,9 +268,9 @@ h2.sh em{color:var(--blue);font-style:normal;}
 
 /* ── HOW IT WORKS ── */
 #howitworks{background:var(--white);}
-.hiw-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1280px;margin:0 auto;}
-.hiw-img{border-radius:16px;overflow:hidden;aspect-ratio:4/3;}
-.hiw-img img{width:100%;height:100%;object-fit:cover;}
+.hiw-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:stretch;max-width:1280px;margin:0 auto;}
+.hiw-img{border-radius:16px;overflow:hidden;min-height:400px;}
+.hiw-img img{width:100%;height:100%;object-fit:cover;display:block;}
 .hiw-steps{display:flex;flex-direction:column;gap:0;}
 .hiw-step{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:28px 0;border-bottom:1px solid var(--border);}
 .hiw-step:first-child{padding-top:0;}
@@ -422,25 +448,48 @@ footer{background:var(--navy);}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1100px){
-  nav{padding:0 24px;}
+  nav{padding:0 16px;gap:8px;}
   .nav-links,.nav-phone{display:none;}
-  section{padding:64px 24px;}
-  .divider{margin:0 24px;}
-  .trust-bar{padding:16px 24px;}
-  .tb-items{gap:24px;overflow-x:auto;}
-  .hero-inner{grid-template-columns:1fr;padding:48px 24px;}
+  .nav-logo small{display:none;}
+  section{padding:56px 20px;}
+  .divider{margin:0 20px;}
+  .trust-bar .tb-label-box{padding:14px 18px;font-size:9px;}
+  .hero-inner{grid-template-columns:1fr;padding:40px 20px;gap:32px;}
   .hero-form-card{margin-top:0;}
-  .about-grid,.hiw-grid,.la-wrap,.dir-head,.dir-grid,.mf-inner,.con-inner,.foot-top{grid-template-columns:1fr;}
+  .hero-h{font-size:clamp(30px,7vw,48px);}
+  .hero-p{font-size:14px;}
+  .hero-chips{gap:6px;}
+  .hero-chip{font-size:11px;padding:5px 10px;}
+  .about-grid,.hiw-grid,.la-wrap,.dir-head,.dir-grid,.mf-inner,.con-inner{grid-template-columns:1fr;}
+  .foot-top{grid-template-columns:1fr 1fr;gap:32px;padding:40px 20px 32px;}
+  .foot-bot{padding:16px 20px;}
   .la-wrap{min-height:auto;}
-  .la-img{aspect-ratio:16/9;}
-  .svc-grid,.serve-grid,.model-phases,.faqs-grid,.test-grid{grid-template-columns:1fr;}
+  .la-img{aspect-ratio:4/3;min-height:280px;}
+  .hiw-grid{gap:32px;}
+  .hiw-img{min-height:240px;aspect-ratio:16/9;}
+  .svc-grid{grid-template-columns:1fr;}
+  .serve-grid{grid-template-columns:1fr 1fr;}
+  .model-phases{grid-template-columns:1fr;}
+  .faqs-grid{grid-template-columns:1fr;}
+  .test-grid{grid-template-columns:1fr;}
   .stats-grid{grid-template-columns:1fr 1fr;}
   .model-results{grid-template-columns:1fr 1fr;}
   .dir-grid{grid-template-columns:1fr;}
   .dir-photo{aspect-ratio:16/7;}
   .form-row-2{grid-template-columns:1fr;}
-  .foot-bot,.foot-top{padding-left:24px;padding-right:24px;}
-  .wa-btn{bottom:20px;right:20px;width:52px;height:52px;}
+  .wa-btn{bottom:16px;right:16px;width:50px;height:50px;}
+  .wa-tooltip{display:none;}
+  .svc-head{flex-direction:column;gap:16px;}
+  .svc-head p{text-align:left;}
+  .mf-form{padding:28px 20px;}
+  .con-r{padding:28px 20px;}
+  .stat{padding:28px 20px;}
+  .model-head{padding:0 4px;}
+  .phase{padding:28px 24px;}
+  #stats{padding:48px 20px;}
+  #model{padding:64px 20px;}
+  .model-results{padding-top:36px;gap:12px;}
+  .mr-item{padding:20px 14px;}
 }
 </style>
 </head>
@@ -454,9 +503,17 @@ footer{background:var(--navy);}
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" class="nav-logo">
-    Anandam<span>.</span>
-    <small>Ventures · Est. 1995</small>
+  <a href="#" class="logo-wrap">
+    <div class="logo-icon">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M11 3L4 8.5V18h14V8.5L11 3z" fill="rgba(255,255,255,.15)" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+        <path d="M8 18v-6h6v6" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <div class="logo-name">Anandam<span> Ventures</span></div>
+      <div class="logo-sub">Est. 1995 · Panipat, Haryana</div>
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -532,15 +589,30 @@ footer{background:var(--navy);}
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar r">
-  <div class="tb-label">Worked With</div>
-  <div class="tb-items">
-    <div class="tb-item">Sukhdev Dhaba, Murthal</div>
-    <div class="tb-item">Haveli, Karnal</div>
-    <div class="tb-item">Ahuja Sweets, Panipat</div>
-    <div class="tb-item">Leading Hospitality Groups</div>
-    <div class="tb-item">35+ Years · 100+ Projects</div>
+<!-- TRUST BAR - SCROLLING MARQUEE -->
+<div class="trust-bar">
+  <div class="tb-inner">
+    <div class="tb-label-box">As Seen At</div>
+    <div class="tb-track-wrap">
+      <div class="tb-track">
+        <div class="tb-item"><div class="tb-dot"></div>Sukhdev Dhaba, Murthal</div>
+        <div class="tb-item"><div class="tb-dot"></div>Haveli, Karnal</div>
+        <div class="tb-item"><div class="tb-dot"></div>Ahuja Sweets, Panipat</div>
+        <div class="tb-item"><div class="tb-dot"></div>35+ Years of Excellence</div>
+        <div class="tb-item"><div class="tb-dot"></div>100+ Hospitality Projects</div>
+        <div class="tb-item"><div class="tb-dot"></div>North India's Trusted Consultant</div>
+        <div class="tb-item"><div class="tb-dot"></div>Hotels · Restaurants · Cafes · QSRs</div>
+        <div class="tb-item"><div class="tb-dot"></div>Dhabas · Sweet Shops · Bakeries</div>
+        <div class="tb-item"><div class="tb-dot"></div>Sukhdev Dhaba, Murthal</div>
+        <div class="tb-item"><div class="tb-dot"></div>Haveli, Karnal</div>
+        <div class="tb-item"><div class="tb-dot"></div>Ahuja Sweets, Panipat</div>
+        <div class="tb-item"><div class="tb-dot"></div>35+ Years of Excellence</div>
+        <div class="tb-item"><div class="tb-dot"></div>100+ Hospitality Projects</div>
+        <div class="tb-item"><div class="tb-dot"></div>North India's Trusted Consultant</div>
+        <div class="tb-item"><div class="tb-dot"></div>Hotels · Restaurants · Cafes · QSRs</div>
+        <div class="tb-item"><div class="tb-dot"></div>Dhabas · Sweet Shops · Bakeries</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -924,11 +996,10 @@ footer{background:var(--navy);}
   <div class="dir-grid">
     <div class="dir-card r" style="transition-delay:.05s">
       <div class="dir-photo">
-        <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/ChatGPT%20Image%20May%2018%2C%202026%2C%2007_08_49%20PM.png">
+        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80" alt="Hospitality professional" loading="lazy">
         <div class="dir-mono-ring" style="position:absolute;z-index:2;">
           <div class="dir-mono">YA</div>
         </div>
-        <div class="dir-photo-label" style="position:absolute;bottom:20px;z-index:2;">Co-Founder & Director</div>
       </div>
       <div class="dir-body">
         <div class="dir-name">Yudhishter Anand</div>
@@ -945,21 +1016,21 @@ footer{background:var(--navy);}
     </div>
     <div class="dir-card r" style="transition-delay:.15s">
       <div class="dir-photo">
-        <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/ChatGPT%20Image%20May%2020%2C%202026%2C%2008_18_19%20PM.png">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Business leader" loading="lazy">
         <div class="dir-mono-ring" style="position:absolute;z-index:2;">
           <div class="dir-mono">PA</div>
         </div>
-        <div class="dir-photo-label" style="position:absolute;bottom:20px;z-index:2;">Co-Founder & Director</div>
       </div>
       <div class="dir-body">
         <div class="dir-name">Mrs. Parveen Anand</div>
-        <div class="dir-role">Co-Founder & Director</div>
+        <div class="dir-role">Co-Founder & Director — People & Operations</div>
         <div class="dir-rule"></div>
-        <div class="dir-bio">Mrs. Parveen Anand co-leads Anandam Ventures with a values-first approach that ensures every engagement remains anchored in trust, authenticity, and long-term thinking. She provides the strategic direction and cultural compass that ensures every business Anandam touches is built not just to perform — but to last. Her partnership brings the balance of ambition and care that has made Anandam a name clients return to and refer.</div>
+        <div class="dir-bio">Mrs. Parveen Anand co-leads Anandam Ventures with a focus on people, culture, and internal operations. She oversees the human side of every engagement — ensuring that staff are treated with respect, clients feel genuinely heard, and every team Anandam builds is set up to thrive long after we leave. Her warmth and attention to relationships is what makes clients return. She manages all internal activities, partner coordination, and ensures that every promise Anandam makes to a client is kept — on time, in full, and with care.</div>
         <div class="dir-tags">
-          <span class="dir-tag">Strategy & Direction</span>
-          <span class="dir-tag">Brand Values</span>
+          <span class="dir-tag">People & HR</span>
+          <span class="dir-tag">Internal Operations</span>
           <span class="dir-tag">Client Relations</span>
+          <span class="dir-tag">Partner Coordination</span>
         </div>
       </div>
     </div>
@@ -1168,7 +1239,7 @@ footer{background:var(--navy);}
         </div>
         <div class="con-item">
           <div class="con-item-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 11a2 2 0 100-4 2 2 0 000 4z" stroke="#1648B0" stroke-width="1.3"/><path d="M10 2a7 7 0 017 7c0 5-7 11-7 11S3 14 3 9a7 7 0 017-7z" stroke="#1648B0" stroke-width="1.3"/></svg></div>
-          <div><div class="con-item-l">Location</div><div class="con-item-v">Panipat, Haryana · North India</div></div>
+          <div><div class="con-item-l">Office Address</div><div class="con-item-v">Building No. 79, Sector 13–17<br>HUDA, Panipat, Haryana 132103</div></div>
         </div>
         <div class="con-item">
           <div class="con-item-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#1648B0" stroke-width="1.3"/><path d="M10 6v4l3 2" stroke="#1648B0" stroke-width="1.3" stroke-linecap="round"/></svg></div>
@@ -1210,7 +1281,7 @@ footer{background:var(--navy);}
     <div>
       <div class="foot-brand">Anandam<span>.</span></div>
       <div class="foot-tagline">Building India's Next Hospitality Brands.</div>
-      <p class="foot-about">35 years of hospitality excellence. We help restaurants, hotels, cafes, QSRs, sweet shops and dhabas grow — and build our own brands alongside. Est. 1995, Panipat, Haryana.</p>
+      <p class="foot-about">35 years of hospitality excellence. We help restaurants, hotels, cafes, QSRs, sweet shops and dhabas grow — and build our own brands alongside.<br><br>Building No. 79, Sector 13–17, HUDA<br>Panipat, Haryana 132103</p>
       <div class="foot-socs">
         <a href="#" class="foot-soc" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
         <a href="#" class="foot-soc" title="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -1253,7 +1324,7 @@ footer{background:var(--navy);}
     </div>
   </div>
   <div class="foot-bot">
-    <div class="foot-copy">© 2025 Anandam Ventures. All rights reserved. · Panipat, Haryana</div>
+    <div class="foot-copy">© 2025 Anandam Ventures · Bldg No. 79, Sector 13–17, HUDA, Panipat, Haryana 132103</div>
     <div class="foot-links">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Use</a>
