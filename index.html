@@ -275,36 +275,69 @@ h2.sh em{color:var(--blue);font-style:normal;}
 .why-desc{font-size:14px;color:var(--t2);line-height:1.75;}
 
 /* DIRECTORS */
-#directors{background:var(--blue-pale);padding:96px 64px;}
-.dir-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:56px;align-items:end;}
+#directors{background:var(--white);padding:96px 64px;}
+.dir-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:64px;align-items:end;}
 .dir-head p{font-size:15px;color:var(--t2);line-height:1.75;}
-.dir-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.dir-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
 .dir-card{
-  background:var(--white);border-radius:12px;
+  background:var(--white);border-radius:16px;
   border:1px solid var(--border);
-  padding:44px 40px;
-  transition:box-shadow .3s,transform .3s;
+  overflow:hidden;
+  transition:box-shadow .35s,transform .35s;
 }
-.dir-card:hover{box-shadow:0 12px 48px rgba(22,72,176,.1);transform:translateY(-3px);}
-.dir-avatar{
-  width:64px;height:64px;border-radius:50%;
-  background:var(--blue-lt);border:2px solid var(--border);
+.dir-card:hover{box-shadow:0 20px 64px rgba(22,72,176,.12);transform:translateY(-4px);}
+.dir-photo{
+  width:100%;aspect-ratio:4/3;
+  background:linear-gradient(135deg,#0D2B6B 0%,#1648B0 50%,#2B5CE6 100%);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  gap:12px;
+}
+.dir-photo::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 40%,rgba(255,255,255,.06),transparent 60%);
+}
+.dir-photo-ring{
+  width:120px;height:120px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.2);
   display:flex;align-items:center;justify-content:center;
-  font-size:20px;font-weight:700;color:var(--blue);
-  margin-bottom:24px;
+  position:relative;z-index:1;
 }
-.dir-name{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.dir-photo-inner{
+  width:100px;height:100px;border-radius:50%;
+  background:rgba(255,255,255,.12);
+  border:2px solid rgba(255,255,255,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:36px;font-weight:800;color:#fff;letter-spacing:1px;
+}
+.dir-photo-name{
+  font-size:13px;font-weight:600;color:rgba(255,255,255,.6);
+  letter-spacing:2px;text-transform:uppercase;
+  position:relative;z-index:1;
+}
+.dir-photo-dots{
+  position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
+  display:flex;gap:6px;z-index:1;
+}
+.dir-photo-dots span{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(255,255,255,.3);
+}
+.dir-photo-dots span:first-child{background:rgba(255,255,255,.8);}
+.dir-body{padding:36px 36px 40px;}
+.dir-name{font-size:24px;font-weight:700;color:var(--navy);margin-bottom:4px;}
 .dir-role{
-  font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
   color:var(--blue);margin-bottom:20px;
 }
 .dir-line{width:36px;height:2px;background:var(--border);border-radius:2px;margin-bottom:20px;}
-.dir-bio{font-size:13.5px;color:var(--t2);line-height:1.85;}
+.dir-bio{font-size:14px;color:var(--t2);line-height:1.85;}
 .dir-badge{
   display:inline-flex;align-items:center;gap:8px;
-  background:var(--blue-lt);border-radius:100px;
-  padding:8px 16px;font-size:13px;font-weight:600;color:var(--blue);
-  margin-top:24px;
+  background:var(--blue-pale);border-radius:100px;
+  padding:8px 16px;font-size:12px;font-weight:600;color:var(--blue);
+  margin-top:24px;border:1px solid var(--border);
 }
 
 /* FRANCHISE */
@@ -399,6 +432,7 @@ footer{
   .svc-grid{grid-template-columns:1fr;}
   .svc-grid{border-radius:0;}
   .lahori-grid,.why-grid,.fran-grid,.dir-head,.dir-grid,.foot-top{grid-template-columns:1fr;}
+  .dir-photo{aspect-ratio:3/2;}
   #stats .stats-grid{grid-template-columns:1fr 1fr;}
   .con-meta{gap:20px;}.cm{border:none;}
   footer{padding:40px 24px;}
@@ -409,7 +443,7 @@ footer{
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" class="logo">Anandam Ventures<span>.</span></a>
+  <a href="#" class="logo">Anandam<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#services">What We Do</a></li>
     <li><a href="#lahori">Lahori Adda</a></li>
@@ -418,7 +452,7 @@ footer{
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-r">
-    <span class="nav-phone">+91 98965 44879</span>
+    <span class="nav-phone">+91 95186 04324</span>
     <a href="#contact" class="nav-btn">Get in Touch</a>
   </div>
 </nav>
@@ -426,7 +460,7 @@ footer{
 <!-- HERO -->
 <section id="hero">
   <div class="hero-l">
-    <div class="hero-badge">Est. 1999 · Panipat, Haryana</div>
+    <div class="hero-badge">Est. 2025 · Panipat, Haryana</div>
     <h1 class="hero-h">Building ventures<br>that <em>last.</em></h1>
     <p class="hero-p">A multi-venture company building authentic brands across hospitality, food, and business consultancy — rooted in Haryana, built for North India.</p>
     <div class="hero-btns">
@@ -467,7 +501,7 @@ footer{
           <div class="hero-card-title">Experience</div>
           <div class="hero-card-sub">Food & Hospitality</div>
         </div>
-        <div class="hero-card-num">25+</div>
+        <div class="hero-card-num">30+</div>
       </div>
     </div>
   </div>
@@ -546,7 +580,7 @@ footer{
       <p class="chip">Hospitality Vertical</p>
       <h2 class="sh">Our <em>flagship</em><br>brand</h2>
       <br>
-      <p>Born from the rich culinary legacy of Lahore, Lahori Adda is an authentic chole bhature franchise built on a recipe that crossed the border in 1947. Backed by 25+ years of food industry expertise, we are rolling out 25 outlets across the NH-44 corridor in Phase 1.</p>
+      <p>Born from the rich culinary legacy of Lahore, Lahori Adda is an authentic chole bhature franchise built on a recipe that crossed the border in 1947. Backed by 30+ years of food industry expertise, we are rolling out 25 outlets across the NH-44 corridor in Phase 1.</p>
       <div class="la-points">
         <div class="la-point"><div class="la-dot"></div>Central masala kitchen — consistent taste across all outlets</div>
         <div class="la-point"><div class="la-dot"></div>Complete setup support and 90-day onboarding programme</div>
@@ -602,14 +636,14 @@ footer{
         <div class="why-n">01</div>
         <div class="why-body">
           <div class="why-title">Real experience, not theory</div>
-          <div class="why-desc">25+ years in India's food industry means every system we build is grounded in what actually works — supply chains, quality control, consumer behaviour, and franchisee management at scale in North India.</div>
+          <div class="why-desc">30+ years in India's food industry means every system we build is grounded in what actually works — supply chains, quality control, consumer behaviour, and franchisee management at scale in North India.</div>
         </div>
       </div>
       <div class="why-item">
         <div class="why-n">02</div>
         <div class="why-body">
           <div class="why-title">Authentic brands with real stories</div>
-          <div class="why-desc">Lahori Adda isn't a manufactured brand — it's a recipe with a 1947 origin story and 25 years of institutional knowledge behind it. We only build brands that have a reason to exist.</div>
+          <div class="why-desc">Lahori Adda isn't a manufactured brand — it's a recipe with a 1947 origin story and 30 years of institutional knowledge behind it. We only build brands that have a reason to exist.</div>
         </div>
       </div>
       <div class="why-item">
@@ -627,12 +661,12 @@ footer{
 
 <!-- DIRECTORS -->
 <section id="directors">
-  <div class="dir-head r">
-    <div>
+  <div class="dir-head">
+    <div class="r">
       <p class="chip">Leadership</p>
       <h2 class="sh">The people<br>behind <em>Anandam</em></h2>
     </div>
-    <p>Our founders bring decades of real-world experience in food, hospitality, and business — not theory, but the ground truth of what works in North India's markets.</p>
+    <p class="r" style="transition-delay:.1s">Our founders bring decades of real-world experience in food, hospitality, and business — not theory, but the ground truth of what works in North India's markets.</p>
   </div>
   <div class="dir-grid">
     <div class="dir-card r" style="transition-delay:.05s">
@@ -644,32 +678,33 @@ footer{
         <div class="dir-photo-dots"><span></span><span></span><span></span></div>
       </div>
       <div class="dir-body">
-      <div class="dir-name">Yudhishter Anand</div>
-      <div class="dir-role">Co-Founder & Director</div>
-      <div class="dir-line"></div>
-      <div class="dir-bio">With over 25 years of hands-on experience in India's hospitality and sweets industry, Mr. Yudhishter Anand brings rare operational depth to Anandam Ventures. Currently serving as General Manager at Ahuja Sweets, Panipat — one of Haryana's most trusted sweet brands — he has spent three decades mastering supply chain integrity, food quality standards, and consumer-facing operations at scale. His expertise is not academic; it has been earned day by day across one of India's most demanding food markets. He leads Anandam's hospitality and food vertical.</div>
-      <div class="dir-badge">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1648B0" stroke-width="1.2"/><path d="M4 7L6 9L10 5" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        25+ Years · Food & Hospitality
+        <div class="dir-name">Yudhishter Anand</div>
+        <div class="dir-role">Co-Founder & Director</div>
+        <div class="dir-line"></div>
+        <div class="dir-bio">With over 30 years of hands-on experience in India's hospitality and sweets industry, Mr. Yudhishter Anand brings rare operational depth to Anandam Ventures. Currently serving as General Manager at Ahuja Sweets, Panipat — one of Haryana's most trusted sweet brands — he has spent three decades mastering supply chain integrity, food quality standards, and consumer-facing operations at scale. His expertise is not academic; it has been earned day by day across one of India's most demanding food markets. He leads Anandam's hospitality and food vertical.</div>
+        <div class="dir-badge">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1648B0" stroke-width="1.2"/><path d="M4 7L6 9L10 5" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          30+ Years · Food & Hospitality
+        </div>
       </div>
     </div>
-     </div>
     <div class="dir-card r" style="transition-delay:.15s">
       <div class="dir-photo">
         <div class="dir-photo-ring">
           <div class="dir-photo-inner">PA</div>
         </div>
-        <div class="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/ChatGPT%20Image%20May%2020%2C%202026%2C%2008_18_19%20PM.png">Co-Founder & Director</div>
+        <div class="dir-photo-name">Co-Founder & Director</div>
         <div class="dir-photo-dots"><span></span><span></span><span></span></div>
       </div>
       <div class="dir-body">
-      <div class="dir-name">Mrs. Parveen Anand</div>
-      <div class="dir-role">Co-Founder & Director</div>
-      <div class="dir-line"></div>
-      <div class="dir-bio">Mrs. Parveen Anand co-leads Anandam Ventures with a values-first approach that ensures every business built under the Anandam name remains anchored in principles that matter — trust, authenticity, and long-term thinking over short-term gain. She provides the strategic steadiness that balances ambition with care, ensuring that the spirit of Anandam — building ventures that bring genuine value — is never compromised in the pursuit of scale. Her leadership ensures every decision at Anandam passes a simple test: will we still be proud of this in ten years?</div>
-      <div class="dir-badge">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1648B0" stroke-width="1.2"/><path d="M4 7L6 9L10 5" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Values · Culture · Direction
+        <div class="dir-name">Mrs. Parveen Anand</div>
+        <div class="dir-role">Co-Founder & Director</div>
+        <div class="dir-line"></div>
+        <div class="dir-bio">Mrs. Parveen Anand co-leads Anandam Ventures with a values-first approach that ensures every business built under the Anandam name remains anchored in principles that matter — trust, authenticity, and long-term thinking over short-term gain. She provides the strategic steadiness that balances ambition with care, ensuring that the spirit of Anandam — building ventures that bring genuine value — is never compromised in the pursuit of scale. Her leadership ensures every decision at Anandam passes a simple test: will we still be proud of this in ten years?</div>
+        <div class="dir-badge">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1648B0" stroke-width="1.2"/><path d="M4 7L6 9L10 5" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Values · Culture · Direction
+        </div>
       </div>
     </div>
   </div>
@@ -727,8 +762,8 @@ footer{
     <h2 class="con-h r" style="transition-delay:.1s">Let's build something<br><em>together.</em></h2>
     <p class="con-p r" style="transition-delay:.2s">Whether you're interested in a Lahori Adda franchise, a consulting engagement, or a longer partnership — we'd love to hear from you.</p>
     <div class="con-btns r" style="transition-delay:.3s">
-      <a href="mailto:Info@anandamventures.com" class="btn-primary">Send a Message</a>
-      <a href="tel:+919896544879" class="btn-secondary">Call Us</a>
+      <a href="mailto:hello@anandamventures.com" class="btn-primary">Send a Message</a>
+      <a href="tel:+919518604324" class="btn-secondary">Call Us</a>
     </div>
     <div class="con-meta r" style="transition-delay:.4s">
       <div class="cm"><div class="cm-l">Email</div><div class="cm-v">hello@anandamventures.com</div></div>
@@ -767,7 +802,7 @@ footer{
       <h4>Connect</h4>
       <ul>
         <li><a href="mailto:hello@anandamventures.com">Email Us</a></li>
-        <li><a href="tel:+919896544879">+91 95186 04324</a></li>
+        <li><a href="tel:+919518604324">+91 95186 04324</a></li>
         <li><a href="#">LinkedIn</a></li>
         <li><a href="#">Instagram</a></li>
       </ul>
