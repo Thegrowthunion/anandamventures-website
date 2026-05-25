@@ -30,13 +30,49 @@ img{display:block;max-width:100%;height:auto;}
 }
 
 /* ── LOGO ── */
-.logo-wrap{display:flex;align-items:center;gap:10px;flex-shrink:0;}
-.logo-icon{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.logo-name{font-size:14px;font-weight:800;color:var(--navy);line-height:1.1;}
-.logo-name span{color:var(--blue);}
-.logo-sub{font-size:9px;font-weight:600;color:var(--t3);letter-spacing:1.5px;text-transform:uppercase;}
+.logo-wrap{display:flex;align-items:center;flex-shrink:0;}
+.nav-logo-img{height:44px;width:auto;max-width:200px;object-fit:contain;display:block;}
 
-/* ── NAV ── */
+/* ── BRAND TICKER ── */
+.brand-ticker{background:var(--navy);overflow:hidden;border-top:1px solid rgba(255,255,255,.04);}
+.bt-inner{display:flex;align-items:stretch;}
+.bt-label{
+  padding:0 24px;background:rgba(255,255,255,.04);
+  border-right:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;
+  font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  color:rgba(255,255,255,.25);white-space:nowrap;flex-shrink:0;min-width:120px;
+}
+.bt-track-wrap{flex:1;overflow:hidden;padding:14px 0;}
+.bt-track{
+  display:flex;align-items:center;gap:0;
+  animation:btRun 40s linear infinite;
+  width:max-content;
+}
+.bt-track:hover{animation-play-state:paused;}
+@keyframes btRun{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.bt-brand{
+  display:flex;align-items:center;gap:10px;
+  padding:0 28px;
+  border-right:1px solid rgba(255,255,255,.05);
+  white-space:nowrap;
+}
+.bt-logo{
+  width:36px;height:36px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:800;color:#fff;
+  flex-shrink:0;overflow:hidden;position:relative;
+}
+.bt-logo img{
+  width:100%;height:100%;object-fit:contain;
+  border-radius:6px;background:#fff;padding:2px;
+}
+.bt-logo .bt-fallback{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:8px;font-size:10px;font-weight:800;color:#fff;
+}
+.bt-name{font-size:12.5px;font-weight:500;color:rgba(255,255,255,.45);}
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;height:68px;
   background:rgba(255,255,255,.97);backdrop-filter:blur(12px);
@@ -143,7 +179,7 @@ nav.scrolled{box-shadow:0 4px 32px rgba(22,72,176,.08);}
 }
 .bt-name{font-size:12.5px;font-weight:500;color:rgba(255,255,255,.45);}
 
-/* ── SECTION COMMON ── */
+/* ── NAV ── */
 section{padding:88px 60px;}
 .chip{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
 .chip::before{content:'';display:block;width:16px;height:2px;background:var(--blue);border-radius:2px;flex-shrink:0;}
@@ -420,7 +456,7 @@ footer{background:var(--navy);}
   html,body{overflow-x:hidden;width:100%;}
   nav{padding:0 16px;height:60px;}
   .nav-links,.nav-phone{display:none;}
-  .logo-sub{display:none;}
+  .nav-logo-img{height:36px;}
   .nav-cta{padding:7px 13px;font-size:11px;}
   section{padding:48px 16px !important;}
   .divider{margin:0 16px;}
@@ -491,13 +527,7 @@ footer{background:var(--navy);}
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="logo-wrap">
-    <div class="logo-icon">
-      <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M11 3L4 8.5V18h14V8.5L11 3z" fill="rgba(255,255,255,.15)" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 18v-5h6v5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
-    <div class="logo-text">
-      <div class="logo-name">Anandam<span> Ventures</span></div>
-      <div class="logo-sub">Est. 1995 · Panipat</div>
-    </div>
+    <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/logo.png" alt="Anandam Ventures" class="nav-logo-img">
   </a>
   <ul class="nav-links">
     <li><a href="#directors">Leadership</a></li>
@@ -574,56 +604,61 @@ footer{background:var(--navy);}
 </section>
 
 <!-- 2. BRANDS TICKER — Worked With -->
+<!-- HOW TO ADD YOUR OWN BRAND LOGO:
+     Replace the <div class="bt-fallback"...> with:
+     <img src="YOUR_LOGO_URL" alt="Brand Name">
+     inside the .bt-logo div. The image will be auto-contained to 36x36px.
+-->
 <div class="brand-ticker">
   <div class="bt-inner">
     <div class="bt-label">Brands Worked With</div>
     <div class="bt-track-wrap">
       <div class="bt-track">
-        <div class="bt-brand"><div class="bt-logo" style="background:#E65C00">SD</div><span class="bt-name">Sukhdev Dhaba, Murthal</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#1B7A2E">HV</div><span class="bt-name">Haveli, Karnal</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#B91C1C">AS</div><span class="bt-name">Ahuja Sweets, Panipat</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#1D4ED8">ASD</div><span class="bt-name">Amrik Sukhdev Dhaba</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#7C3AED">GD</div><span class="bt-name">Gulshan Dhaba</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#0F766E">KS</div><span class="bt-name">Kwality Sweets</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#92400E">PG</div><span class="bt-name">Punjab Grill</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#BE185D">NDH</div><span class="bt-name">Nand Di Hatti</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#0369A1">BKR</div><span class="bt-name">Bikaner Sweets</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#A16207">MS</div><span class="bt-name">Mathura Sweets</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#166534">PSH</div><span class="bt-name">Punjab Sweet House</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#7C2D12">WJW</div><span class="bt-name">Wah Ji Wah</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#1E3A5F">HHK</div><span class="bt-name">Hotel Haveli, Karnal</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#5B21B6">PB</div><span class="bt-name">Pind Balluchi</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#064E3B">DD</div><span class="bt-name">Delhi Darbar</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#831843">SRD</div><span class="bt-name">Sita Ram Diwan Chand</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#1C3A5E">JWM</div><span class="bt-name">Premium Hotels Group</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#78350F">BH</div><span class="bt-name">Bikaner House</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#14532D">MSD</div><span class="bt-name">Murthal Sweet Dhabas</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#4C1D95">HBC</div><span class="bt-name">Haryana Bakery Chain</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#0C4A6E">NCR</div><span class="bt-name">NCR Hospitality Group</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#7F1D1D">PRG</div><span class="bt-name">Panipat Restaurant Group</span></div>
-        <!-- Duplicate for seamless loop -->
-        <div class="bt-brand"><div class="bt-logo" style="background:#E65C00">SD</div><span class="bt-name">Sukhdev Dhaba, Murthal</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#1B7A2E">HV</div><span class="bt-name">Haveli, Karnal</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#B91C1C">AS</div><span class="bt-name">Ahuja Sweets, Panipat</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#1D4ED8">ASD</div><span class="bt-name">Amrik Sukhdev Dhaba</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#7C3AED">GD</div><span class="bt-name">Gulshan Dhaba</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#0F766E">KS</div><span class="bt-name">Kwality Sweets</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#92400E">PG</div><span class="bt-name">Punjab Grill</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#BE185D">NDH</div><span class="bt-name">Nand Di Hatti</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#0369A1">BKR</div><span class="bt-name">Bikaner Sweets</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#A16207">MS</div><span class="bt-name">Mathura Sweets</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#166534">PSH</div><span class="bt-name">Punjab Sweet House</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#7C2D12">WJW</div><span class="bt-name">Wah Ji Wah</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#1E3A5F">HHK</div><span class="bt-name">Hotel Haveli, Karnal</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#5B21B6">PB</div><span class="bt-name">Pind Balluchi</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#064E3B">DD</div><span class="bt-name">Delhi Darbar</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#831843">SRD</div><span class="bt-name">Sita Ram Diwan Chand</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#1C3A5E">JWM</div><span class="bt-name">Premium Hotels Group</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#78350F">BH</div><span class="bt-name">Bikaner House</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#14532D">MSD</div><span class="bt-name">Murthal Sweet Dhabas</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#4C1D95">HBC</div><span class="bt-name">Haryana Bakery Chain</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#0C4A6E">NCR</div><span class="bt-name">NCR Hospitality Group</span></div>
-        <div class="bt-brand"><div class="bt-logo" style="background:#7F1D1D">PRG</div><span class="bt-name">Panipat Restaurant Group</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#E65C00">SD</div></div><span class="bt-name">Sukhdev Dhaba, Murthal</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#1B7A2E">HV</div></div><span class="bt-name">Haveli, Karnal</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#B91C1C">AS</div></div><span class="bt-name">Ahuja Sweets, Panipat</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#1D4ED8">ASD</div></div><span class="bt-name">Amrik Sukhdev Dhaba</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#7C3AED">GD</div></div><span class="bt-name">Gulshan Dhaba</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#0F766E">KS</div></div><span class="bt-name">Kwality Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#92400E">PG</div></div><span class="bt-name">Punjab Grill</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#BE185D">NDH</div></div><span class="bt-name">Nand Di Hatti</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#0369A1">BKR</div></div><span class="bt-name">Bikaner Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#A16207">MS</div></div><span class="bt-name">Mathura Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#166534">PSH</div></div><span class="bt-name">Punjab Sweet House</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#7C2D12">WJW</div></div><span class="bt-name">Wah Ji Wah</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#1E3A5F">HHK</div></div><span class="bt-name">Hotel Haveli, Karnal</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#5B21B6">PB</div></div><span class="bt-name">Pind Balluchi</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#064E3B">DD</div></div><span class="bt-name">Delhi Darbar</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#831843">SRD</div></div><span class="bt-name">Sita Ram Diwan Chand</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#1C3A5E">JWM</div></div><span class="bt-name">Premium Hotels Group</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#78350F">BH</div></div><span class="bt-name">Bikaner House</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#14532D">MSD</div></div><span class="bt-name">Murthal Sweet Dhabas</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#4C1D95">HBC</div></div><span class="bt-name">Haryana Bakery Chain</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#0C4A6E">NCR</div></div><span class="bt-name">NCR Hospitality Group</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#7F1D1D">PRG</div></div><span class="bt-name">Panipat Restaurant Group</span></div>
+        <!-- === DUPLICATE FOR SEAMLESS LOOP === -->
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#E65C00">SD</div></div><span class="bt-name">Sukhdev Dhaba, Murthal</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#1B7A2E">HV</div></div><span class="bt-name">Haveli, Karnal</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#B91C1C">AS</div></div><span class="bt-name">Ahuja Sweets, Panipat</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#1D4ED8">ASD</div></div><span class="bt-name">Amrik Sukhdev Dhaba</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#7C3AED">GD</div></div><span class="bt-name">Gulshan Dhaba</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#0F766E">KS</div></div><span class="bt-name">Kwality Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#92400E">PG</div></div><span class="bt-name">Punjab Grill</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#BE185D">NDH</div></div><span class="bt-name">Nand Di Hatti</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#0369A1">BKR</div></div><span class="bt-name">Bikaner Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#A16207">MS</div></div><span class="bt-name">Mathura Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#166534">PSH</div></div><span class="bt-name">Punjab Sweet House</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#7C2D12">WJW</div></div><span class="bt-name">Wah Ji Wah</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#1E3A5F">HHK</div></div><span class="bt-name">Hotel Haveli, Karnal</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#5B21B6">PB</div></div><span class="bt-name">Pind Balluchi</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#064E3B">DD</div></div><span class="bt-name">Delhi Darbar</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#831843">SRD</div></div><span class="bt-name">Sita Ram Diwan Chand</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#1C3A5E">JWM</div></div><span class="bt-name">Premium Hotels Group</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#78350F">BH</div></div><span class="bt-name">Bikaner House</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#14532D">MSD</div></div><span class="bt-name">Murthal Sweet Dhabas</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#4C1D95">HBC</div></div><span class="bt-name">Haryana Bakery Chain</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#0C4A6E">NCR</div></div><span class="bt-name">NCR Hospitality Group</span></div>
+        <div class="bt-brand"><div class="bt-logo"><div class="bt-fallback" style="background:#7F1D1D">PRG</div></div><span class="bt-name">Panipat Restaurant Group</span></div>
       </div>
     </div>
   </div>
