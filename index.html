@@ -10,45 +10,9 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;overflow-x:hidden;}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1F35;overflow-x:hidden;font-size:16px;line-height:1.6;max-width:100vw;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1F35;overflow-x:hidden;font-size:16px;line-height:1.6;width:100%;}
 a{text-decoration:none;color:inherit;}
 img{display:block;max-width:100%;height:auto;}
-
-/* ── LOGO ── */
-.logo-wrap{display:flex;align-items:center;gap:10px;margin-right:40px;flex-shrink:0;}
-.logo-icon{width:38px;height:38px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.logo-text{}
-.logo-name{font-size:15px;font-weight:800;color:var(--navy);letter-spacing:.3px;line-height:1.1;}
-.logo-name span{color:var(--blue);}
-.logo-sub{font-size:9px;font-weight:600;color:var(--t3);letter-spacing:2px;text-transform:uppercase;}
-
-/* ── MARQUEE TRUST BAR ── */
-.trust-bar{background:var(--navy);padding:0;overflow:hidden;border-top:1px solid rgba(255,255,255,.04);}
-.tb-inner{display:flex;align-items:stretch;}
-.tb-label-box{
-  padding:18px 28px;background:rgba(255,255,255,.04);
-  border-right:1px solid rgba(255,255,255,.08);
-  display:flex;align-items:center;
-  font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
-  color:rgba(255,255,255,.3);white-space:nowrap;flex-shrink:0;
-}
-.tb-track-wrap{flex:1;overflow:hidden;display:flex;align-items:center;padding:18px 0;}
-.tb-track{
-  display:flex;gap:0;
-  animation:marqueeRun 28s linear infinite;
-  width:max-content;
-}
-.tb-track:hover{animation-play-state:paused;}
-.tb-item{
-  display:flex;align-items:center;gap:10px;
-  padding:0 36px;
-  border-right:1px solid rgba(255,255,255,.06);
-  font-size:13px;font-weight:500;color:rgba(255,255,255,.5);
-  white-space:nowrap;
-}
-.tb-item:last-child{border-right:1px solid rgba(255,255,255,.06);}
-.tb-dot{width:5px;height:5px;border-radius:50%;background:var(--blue2);flex-shrink:0;}
-@keyframes marqueeRun{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 
 :root{
   --navy:#0D1F35;
@@ -63,33 +27,35 @@ img{display:block;max-width:100%;height:auto;}
   --t3:#8A9BB0;
   --green:#25D366;
   --gold:#C49B3C;
-  --red:#E63946;
 }
+
+/* ── LOGO ── */
+.logo-wrap{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.logo-icon{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.logo-name{font-size:14px;font-weight:800;color:var(--navy);line-height:1.1;}
+.logo-name span{color:var(--blue);}
+.logo-sub{font-size:9px;font-weight:600;color:var(--t3);letter-spacing:1.5px;text-transform:uppercase;}
 
 /* ── NAV ── */
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  height:72px;background:rgba(255,255,255,.97);
-  backdrop-filter:blur(12px);
+  position:fixed;top:0;left:0;right:0;z-index:200;height:68px;
+  background:rgba(255,255,255,.97);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
-  display:flex;align-items:center;padding:0 48px;
+  display:flex;align-items:center;padding:0 48px;gap:32px;
   transition:box-shadow .3s;
 }
 nav.scrolled{box-shadow:0 4px 32px rgba(22,72,176,.08);}
-.nav-logo{font-size:18px;font-weight:800;color:var(--navy);white-space:nowrap;margin-right:48px;}
-.nav-logo span{color:var(--blue);}
-.nav-logo small{font-size:10px;font-weight:500;color:var(--t3);display:block;letter-spacing:1.5px;text-transform:uppercase;margin-top:-2px;}
-.nav-links{display:flex;list-style:none;gap:2px;flex:1;overflow:hidden;}
-.nav-links a{padding:8px 12px;font-size:12px;font-weight:500;color:var(--t2);border-radius:6px;transition:all .2s;white-space:nowrap;}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1;}
+.nav-links a{padding:7px 12px;font-size:12px;font-weight:500;color:var(--t2);border-radius:6px;transition:all .2s;white-space:nowrap;}
 .nav-links a:hover{color:var(--navy);background:var(--blue-pale);}
 .nav-r{margin-left:auto;display:flex;align-items:center;gap:10px;flex-shrink:0;}
 .nav-phone{font-size:12px;color:var(--t2);display:flex;align-items:center;gap:6px;white-space:nowrap;}
-.nav-cta{background:var(--blue);color:#fff;padding:9px 18px;border-radius:8px;font-size:12px;font-weight:600;transition:background .2s;white-space:nowrap;}
+.nav-cta{background:var(--blue);color:#fff;padding:9px 18px;border-radius:7px;font-size:12px;font-weight:600;white-space:nowrap;transition:background .2s;}
 .nav-cta:hover{background:var(--navy);}
 
-/* ── HERO ── */
+/* ── HERO (no form, full editorial) ── */
 #hero{
-  min-height:100vh;padding-top:72px;
+  min-height:100vh;padding-top:68px;
   position:relative;overflow:hidden;
   display:flex;align-items:center;
 }
@@ -97,556 +63,460 @@ nav.scrolled{box-shadow:0 4px 32px rgba(22,72,176,.08);}
   position:absolute;inset:0;
   background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80');
   background-size:cover;background-position:center;
-  filter:brightness(.35);
 }
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(13,31,53,.92) 45%,rgba(22,72,176,.6) 100%);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(9,20,40,.95) 50%,rgba(13,31,80,.75) 100%);}
 .hero-inner{
   position:relative;z-index:2;
-  display:grid;grid-template-columns:1fr 420px;
-  gap:64px;align-items:center;
-  padding:80px 60px;max-width:1400px;width:100%;
+  max-width:1280px;width:100%;
+  display:grid;grid-template-columns:1.1fr 1fr;
+  gap:80px;align-items:center;
+  padding:80px 60px;
 }
 .hero-l{}
-.hero-est{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:6px 16px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:24px;}
-.hero-h{font-size:clamp(36px,5.5vw,68px);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.5px;margin-bottom:16px;}
+.hero-est{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:5px 14px;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:20px;}
+.hero-tag{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px;letter-spacing:.3px;}
+.hero-tag::before{content:'';display:block;width:20px;height:2px;background:var(--gold);flex-shrink:0;}
+.hero-h{font-size:clamp(36px,5vw,64px);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.5px;margin-bottom:20px;}
 .hero-h em{color:#7EB3FF;font-style:normal;}
-.hero-tag{font-size:16px;font-weight:600;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
-.hero-tag::before{content:'';display:block;width:24px;height:2px;background:var(--gold);}
-.hero-p{font-size:16px;line-height:1.75;color:rgba(255,255,255,.65);max-width:520px;margin-bottom:32px;font-weight:400;}
-.hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
-.hero-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:6px 14px;font-size:12px;color:rgba(255,255,255,.65);}
-.hero-socials{display:flex;gap:12px;margin-top:8px;}
-.hero-soc{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:all .2s;}
-.hero-soc:hover{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.1);}
+.hero-p{font-size:16px;line-height:1.8;color:rgba(255,255,255,.6);margin-bottom:32px;max-width:520px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+.hero-btn-p{background:var(--blue);color:#fff;padding:14px 28px;border-radius:8px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.hero-btn-p:hover{background:#1D55CC;}
+.hero-btn-s{border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);padding:14px 28px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.hero-btn-s:hover{border-color:rgba(255,255,255,.5);color:#fff;}
+.hero-socials{display:flex;gap:10px;}
+.hero-soc{width:34px;height:34px;border-radius:8px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);transition:all .2s;}
+.hero-soc:hover{border-color:rgba(255,255,255,.5);color:#fff;}
 
-/* Hero Form */
-.hero-form-card{
-  background:#fff;border-radius:16px;padding:36px 32px;
-  box-shadow:0 32px 80px rgba(13,31,53,.4);
+/* Hero Right - Stat Cards */
+.hero-r{display:flex;flex-direction:column;gap:14px;}
+.hero-stat-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;padding:22px 24px;
+  display:flex;align-items:center;gap:18px;
+  backdrop-filter:blur(8px);
+  transition:background .3s;
 }
-.hf-title{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:4px;}
-.hf-sub{font-size:13px;color:var(--t2);margin-bottom:24px;}
-.hf-row{margin-bottom:14px;}
-.hf-row label{display:block;font-size:12px;font-weight:600;color:var(--t2);margin-bottom:5px;letter-spacing:.3px;}
-.hf-row input,.hf-row select,.hf-row textarea{
-  width:100%;border:1.5px solid var(--border);border-radius:8px;
-  padding:11px 14px;font-size:14px;font-family:inherit;color:var(--navy);
-  background:var(--off);transition:border-color .2s;outline:none;
+.hero-stat-card:hover{background:rgba(255,255,255,.1);}
+.hsc-icon{width:48px;height:48px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hsc-n{font-size:28px;font-weight:800;color:#fff;line-height:1;}
+.hsc-l{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px;}
+.hsc-bar{width:100%;height:3px;background:rgba(255,255,255,.08);border-radius:2px;margin-top:8px;overflow:hidden;}
+.hsc-fill{height:100%;border-radius:2px;background:var(--blue2);}
+.hero-quote{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;padding:20px 22px;border-left:3px solid var(--gold);
 }
-.hf-row input:focus,.hf-row select:focus,.hf-row textarea:focus{border-color:var(--blue);background:#fff;}
-.hf-row textarea{resize:vertical;min-height:80px;}
-.hf-row select{appearance:none;cursor:pointer;}
-.hf-btn{
-  width:100%;background:var(--blue);color:#fff;border:none;
-  padding:14px;border-radius:8px;font-size:14px;font-weight:700;
-  cursor:pointer;transition:background .2s;margin-top:4px;font-family:inherit;
+.hero-quote p{font-size:13px;font-style:italic;color:rgba(255,255,255,.55);line-height:1.6;}
+.hero-quote span{display:block;font-size:11px;color:rgba(255,255,255,.3);margin-top:8px;font-style:normal;}
+
+/* ── BRAND TICKER ── */
+.brand-ticker{background:var(--navy);overflow:hidden;border-top:1px solid rgba(255,255,255,.04);}
+.bt-inner{display:flex;align-items:stretch;}
+.bt-label{
+  padding:0 24px;background:rgba(255,255,255,.04);
+  border-right:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;
+  font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  color:rgba(255,255,255,.25);white-space:nowrap;flex-shrink:0;min-width:120px;
 }
-.hf-btn:hover{background:var(--navy);}
-.hf-note{font-size:11px;color:var(--t3);text-align:center;margin-top:10px;}
+.bt-track-wrap{flex:1;overflow:hidden;padding:14px 0;}
+.bt-track{
+  display:flex;align-items:center;gap:0;
+  animation:btRun 18s linear infinite;
+  width:max-content;
+}
+.bt-track:hover{animation-play-state:paused;}
+@keyframes btRun{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.bt-brand{
+  display:flex;align-items:center;gap:10px;
+  padding:0 28px;
+  border-right:1px solid rgba(255,255,255,.05);
+  white-space:nowrap;
+}
+.bt-logo{
+  width:32px;height:32px;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:800;color:#fff;
+  flex-shrink:0;letter-spacing:0;
+}
+.bt-name{font-size:12.5px;font-weight:500;color:rgba(255,255,255,.45);}
 
 /* ── SECTION COMMON ── */
-section{padding:96px 60px;}
-.chip{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:14px;}
-.chip::before{content:'';display:block;width:18px;height:2px;background:var(--blue);border-radius:2px;}
-h2.sh{font-size:clamp(28px,4vw,48px);font-weight:800;color:var(--navy);line-height:1.1;letter-spacing:-.3px;}
+section{padding:88px 60px;}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+.chip::before{content:'';display:block;width:16px;height:2px;background:var(--blue);border-radius:2px;flex-shrink:0;}
+h2.sh{font-size:clamp(26px,3.5vw,44px);font-weight:800;color:var(--navy);line-height:1.12;letter-spacing:-.3px;}
 h2.sh em{color:var(--blue);font-style:normal;}
 .divider{height:1px;background:var(--border);margin:0 60px;}
+.btn-blue{background:var(--blue);color:#fff;padding:12px 24px;border-radius:8px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-blue:hover{background:var(--navy);transform:translateY(-1px);}
+.btn-outline{border:2px solid var(--border);color:var(--navy);padding:12px 24px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue);}
 .r{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease;}
 .r.on{opacity:1;transform:none;}
-.btn-blue{background:var(--blue);color:#fff;padding:13px 26px;border-radius:8px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
-.btn-blue:hover{background:var(--navy);transform:translateY(-1px);}
-.btn-outline{border:2px solid var(--border);color:var(--navy);padding:13px 26px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
-.btn-outline:hover{border-color:var(--blue);color:var(--blue);}
+
+/* ── DIRECTORS ── */
+#directors{background:var(--blue-pale);padding:88px 60px;}
+.dir-intro{text-align:center;max-width:680px;margin:0 auto 64px;}
+.dir-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1160px;margin:0 auto;}
+.dir-card{background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;transition:all .35s;}
+.dir-card:hover{box-shadow:0 20px 60px rgba(22,72,176,.12);transform:translateY(-4px);}
+.dir-photo{width:100%;aspect-ratio:4/3;position:relative;overflow:hidden;background:#1648B0;}
+.dir-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;opacity:1;}
+.dir-body{padding:30px 28px 32px;}
+.dir-name{font-size:21px;font-weight:800;color:var(--navy);margin-bottom:3px;}
+.dir-role{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:16px;}
+.dir-rule{width:28px;height:2px;background:var(--border);border-radius:2px;margin-bottom:16px;}
+.dir-bio{font-size:13.5px;color:var(--t2);line-height:1.85;}
+.dir-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;}
+.dir-tag{background:var(--blue-pale);border:1px solid var(--border);border-radius:100px;padding:4px 11px;font-size:11px;font-weight:600;color:var(--blue);}
 
 /* ── ABOUT ── */
 #about{background:var(--white);}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1280px;margin:0 auto;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;max-width:1160px;margin:0 auto;}
 .about-img{border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;}
 .about-img img{width:100%;height:100%;object-fit:cover;}
-.about-img-badge{
-  position:absolute;bottom:24px;left:24px;
-  background:var(--navy);border-radius:12px;padding:16px 20px;
-  border:1px solid rgba(255,255,255,.1);
-}
-.aib-n{font-size:32px;font-weight:800;color:#fff;line-height:1;}
-.aib-l{font-size:11px;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
-.about-r{}
-.about-r p{font-size:15px;line-height:1.85;color:var(--t2);margin-bottom:16px;}
+.about-img-badge{position:absolute;bottom:20px;left:20px;background:var(--navy);border-radius:10px;padding:14px 18px;border:1px solid rgba(255,255,255,.1);}
+.aib-n{font-size:28px;font-weight:800;color:#fff;line-height:1;}
+.aib-l{font-size:10px;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+.about-r p{font-size:15px;line-height:1.85;color:var(--t2);margin-bottom:14px;}
 .about-r strong{color:var(--navy);font-weight:600;}
-.about-pills{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 32px;}
-.about-pill{background:var(--blue-pale);border:1px solid var(--border);border-radius:100px;padding:8px 16px;font-size:12.5px;font-weight:600;color:var(--blue);}
+.about-pills{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 28px;}
+.about-pill{background:var(--blue-pale);border:1px solid var(--border);border-radius:100px;padding:6px 14px;font-size:12px;font-weight:600;color:var(--blue);}
 
 /* ── SERVICES ── */
 #services{background:var(--blue-pale);}
-.svc-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;max-width:1280px;margin-left:auto;margin-right:auto;}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1280px;margin:0 auto;}
-.svc-card{
-  background:var(--white);border-radius:14px;
-  border:1px solid var(--border);padding:36px 30px;
-  transition:all .3s;cursor:default;
-}
+.svc-intro{max-width:640px;margin:0 auto 56px;text-align:center;}
+.svc-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1160px;margin:0 auto;}
+.svc-card{background:var(--white);border-radius:14px;border:1px solid var(--border);padding:32px 26px;transition:all .3s;}
 .svc-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(22,72,176,.1);border-color:var(--blue);}
-.svc-icon{width:52px;height:52px;border-radius:12px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
-.svc-n{font-size:11px;font-weight:700;color:var(--t3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
-.svc-name{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.2;}
-.svc-desc{font-size:13.5px;color:var(--t2);line-height:1.75;margin-bottom:18px;}
-.svc-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
-.svc-list li{font-size:12.5px;color:var(--t2);display:flex;align-items:center;gap:8px;}
+.svc-icon{width:48px;height:48px;border-radius:11px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.svc-n{font-size:10px;font-weight:700;color:var(--t3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
+.svc-name{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:9px;line-height:1.25;}
+.svc-desc{font-size:13px;color:var(--t2);line-height:1.75;margin-bottom:16px;}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:5px;}
+.svc-list li{font-size:12px;color:var(--t2);display:flex;align-items:center;gap:7px;}
 .svc-list li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0;}
 
 /* ── WHO WE SERVE ── */
 #serve{background:var(--white);}
-.serve-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1280px;margin:56px auto 0;}
-.serve-card{
-  background:var(--blue-pale);border-radius:14px;
-  border:1px solid var(--border);padding:32px 24px;
-  text-align:center;transition:all .3s;cursor:default;
-}
+.serve-intro{text-align:center;max-width:620px;margin:0 auto 48px;}
+.serve-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
+.serve-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1160px;margin:0 auto;}
+.serve-card{background:var(--blue-pale);border-radius:12px;border:1px solid var(--border);padding:26px 18px;text-align:center;transition:all .3s;}
 .serve-card:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-3px);}
 .serve-card:hover .serve-icon{background:rgba(255,255,255,.15);}
-.serve-card:hover .serve-name{color:#fff;}
+.serve-card:hover .serve-name,.serve-card:hover .serve-desc{color:#fff;}
 .serve-card:hover .serve-desc{color:rgba(255,255,255,.7);}
-.serve-icon{width:64px;height:64px;border-radius:16px;background:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;transition:background .3s;}
-.serve-name{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px;transition:color .3s;}
-.serve-desc{font-size:12.5px;color:var(--t2);line-height:1.5;transition:color .3s;}
+.serve-icon{width:56px;height:56px;border-radius:13px;background:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;transition:background .3s;}
+.serve-name{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:5px;transition:color .3s;}
+.serve-desc{font-size:12px;color:var(--t2);line-height:1.45;transition:color .3s;}
 
 /* ── 90-DAY MODEL ── */
-#model{background:var(--navy);padding:96px 60px;}
-.model-head{text-align:center;margin-bottom:64px;max-width:720px;margin-left:auto;margin-right:auto;}
-.model-head .chip{color:var(--gold);justify-content:center;}
-.model-head .chip::before{background:var(--gold);}
-.model-head h2{color:#fff;margin-bottom:16px;}
-.model-head h2 em{color:#7EB3FF;}
-.model-head p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.8;}
-.model-phases{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1280px;margin:0 auto 56px;}
-.phase{
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
-  border-radius:16px;padding:36px 32px;position:relative;overflow:hidden;
-}
-.phase::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-}
+#model{background:var(--navy);padding:88px 60px;}
+.model-intro{text-align:center;max-width:720px;margin:0 auto 60px;}
+.model-intro .chip{color:var(--gold);justify-content:center;}
+.model-intro .chip::before{background:var(--gold);}
+.model-intro h2{color:#fff;margin-bottom:14px;}
+.model-intro h2 em{color:#7EB3FF;}
+.model-intro p{font-size:15px;color:rgba(255,255,255,.5);line-height:1.8;}
+.model-phases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1160px;margin:0 auto 48px;}
+.phase{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:32px 26px;position:relative;overflow:hidden;}
+.phase::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
 .phase-1::before{background:linear-gradient(90deg,#3B82F6,#60A5FA);}
 .phase-2::before{background:linear-gradient(90deg,#F59E0B,#FBBF24);}
 .phase-3::before{background:linear-gradient(90deg,#10B981,#34D399);}
-.phase-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  border-radius:100px;padding:6px 14px;
-  font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
-  margin-bottom:20px;
-}
+.phase-badge{display:inline-flex;align-items:center;gap:6px;border-radius:100px;padding:5px 12px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
 .pb-1{background:rgba(59,130,246,.15);color:#60A5FA;}
 .pb-2{background:rgba(245,158,11,.15);color:#FBBF24;}
 .pb-3{background:rgba(16,185,129,.15);color:#34D399;}
-.phase-days{font-size:13px;font-weight:600;color:rgba(255,255,255,.35);margin-bottom:8px;letter-spacing:.5px;}
-.phase-title{font-size:22px;font-weight:800;color:#fff;margin-bottom:16px;line-height:1.2;}
-.phase-tasks{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
-.phase-tasks li{font-size:13.5px;color:rgba(255,255,255,.55);display:flex;align-items:flex-start;gap:10px;line-height:1.5;}
-.pt-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px;}
-.pd-1{background:#60A5FA;}
-.pd-2{background:#FBBF24;}
-.pd-3{background:#34D399;}
-.phase-outcome{
-  background:rgba(255,255,255,.05);border-radius:10px;
-  padding:14px 16px;border:1px solid rgba(255,255,255,.06);
-}
-.po-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:6px;}
-.po-val{font-size:13.5px;color:rgba(255,255,255,.7);font-weight:500;}
-.model-results{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
-  max-width:1280px;margin:0 auto;
-  border-top:1px solid rgba(255,255,255,.08);padding-top:48px;
-}
-.mr-item{text-align:center;padding:28px 20px;background:rgba(255,255,255,.03);border-radius:12px;border:1px solid rgba(255,255,255,.06);}
-.mr-n{font-size:40px;font-weight:800;color:#fff;line-height:1;margin-bottom:6px;}
+.phase-days{font-size:12px;font-weight:600;color:rgba(255,255,255,.3);margin-bottom:6px;}
+.phase-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:14px;line-height:1.2;}
+.phase-tasks{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:20px;}
+.phase-tasks li{font-size:13px;color:rgba(255,255,255,.5);display:flex;align-items:flex-start;gap:8px;line-height:1.5;}
+.pt-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:5px;}
+.pd-1{background:#60A5FA;}.pd-2{background:#FBBF24;}.pd-3{background:#34D399;}
+.phase-outcome{background:rgba(255,255,255,.04);border-radius:8px;padding:12px 14px;border:1px solid rgba(255,255,255,.05);}
+.po-label{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:4px;}
+.po-val{font-size:13px;color:rgba(255,255,255,.65);font-weight:500;}
+.model-results{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1160px;margin:0 auto;border-top:1px solid rgba(255,255,255,.07);padding-top:40px;}
+.mr-item{text-align:center;padding:24px 16px;background:rgba(255,255,255,.03);border-radius:10px;border:1px solid rgba(255,255,255,.05);}
+.mr-n{font-size:36px;font-weight:800;color:#fff;line-height:1;margin-bottom:5px;}
 .mr-n span{color:#60A5FA;}
-.mr-l{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.35);}
-.mr-d{font-size:13px;color:rgba(255,255,255,.25);margin-top:6px;line-height:1.4;}
-.model-cta{text-align:center;margin-top:48px;}
-.btn-gold{background:var(--gold);color:var(--navy);padding:16px 36px;border-radius:10px;font-size:14px;font-weight:800;display:inline-flex;align-items:center;gap:10px;transition:all .2s;}
+.mr-l{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.3);}
+.mr-d{font-size:12px;color:rgba(255,255,255,.2);margin-top:5px;line-height:1.4;}
+.model-cta{text-align:center;margin-top:40px;}
+.btn-gold{background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:9px;font-size:13px;font-weight:800;display:inline-flex;align-items:center;gap:10px;transition:all .2s;}
 .btn-gold:hover{background:#D4A93C;transform:translateY(-2px);}
 
 /* ── HOW IT WORKS ── */
 #howitworks{background:var(--white);}
-.hiw-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:stretch;max-width:1280px;margin:0 auto;}
-.hiw-img{border-radius:16px;overflow:hidden;min-height:400px;}
+.hiw-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:stretch;max-width:1160px;margin:0 auto;}
+.hiw-img{border-radius:16px;overflow:hidden;min-height:440px;}
 .hiw-img img{width:100%;height:100%;object-fit:cover;display:block;}
 .hiw-steps{display:flex;flex-direction:column;gap:0;}
-.hiw-step{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:28px 0;border-bottom:1px solid var(--border);}
+.hiw-step{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--border);}
 .hiw-step:first-child{padding-top:0;}
 .hiw-step:last-child{border-bottom:none;padding-bottom:0;}
-.hs-n{width:40px;height:40px;border-radius:10px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--blue);flex-shrink:0;}
-.hs-b{}
-.hs-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:4px;}
-.hs-desc{font-size:13.5px;color:var(--t2);line-height:1.65;}
+.hs-n{width:38px;height:38px;border-radius:9px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--blue);flex-shrink:0;}
+.hs-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.hs-desc{font-size:13px;color:var(--t2);line-height:1.65;}
 
 /* ── LAHORI ADDA ── */
 #lahori{background:var(--blue-pale);padding:0;}
-.la-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:600px;}
+.la-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:560px;}
 .la-img{position:relative;overflow:hidden;}
 .la-img img{width:100%;height:100%;object-fit:cover;}
-.la-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,43,107,.85),rgba(22,72,176,.7));}
+.la-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,43,107,.88),rgba(22,72,176,.72));}
 .la-img-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px;text-align:center;}
-.la-brand{font-size:56px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1;}
-.la-brand-sub{font-size:24px;font-weight:300;color:rgba(255,255,255,.6);letter-spacing:4px;margin-bottom:16px;}
-.la-divider{width:40px;height:2px;background:rgba(255,255,255,.3);margin:0 auto 14px;}
-.la-tagline{font-size:14px;font-style:italic;color:rgba(255,255,255,.5);}
+.la-brand{font-size:52px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1;}
+.la-brand-sub{font-size:22px;font-weight:300;color:rgba(255,255,255,.55);letter-spacing:4px;margin-bottom:14px;}
+.la-divider{width:36px;height:2px;background:rgba(255,255,255,.3);margin:0 auto 12px;}
+.la-tagline{font-size:13px;font-style:italic;color:rgba(255,255,255,.45);}
 .la-body{padding:64px 56px;display:flex;flex-direction:column;justify-content:center;}
-.la-body .chip{margin-bottom:16px;}
-.la-body h2{margin-bottom:16px;}
-.la-body p{font-size:15px;color:var(--t2);line-height:1.8;margin-bottom:24px;}
-.la-points{display:flex;flex-direction:column;gap:12px;margin-bottom:32px;}
-.la-pt{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--navy);font-weight:500;}
-.la-pt-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:5px;}
+.la-body p{font-size:14px;color:var(--t2);line-height:1.8;margin-bottom:20px;}
+.la-points{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
+.la-pt{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--navy);font-weight:500;}
+.la-pt-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:5px;}
 
 /* ── STATS ── */
-#stats{background:var(--navy);padding:72px 60px;}
+#stats{background:var(--navy);}
 .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;max-width:1400px;margin:0 auto;}
-.stat{padding:36px 32px;border-right:1px solid rgba(255,255,255,.06);}
+.stat{padding:40px 28px;border-right:1px solid rgba(255,255,255,.06);}
 .stat:last-child{border-right:none;}
-.stat-n{font-size:48px;font-weight:800;color:#fff;line-height:1;margin-bottom:6px;letter-spacing:-1px;}
-.stat-n sub{font-size:22px;}
-.stat-l{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);}
-.stat-d{font-size:12.5px;color:rgba(255,255,255,.2);margin-top:5px;line-height:1.4;}
-
-/* ── DIRECTORS ── */
-#directors{background:var(--white);}
-.dir-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:56px;align-items:end;max-width:1280px;margin-left:auto;margin-right:auto;}
-.dir-head p{font-size:15px;color:var(--t2);line-height:1.75;}
-.dir-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1280px;margin:0 auto;}
-.dir-card{background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;transition:all .35s;}
-.dir-card:hover{box-shadow:0 20px 60px rgba(22,72,176,.12);transform:translateY(-4px);}
-.dir-photo{
-  width:100%;aspect-ratio:4/3;
-  position:relative;overflow:hidden;
-  background:linear-gradient(135deg,#0D2B6B 0%,#1648B0 55%,#2B5CE6 100%);
-}
-.dir-photo img{
-  position:absolute;inset:0;
-  width:100%;height:100%;
-  object-fit:cover;
-  object-position:top center;
-  opacity:1;
-}
-.dir-mono-ring{display:none;}
-.dir-body{padding:32px 32px 36px;}
-.dir-name{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:4px;}
-.dir-role{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:18px;}
-.dir-rule{width:32px;height:2px;background:var(--border);border-radius:2px;margin-bottom:18px;}
-.dir-bio{font-size:13.5px;color:var(--t2);line-height:1.85;}
-.dir-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px;}
-.dir-tag{background:var(--blue-pale);border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--blue);}
-
-/* ── MIDDLE LEAD FORM ── */
-#midform{
-  background:linear-gradient(135deg,#0D1F35 0%,#1648B0 100%);
-  padding:96px 60px;position:relative;overflow:hidden;
-}
-#midform::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1920&q=80') center/cover;opacity:.1;}
-.mf-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1280px;margin:0 auto;}
-.mf-l .chip{color:rgba(255,255,255,.5);}
-.mf-l .chip::before{background:rgba(255,255,255,.4);}
-.mf-l h2{color:#fff;margin-bottom:16px;}
-.mf-l h2 em{color:#7EB3FF;}
-.mf-l p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.8;}
-.mf-points{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
-.mf-point{display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(255,255,255,.6);}
-.mf-point svg{flex-shrink:0;}
-.mf-form{background:#fff;border-radius:16px;padding:40px 36px;box-shadow:0 32px 80px rgba(0,0,0,.3);}
-.mf-form h3{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:4px;}
-.mf-form .sub{font-size:13px;color:var(--t2);margin-bottom:24px;}
-.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-
-/* ── FAQS ── */
-#faqs{background:var(--blue-pale);}
-.faqs-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1280px;margin:56px auto 0;}
-.faq-item{
-  background:var(--white);border-radius:12px;
-  border:1px solid var(--border);padding:28px 28px;
-  cursor:pointer;transition:all .25s;
-}
-.faq-item:hover{border-color:var(--blue);box-shadow:0 8px 32px rgba(22,72,176,.08);}
-.faq-q{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}
-.faq-q-icon{color:var(--blue);flex-shrink:0;margin-top:1px;}
-.faq-a{font-size:13.5px;color:var(--t2);line-height:1.75;}
+.stat-n{font-size:44px;font-weight:800;color:#fff;line-height:1;margin-bottom:5px;letter-spacing:-1px;}
+.stat-n sub{font-size:20px;}
+.stat-l{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);}
+.stat-d{font-size:12px;color:rgba(255,255,255,.18);margin-top:4px;line-height:1.4;}
 
 /* ── TESTIMONIALS ── */
 #testimonials{background:var(--white);}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1280px;margin:56px auto 0;}
-.test-card{background:var(--blue-pale);border-radius:14px;border:1px solid var(--border);padding:32px 28px;}
-.test-stars{display:flex;gap:3px;margin-bottom:16px;}
-.test-stars svg{color:#F59E0B;}
-.test-text{font-size:14px;color:var(--t2);line-height:1.75;margin-bottom:20px;font-style:italic;}
-.test-author{display:flex;align-items:center;gap:12px;}
-.test-avatar{width:42px;height:42px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0;}
-.test-name{font-size:14px;font-weight:700;color:var(--navy);}
-.test-biz{font-size:12px;color:var(--t2);}
+.test-intro{text-align:center;max-width:600px;margin:0 auto 48px;}
+.test-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1160px;margin:0 auto;}
+.test-card{background:var(--blue-pale);border-radius:14px;border:1px solid var(--border);padding:28px 24px;}
+.test-stars{display:flex;gap:3px;margin-bottom:14px;}
+.test-text{font-size:13.5px;color:var(--t2);line-height:1.75;margin-bottom:18px;font-style:italic;}
+.test-author{display:flex;align-items:center;gap:10px;}
+.test-avatar{width:40px;height:40px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;}
+.test-name{font-size:13.5px;font-weight:700;color:var(--navy);}
+.test-biz{font-size:11.5px;color:var(--t2);}
+.test-result{display:inline-flex;align-items:center;gap:5px;background:rgba(16,185,129,.1);border-radius:100px;padding:3px 10px;font-size:11px;font-weight:700;color:#059669;margin-top:12px;}
+
+/* ── MIDDLE LEAD FORM ── */
+#midform{background:linear-gradient(135deg,#0D1F35 0%,#1648B0 100%);padding:88px 60px;position:relative;overflow:hidden;}
+#midform::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1920&q=80') center/cover;opacity:.08;}
+.mf-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;max-width:1160px;margin:0 auto;}
+.mf-l .chip{color:rgba(255,255,255,.45);}
+.mf-l .chip::before{background:rgba(255,255,255,.35);}
+.mf-l h2{color:#fff;margin-bottom:14px;}
+.mf-l h2 em{color:#7EB3FF;}
+.mf-l p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.8;}
+.mf-points{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
+.mf-point{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(255,255,255,.55);}
+.mf-point svg{flex-shrink:0;}
+.mf-form{background:#fff;border-radius:14px;padding:36px 30px;box-shadow:0 24px 64px rgba(0,0,0,.25);}
+.mf-form h3{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:4px;}
+.mf-form .sub{font-size:13px;color:var(--t2);margin-bottom:22px;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+
+/* ── FAQS ── */
+#faqs{background:var(--blue-pale);}
+.faqs-intro{text-align:center;max-width:580px;margin:0 auto 48px;}
+.faqs-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
+.faqs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:1160px;margin:0 auto;}
+.faq-item{background:var(--white);border-radius:11px;border:1px solid var(--border);padding:22px 22px;transition:all .25s;}
+.faq-item:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(22,72,176,.07);}
+.faq-q{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+.faq-icon{color:var(--blue);flex-shrink:0;margin-top:1px;}
+.faq-a{font-size:13px;color:var(--t2);line-height:1.72;}
 
 /* ── CONTACT ── */
 #contact{background:var(--white);}
-.con-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1280px;margin:0 auto;}
-.con-l{}
-.con-l h2{margin-bottom:16px;}
-.con-l p{font-size:15px;color:var(--t2);line-height:1.8;margin-bottom:32px;}
-.con-items{display:flex;flex-direction:column;gap:20px;}
-.con-item{display:flex;align-items:flex-start;gap:16px;}
-.con-item-icon{width:44px;height:44px;border-radius:10px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.con-item-l{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);margin-bottom:3px;}
-.con-item-v{font-size:14px;font-weight:600;color:var(--navy);}
-.con-socials{display:flex;gap:10px;margin-top:28px;}
-.con-soc{width:40px;height:40px;border-radius:10px;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--t2);transition:all .2s;}
+.con-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;max-width:1160px;margin:0 auto;}
+.con-l h2{margin-bottom:14px;}
+.con-l p{font-size:14px;color:var(--t2);line-height:1.8;margin-bottom:28px;}
+.con-items{display:flex;flex-direction:column;gap:16px;}
+.con-item{display:flex;align-items:flex-start;gap:14px;}
+.con-item-icon{width:40px;height:40px;border-radius:9px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.con-item-l{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);margin-bottom:2px;}
+.con-item-v{font-size:13.5px;font-weight:600;color:var(--navy);}
+.con-socials{display:flex;gap:8px;margin-top:24px;}
+.con-soc{width:38px;height:38px;border-radius:9px;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--t2);transition:all .2s;}
 .con-soc:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-lt);}
-.con-r{background:var(--blue-pale);border-radius:16px;border:1px solid var(--border);padding:40px 36px;}
-.con-r h3{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:4px;}
-.con-r .sub{font-size:13px;color:var(--t2);margin-bottom:28px;}
+.con-r{background:var(--blue-pale);border-radius:14px;border:1px solid var(--border);padding:36px 30px;}
+.con-r h3{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:4px;}
+.con-r .sub{font-size:13px;color:var(--t2);margin-bottom:24px;}
+
+/* ── FORM SHARED ── */
+.f-row{margin-bottom:12px;}
+.f-row label{display:block;font-size:11.5px;font-weight:600;color:var(--t2);margin-bottom:4px;}
+.f-row input,.f-row select,.f-row textarea{width:100%;border:1.5px solid var(--border);border-radius:7px;padding:10px 13px;font-size:13.5px;font-family:inherit;color:var(--navy);background:var(--off);transition:border-color .2s;outline:none;}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{border-color:var(--blue);background:#fff;}
+.f-row textarea{resize:vertical;min-height:80px;}
+.f-row select{appearance:none;cursor:pointer;}
+.f-btn{width:100%;background:var(--blue);color:#fff;border:none;padding:13px;border-radius:7px;font-size:13.5px;font-weight:700;cursor:pointer;transition:background .2s;margin-top:4px;font-family:inherit;}
+.f-btn:hover{background:var(--navy);}
+.f-note{font-size:10.5px;color:var(--t3);text-align:center;margin-top:7px;}
 
 /* ── FOOTER ── */
 footer{background:var(--navy);}
-.foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:56px;padding:64px 60px 48px;border-bottom:1px solid rgba(255,255,255,.06);}
-.foot-brand{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding:60px 60px 44px;border-bottom:1px solid rgba(255,255,255,.06);}
+.foot-brand{font-size:18px;font-weight:800;color:#fff;margin-bottom:3px;}
 .foot-brand span{color:var(--blue2);}
-.foot-tagline{font-size:12px;font-weight:500;color:var(--gold);letter-spacing:.5px;margin-bottom:12px;}
-.foot-about{font-size:13px;color:rgba(255,255,255,.25);line-height:1.7;max-width:280px;margin-bottom:24px;}
-.foot-socs{display:flex;gap:8px;}
-.foot-soc{width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);transition:all .2s;}
-.foot-soc:hover{border-color:rgba(255,255,255,.4);color:#fff;}
-.foot-col h4{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:18px;}
-.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.foot-col a{font-size:13px;color:rgba(255,255,255,.3);transition:color .2s;}
-.foot-col a:hover{color:rgba(255,255,255,.8);}
-.foot-bot{display:flex;align-items:center;justify-content:space-between;padding:20px 60px;flex-wrap:wrap;gap:12px;}
-.foot-copy{font-size:12px;color:rgba(255,255,255,.18);}
-.foot-links{display:flex;gap:20px;}
-.foot-links a{font-size:12px;color:rgba(255,255,255,.18);transition:color .2s;}
-.foot-links a:hover{color:rgba(255,255,255,.5);}
+.foot-tagline{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.5px;margin-bottom:10px;}
+.foot-about{font-size:12.5px;color:rgba(255,255,255,.22);line-height:1.7;max-width:280px;margin-bottom:20px;}
+.foot-socs{display:flex;gap:7px;}
+.foot-soc{width:34px;height:34px;border-radius:7px;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.25);transition:all .2s;}
+.foot-soc:hover{border-color:rgba(255,255,255,.35);color:#fff;}
+.foot-col h4{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:16px;}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.foot-col a{font-size:12.5px;color:rgba(255,255,255,.27);transition:color .2s;}
+.foot-col a:hover{color:rgba(255,255,255,.75);}
+.foot-bot{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;flex-wrap:wrap;gap:10px;}
+.foot-copy{font-size:11.5px;color:rgba(255,255,255,.15);}
+.foot-links{display:flex;gap:18px;}
+.foot-links a{font-size:11.5px;color:rgba(255,255,255,.15);transition:color .2s;}
+.foot-links a:hover{color:rgba(255,255,255,.45);}
 
 /* ── WHATSAPP ── */
-.wa-btn{
-  position:fixed;bottom:32px;right:32px;z-index:999;
-  width:60px;height:60px;border-radius:50%;
-  background:var(--green);display:flex;align-items:center;justify-content:center;
-  box-shadow:0 8px 32px rgba(37,211,102,.4);
-  transition:transform .2s,box-shadow .2s;
-}
-.wa-btn:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(37,211,102,.5);}
-.wa-tooltip{
-  position:absolute;right:70px;background:var(--navy);color:#fff;
-  white-space:nowrap;padding:8px 14px;border-radius:8px;
-  font-size:12px;font-weight:600;opacity:0;pointer-events:none;
-  transition:opacity .2s;
-}
+.wa-btn{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(37,211,102,.4);transition:transform .2s;}
+.wa-btn:hover{transform:scale(1.1);}
+.wa-tooltip{position:absolute;right:66px;background:var(--navy);color:#fff;white-space:nowrap;padding:7px 13px;border-radius:7px;font-size:11.5px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s;}
 .wa-btn:hover .wa-tooltip{opacity:1;}
-
-/* FORM SHARED */
-.f-row{margin-bottom:14px;}
-.f-row label{display:block;font-size:12px;font-weight:600;color:var(--t2);margin-bottom:5px;}
-.f-row input,.f-row select,.f-row textarea{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;font-size:14px;font-family:inherit;color:var(--navy);background:var(--off);transition:border-color .2s;outline:none;}
-.f-row input:focus,.f-row select:focus,.f-row textarea:focus{border-color:var(--blue);background:#fff;}
-.f-row textarea{resize:vertical;min-height:90px;}
-.f-row select{appearance:none;cursor:pointer;}
-.f-btn{width:100%;background:var(--blue);color:#fff;border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;transition:background .2s;margin-top:4px;font-family:inherit;}
-.f-btn:hover{background:var(--navy);}
-.f-note{font-size:11px;color:var(--t3);text-align:center;margin-top:8px;}
 
 /* ── TABLET ── */
 @media(min-width:769px) and (max-width:1100px){
   nav{padding:0 24px;}
   .nav-links{display:none;}
-  .nav-phone{display:none;}
   section{padding:64px 28px;}
   .divider{margin:0 28px;}
-  #stats{padding:56px 28px;}
-  .hero-inner{grid-template-columns:1fr !important;padding:56px 28px;gap:36px;}
+  #directors,#model,#stats{padding:64px 28px;}
+  .hero-inner{grid-template-columns:1fr;padding:56px 28px;gap:36px;}
+  .hero-r{flex-direction:row;flex-wrap:wrap;}
+  .hero-stat-card{flex:1;min-width:180px;}
   .about-grid,.hiw-grid,.mf-inner,.con-inner{grid-template-columns:1fr;gap:36px;}
   .la-wrap{grid-template-columns:1fr;}
   .la-body{padding:48px 28px;}
-  .svc-grid{grid-template-columns:1fr 1fr;gap:16px;}
+  .svc-grid{grid-template-columns:1fr 1fr;gap:14px;}
   .serve-grid{grid-template-columns:1fr 1fr;}
   .model-phases{grid-template-columns:1fr;}
   .model-results{grid-template-columns:1fr 1fr;}
-  .stats-grid{grid-template-columns:1fr 1fr 1fr;}
-  .dir-head{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
   .dir-grid{grid-template-columns:1fr 1fr;gap:16px;}
-  .dir-photo{aspect-ratio:4/3;}
   .faqs-grid{grid-template-columns:1fr;}
-  .test-grid{grid-template-columns:1fr;}
-  .foot-top{grid-template-columns:1fr 1fr;gap:32px;padding:48px 28px 32px;}
-  .foot-bot{padding:16px 28px;}
+  .test-grid{grid-template-columns:1fr 1fr;}
+  .foot-top{grid-template-columns:1fr 1fr;gap:28px;padding:44px 28px 32px;}
+  .foot-bot{padding:14px 28px;}
   .form-row-2{grid-template-columns:1fr;}
 }
 
 /* ── MOBILE ── */
 @media(max-width:768px){
-  /* Global overflow prevention */
   *{max-width:100%;word-break:break-word;}
-  html,body{overflow-x:hidden;width:100%;position:relative;}
-
-  /* NAV */
-  nav{padding:0 16px;gap:8px;height:60px;}
+  html,body{overflow-x:hidden;width:100%;}
+  nav{padding:0 16px;height:60px;}
   .nav-links,.nav-phone{display:none;}
   .logo-sub{display:none;}
-  .logo-name{font-size:14px;}
-  .nav-cta{padding:7px 14px;font-size:11px;}
-
-  /* SECTIONS */
+  .nav-cta{padding:7px 13px;font-size:11px;}
   section{padding:48px 16px !important;}
   .divider{margin:0 16px;}
-  #stats{padding:40px 16px !important;}
-  #model{padding:56px 16px !important;}
-
-  /* HERO */
-  #hero{min-height:auto;padding-top:60px;}
-  .hero-inner{
-    grid-template-columns:1fr !important;
-    padding:36px 16px 40px !important;
-    gap:28px;
-  }
-  .hero-h{font-size:28px !important;line-height:1.15;}
-  .hero-tag{font-size:13px;}
-  .hero-p{font-size:13px;max-width:100%;}
-  .hero-chips{gap:6px;}
-  .hero-chip{font-size:10px;padding:4px 10px;}
-  .hero-est{font-size:9px;padding:5px 12px;}
-  .hero-socials{gap:8px;}
-  .hero-form-card{padding:24px 18px;}
-  .hf-title{font-size:17px;}
-  .hf-row input,.hf-row select,.hf-row textarea{font-size:13px;padding:10px 12px;}
-
-  /* TRUST BAR */
-  .trust-bar{overflow:hidden;}
-  .tb-label-box{padding:12px 14px;font-size:8px;}
-  .tb-item{font-size:11px;padding:0 20px;}
-
-  /* ABOUT */
-  .about-grid{grid-template-columns:1fr !important;gap:32px;}
-  .about-img{aspect-ratio:4/3;}
-
-  /* SERVICES */
-  .svc-head{flex-direction:column;gap:12px;align-items:flex-start;}
-  .svc-head > p{text-align:left !important;max-width:100%;}
-  .svc-grid{grid-template-columns:1fr !important;gap:14px;}
-  .svc-card{padding:24px 20px;}
-
-  /* WHO WE SERVE */
-  .serve-grid{grid-template-columns:1fr 1fr !important;gap:10px;}
-  .serve-card{padding:20px 14px;}
-  .serve-icon{width:48px;height:48px;}
-  .serve-name{font-size:13px;}
-  .serve-desc{font-size:11px;}
-
-  /* 90 DAY MODEL */
-  .model-head{padding:0;}
-  .model-phases{grid-template-columns:1fr !important;gap:14px;}
-  .phase{padding:24px 18px;}
-  .model-results{grid-template-columns:1fr 1fr !important;gap:10px;padding-top:28px;}
-  .mr-item{padding:18px 12px;}
-  .mr-n{font-size:32px;}
-
-  /* HOW IT WORKS */
-  .hiw-grid{grid-template-columns:1fr !important;gap:28px;}
-  .hiw-img{min-height:220px;aspect-ratio:16/9;}
-
-  /* LAHORI ADDA */
-  .la-wrap{grid-template-columns:1fr !important;min-height:auto;}
+  #directors,#model,#midform{padding:48px 16px !important;}
+  #stats{padding:36px 16px !important;}
+  #hero{padding-top:60px;min-height:auto;}
+  .hero-inner{grid-template-columns:1fr !important;padding:36px 16px 44px !important;gap:28px;}
+  .hero-h{font-size:28px !important;line-height:1.12;}
+  .hero-tag{font-size:12px;}
+  .hero-p{font-size:13.5px;max-width:100%;}
+  .hero-est{font-size:9px;}
+  .hero-btns{gap:9px;}
+  .hero-btn-p,.hero-btn-s{padding:11px 18px;font-size:12px;}
+  .hero-r{flex-direction:column;gap:10px;}
+  .hero-stat-card{padding:16px 18px;}
+  .hsc-n{font-size:22px;}
+  .about-grid,.hiw-grid,.la-wrap,.mf-inner,.con-inner{grid-template-columns:1fr !important;}
   .la-img{aspect-ratio:4/3;min-height:240px;}
   .la-body{padding:36px 16px !important;}
-  .la-brand{font-size:40px;}
-  .la-brand-sub{font-size:18px;}
-
-  /* STATS */
-  .stats-grid{grid-template-columns:1fr 1fr !important;}
-  .stat{padding:24px 16px;border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}
-  .stat:nth-child(odd){border-right:1px solid rgba(255,255,255,.06);}
-  .stat:last-child{border-bottom:none;}
-  .stat-n{font-size:36px;}
-
-  /* DIRECTORS */
-  .dir-head{grid-template-columns:1fr !important;gap:16px;margin-bottom:32px;}
-  .dir-grid{grid-template-columns:1fr !important;gap:20px;}
+  .la-brand{font-size:36px;}
+  .dir-intro{margin-bottom:36px;}
+  .dir-grid{grid-template-columns:1fr !important;gap:18px;}
   .dir-photo{aspect-ratio:4/3;}
-  .dir-body{padding:24px 20px 28px;}
-  .dir-name{font-size:19px;}
-  .dir-bio{font-size:13px;}
-
-  /* MIDDLE LEAD FORM */
-  .mf-inner{grid-template-columns:1fr !important;gap:32px;}
-  #midform{padding:56px 16px !important;}
-  .mf-form{padding:24px 18px;}
+  .svc-grid{grid-template-columns:1fr !important;gap:12px;}
+  .svc-intro,.serve-intro,.test-intro,.faqs-intro,.model-intro{padding:0 4px;}
+  .serve-grid{grid-template-columns:1fr 1fr !important;gap:9px;}
+  .serve-card{padding:18px 12px;}
+  .serve-icon{width:44px;height:44px;}
+  .model-phases{grid-template-columns:1fr !important;gap:12px;}
+  .phase{padding:22px 18px;}
+  .model-results{grid-template-columns:1fr 1fr !important;gap:9px;padding-top:28px;}
+  .mr-item{padding:16px 10px;}
+  .mr-n{font-size:28px;}
+  .stats-grid{grid-template-columns:1fr 1fr !important;}
+  .stat{padding:22px 14px;border-right:none;border-bottom:1px solid rgba(255,255,255,.05);}
+  .stat:nth-child(odd){border-right:1px solid rgba(255,255,255,.05);}
+  .stat-n{font-size:32px;}
+  .test-grid{grid-template-columns:1fr !important;gap:12px;}
+  .faqs-grid{grid-template-columns:1fr !important;gap:9px;}
+  .faq-item{padding:18px 16px;}
   .form-row-2{grid-template-columns:1fr !important;}
-
-  /* FAQS */
-  .faqs-grid{grid-template-columns:1fr !important;gap:10px;}
-  .faq-item{padding:20px 18px;}
-  .faq-q{font-size:13px;}
-  .faq-a{font-size:12.5px;}
-
-  /* TESTIMONIALS */
-  .test-grid{grid-template-columns:1fr !important;gap:14px;}
-  .test-card{padding:24px 18px;}
-
-  /* CONTACT */
-  .con-inner{grid-template-columns:1fr !important;gap:36px;}
-  .con-r{padding:24px 18px;}
-
-  /* FOOTER */
-  .foot-top{grid-template-columns:1fr !important;gap:32px;padding:36px 16px 28px;}
-  .foot-bot{padding:16px;flex-direction:column;text-align:center;gap:8px;}
-  .foot-about{max-width:100%;}
+  .mf-form{padding:22px 16px;}
+  .con-r{padding:22px 16px;}
+  .hiw-grid{gap:28px;}
+  .hiw-img{min-height:200px;aspect-ratio:16/9;}
+  .foot-top{grid-template-columns:1fr !important;gap:28px;padding:36px 16px 24px;}
+  .foot-bot{padding:14px 16px;flex-direction:column;text-align:center;gap:7px;}
   .foot-links{justify-content:center;}
-
-  /* WHATSAPP */
+  .foot-about{max-width:100%;}
   .wa-btn{bottom:14px;right:14px;width:48px;height:48px;}
   .wa-tooltip{display:none;}
-
-  /* SHARED BUTTONS */
-  .btn-blue,.btn-outline,.btn-white,.btn-gold{padding:11px 20px;font-size:12px;}
-
-  /* CHIPS & LABELS */
-  h2.sh{font-size:clamp(24px,6vw,36px);}
-  .chip{font-size:10px;}
+  h2.sh{font-size:clamp(22px,6vw,32px);}
+  .btn-blue,.btn-outline,.btn-gold{padding:10px 18px;font-size:12px;}
+  .bt-label{min-width:80px;padding:0 14px;font-size:8px;}
+  .bt-brand{padding:0 18px;}
+  .svc-head,.about-pills{flex-wrap:wrap;}
 }
 </style>
 </head>
 <body>
 
-<!-- WHATSAPP FLOATING BUTTON -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/919896544879?text=Hello%20Anandam%20Ventures!%20I%20am%20interested%20in%20your%20hospitality%20consulting%20services." class="wa-btn" target="_blank" rel="noopener">
   <div class="wa-tooltip">Chat with us</div>
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2C7.373 2 2 7.373 2 14c0 2.104.548 4.08 1.508 5.8L2 26l6.38-1.492A11.94 11.94 0 0014 26c6.627 0 12-5.373 12-12S20.627 2 14 2z" fill="#fff"/><path d="M10.5 8.5c-.3-.7-.6-.72-.88-.73H9c-.28 0-.72.1-1.1.5-.37.4-1.42 1.38-1.42 3.36s1.45 3.9 1.65 4.17c.2.27 2.8 4.48 6.9 6.1 3.42 1.35 4.1 1.08 4.84 1.01.74-.07 2.4-.98 2.74-1.92.34-.94.34-1.75.24-1.92-.1-.17-.37-.27-.77-.47s-2.4-1.18-2.77-1.32c-.37-.14-.64-.2-.91.2-.27.4-1.05 1.32-1.28 1.59-.24.27-.47.3-.87.1-.4-.2-1.68-.62-3.2-1.97-1.18-1.05-1.98-2.35-2.21-2.75-.24-.4-.03-.62.17-.82.18-.18.4-.47.6-.7.2-.24.27-.4.4-.67.14-.27.07-.5-.03-.7-.1-.2-.88-2.18-1.23-2.97z" fill="#25D366"/></svg>
+  <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 2C7.373 2 2 7.373 2 14c0 2.104.548 4.08 1.508 5.8L2 26l6.38-1.492A11.94 11.94 0 0014 26c6.627 0 12-5.373 12-12S20.627 2 14 2z" fill="#fff"/><path d="M10.5 8.5c-.3-.7-.6-.72-.88-.73H9c-.28 0-.72.1-1.1.5-.37.4-1.42 1.38-1.42 3.36s1.45 3.9 1.65 4.17c.2.27 2.8 4.48 6.9 6.1 3.42 1.35 4.1 1.08 4.84 1.01.74-.07 2.4-.98 2.74-1.92.34-.94.34-1.75.24-1.92-.1-.17-.37-.27-.77-.47s-2.4-1.18-2.77-1.32c-.37-.14-.64-.2-.91.2-.27.4-1.05 1.32-1.28 1.59-.24.27-.47.3-.87.1-.4-.2-1.68-.62-3.2-1.97-1.18-1.05-1.98-2.35-2.21-2.75-.24-.4-.03-.62.17-.82.18-.18.4-.47.6-.7.2-.24.27-.4.4-.67.14-.27.07-.5-.03-.7-.1-.2-.88-2.18-1.23-2.97z" fill="#25D366"/></svg>
 </a>
 
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="logo-wrap">
     <div class="logo-icon">
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-        <path d="M11 3L4 8.5V18h14V8.5L11 3z" fill="rgba(255,255,255,.15)" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
-        <path d="M8 18v-6h6v6" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M11 3L4 8.5V18h14V8.5L11 3z" fill="rgba(255,255,255,.15)" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 18v-5h6v5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
     <div class="logo-text">
       <div class="logo-name">Anandam<span> Ventures</span></div>
-      <div class="logo-sub">Est. 1995 · Panipat, Haryana</div>
+      <div class="logo-sub">Est. 1995 · Panipat</div>
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
+    <li><a href="#directors">Leadership</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#model">90-Day Model</a></li>
     <li><a href="#lahori">Lahori Adda</a></li>
-    <li><a href="#directors">Leadership</a></li>
+    <li><a href="#testimonials">Results</a></li>
     <li><a href="#faqs">FAQs</a></li>
   </ul>
   <div class="nav-r">
     <a href="tel:+919896544879" class="nav-phone">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12.5 9.5l-2-2a1 1 0 00-1.4 0l-.8.8a8.5 8.5 0 01-3.6-3.6l.8-.8a1 1 0 000-1.4l-2-2A1 1 0 002 1C1 3 1 5 2.5 7.5S6 12 9 13a1 1 0 00.5-.5l1-1a1 1 0 000-1.4z" stroke="#4A6080" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M12.5 9.5l-2-2a1 1 0 00-1.4 0l-.8.8a8.5 8.5 0 01-3.6-3.6l.8-.8a1 1 0 000-1.4l-2-2A1 1 0 002 1C1 3 1 5 2.5 7.5S6 12 9 13a1 1 0 00.5-.5l1-1a1 1 0 000-1.4z" stroke="#4A6080" stroke-width="1.2" stroke-linecap="round"/></svg>
       +91 98965 44879
     </a>
-    <a href="#midform" class="nav-cta">Get Free Consultation</a>
+    <a href="#midform" class="nav-cta">Free Consultation</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- 1. HERO — Introduction -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
@@ -654,99 +524,171 @@ footer{background:var(--navy);}
     <div class="hero-l">
       <div class="hero-est">Est. 1995 &nbsp;·&nbsp; 35 Years of Hospitality Excellence</div>
       <p class="hero-tag">Building India's Next Hospitality Brands.</p>
-      <h1 class="hero-h">We Transform<br><em>Restaurants,</em><br>Hotels & Dhabas.</h1>
-      <p class="hero-p">From strategy to execution — Anandam Ventures is India's most experienced hospitality consulting partner. Our proven 90-day model has helped hotels, restaurants, cafes, QSRs, sweet shops, and dhabas achieve 25–40% revenue growth.</p>
-      <div class="hero-chips">
-        <span class="hero-chip">🍽️ Restaurants</span>
-        <span class="hero-chip">🏨 Hotels</span>
-        <span class="hero-chip">☕ Cafes</span>
-        <span class="hero-chip">🍔 QSRs</span>
-        <span class="hero-chip">🍛 Dhabas</span>
-        <span class="hero-chip">🍬 Sweet Shops</span>
+      <h1 class="hero-h">India's Most Experienced<br><em>Hospitality Consulting</em><br>Partner.</h1>
+      <p class="hero-p">From opening new restaurants to turning around struggling ones — we bring 35 years of real, ground-level hospitality expertise to every engagement. Our proven 90-day model delivers 25–40% revenue growth.</p>
+      <div class="hero-btns">
+        <a href="#model" class="hero-btn-p">
+          See Our 90-Day Model
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+        <a href="#midform" class="hero-btn-s">Get Free Consultation</a>
       </div>
       <div class="hero-socials">
-        <a href="#" class="hero-soc" title="Instagram">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        </a>
-        <a href="#" class="hero-soc" title="Facebook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#" class="hero-soc" title="LinkedIn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        </a>
-        <a href="https://wa.me/919896544879" class="hero-soc" title="WhatsApp">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <a href="#" class="hero-soc" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" class="hero-soc" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="hero-soc" title="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+        <a href="https://wa.me/919896544879" class="hero-soc" title="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
-    <div class="hero-form-card r">
-      <div class="hf-title">Get a Free Consultation</div>
-      <div class="hf-sub">Fill in your details and we'll call you within 24 hours.</div>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="hf-row"><label>Your Name *</label><input type="text" name="name" placeholder="Full name" required></div>
-        <div class="hf-row"><label>Phone Number *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required></div>
-        <div class="hf-row"><label>Business Type *</label>
-          <select name="business_type" required>
-            <option value="">Select your business type</option>
-            <option>Restaurant</option><option>Hotel</option><option>Cafe</option>
-            <option>QSR / Fast Food</option><option>Dhaba</option>
-            <option>Sweet Shop</option><option>Bakery</option>
-            <option>Cloud Kitchen</option><option>Bar & Restaurant</option><option>Other</option>
-          </select>
+    <div class="hero-r r">
+      <div class="hero-stat-card">
+        <div class="hsc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v10l9 5 9-5V7L12 2z" stroke="#7EB3FF" stroke-width="1.5"/><path d="M12 12L3 7M12 12l9-5M12 12v10" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div>
+          <div class="hsc-n">35+</div>
+          <div class="hsc-l">Years of Hospitality Experience</div>
+          <div class="hsc-bar"><div class="hsc-fill" style="width:95%"></div></div>
         </div>
-        <div class="hf-row"><label>City</label><input type="text" name="city" placeholder="Your city"></div>
-        <div class="hf-row"><label>How can we help?</label><textarea name="message" placeholder="Briefly describe your challenge..."></textarea></div>
-        <button type="submit" class="hf-btn">Book Free Consultation →</button>
-        <div class="hf-note">🔒 Your details are 100% safe with us. No spam.</div>
-      </form>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hsc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#34D399" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div>
+          <div class="hsc-n" style="color:#34D399">100+</div>
+          <div class="hsc-l">Hospitality Projects Delivered</div>
+          <div class="hsc-bar"><div class="hsc-fill" style="width:80%;background:#34D399"></div></div>
+        </div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hsc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#FBBF24" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div>
+          <div class="hsc-n" style="color:#FBBF24">25-40%</div>
+          <div class="hsc-l">Average Revenue Growth in 90 Days</div>
+          <div class="hsc-bar"><div class="hsc-fill" style="width:70%;background:#FBBF24"></div></div>
+        </div>
+      </div>
+      <div class="hero-quote">
+        <p>"35 years in hospitality isn't a number — it's every restaurant we opened, every team we built, every problem we solved on the ground."</p>
+        <span>— Yudhishter Anand, Co-Founder & Director</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR - SCROLLING MARQUEE -->
-<div class="trust-bar">
-  <div class="tb-inner">
-    <div class="tb-label-box">As Seen At</div>
-    <div class="tb-track-wrap">
-      <div class="tb-track">
-        <div class="tb-item"><div class="tb-dot"></div>Sukhdev Dhaba, Murthal</div>
-        <div class="tb-item"><div class="tb-dot"></div>Haveli, Karnal</div>
-        <div class="tb-item"><div class="tb-dot"></div>Ahuja Sweets, Panipat</div>
-        <div class="tb-item"><div class="tb-dot"></div>35+ Years of Excellence</div>
-        <div class="tb-item"><div class="tb-dot"></div>100+ Hospitality Projects</div>
-        <div class="tb-item"><div class="tb-dot"></div>North India's Trusted Consultant</div>
-        <div class="tb-item"><div class="tb-dot"></div>Hotels · Restaurants · Cafes · QSRs</div>
-        <div class="tb-item"><div class="tb-dot"></div>Dhabas · Sweet Shops · Bakeries</div>
-        <div class="tb-item"><div class="tb-dot"></div>Sukhdev Dhaba, Murthal</div>
-        <div class="tb-item"><div class="tb-dot"></div>Haveli, Karnal</div>
-        <div class="tb-item"><div class="tb-dot"></div>Ahuja Sweets, Panipat</div>
-        <div class="tb-item"><div class="tb-dot"></div>35+ Years of Excellence</div>
-        <div class="tb-item"><div class="tb-dot"></div>100+ Hospitality Projects</div>
-        <div class="tb-item"><div class="tb-dot"></div>North India's Trusted Consultant</div>
-        <div class="tb-item"><div class="tb-dot"></div>Hotels · Restaurants · Cafes · QSRs</div>
-        <div class="tb-item"><div class="tb-dot"></div>Dhabas · Sweet Shops · Bakeries</div>
+<!-- 2. BRANDS TICKER — Worked With -->
+<div class="brand-ticker">
+  <div class="bt-inner">
+    <div class="bt-label">Brands Worked With</div>
+    <div class="bt-track-wrap">
+      <div class="bt-track">
+        <div class="bt-brand"><div class="bt-logo" style="background:#E65C00">SD</div><span class="bt-name">Sukhdev Dhaba, Murthal</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#1B7A2E">HV</div><span class="bt-name">Haveli, Karnal</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#B91C1C">AS</div><span class="bt-name">Ahuja Sweets, Panipat</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#1D4ED8">ASD</div><span class="bt-name">Amrik Sukhdev Dhaba</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#7C3AED">GD</div><span class="bt-name">Gulshan Dhaba</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#0F766E">KS</div><span class="bt-name">Kwality Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#92400E">PG</div><span class="bt-name">Punjab Grill</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#BE185D">NDH</div><span class="bt-name">Nand Di Hatti</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#0369A1">BKR</div><span class="bt-name">Bikaner Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#A16207">MS</div><span class="bt-name">Mathura Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#166534">PSH</div><span class="bt-name">Punjab Sweet House</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#7C2D12">WJW</div><span class="bt-name">Wah Ji Wah</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#1E3A5F">HHK</div><span class="bt-name">Hotel Haveli, Karnal</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#5B21B6">PB</div><span class="bt-name">Pind Balluchi</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#064E3B">DD</div><span class="bt-name">Delhi Darbar</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#831843">SRD</div><span class="bt-name">Sita Ram Diwan Chand</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#1C3A5E">JWM</div><span class="bt-name">Premium Hotels Group</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#78350F">BH</div><span class="bt-name">Bikaner House</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#14532D">MSD</div><span class="bt-name">Murthal Sweet Dhabas</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#4C1D95">HBC</div><span class="bt-name">Haryana Bakery Chain</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#0C4A6E">NCR</div><span class="bt-name">NCR Hospitality Group</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#7F1D1D">PRG</div><span class="bt-name">Panipat Restaurant Group</span></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="bt-brand"><div class="bt-logo" style="background:#E65C00">SD</div><span class="bt-name">Sukhdev Dhaba, Murthal</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#1B7A2E">HV</div><span class="bt-name">Haveli, Karnal</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#B91C1C">AS</div><span class="bt-name">Ahuja Sweets, Panipat</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#1D4ED8">ASD</div><span class="bt-name">Amrik Sukhdev Dhaba</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#7C3AED">GD</div><span class="bt-name">Gulshan Dhaba</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#0F766E">KS</div><span class="bt-name">Kwality Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#92400E">PG</div><span class="bt-name">Punjab Grill</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#BE185D">NDH</div><span class="bt-name">Nand Di Hatti</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#0369A1">BKR</div><span class="bt-name">Bikaner Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#A16207">MS</div><span class="bt-name">Mathura Sweets</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#166534">PSH</div><span class="bt-name">Punjab Sweet House</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#7C2D12">WJW</div><span class="bt-name">Wah Ji Wah</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#1E3A5F">HHK</div><span class="bt-name">Hotel Haveli, Karnal</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#5B21B6">PB</div><span class="bt-name">Pind Balluchi</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#064E3B">DD</div><span class="bt-name">Delhi Darbar</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#831843">SRD</div><span class="bt-name">Sita Ram Diwan Chand</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#1C3A5E">JWM</div><span class="bt-name">Premium Hotels Group</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#78350F">BH</div><span class="bt-name">Bikaner House</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#14532D">MSD</div><span class="bt-name">Murthal Sweet Dhabas</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#4C1D95">HBC</div><span class="bt-name">Haryana Bakery Chain</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#0C4A6E">NCR</div><span class="bt-name">NCR Hospitality Group</span></div>
+        <div class="bt-brand"><div class="bt-logo" style="background:#7F1D1D">PRG</div><span class="bt-name">Panipat Restaurant Group</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ABOUT -->
+<!-- 3. PEOPLE BEHIND ANANDAM — right after brands -->
+<section id="directors">
+  <div class="dir-intro r">
+    <p class="chip" style="justify-content:center">The People Behind It</p>
+    <h2 class="sh" style="text-align:center">Meet the founders who've<br><em>lived hospitality</em> for 35 years.</h2>
+    <p style="font-size:15px;color:var(--t2);margin-top:12px;line-height:1.75;">Two co-founders. Decades of real ground-level experience. Every piece of advice we give comes from having done it ourselves.</p>
+  </div>
+  <div class="dir-grid">
+    <div class="dir-card r" style="transition-delay:.05s">
+      <div class="dir-photo">
+        <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/Untitled%20design%20(16).png" alt="Yudhishter Anand" loading="lazy">
+      </div>
+      <div class="dir-body">
+        <div class="dir-name">Yudhishter Anand</div>
+        <div class="dir-role">Co-Founder & Director · 35+ Years</div>
+        <div class="dir-rule"></div>
+        <div class="dir-bio">With over <strong>35 years of hands-on experience</strong> in India's hospitality and food industry, Mr. Yudhishter Anand is one of North India's most respected hospitality professionals. He has worked with legendary names including <strong>Sukhdev Dhaba, Murthal</strong> and <strong>Haveli, Karnal</strong>. Currently serving as <strong>General Manager at Ahuja Sweets, Panipat</strong>, he manages end-to-end operations — from hiring to sales, marketing, new outlet launches, and business expansion. His expertise spans every aspect: opening new restaurants, turning around struggling ones, building high-performance teams, and scaling brands across multiple cities.</div>
+        <div class="dir-tags">
+          <span class="dir-tag">Sukhdev Dhaba, Murthal</span>
+          <span class="dir-tag">Haveli, Karnal</span>
+          <span class="dir-tag">Ahuja Sweets, Panipat</span>
+          <span class="dir-tag">35+ Years</span>
+        </div>
+      </div>
+    </div>
+    <div class="dir-card r" style="transition-delay:.15s">
+      <div class="dir-photo">
+        <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/Untitled%20design%20(15).png" alt="Mrs. Parveen Anand" loading="lazy">
+      </div>
+      <div class="dir-body">
+        <div class="dir-name">Mrs. Parveen Anand</div>
+        <div class="dir-role">Co-Founder & Director — People & Operations</div>
+        <div class="dir-rule"></div>
+        <div class="dir-bio">Mrs. Parveen Anand co-leads Anandam Ventures with a focus on people, culture, and internal operations. She oversees the human side of every engagement — ensuring that staff are treated with respect, clients feel genuinely heard, and every team Anandam builds is set up to thrive long after we leave. Her warmth and attention to relationships is what makes clients return and refer. She manages all internal activities, partner coordination, and ensures every promise Anandam makes to a client is kept — on time, in full, and with care.</div>
+        <div class="dir-tags">
+          <span class="dir-tag">People & HR</span>
+          <span class="dir-tag">Internal Operations</span>
+          <span class="dir-tag">Client Relations</span>
+          <span class="dir-tag">Partner Coordination</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 4. ABOUT — Our Story -->
 <section id="about">
   <div class="about-grid">
     <div class="about-img r">
       <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Premium restaurant interior" loading="lazy">
-      <div class="about-img-badge">
-        <div class="aib-n">35+</div>
-        <div class="aib-l">Years of Excellence</div>
-      </div>
+      <div class="about-img-badge"><div class="aib-n">35+</div><div class="aib-l">Years of Excellence</div></div>
     </div>
-    <div class="about-r r" style="transition-delay:.15s">
+    <div class="r" style="transition-delay:.15s">
       <p class="chip">Our Story</p>
       <h2 class="sh">Hospitality isn't a business.<br>It's our <em>life's work.</em></h2>
       <br>
-      <p>Anandam Ventures is built on <strong>35 years of real hospitality experience</strong> — not theory, not consulting room strategy, but hands-on, ground-level expertise across India's most demanding food and hospitality environments.</p>
-      <p>Founded by <strong>Mr. Yudhishter Anand</strong>, who has worked with iconic names like <strong>Sukhdev Dhaba (Murthal)</strong> and <strong>Haveli (Karnal)</strong> and currently serves as General Manager at <strong>Ahuja Sweets, Panipat</strong> — Anandam Ventures brings institutional knowledge that cannot be replicated.</p>
-      <p>We do everything: open new restaurants, turn around struggling ones, build teams, scale brands, and create systems that make businesses run without the owner being there every hour. <strong>Now, we're making that expertise available to you.</strong></p>
+      <p style="font-size:15px;line-height:1.85;color:var(--t2);margin-bottom:14px;">Anandam Ventures is built on <strong style="color:var(--navy)">35 years of real hospitality experience</strong> — not theory, not consulting room strategy, but hands-on, ground-level expertise across India's most demanding food and hospitality environments.</p>
+      <p style="font-size:15px;line-height:1.85;color:var(--t2);margin-bottom:14px;">We do everything: open new restaurants, turn around struggling ones, build teams, scale brands, and create systems that make businesses run without the owner being there every hour. <strong style="color:var(--navy)">Now, we're making that expertise available to you.</strong></p>
       <div class="about-pills">
         <span class="about-pill">Restaurant Turnarounds</span>
         <span class="about-pill">New Outlet Launches</span>
@@ -756,9 +698,7 @@ footer{background:var(--navy);}
         <span class="about-pill">Franchise Development</span>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <a href="#model" class="btn-blue">See Our 90-Day Model
-          <svg width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg>
-        </a>
+        <a href="#model" class="btn-blue">See Our 90-Day Model <svg width="13" height="7" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></a>
         <a href="#midform" class="btn-outline">Get Free Consultation</a>
       </div>
     </div>
@@ -767,283 +707,152 @@ footer{background:var(--navy);}
 
 <div class="divider"></div>
 
-<!-- SERVICES -->
+<!-- 5. SERVICES — What We Do -->
 <section id="services">
-  <div class="svc-head r">
-    <div>
-      <p class="chip">What We Do</p>
-      <h2 class="sh">End-to-end hospitality<br><em>consulting services</em></h2>
-    </div>
-    <p style="font-size:14px;color:var(--t2);max-width:340px;text-align:right;line-height:1.75;">From opening your first outlet to scaling your 50th — we've done it all and we'll do it with you.</p>
+  <div class="svc-intro r">
+    <p class="chip" style="justify-content:center">What We Do</p>
+    <h2 class="sh" style="text-align:center">End-to-end hospitality<br><em>consulting services</em></h2>
+    <p>From opening your first outlet to scaling your 50th — we've done it all and we'll do it with you.</p>
   </div>
   <div class="svc-grid r" style="transition-delay:.1s">
     <div class="svc-card">
-      <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3L3 8v10l10 5 10-5V8L13 3z" stroke="#1648B0" stroke-width="1.5" stroke-linejoin="round"/><path d="M3 8l10 5m0 0l10-5m-10 5v10" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="svc-n">01</div>
-      <div class="svc-name">Restaurant Launch & Setup</div>
+      <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><path d="M13 3L3 8v10l10 5 10-5V8L13 3z" stroke="#1648B0" stroke-width="1.5" stroke-linejoin="round"/><path d="M3 8l10 5m0 0l10-5m-10 5v10" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="svc-n">01</div><div class="svc-name">Restaurant Launch & Setup</div>
       <div class="svc-desc">From concept to first customer. We handle everything — kitchen design, menu engineering, staff hiring, SOPs, vendor sourcing, and grand opening.</div>
-      <ul class="svc-list">
-        <li>Concept development & positioning</li>
-        <li>Kitchen layout & equipment planning</li>
-        <li>Menu engineering & food costing</li>
-        <li>Vendor & supply chain setup</li>
-        <li>Staff recruitment & training</li>
-      </ul>
+      <ul class="svc-list"><li>Concept development & positioning</li><li>Kitchen layout & equipment planning</li><li>Menu engineering & food costing</li><li>Staff recruitment & training</li><li>Vendor & supply chain setup</li></ul>
     </div>
     <div class="svc-card">
-      <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3v20M3 13h20" stroke="#1648B0" stroke-width="2" stroke-linecap="round"/><circle cx="13" cy="13" r="10" stroke="#1648B0" stroke-width="1.5"/></svg></div>
-      <div class="svc-n">02</div>
-      <div class="svc-name">Revenue Growth & Turnaround</div>
+      <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><path d="M13 3v20M3 13h20" stroke="#1648B0" stroke-width="2" stroke-linecap="round"/><circle cx="13" cy="13" r="10" stroke="#1648B0" stroke-width="1.5"/></svg></div>
+      <div class="svc-n">02</div><div class="svc-name">Revenue Growth & Turnaround</div>
       <div class="svc-desc">Is your restaurant not performing? We diagnose the problem, fix the systems, and get you to profitability — typically within 90 days.</div>
-      <ul class="svc-list">
-        <li>Full operations & P&L audit</li>
-        <li>Menu revamp & pricing strategy</li>
-        <li>Food cost & wastage reduction</li>
-        <li>Footfall & average bill increase</li>
-        <li>Zomato / Swiggy optimisation</li>
-      </ul>
+      <ul class="svc-list"><li>Full operations & P&L audit</li><li>Menu revamp & pricing strategy</li><li>Food cost & wastage reduction</li><li>Footfall & average bill increase</li><li>Zomato / Swiggy optimisation</li></ul>
     </div>
     <div class="svc-card">
-      <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 20L13 6l8 14H5z" stroke="#1648B0" stroke-width="1.5" stroke-linejoin="round"/><path d="M13 14v3M13 11v1" stroke="#1648B0" stroke-width="2" stroke-linecap="round"/></svg></div>
-      <div class="svc-n">03</div>
-      <div class="svc-name">Staff Hiring & Training</div>
-      <div class="svc-desc">We recruit the right people and train them to deliver consistent quality. From chefs to captains to cashiers — end-to-end HR for hospitality.</div>
-      <ul class="svc-list">
-        <li>Bulk hiring for new outlets</li>
-        <li>Service & kitchen staff training</li>
-        <li>SOP documentation & implementation</li>
-        <li>Performance management systems</li>
-        <li>Retention strategies</li>
-      </ul>
+      <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><path d="M5 20L13 6l8 14H5z" stroke="#1648B0" stroke-width="1.5" stroke-linejoin="round"/><path d="M13 14v3M13 11v1" stroke="#1648B0" stroke-width="2" stroke-linecap="round"/></svg></div>
+      <div class="svc-n">03</div><div class="svc-name">Staff Hiring & Training</div>
+      <div class="svc-desc">We recruit the right people and train them to deliver consistent quality — from chefs to captains to cashiers.</div>
+      <ul class="svc-list"><li>Bulk hiring for new outlets</li><li>Service & kitchen staff training</li><li>SOP documentation & implementation</li><li>Performance management systems</li><li>Retention strategies</li></ul>
     </div>
     <div class="svc-card">
-      <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="20" height="20" rx="3" stroke="#1648B0" stroke-width="1.5"/><path d="M8 12h10M8 16h6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/><circle cx="13" cy="8" r="2" fill="#1648B0" opacity=".5"/></svg></div>
-      <div class="svc-n">04</div>
-      <div class="svc-name">Marketing & Digital Growth</div>
-      <div class="svc-desc">Social media, Google listing, food delivery platforms, influencer partnerships — we manage your entire digital presence to drive real footfall.</div>
-      <ul class="svc-list">
-        <li>Instagram & Facebook management</li>
-        <li>Google My Business optimisation</li>
-        <li>Zomato & Swiggy listing management</li>
-        <li>Festival & seasonal campaigns</li>
-        <li>Corporate & bulk order tie-ups</li>
-      </ul>
+      <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="20" height="20" rx="3" stroke="#1648B0" stroke-width="1.5"/><path d="M8 12h10M8 16h6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/><circle cx="13" cy="8" r="2" fill="#1648B0" opacity=".5"/></svg></div>
+      <div class="svc-n">04</div><div class="svc-name">Marketing & Digital Growth</div>
+      <div class="svc-desc">Social media, Google, Zomato, Swiggy, influencer partnerships — we manage your entire digital presence to drive real footfall.</div>
+      <ul class="svc-list"><li>Instagram & Facebook management</li><li>Google My Business optimisation</li><li>Zomato & Swiggy listing management</li><li>Festival & seasonal campaigns</li><li>Corporate & bulk order tie-ups</li></ul>
     </div>
     <div class="svc-card">
-      <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M3 23l5-8 5 5 5-9 5 4" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="svc-n">05</div>
-      <div class="svc-name">Expansion & Scaling</div>
+      <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><path d="M3 23l5-8 5 5 5-9 5 4" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="svc-n">05</div><div class="svc-name">Expansion & Scaling</div>
       <div class="svc-desc">Ready to open your second or fifth outlet? We build the systems, franchise model, and team structure that make expansion seamless.</div>
-      <ul class="svc-list">
-        <li>Franchise model development</li>
-        <li>SOP & training manual creation</li>
-        <li>New city market entry strategy</li>
-        <li>Central kitchen & supply chain</li>
-        <li>Brand consistency frameworks</li>
-      </ul>
+      <ul class="svc-list"><li>Franchise model development</li><li>SOP & training manual creation</li><li>New city market entry strategy</li><li>Central kitchen & supply chain</li><li>Brand consistency frameworks</li></ul>
     </div>
     <div class="svc-card">
-      <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#1648B0" stroke-width="1.5"/><path d="M13 8v5l3 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="svc-n">06</div>
-      <div class="svc-name">Website & Digital Presence</div>
-      <div class="svc-desc">A professional website built specifically for your restaurant or hospitality brand — fast, beautiful, and designed to convert visitors into customers.</div>
-      <ul class="svc-list">
-        <li>Custom restaurant website design</li>
-        <li>Online table booking integration</li>
-        <li>Menu display & ordering page</li>
-        <li>SEO & Google ranking optimisation</li>
-        <li>WhatsApp ordering setup</li>
-      </ul>
+      <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#1648B0" stroke-width="1.5"/><path d="M13 8v5l3 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="svc-n">06</div><div class="svc-name">Website & Digital Presence</div>
+      <div class="svc-desc">A professional website built specifically for your restaurant or hospitality brand — fast, beautiful, designed to convert.</div>
+      <ul class="svc-list"><li>Custom restaurant website design</li><li>Online table booking integration</li><li>Menu display & ordering page</li><li>SEO & Google ranking optimisation</li><li>WhatsApp ordering setup</li></ul>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- WHO WE SERVE -->
+<!-- 6. WHO WE SERVE -->
 <section id="serve">
-  <div class="r" style="text-align:center;max-width:600px;margin:0 auto;">
+  <div class="serve-intro r">
     <p class="chip" style="justify-content:center">Who We Serve</p>
     <h2 class="sh" style="text-align:center">Built for every format<br>of <em>food & hospitality</em></h2>
-    <p style="font-size:15px;color:var(--t2);margin-top:12px;">Whether you serve 30 covers or 300, we have the expertise and the model to help you grow.</p>
+    <p>Whether you serve 30 covers or 300, we have the expertise to help you grow.</p>
   </div>
   <div class="serve-grid r" style="transition-delay:.1s">
-    <div class="serve-card">
-      <div class="serve-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 28V10M6 10C6 6.686 8.686 4 12 4h8c3.314 0 6 2.686 6 6v18" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/><path d="M2 28h28M10 20h12M10 14h12" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="serve-name">Hotels</div>
-      <div class="serve-desc">F&B operations, room service, banquet management & revenue growth</div>
-    </div>
-    <div class="serve-card">
-      <div class="serve-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="22" r="6" stroke="#1648B0" stroke-width="1.5"/><path d="M4 22h6M22 22h6M16 16V8M12 8h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="serve-name">Restaurants</div>
-      <div class="serve-desc">Full-service restaurant turnaround, new launches & revenue scaling</div>
-    </div>
-    <div class="serve-card">
-      <div class="serve-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 20c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#1648B0" stroke-width="1.5"/><path d="M4 20h24M12 20v4M20 20v4M16 12V6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="serve-name">Cafes</div>
-      <div class="serve-desc">Cafe concept development, menu design, ambiance & brand building</div>
-    </div>
-    <div class="serve-card">
-      <div class="serve-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="10" width="20" height="14" rx="2" stroke="#1648B0" stroke-width="1.5"/><path d="M10 10V8a6 6 0 0112 0v2M16 16v4" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="serve-name">QSRs</div>
-      <div class="serve-desc">Quick service operations, speed, consistency & franchise systems</div>
-    </div>
-    <div class="serve-card">
-      <div class="serve-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4 24V14l12-8 12 8v10H4z" stroke="#1648B0" stroke-width="1.5" stroke-linejoin="round"/><rect x="12" y="18" width="8" height="6" rx="1" stroke="#1648B0" stroke-width="1.5"/></svg></div>
-      <div class="serve-name">Dhabas</div>
-      <div class="serve-desc">Scaling authentic dhaba concepts from roadside to brand</div>
-    </div>
-    <div class="serve-card">
-      <div class="serve-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12 12-5.373 12-12S22.627 4 16 4z" stroke="#1648B0" stroke-width="1.5"/><path d="M16 10v6l4 2" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="serve-name">Sweet Shops</div>
-      <div class="serve-desc">Sweet shop modernisation, packaging, retail expansion & gifting</div>
-    </div>
-    <div class="serve-card">
-      <div class="serve-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="14" width="24" height="14" rx="2" stroke="#1648B0" stroke-width="1.5"/><path d="M10 14V10a6 6 0 0112 0v4" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="20" r="2" fill="#1648B0" opacity=".5"/></svg></div>
-      <div class="serve-name">Bakeries</div>
-      <div class="serve-desc">Production systems, retail presence, delivery tie-ups & brand growth</div>
-    </div>
-    <div class="serve-card">
-      <div class="serve-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="20" rx="3" stroke="#1648B0" stroke-width="1.5"/><path d="M10 8V6a6 6 0 0112 0v2M8 16h16M8 22h10" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="serve-name">Cloud Kitchens</div>
-      <div class="serve-desc">Cloud kitchen setup, multi-brand strategy & delivery platform domination</div>
-    </div>
+    <div class="serve-card"><div class="serve-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M6 28V10M6 10C6 6.686 8.686 4 12 4h8c3.314 0 6 2.686 6 6v18" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/><path d="M2 28h28M10 20h12M10 14h12" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="serve-name">Hotels</div><div class="serve-desc">F&B operations, banquet & revenue growth</div></div>
+    <div class="serve-card"><div class="serve-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="22" r="6" stroke="#1648B0" stroke-width="1.5"/><path d="M4 22h6M22 22h6M16 16V8M12 8h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="serve-name">Restaurants</div><div class="serve-desc">Full-service turnaround & revenue scaling</div></div>
+    <div class="serve-card"><div class="serve-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M8 20c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#1648B0" stroke-width="1.5"/><path d="M4 20h24M12 20v4M20 20v4M16 12V6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="serve-name">Cafes</div><div class="serve-desc">Concept development, menu & brand</div></div>
+    <div class="serve-card"><div class="serve-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="6" y="10" width="20" height="14" rx="2" stroke="#1648B0" stroke-width="1.5"/><path d="M10 10V8a6 6 0 0112 0v2M16 16v4" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="serve-name">QSRs</div><div class="serve-desc">Speed, consistency & franchise systems</div></div>
+    <div class="serve-card"><div class="serve-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M4 24V14l12-8 12 8v10H4z" stroke="#1648B0" stroke-width="1.5" stroke-linejoin="round"/><rect x="12" y="18" width="8" height="6" rx="1" stroke="#1648B0" stroke-width="1.5"/></svg></div><div class="serve-name">Dhabas</div><div class="serve-desc">Scaling authentic dhaba concepts</div></div>
+    <div class="serve-card"><div class="serve-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12 12-5.373 12-12S22.627 4 16 4z" stroke="#1648B0" stroke-width="1.5"/><path d="M16 10v6l4 2" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="serve-name">Sweet Shops</div><div class="serve-desc">Modernisation, packaging & retail</div></div>
+    <div class="serve-card"><div class="serve-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="4" y="14" width="24" height="14" rx="2" stroke="#1648B0" stroke-width="1.5"/><path d="M10 14V10a6 6 0 0112 0v4" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="20" r="2" fill="#1648B0" opacity=".5"/></svg></div><div class="serve-name">Bakeries</div><div class="serve-desc">Production, retail & delivery tie-ups</div></div>
+    <div class="serve-card"><div class="serve-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="20" rx="3" stroke="#1648B0" stroke-width="1.5"/><path d="M10 8V6a6 6 0 0112 0v2M8 16h16M8 22h10" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="serve-name">Cloud Kitchens</div><div class="serve-desc">Setup, multi-brand & delivery domination</div></div>
   </div>
 </section>
 
-<!-- 90-DAY MODEL -->
+<!-- 7. 90-DAY MODEL — How We Do It -->
 <section id="model">
-  <div class="model-head r">
+  <div class="model-intro r">
     <p class="chip">Our Signature Framework</p>
     <h2 class="sh">The 90-Day <em>Transformation Model</em></h2>
-    <p>Our battle-tested, 3-phase programme that has helped restaurants, hotels, and food businesses across North India achieve measurable growth — guaranteed or your money back.</p>
+    <p>Our battle-tested, 3-phase programme. Measurable results in 90 days — or we work for free.</p>
   </div>
   <div class="model-phases">
     <div class="phase phase-1 r" style="transition-delay:.05s">
-      <div class="phase-badge pb-1">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Phase 1
-      </div>
+      <div class="phase-badge pb-1">Phase 1</div>
       <div class="phase-days">Days 1 — 30</div>
       <div class="phase-title">Diagnose &<br>Strategize</div>
       <ul class="phase-tasks">
-        <li><span class="pt-dot pd-1"></span>Complete operations & financial audit — kitchen, FOH, accounts</li>
-        <li><span class="pt-dot pd-1"></span>Menu engineering & food cost analysis (item-by-item)</li>
-        <li><span class="pt-dot pd-1"></span>Staff performance assessment & gap mapping</li>
+        <li><span class="pt-dot pd-1"></span>Complete operations & financial audit</li>
+        <li><span class="pt-dot pd-1"></span>Menu engineering & food cost analysis</li>
+        <li><span class="pt-dot pd-1"></span>Staff performance assessment</li>
         <li><span class="pt-dot pd-1"></span>Customer journey & experience audit</li>
-        <li><span class="pt-dot pd-1"></span>Competitive market analysis (3 km radius)</li>
-        <li><span class="pt-dot pd-1"></span>Digital presence audit — Google, Zomato, Swiggy</li>
-        <li><span class="pt-dot pd-1"></span>90-day strategy blueprint delivered to owner</li>
+        <li><span class="pt-dot pd-1"></span>Competitive market analysis</li>
+        <li><span class="pt-dot pd-1"></span>Digital presence audit</li>
+        <li><span class="pt-dot pd-1"></span>90-day strategy blueprint delivered</li>
       </ul>
-      <div class="phase-outcome">
-        <div class="po-label">Phase 1 Deliverable</div>
-        <div class="po-val">Complete business health report + 90-day execution roadmap</div>
-      </div>
+      <div class="phase-outcome"><div class="po-label">Deliverable</div><div class="po-val">Complete business health report + 90-day execution roadmap</div></div>
     </div>
     <div class="phase phase-2 r" style="transition-delay:.15s">
-      <div class="phase-badge pb-2">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6l4-4 4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Phase 2
-      </div>
+      <div class="phase-badge pb-2">Phase 2</div>
       <div class="phase-days">Days 31 — 60</div>
       <div class="phase-title">Implement &<br>Execute</div>
       <ul class="phase-tasks">
-        <li><span class="pt-dot pd-2"></span>SOP documentation & implementation (kitchen to billing)</li>
-        <li><span class="pt-dot pd-2"></span>Staff retraining & new hiring if required</li>
-        <li><span class="pt-dot pd-2"></span>Menu revamp — remove dead items, engineer high-margin dishes</li>
-        <li><span class="pt-dot pd-2"></span>Food cost reduction — vendor renegotiation & portion control</li>
-        <li><span class="pt-dot pd-2"></span>Digital presence overhaul — photos, listings, social media</li>
-        <li><span class="pt-dot pd-2"></span>Marketing campaign launch — social + offline</li>
-        <li><span class="pt-dot pd-2"></span>In-store experience improvements — signage, ambiance, service</li>
+        <li><span class="pt-dot pd-2"></span>SOP documentation & implementation</li>
+        <li><span class="pt-dot pd-2"></span>Staff retraining & new hiring</li>
+        <li><span class="pt-dot pd-2"></span>Menu revamp — remove dead items</li>
+        <li><span class="pt-dot pd-2"></span>Food cost reduction — vendor renegotiation</li>
+        <li><span class="pt-dot pd-2"></span>Digital presence overhaul</li>
+        <li><span class="pt-dot pd-2"></span>Marketing campaign launch</li>
+        <li><span class="pt-dot pd-2"></span>In-store experience improvements</li>
       </ul>
-      <div class="phase-outcome">
-        <div class="po-label">Phase 2 Deliverable</div>
-        <div class="po-val">Fully functional systems + first revenue lift in weeks 5–8</div>
-      </div>
+      <div class="phase-outcome"><div class="po-label">Deliverable</div><div class="po-val">Fully functional systems + first revenue lift in weeks 5–8</div></div>
     </div>
     <div class="phase phase-3 r" style="transition-delay:.25s">
-      <div class="phase-badge pb-3">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10l3-3 2 2 5-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Phase 3
-      </div>
+      <div class="phase-badge pb-3">Phase 3</div>
       <div class="phase-days">Days 61 — 90</div>
       <div class="phase-title">Scale &<br>Sustain</div>
       <ul class="phase-tasks">
-        <li><span class="pt-dot pd-3"></span>Performance review — what's working, what needs course correction</li>
-        <li><span class="pt-dot pd-3"></span>Corporate gifting & bulk order tie-ups (factories, offices)</li>
-        <li><span class="pt-dot pd-3"></span>Customer loyalty programme design & launch</li>
-        <li><span class="pt-dot pd-3"></span>Festival & seasonal campaign calendar (next 6 months)</li>
-        <li><span class="pt-dot pd-3"></span>Expansion readiness assessment — are you ready for outlet 2?</li>
-        <li><span class="pt-dot pd-3"></span>Team self-sufficiency — the business should run without you</li>
+        <li><span class="pt-dot pd-3"></span>Performance review & course correction</li>
+        <li><span class="pt-dot pd-3"></span>Corporate gifting & bulk order tie-ups</li>
+        <li><span class="pt-dot pd-3"></span>Customer loyalty programme launch</li>
+        <li><span class="pt-dot pd-3"></span>Festival campaign calendar (6 months)</li>
+        <li><span class="pt-dot pd-3"></span>Expansion readiness assessment</li>
+        <li><span class="pt-dot pd-3"></span>Team self-sufficiency training</li>
         <li><span class="pt-dot pd-3"></span>6-month growth roadmap handover</li>
       </ul>
-      <div class="phase-outcome">
-        <div class="po-label">Phase 3 Deliverable</div>
-        <div class="po-val">Sustainable growth engine + 6-month forward roadmap</div>
-      </div>
+      <div class="phase-outcome"><div class="po-label">Deliverable</div><div class="po-val">Sustainable growth engine + 6-month forward roadmap</div></div>
     </div>
   </div>
   <div class="model-results r" style="transition-delay:.1s">
-    <div class="mr-item">
-      <div class="mr-n">25<span>–40%</span></div>
-      <div class="mr-l">Revenue Increase</div>
-      <div class="mr-d">Average monthly revenue growth within 90 days</div>
-    </div>
-    <div class="mr-item">
-      <div class="mr-n">15<span>–20%</span></div>
-      <div class="mr-l">Food Cost Reduction</div>
-      <div class="mr-d">Through menu engineering & vendor optimisation</div>
-    </div>
-    <div class="mr-item">
-      <div class="mr-n">3<span>x</span></div>
-      <div class="mr-l">Online Visibility</div>
-      <div class="mr-d">Google, Zomato & Swiggy ranking improvement</div>
-    </div>
-    <div class="mr-item">
-      <div class="mr-n">90<span>days</span></div>
-      <div class="mr-l">To Transformation</div>
-      <div class="mr-d">Measurable results in 90 days, or we work for free</div>
-    </div>
+    <div class="mr-item"><div class="mr-n">25<span>–40%</span></div><div class="mr-l">Revenue Increase</div><div class="mr-d">Avg monthly growth within 90 days</div></div>
+    <div class="mr-item"><div class="mr-n">15<span>–20%</span></div><div class="mr-l">Food Cost Reduction</div><div class="mr-d">Through menu engineering & vendors</div></div>
+    <div class="mr-item"><div class="mr-n">3<span>x</span></div><div class="mr-l">Online Visibility</div><div class="mr-d">Google, Zomato & Swiggy ranking</div></div>
+    <div class="mr-item"><div class="mr-n">90<span> days</span></div><div class="mr-l">To Transformation</div><div class="mr-d">Results guaranteed or we work free</div></div>
   </div>
-  <div class="model-cta r">
-    <a href="#midform" class="btn-gold">
-      Start Your 90-Day Transformation
-      <svg width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M0 4.5H14M14 4.5L10 1M14 4.5L10 8" stroke="currentColor" stroke-width="1.8"/></svg>
-    </a>
-    <p style="color:rgba(255,255,255,.3);font-size:13px;margin-top:14px;">Free initial consultation · No commitment required</p>
-  </div>
+  <div class="model-cta r"><a href="#midform" class="btn-gold">Start Your 90-Day Transformation <svg width="15" height="8" viewBox="0 0 16 9" fill="none"><path d="M0 4.5H14M14 4.5L10 1M14 4.5L10 8" stroke="currentColor" stroke-width="1.8"/></svg></a><p style="color:rgba(255,255,255,.28);font-size:12px;margin-top:12px;">Free initial consultation · No commitment required</p></div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- 8. HOW IT WORKS — Simple Process -->
 <section id="howitworks">
   <div class="hiw-grid">
     <div class="hiw-img r">
       <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Restaurant team working" loading="lazy">
     </div>
     <div class="r" style="transition-delay:.15s">
-      <p class="chip">How It Works</p>
-      <h2 class="sh" style="margin-bottom:36px;">Simple process.<br><em>Serious results.</em></h2>
+      <p class="chip">Simple Process</p>
+      <h2 class="sh" style="margin-bottom:32px;">Five steps to a<br><em>transformed business.</em></h2>
       <div class="hiw-steps">
-        <div class="hiw-step">
-          <div class="hs-n">01</div>
-          <div class="hs-b"><div class="hs-title">Free Consultation Call</div><div class="hs-desc">Fill in the form or call us directly. We'll schedule a 30-minute call to understand your business, your challenges, and your goals — at no cost.</div></div>
-        </div>
-        <div class="hiw-step">
-          <div class="hs-n">02</div>
-          <div class="hs-b"><div class="hs-title">On-Site Audit & Assessment</div><div class="hs-desc">Our team visits your outlet. We spend 2–3 days doing a deep audit of every aspect — operations, kitchen, team, financials, and digital presence.</div></div>
-        </div>
-        <div class="hiw-step">
-          <div class="hs-n">03</div>
-          <div class="hs-b"><div class="hs-title">Customised Strategy Blueprint</div><div class="hs-desc">We deliver a detailed, customised 90-day action plan specific to your business — not a generic template. You see exactly what we'll do and when.</div></div>
-        </div>
-        <div class="hiw-step">
-          <div class="hs-n">04</div>
-          <div class="hs-b"><div class="hs-title">90-Day Transformation Begins</div><div class="hs-desc">We work alongside your team — implementing, training, and managing — for 90 days. Weekly progress reports, full transparency, measurable results.</div></div>
-        </div>
-        <div class="hiw-step">
-          <div class="hs-n">05</div>
-          <div class="hs-b"><div class="hs-title">Handover & Growth Roadmap</div><div class="hs-desc">At Day 90, we hand over a fully functional, self-sustaining operation with a 6-month growth roadmap and ongoing support available on demand.</div></div>
-        </div>
+        <div class="hiw-step"><div class="hs-n">01</div><div class="hs-b"><div class="hs-title">Free Consultation Call</div><div class="hs-desc">30 minutes to understand your business, challenges, and goals. Always free, zero commitment.</div></div></div>
+        <div class="hiw-step"><div class="hs-n">02</div><div class="hs-b"><div class="hs-title">On-Site Audit</div><div class="hs-desc">2–3 days on-site doing a deep audit of operations, kitchen, team, financials, and digital presence.</div></div></div>
+        <div class="hiw-step"><div class="hs-n">03</div><div class="hs-b"><div class="hs-title">Customised Strategy Blueprint</div><div class="hs-desc">A detailed, specific 90-day action plan — not a template. You see exactly what we'll do and when.</div></div></div>
+        <div class="hiw-step"><div class="hs-n">04</div><div class="hs-b"><div class="hs-title">90-Day Transformation</div><div class="hs-desc">We work alongside your team — implementing, training, managing. Weekly progress reports throughout.</div></div></div>
+        <div class="hiw-step"><div class="hs-n">05</div><div class="hs-b"><div class="hs-title">Handover & Growth Roadmap</div><div class="hs-desc">Day 90: fully functional operation + 6-month roadmap. Ongoing support available on demand.</div></div></div>
       </div>
     </div>
   </div>
@@ -1051,7 +860,7 @@ footer{background:var(--navy);}
 
 <div class="divider"></div>
 
-<!-- LAHORI ADDA -->
+<!-- 9. LAHORI ADDA — Our Venture -->
 <section id="lahori" style="padding:0;">
   <div class="la-wrap">
     <div class="la-img">
@@ -1069,24 +878,21 @@ footer{background:var(--navy);}
       <h2 class="sh">Authentic Lahori<br><em>Chole Bhature</em> Franchise</h2>
       <br>
       <p>Alongside our consulting work, Anandam Ventures is building its own food brand. Lahori Adda is an authentic chole bhature franchise rooted in a recipe that crossed the border in 1947 and never lost its soul.</p>
-      <p>We are rolling out 25 franchise outlets across the NH-44 corridor in Haryana — Panipat, Karnal, Sonipat, Kurukshetra, and Ambala — in Phase 1.</p>
+      <p>Rolling out 25 franchise outlets across the NH-44 corridor in Haryana — Panipat, Karnal, Sonipat, Kurukshetra, and Ambala — in Phase 1.</p>
       <div class="la-points">
         <div class="la-pt"><div class="la-pt-dot"></div>Central masala kitchen — consistent taste, every outlet, every day</div>
         <div class="la-pt"><div class="la-pt-dot"></div>Complete brand, recipe & supply chain support for franchisees</div>
-        <div class="la-pt"><div class="la-pt-dot"></div>₹10–20 Lakhs all-inclusive investment · 18–30 month payback</div>
+        <div class="la-pt"><div class="la-pt-dot"></div>₹10–20 Lakhs all-inclusive · 18–30 month payback</div>
         <div class="la-pt"><div class="la-pt-dot"></div>90-day onboarding programme for every new franchisee</div>
-        <div class="la-pt"><div class="la-pt-dot"></div>Phase 1 territory: Panipat · Karnal · Sonipat · Kurukshetra · Ambala</div>
+        <div class="la-pt"><div class="la-pt-dot"></div>Phase 1: Panipat · Karnal · Sonipat · Kurukshetra · Ambala</div>
       </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <a href="#midform" class="btn-blue">Franchise Enquiry</a>
-        <a href="#contact" class="btn-outline">Learn More</a>
-      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;"><a href="#midform" class="btn-blue">Franchise Enquiry</a><a href="#contact" class="btn-outline">Learn More</a></div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
-<section id="stats" style="padding:72px 56px;">
+<!-- 10. STATS -->
+<section id="stats" style="padding:64px 60px;">
   <div class="stats-grid r">
     <div class="stat"><div class="stat-n">35<sub>+</sub></div><div class="stat-l">Years Experience</div><div class="stat-d">Hospitality & food industry</div></div>
     <div class="stat"><div class="stat-n">100<sub>+</sub></div><div class="stat-l">Projects Delivered</div><div class="stat-d">Restaurants, hotels, dhabas</div></div>
@@ -1098,171 +904,97 @@ footer{background:var(--navy);}
 
 <div class="divider"></div>
 
-<!-- DIRECTORS -->
-<section id="directors">
-  <div class="dir-head r">
-    <div>
-      <p class="chip">Leadership</p>
-      <h2 class="sh">The people behind<br><em>Anandam Ventures</em></h2>
-    </div>
-    <p>Founded by two people who have lived hospitality — not studied it. Every recommendation we make comes from decades of real experience across India's most competitive food markets.</p>
+<!-- 11. TESTIMONIALS -->
+<section id="testimonials">
+  <div class="test-intro r">
+    <p class="chip" style="justify-content:center">Client Results</p>
+    <h2 class="sh" style="text-align:center">What our clients <em>say</em></h2>
+    <p>Real businesses. Real results. Real stories from the hospitality owners we've worked with.</p>
   </div>
-  <div class="dir-grid">
-    <div class="dir-card r" style="transition-delay:.05s">
-      <div class="dir-photo">
-        <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/Untitled%20design%20(16).png">
-        <div class="dir-mono-ring" style="position:absolute;z-index:2;">
-        </div>
-      </div>
-      <div class="dir-body">
-        <div class="dir-name">Yudhishter Anand</div>
-        <div class="dir-role">Co-Founder & Director · 35+ Years</div>
-        <div class="dir-rule"></div>
-        <div class="dir-bio">With over <strong>35 years of hands-on experience</strong> in India's hospitality and food industry, Mr. Yudhishter Anand is one of North India's most respected hospitality professionals. He has worked with legendary names including <strong>Sukhdev Dhaba, Murthal</strong> — one of India's most iconic highway dhabas — and <strong>Haveli, Karnal</strong>, building deep expertise in large-scale food operations. Currently serving as <strong>General Manager at Ahuja Sweets, Panipat</strong>, he manages end-to-end operations as a consultant — from hiring to sales, marketing, new outlet launches, and business expansion. His expertise spans every aspect of the hospitality business: opening new restaurants, turning around struggling ones, building high-performance teams, and scaling brands across multiple cities.</div>
-        <div class="dir-tags">
-          <span class="dir-tag">Sukhdev Dhaba, Murthal</span>
-          <span class="dir-tag">Haveli, Karnal</span>
-          <span class="dir-tag">Ahuja Sweets, Panipat</span>
-          <span class="dir-tag">35+ Years</span>
-        </div>
-      </div>
+  <div class="test-grid r" style="transition-delay:.1s">
+    <div class="test-card">
+      <div class="test-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg></div>
+      <div class="test-text">"Yudhishter ji turned our restaurant around in 60 days. Revenue went up 32% and our food cost came down significantly. The team training alone was worth every rupee."</div>
+      <div class="test-result">↑ 32% Revenue Growth</div>
+      <div class="test-author" style="margin-top:12px;"><div class="test-avatar">RK</div><div><div class="test-name">Rajesh Kumar</div><div class="test-biz">Family Restaurant · Panipat</div></div></div>
     </div>
-    <div class="dir-card r" style="transition-delay:.15s">
-      <div class="dir-photo">
-        <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/Untitled%20design%20(15).png">
-        <div class="dir-mono-ring" style="position:absolute;z-index:2;">
-        </div>
-      </div>
-      <div class="dir-body">
-        <div class="dir-name">Mrs. Parveen Anand</div>
-        <div class="dir-role">Co-Founder & Director — People & Operations</div>
-        <div class="dir-rule"></div>
-        <div class="dir-bio">Mrs. Parveen Anand co-leads Anandam Ventures with a focus on people, culture, and internal operations. She oversees the human side of every engagement — ensuring that staff are treated with respect, clients feel genuinely heard, and every team Anandam builds is set up to thrive long after we leave. Her warmth and attention to relationships is what makes clients return. She manages all internal activities, partner coordination, and ensures that every promise Anandam makes to a client is kept — on time, in full, and with care.</div>
-        <div class="dir-tags">
-          <span class="dir-tag">People & HR</span>
-          <span class="dir-tag">Internal Operations</span>
-          <span class="dir-tag">Client Relations</span>
-          <span class="dir-tag">Partner Coordination</span>
-        </div>
-      </div>
+    <div class="test-card">
+      <div class="test-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg></div>
+      <div class="test-text">"We were struggling with high food costs and low footfall. The 90-day plan gave us clarity, the team training gave us consistency. Best investment we've ever made."</div>
+      <div class="test-result">↑ 28% Revenue · ↓ 18% Food Cost</div>
+      <div class="test-author" style="margin-top:12px;"><div class="test-avatar" style="background:#F59E0B;">SM</div><div><div class="test-name">Sunita Mehta</div><div class="test-biz">Cafe Owner · Karnal</div></div></div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg></div>
+      <div class="test-text">"Opened our second sweet shop outlet with Anandam's help. They handled everything — setup, hiring, training. We were live in 45 days with zero issues."</div>
+      <div class="test-result">2nd Outlet Launched in 45 Days</div>
+      <div class="test-author" style="margin-top:12px;"><div class="test-avatar" style="background:#10B981;">AS</div><div><div class="test-name">Amit Sharma</div><div class="test-biz">Sweet Shop Chain · Sonipat</div></div></div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg></div>
+      <div class="test-text">"Our hotel F&B was losing money every month. Anandam's audit found 5 major cost leaks we weren't even aware of. Within 3 months we were breaking even and growing."</div>
+      <div class="test-result">F&B Turned Profitable in 90 Days</div>
+      <div class="test-author" style="margin-top:12px;"><div class="test-avatar" style="background:#7C3AED;">VP</div><div><div class="test-name">Vikram Puri</div><div class="test-biz">Hotel Owner · Ambala</div></div></div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg></div>
+      <div class="test-text">"We came to Anandam because our QSR was making sales but no profit. They revamped our entire menu, cut food waste by 22%, and trained our team properly. Game changer."</div>
+      <div class="test-result">↓ 22% Wastage · First Profitable Month</div>
+      <div class="test-author" style="margin-top:12px;"><div class="test-avatar" style="background:#0369A1;">NK</div><div><div class="test-name">Nitin Kalra</div><div class="test-biz">QSR Owner · Kurukshetra</div></div></div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg></div>
+      <div class="test-text">"I had a dhaba running for 12 years with no growth. Anandam came in, restructured everything, got us on Zomato properly, and we grew 40% in under 90 days. Unbelievable."</div>
+      <div class="test-result">↑ 40% Revenue in 90 Days</div>
+      <div class="test-author" style="margin-top:12px;"><div class="test-avatar" style="background:#E65C00;">PS</div><div><div class="test-name">Paramjeet Singh</div><div class="test-biz">Dhaba Owner · Panipat</div></div></div>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="r" style="text-align:center;max-width:600px;margin:0 auto;">
-    <p class="chip" style="justify-content:center">Results Speak</p>
-    <h2 class="sh" style="text-align:center">What our clients <em>say</em></h2>
+<!-- 12. FAQS -->
+<section id="faqs">
+  <div class="faqs-intro r">
+    <p class="chip" style="justify-content:center">FAQs</p>
+    <h2 class="sh" style="text-align:center">Frequently Asked <em>Questions</em></h2>
+    <p>Everything you need to know before working with us.</p>
   </div>
-  <div class="test-grid r" style="transition-delay:.1s">
-    <div class="test-card">
-      <div class="test-stars">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-      </div>
-      <div class="test-text">"Yudhishter ji turned our restaurant around in 60 days. Revenue went up 32% and our food cost came down significantly. The team training alone was worth every rupee."</div>
-      <div class="test-author">
-        <div class="test-avatar">RK</div>
-        <div><div class="test-name">Rajesh Kumar</div><div class="test-biz">Owner, Family Restaurant · Panipat</div></div>
-      </div>
-    </div>
-    <div class="test-card">
-      <div class="test-stars">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-      </div>
-      <div class="test-text">"We were struggling with high food costs and low footfall. The 90-day plan gave us clarity, the team training gave us consistency. Best investment we made."</div>
-      <div class="test-author">
-        <div class="test-avatar" style="background:#F59E0B;">SM</div>
-        <div><div class="test-name">Sunita Mehta</div><div class="test-biz">Owner, Cafe · Karnal</div></div>
-      </div>
-    </div>
-    <div class="test-card">
-      <div class="test-stars">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-      </div>
-      <div class="test-text">"Opened our second outlet with Anandam's help. They handled everything — location, setup, hiring, training. We were live in 45 days with zero hiccups."</div>
-      <div class="test-author">
-        <div class="test-avatar" style="background:#10B981;">AS</div>
-        <div><div class="test-name">Amit Sharma</div><div class="test-biz">Owner, Sweet Shop Chain · Sonipat</div></div>
-      </div>
-    </div>
+  <div class="faqs-grid r" style="transition-delay:.1s">
+    <div class="faq-item"><div class="faq-q">What does the 90-day model cover?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">A complete transformation — operations audit, menu engineering, food cost optimisation, staff training, digital marketing, revenue systems, and handover with a 6-month roadmap. We work on-site, not just advise remotely.</div></div>
+    <div class="faq-item"><div class="faq-q">How much does the programme cost?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Pricing depends on the size and type of your business. The initial consultation is always free. After understanding your needs, we give a transparent customised quote. Our fee is always less than the revenue increase you'll see.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you work outside Haryana?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes. Our primary focus is North India — Haryana, Punjab, Delhi NCR, and UP — but we work with clients across India. Some services like digital strategy can be done remotely for clients in other cities.</div></div>
+    <div class="faq-item"><div class="faq-q">What is the Lahori Adda franchise investment?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Starting at ₹10 Lakhs all-inclusive — franchise fee, setup, initial stock, and working capital. Projected payback is 18–30 months depending on location and footfall.</div></div>
+    <div class="faq-item"><div class="faq-q">Can you help if our restaurant is struggling?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Absolutely. Turnarounds are one of our specialties. We've taken restaurants from near-closure to profitability. The 90-day model was specifically designed for struggling businesses — and the results speak for themselves.</div></div>
+    <div class="faq-item"><div class="faq-q">How soon will we see results?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Most clients see measurable improvement in weeks 5–8. Full transformation is visible by Day 60–90. We commit to a minimum 25% revenue improvement by end of the programme.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you help with staff hiring?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes — this is a core service. We recruit hospitality staff (chefs, managers, service staff, cashiers) and train them to your brand standards. We also document SOPs so your team performs consistently after we leave.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you build websites for restaurants?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes. We design and build custom websites for restaurants, hotels, cafes, and hospitality businesses — optimised for Google search, online bookings, and conversions. Competitive pricing, handed over fully to you.</div></div>
   </div>
 </section>
 
-<!-- MIDDLE LEAD FORM -->
+<!-- 13. LEAD FORM -->
 <section id="midform">
   <div class="mf-inner">
     <div class="mf-l r">
       <p class="chip">Free Consultation</p>
       <h2 class="sh">Ready to grow your<br><em>hospitality business?</em></h2>
       <br>
-      <p>Whether you want to launch a new restaurant, fix a struggling one, scale your sweet shop, or explore a Lahori Adda franchise — we'd love to talk. First consultation is always free.</p>
+      <p>Whether you want to launch, fix, or scale your restaurant, hotel, cafe, dhaba or sweet shop — or explore a Lahori Adda franchise — let's talk. First consultation is always free.</p>
       <div class="mf-points">
-        <div class="mf-point">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.3)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Free 30-minute strategy call
-        </div>
-        <div class="mf-point">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.3)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          No commitment, no pressure
-        </div>
-        <div class="mf-point">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.3)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          We call back within 24 hours
-        </div>
-        <div class="mf-point">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.3)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Customised advice for your specific business
-        </div>
+        <div class="mf-point"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Free 30-minute strategy call</div>
+        <div class="mf-point"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>No commitment, no pressure</div>
+        <div class="mf-point"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>We call back within 24 hours</div>
+        <div class="mf-point"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Customised advice for your business</div>
       </div>
     </div>
     <div class="mf-form r" style="transition-delay:.15s">
       <h3>Tell Us About Your Business</h3>
       <div class="sub">We'll get back to you within 24 hours.</div>
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="form-row-2">
-          <div class="f-row"><label>Full Name *</label><input type="text" name="name" placeholder="Your name" required></div>
-          <div class="f-row"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required></div>
-        </div>
-        <div class="form-row-2">
-          <div class="f-row"><label>Business Type *</label>
-            <select name="type" required>
-              <option value="">Select type</option>
-              <option>Restaurant</option><option>Hotel</option><option>Cafe</option>
-              <option>QSR</option><option>Dhaba</option><option>Sweet Shop</option>
-              <option>Bakery</option><option>Cloud Kitchen</option><option>Other</option>
-            </select>
-          </div>
-          <div class="f-row"><label>City *</label><input type="text" name="city" placeholder="Your city" required></div>
-        </div>
-        <div class="f-row"><label>What's your biggest challenge right now?</label>
-          <select name="challenge">
-            <option value="">Select challenge</option>
-            <option>Low footfall / customers</option>
-            <option>High food costs</option>
-            <option>Staff issues</option>
-            <option>Not making profit</option>
-            <option>Want to expand / open new outlet</option>
-            <option>Lahori Adda franchise inquiry</option>
-            <option>Need a website</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="f-row"><label>Additional details</label><textarea name="details" placeholder="Tell us more about your business and goals..."></textarea></div>
+        <div class="form-row-2"><div class="f-row"><label>Full Name *</label><input type="text" name="name" placeholder="Your name" required></div><div class="f-row"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required></div></div>
+        <div class="form-row-2"><div class="f-row"><label>Business Type *</label><select name="type" required><option value="">Select type</option><option>Restaurant</option><option>Hotel</option><option>Cafe</option><option>QSR</option><option>Dhaba</option><option>Sweet Shop</option><option>Bakery</option><option>Cloud Kitchen</option><option>Lahori Adda Franchise</option><option>Other</option></select></div><div class="f-row"><label>City *</label><input type="text" name="city" placeholder="Your city" required></div></div>
+        <div class="f-row"><label>Biggest Challenge</label><select name="challenge"><option value="">Select challenge</option><option>Low footfall</option><option>High food costs</option><option>Staff issues</option><option>Not making profit</option><option>Want to expand</option><option>Lahori Adda franchise</option><option>Need a website</option><option>Other</option></select></div>
+        <div class="f-row"><label>Details</label><textarea name="details" placeholder="Tell us more about your business and goals..."></textarea></div>
         <button type="submit" class="f-btn">Book My Free Consultation →</button>
         <div class="f-note">🔒 100% confidential · No spam · Free advice, always.</div>
       </form>
@@ -1272,113 +1004,33 @@ footer{background:var(--navy);}
 
 <div class="divider"></div>
 
-<!-- FAQS -->
-<section id="faqs">
-  <div class="r" style="text-align:center;max-width:600px;margin:0 auto;">
-    <p class="chip" style="justify-content:center">FAQs</p>
-    <h2 class="sh" style="text-align:center">Frequently Asked <em>Questions</em></h2>
-    <p style="font-size:15px;color:var(--t2);margin-top:12px;">Everything you need to know before working with us.</p>
-  </div>
-  <div class="faqs-grid r" style="transition-delay:.1s">
-    <div class="faq-item">
-      <div class="faq-q">What exactly does the 90-day model cover?
-        <svg class="faq-q-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg>
-      </div>
-      <div class="faq-a">The 90-day model is a complete business transformation programme. It covers operations audit, menu engineering, food cost optimisation, staff training, digital marketing, revenue systems, and handover. We work on-site with your team — not just advise from a distance.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How much does the 90-day programme cost?
-        <svg class="faq-q-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg>
-      </div>
-      <div class="faq-a">Pricing depends on the size and type of your business. The initial consultation is always free. After we understand your needs, we'll give you a transparent, customised quote. The investment is always significantly less than the revenue increase you'll see.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Do you work outside of Haryana?
-        <svg class="faq-q-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg>
-      </div>
-      <div class="faq-a">Yes. While our primary focus is North India — Haryana, Punjab, Delhi NCR, and UP — we work with clients across India. Some services like digital strategy and consulting calls can be done remotely for clients in other cities.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is the Lahori Adda franchise investment?
-        <svg class="faq-q-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg>
-      </div>
-      <div class="faq-a">The Lahori Adda franchise investment starts at ₹10 Lakhs, all-inclusive. This covers the franchise fee, setup, initial stock, and working capital buffer. The projected payback period is 18–30 months depending on location and footfall.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Can you help us if our restaurant is already struggling?
-        <svg class="faq-q-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg>
-      </div>
-      <div class="faq-a">Absolutely. Turnarounds are one of our specialties. We've taken restaurants from near-closure to profitability. The 90-day model was specifically designed for struggling businesses — and the results speak for themselves.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Do you help with staff hiring and training?
-        <svg class="faq-q-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg>
-      </div>
-      <div class="faq-a">Yes — this is a core service. We recruit hospitality staff (chefs, managers, service staff, cashiers) and train them according to your brand standards. We also document SOPs so your team performs consistently even after we leave.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How long before we see results?
-        <svg class="faq-q-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg>
-      </div>
-      <div class="faq-a">Most clients see measurable improvement in revenue and operations within the first 30–45 days. The full transformation is visible by Day 60–90. We commit to a minimum 25% revenue improvement by the end of the programme.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Do you also build websites for restaurants?
-        <svg class="faq-q-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg>
-      </div>
-      <div class="faq-a">Yes. We design and build custom websites for restaurants, hotels, cafes, and hospitality businesses — optimised for Google search, online bookings, and conversions. Pricing starts at competitive rates and the website is handed over to you fully.</div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- CONTACT -->
+<!-- 14. CONTACT -->
 <section id="contact">
   <div class="con-inner">
-    <div class="con-l r">
-      <p class="chip">Get In Touch</p>
-      <h2 class="sh" style="margin-bottom:16px;">Let's talk about<br>your <em>business.</em></h2>
-      <p>Whether you're ready to start or just exploring your options — we're happy to have a conversation. No commitment, no pressure. Just honest advice from 35 years of experience.</p>
+    <div class="r">
+      <p class="chip">Contact Us</p>
+      <h2 class="sh" style="margin-bottom:14px;">Let's talk about<br>your <em>business.</em></h2>
+      <p style="font-size:14px;color:var(--t2);line-height:1.8;margin-bottom:26px;">No commitment, no pressure. Just honest advice from 35 years of experience.</p>
       <div class="con-items">
-        <div class="con-item">
-          <div class="con-item-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.5 12.5l-2.5-2.5a1 1 0 00-1.4 0l-1 1a7 7 0 01-3.6-3.6l1-1a1 1 0 000-1.4L6.5 2.5A1 1 0 005 2.5l-1.5 1.5C2.5 5 2 6.5 2.5 8A14 14 0 0012 17.5c1.5.5 3 0 4-1l1.5-1.5a1 1 0 000-1.5z" stroke="#1648B0" stroke-width="1.3" stroke-linecap="round"/></svg></div>
-          <div><div class="con-item-l">Phone / WhatsApp</div><div class="con-item-v">+91 98965 44879</div></div>
-        </div>
-        <div class="con-item">
-          <div class="con-item-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="#1648B0" stroke-width="1.3"/><path d="M2 5l8 6 8-6" stroke="#1648B0" stroke-width="1.3" stroke-linecap="round"/></svg></div>
-          <div><div class="con-item-l">Email</div><div class="con-item-v">hello@anandamventures.com</div></div>
-        </div>
-        <div class="con-item">
-          <div class="con-item-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 11a2 2 0 100-4 2 2 0 000 4z" stroke="#1648B0" stroke-width="1.3"/><path d="M10 2a7 7 0 017 7c0 5-7 11-7 11S3 14 3 9a7 7 0 017-7z" stroke="#1648B0" stroke-width="1.3"/></svg></div>
-          <div><div class="con-item-l">Office Address</div><div class="con-item-v">Building No. 79, Sector 13–17<br>HUDA, Panipat, Haryana 132103</div></div>
-        </div>
-        <div class="con-item">
-          <div class="con-item-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#1648B0" stroke-width="1.3"/><path d="M10 6v4l3 2" stroke="#1648B0" stroke-width="1.3" stroke-linecap="round"/></svg></div>
-          <div><div class="con-item-l">Response Time</div><div class="con-item-v">Within 24 hours, guaranteed</div></div>
-        </div>
+        <div class="con-item"><div class="con-item-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M16.5 12.5l-2.5-2.5a1 1 0 00-1.4 0l-1 1a7 7 0 01-3.6-3.6l1-1a1 1 0 000-1.4L6.5 2.5A1 1 0 005 2.5l-1.5 1.5C2.5 5 2 6.5 2.5 8A14 14 0 0012 17.5c1.5.5 3 0 4-1l1.5-1.5a1 1 0 000-1.5z" stroke="#1648B0" stroke-width="1.3" stroke-linecap="round"/></svg></div><div><div class="con-item-l">Phone / WhatsApp</div><div class="con-item-v">+91 98965 44879</div></div></div>
+        <div class="con-item"><div class="con-item-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="#1648B0" stroke-width="1.3"/><path d="M2 5l8 6 8-6" stroke="#1648B0" stroke-width="1.3" stroke-linecap="round"/></svg></div><div><div class="con-item-l">Email</div><div class="con-item-v">hello@anandamventures.com</div></div></div>
+        <div class="con-item"><div class="con-item-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 11a2 2 0 100-4 2 2 0 000 4z" stroke="#1648B0" stroke-width="1.3"/><path d="M10 2a7 7 0 017 7c0 5-7 11-7 11S3 14 3 9a7 7 0 017-7z" stroke="#1648B0" stroke-width="1.3"/></svg></div><div><div class="con-item-l">Office Address</div><div class="con-item-v">Building No. 79, Sector 13–17<br>HUDA, Panipat, Haryana 132103</div></div></div>
+        <div class="con-item"><div class="con-item-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#1648B0" stroke-width="1.3"/><path d="M10 6v4l3 2" stroke="#1648B0" stroke-width="1.3" stroke-linecap="round"/></svg></div><div><div class="con-item-l">Response Time</div><div class="con-item-v">Within 24 hours, guaranteed</div></div></div>
       </div>
       <div class="con-socials">
-        <a href="#" class="con-soc" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-        <a href="#" class="con-soc" title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="#" class="con-soc" title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
-        <a href="https://wa.me/919896544879" class="con-soc" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="con-soc" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" class="con-soc" title="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="con-soc" title="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+        <a href="https://wa.me/919896544879" class="con-soc" title="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
     <div class="con-r r" style="transition-delay:.15s">
-      <h3>Quick Enquiry Form</h3>
+      <h3>Quick Enquiry</h3>
       <div class="sub">We'll get back within 24 hours.</div>
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <div class="f-row"><label>Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
         <div class="f-row"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required></div>
-        <div class="f-row"><label>Business Type</label>
-          <select name="type">
-            <option value="">Select your business</option>
-            <option>Restaurant</option><option>Hotel</option><option>Cafe</option>
-            <option>QSR</option><option>Dhaba</option><option>Sweet Shop</option>
-            <option>Lahori Adda Franchise</option><option>Other</option>
-          </select>
-        </div>
+        <div class="f-row"><label>Business Type</label><select name="type"><option value="">Select your business</option><option>Restaurant</option><option>Hotel</option><option>Cafe</option><option>QSR</option><option>Dhaba</option><option>Sweet Shop</option><option>Lahori Adda Franchise</option><option>Other</option></select></div>
         <div class="f-row"><label>Message</label><textarea name="message" placeholder="How can we help you?"></textarea></div>
         <button type="submit" class="f-btn">Send Enquiry →</button>
         <div class="f-note">🔒 Your information is completely private.</div>
@@ -1391,65 +1043,31 @@ footer{background:var(--navy);}
 <footer>
   <div class="foot-top">
     <div>
-      <div class="foot-brand">Anandam<span>.</span></div>
+      <div class="foot-brand">Anandam<span> Ventures</span></div>
       <div class="foot-tagline">Building India's Next Hospitality Brands.</div>
       <p class="foot-about">35 years of hospitality excellence. We help restaurants, hotels, cafes, QSRs, sweet shops and dhabas grow — and build our own brands alongside.<br><br>Building No. 79, Sector 13–17, HUDA<br>Panipat, Haryana 132103</p>
       <div class="foot-socs">
-        <a href="#" class="foot-soc" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-        <a href="#" class="foot-soc" title="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="#" class="foot-soc" title="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
-        <a href="https://wa.me/919896544879" class="foot-soc" title="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+        <a href="https://wa.me/919896544879" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
-    <div class="foot-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#services">Restaurant Launch</a></li>
-        <li><a href="#services">Revenue Growth</a></li>
-        <li><a href="#services">Staff Training</a></li>
-        <li><a href="#services">Digital Marketing</a></li>
-        <li><a href="#services">Expansion & Scaling</a></li>
-        <li><a href="#services">Website Design</a></li>
-      </ul>
-    </div>
-    <div class="foot-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#model">90-Day Model</a></li>
-        <li><a href="#directors">Leadership</a></li>
-        <li><a href="#lahori">Lahori Adda</a></li>
-        <li><a href="#testimonials">Results</a></li>
-        <li><a href="#faqs">FAQs</a></li>
-      </ul>
-    </div>
-    <div class="foot-col">
-      <h4>Connect</h4>
-      <ul>
-        <li><a href="tel:+919896544879">+91 98965 44879</a></li>
-        <li><a href="mailto:hello@anandamventures.com">hello@anandamventures.com</a></li>
-        <li><a href="https://wa.me/919896544879">WhatsApp Us</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
-    </div>
+    <div class="foot-col"><h4>Services</h4><ul><li><a href="#services">Restaurant Launch</a></li><li><a href="#services">Revenue Growth</a></li><li><a href="#services">Staff Training</a></li><li><a href="#services">Digital Marketing</a></li><li><a href="#services">Expansion</a></li><li><a href="#services">Website Design</a></li></ul></div>
+    <div class="foot-col"><h4>Company</h4><ul><li><a href="#directors">Leadership</a></li><li><a href="#about">About Us</a></li><li><a href="#model">90-Day Model</a></li><li><a href="#lahori">Lahori Adda</a></li><li><a href="#testimonials">Results</a></li><li><a href="#faqs">FAQs</a></li></ul></div>
+    <div class="foot-col"><h4>Connect</h4><ul><li><a href="tel:+919896544879">+91 98965 44879</a></li><li><a href="mailto:hello@anandamventures.com">hello@anandamventures.com</a></li><li><a href="https://wa.me/919896544879">WhatsApp Us</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">LinkedIn</a></li></ul></div>
   </div>
   <div class="foot-bot">
-    <div class="foot-copy">© 2025 Anandam Ventures · Bldg No. 79, Sector 13–17, HUDA, Panipat, Haryana 132103</div>
-    <div class="foot-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Franchise Disclosure</a>
-    </div>
+    <div class="foot-copy">© 2025 Anandam Ventures · Bldg 79, Sector 13–17, HUDA, Panipat, Haryana 132103</div>
+    <div class="foot-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Franchise Disclosure</a></div>
   </div>
 </footer>
 
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>80),{passive:true});
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.r').forEach((el,i)=>{if(!el.style.transitionDelay)el.style.transitionDelay=`${(i%5)*.07}s`;io.observe(el);});
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.r').forEach((el,i)=>{if(!el.style.transitionDelay)el.style.transitionDelay=`${(i%4)*.07}s`;io.observe(el);});
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=a.getAttribute('href');if(t==='#')return;e.preventDefault();document.querySelector(t)?.scrollIntoView({behavior:'smooth'});}));
 </script>
 </body>
