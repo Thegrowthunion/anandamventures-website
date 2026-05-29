@@ -32,12 +32,9 @@ img{display:block;max-width:100%;height:auto;}
 /* ── LOGO ── */
 .logo-wrap{display:flex;align-items:center;flex-shrink:0;}
 .nav-logo-img{
-  height:46px;
-  width:auto;
-  max-width:200px;
-  object-fit:contain;
-  object-position:left center;
-  display:block;
+  height:54px;width:54px;
+  object-fit:cover;object-position:center 22%;
+  border-radius:9px;display:block;flex-shrink:0;
 }
 
 /* ── BRAND TICKER ── */
@@ -81,24 +78,25 @@ img{display:block;max-width:100%;height:auto;}
 }
 .bt-name{font-size:12.5px;font-weight:500;color:rgba(255,255,255,.45);}
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;height:72px;
-  background:rgba(255,255,255,.97);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
+  position:fixed;top:0;left:0;right:0;z-index:200;height:76px;
+  background:rgba(8,14,26,.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.07);
   display:flex;align-items:center;padding:0 48px;gap:32px;
   transition:box-shadow .3s;
 }
-nav.scrolled{box-shadow:0 4px 32px rgba(22,72,176,.08);}
+nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.45);}
 .nav-links{display:flex;list-style:none;gap:2px;flex:1;}
-.nav-links a{padding:7px 12px;font-size:12px;font-weight:500;color:var(--t2);border-radius:6px;transition:all .2s;white-space:nowrap;}
-.nav-links a:hover{color:var(--navy);background:var(--blue-pale);}
+.nav-links a{padding:7px 12px;font-size:12px;font-weight:500;color:rgba(255,255,255,.52);border-radius:6px;transition:all .2s;white-space:nowrap;}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.09);}
 .nav-r{margin-left:auto;display:flex;align-items:center;gap:10px;flex-shrink:0;}
-.nav-phone{font-size:12px;color:var(--t2);display:flex;align-items:center;gap:6px;white-space:nowrap;}
-.nav-cta{background:var(--blue);color:#fff;padding:9px 18px;border-radius:7px;font-size:12px;font-weight:600;white-space:nowrap;transition:background .2s;}
-.nav-cta:hover{background:var(--navy);}
+.nav-phone{font-size:12px;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;white-space:nowrap;}
+.nav-cta{background:var(--blue);color:#fff;padding:9px 18px;border-radius:7px;font-size:12px;font-weight:600;white-space:nowrap;transition:all .2s;}
+.nav-cta:hover{background:#1D55CC;}
 
 /* ── HERO (no form, full editorial) ── */
 #hero{
-  min-height:100vh;padding-top:72px;
+  min-height:100vh;padding-top:76px;
   position:relative;overflow:hidden;
   display:flex;align-items:center;
 }
@@ -431,13 +429,13 @@ footer{background:var(--navy);}
   html,body{overflow-x:hidden;width:100%;}
   nav{padding:0 16px;height:64px;}
   .nav-links,.nav-phone{display:none;}
-  .nav-logo-img{height:40px;max-width:160px;}
+  .nav-logo-img{height:42px;width:42px;border-radius:7px;}
   .nav-cta{padding:7px 13px;font-size:11px;}
   section{padding:48px 16px !important;}
   .divider{margin:0 16px;}
   #directors,#model,#midform{padding:48px 16px !important;}
   #stats{padding:36px 16px !important;}
-  #hero{padding-top:60px;min-height:auto;}
+  #hero{padding-top:64px;min-height:auto;}
   .hero-inner{grid-template-columns:1fr !important;padding:36px 16px 44px !important;gap:28px;}
   .hero-h{font-size:28px !important;line-height:1.12;}
   .hero-tag{font-size:12px;}
@@ -502,7 +500,7 @@ footer{background:var(--navy);}
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="logo-wrap">
-    <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/ChatGPT%20Image%20May%2025%2C%202026%2C%2001_19_08%20PM.png" alt="Anandam Ventures" class="nav-logo-img">
+    <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/ChatGPT_Image_May_27__2026__10_35_51_AM.png" alt="Anandam Ventures" class="nav-logo-img">
   </a>
   <ul class="nav-links">
     <li><a href="#directors">Leadership</a></li>
@@ -591,7 +589,7 @@ footer{background:var(--navy);}
     <div class="bt-label">Brands Worked With</div>
     <div class="bt-track-wrap">
       <div class="bt-track">
-        <div class="bt-brand"><div class="bt-logo"><https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/Amrik_Sukhdev.png"></div><span class="bt-name">Sukhdev Dhaba, Murthal</span></div>
+        <div class="bt-brand"><div class="bt-logo"><img src="https://placehold.co/40x40/E65C00/ffffff?text=SD" alt="Sukhdev Dhaba"></div><span class="bt-name">Sukhdev Dhaba, Murthal</span></div>
         <div class="bt-brand"><div class="bt-logo"><img src="https://placehold.co/40x40/1B7A2E/ffffff?text=HV" alt="Haveli Karnal"></div><span class="bt-name">Haveli, Karnal</span></div>
         <div class="bt-brand"><div class="bt-logo"><img src="https://placehold.co/40x40/B91C1C/ffffff?text=AS" alt="Ahuja Sweets"></div><span class="bt-name">Ahuja Sweets, Panipat</span></div>
         <div class="bt-brand"><div class="bt-logo"><img src="https://placehold.co/40x40/1D4ED8/ffffff?text=ASD" alt="Amrik Sukhdev"></div><span class="bt-name">Amrik Sukhdev Dhaba</span></div>
@@ -614,7 +612,7 @@ footer{background:var(--navy);}
         <div class="bt-brand"><div class="bt-logo"><img src="https://placehold.co/40x40/0C4A6E/ffffff?text=NCR" alt="NCR Hospitality Group"></div><span class="bt-name">NCR Hospitality Group</span></div>
         <div class="bt-brand"><div class="bt-logo"><img src="https://placehold.co/40x40/7F1D1D/ffffff?text=PRG" alt="Panipat Restaurant Group"></div><span class="bt-name">Panipat Restaurant Group</span></div>
         <!-- DUPLICATE FOR SEAMLESS LOOP -->
-        <div class="bt-brand"><div class="bt-logo"><https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/Amrik_Sukhdev.png></div><span class="bt-name">Sukhdev Dhaba, Murthal</span></div>
+        <div class="bt-brand"><div class="bt-logo"><img src="https://placehold.co/40x40/E65C00/ffffff?text=SD" alt="Sukhdev Dhaba"></div><span class="bt-name">Sukhdev Dhaba, Murthal</span></div>
         <div class="bt-brand"><div class="bt-logo"><img src="https://placehold.co/40x40/1B7A2E/ffffff?text=HV" alt="Haveli Karnal"></div><span class="bt-name">Haveli, Karnal</span></div>
         <div class="bt-brand"><div class="bt-logo"><img src="https://placehold.co/40x40/B91C1C/ffffff?text=AS" alt="Ahuja Sweets"></div><span class="bt-name">Ahuja Sweets, Panipat</span></div>
         <div class="bt-brand"><div class="bt-logo"><img src="https://placehold.co/40x40/1D4ED8/ffffff?text=ASD" alt="Amrik Sukhdev"></div><span class="bt-name">Amrik Sukhdev Dhaba</span></div>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Anandam Ventures | Hospitality Consulting</title>
+<meta name="description" content="35 years of hospitality expertise. Restaurant launch, revenue growth, staff training, digital marketing, expansion consulting and website design for restaurants, hotels, cafes and dhabas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1F35;overflow-x:hidden;font-size:16px;line-height:1.6;width:100%;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;height:auto;}
+
+:root{
+  --navy:#0D1F35;
+  --blue:#1648B0;
+  --blue2:#2B5CE6;
+  --blue-lt:#EBF1FD;
+  --blue-pale:#F4F7FE;
+  --white:#fff;
+  --off:#F8FAFB;
+  --border:#D8E3F0;
+  --t2:#4A6080;
+  --t3:#8A9BB0;
+  --green:#25D366;
+  --gold:#C49B3C;
+}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;background:rgba(8,14,26,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;padding:0 48px;gap:32px;transition:box-shadow .3s;}
+nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.4);}
+.nav-logo-wrap{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.nav-logo-img{height:54px;width:54px;object-fit:cover;object-position:center 22%;border-radius:9px;display:block;}
+.nav-brand{display:flex;flex-direction:column;}
+.nav-brand-main{font-size:13px;font-weight:700;color:rgba(255,255,255,.9);line-height:1.1;}
+.nav-brand-sub{font-size:9px;font-weight:600;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-top:1px;}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1;margin-left:8px;}
+.nav-links a{padding:7px 12px;font-size:12px;font-weight:500;color:rgba(255,255,255,.52);border-radius:6px;transition:all .2s;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.09);}
+.nav-r{margin-left:auto;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-phone{font-size:12px;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;white-space:nowrap;}
+.nav-cta{background:var(--blue);color:#fff;padding:9px 18px;border-radius:7px;font-size:12px;font-weight:600;white-space:nowrap;transition:all .2s;}
+.nav-cta:hover{background:#1D55CC;}
+
+/* ── HERO ── */
+#hero{min-height:72vh;padding-top:76px;position:relative;overflow:hidden;display:flex;align-items:center;}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(9,14,26,.95) 45%,rgba(22,72,176,.55) 100%);}
+.hero-inner{position:relative;z-index:2;padding:64px 60px;max-width:1280px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.hero-est{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:5px 14px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:18px;}
+.hero-h{font-size:clamp(34px,5vw,62px);font-weight:800;color:#fff;line-height:1.09;letter-spacing:-.5px;margin-bottom:16px;}
+.hero-h em{color:#93C5FD;font-style:normal;}
+.hero-p{font-size:16px;line-height:1.8;color:rgba(255,255,255,.58);margin-bottom:32px;max-width:500px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{background:var(--blue);color:#fff;padding:14px 28px;border-radius:8px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-primary:hover{background:#1D55CC;transform:translateY(-1px);}
+.btn-secondary{border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);padding:14px 28px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-secondary:hover{border-color:rgba(255,255,255,.5);color:#fff;}
+.hero-r{display:flex;flex-direction:column;gap:12px;}
+.hero-svc-pill{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:14px;backdrop-filter:blur(8px);transition:background .25s;}
+.hero-svc-pill:hover{background:rgba(255,255,255,.1);}
+.hsp-icon{width:40px;height:40px;border-radius:9px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hsp-name{font-size:14px;font-weight:700;color:#fff;margin-bottom:1px;}
+.hsp-tag{font-size:11px;color:rgba(255,255,255,.38);}
+.hsp-arr{color:rgba(255,255,255,.25);margin-left:auto;flex-shrink:0;}
+
+/* ── SHARED ── */
+section{padding:88px 60px;}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+.chip::before{content:'';display:block;width:16px;height:2px;background:var(--blue);border-radius:2px;}
+.chip-w{color:rgba(255,255,255,.45);}
+.chip-w::before{background:rgba(255,255,255,.3);}
+h2.sh{font-size:clamp(26px,3.5vw,44px);font-weight:800;color:var(--navy);line-height:1.1;letter-spacing:-.3px;}
+h2.sh em{color:var(--blue);font-style:normal;}
+h2.sh-w{color:#fff;}
+h2.sh-w em{color:#93C5FD;}
+.divider{height:1px;background:var(--border);margin:0 60px;}
+.r{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+.r.on{opacity:1;transform:none;}
+.btn-blue{background:var(--blue);color:#fff;padding:13px 26px;border-radius:8px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-blue:hover{background:var(--navy);transform:translateY(-1px);}
+.btn-outline{border:2px solid var(--border);color:var(--navy);padding:13px 26px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue);}
+.max-w{max-width:1160px;margin:0 auto;}
+
+/* ── SERVICES OVERVIEW ── */
+#overview{background:var(--blue-pale);}
+.ov-intro{text-align:center;max-width:640px;margin:0 auto 52px;}
+.ov-intro p{font-size:15px;color:var(--t2);margin-top:10px;line-height:1.75;}
+.ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.ov-card{background:var(--white);border-radius:14px;border:1px solid var(--border);padding:30px 24px;transition:all .3s;cursor:pointer;}
+.ov-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(22,72,176,.1);border-color:var(--blue);}
+.ov-num{font-size:10px;font-weight:700;color:var(--t3);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+.ov-icon{width:48px;height:48px;border-radius:11px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.ov-name{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:7px;line-height:1.25;}
+.ov-desc{font-size:13px;color:var(--t2);line-height:1.7;margin-bottom:16px;}
+.ov-link{font-size:12px;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:6px;}
+
+/* ── SERVICE DETAIL SECTIONS ── */
+.svc-section{padding:88px 60px;}
+.svc-section:nth-child(even){background:var(--blue-pale);}
+.svc-section:nth-child(odd){background:var(--white);}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;max-width:1160px;margin:0 auto;}
+.svc-grid-rev{direction:rtl;}
+.svc-grid-rev > *{direction:ltr;}
+.svc-img-wrap{border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;}
+.svc-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
+.svc-img-badge{position:absolute;bottom:20px;left:20px;background:var(--navy);border-radius:10px;padding:14px 18px;border:1px solid rgba(255,255,255,.08);}
+.sib-n{font-size:28px;font-weight:800;color:#fff;line-height:1;}
+.sib-l{font-size:9px;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+.svc-content{}
+.svc-n{font-size:10px;font-weight:700;color:var(--t3);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+.svc-title{font-size:clamp(24px,3vw,38px);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:14px;letter-spacing:-.3px;}
+.svc-title em{color:var(--blue);font-style:normal;}
+.svc-lead{font-size:15px;line-height:1.8;color:var(--t2);margin-bottom:24px;}
+.svc-checklist{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
+.svc-checklist li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--t2);line-height:1.55;}
+.sc-dot{width:20px;height:20px;border-radius:50%;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.svc-outcome{background:var(--navy);border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:16px;margin-bottom:28px;}
+.so-icon{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.so-n{font-size:22px;font-weight:800;color:#fff;line-height:1;margin-bottom:2px;}
+.so-l{font-size:12px;color:rgba(255,255,255,.4);}
+
+/* ── HOW WE WORK ── */
+#howwework{background:var(--navy);padding:88px 60px;}
+.hww-intro{text-align:center;max-width:640px;margin:0 auto 56px;}
+.hww-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1160px;margin:0 auto;}
+.hww-step{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:28px 22px;position:relative;overflow:hidden;transition:all .3s;}
+.hww-step:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);}
+.hwws-num{font-size:48px;font-weight:800;color:rgba(255,255,255,.06);line-height:1;margin-bottom:14px;}
+.hwws-icon{width:44px;height:44px;border-radius:10px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.hwws-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:7px;line-height:1.3;}
+.hwws-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.65;}
+.hwws-time{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.06);border-radius:100px;padding:4px 10px;font-size:11px;font-weight:600;color:rgba(255,255,255,.4);margin-top:14px;}
+
+/* ── RESULTS ── */
+#results{background:var(--white);}
+.res-intro{text-align:center;max-width:600px;margin:0 auto 52px;}
+.res-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
+.res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1160px;margin:0 auto 40px;}
+.res-card{border-radius:14px;border:1px solid var(--border);padding:28px 22px;text-align:center;background:var(--blue-pale);transition:all .3s;}
+.res-card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 10px 32px rgba(22,72,176,.1);}
+.rc-n{font-size:40px;font-weight:800;color:var(--navy);line-height:1;margin-bottom:5px;}
+.rc-n span{color:var(--blue);}
+.rc-l{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);}
+.rc-d{font-size:13px;color:var(--t2);margin-top:6px;line-height:1.4;}
+.res-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1160px;margin:0 auto;}
+.case-card{background:var(--blue-pale);border-radius:14px;border:1px solid var(--border);overflow:hidden;transition:all .3s;}
+.case-card:hover{box-shadow:0 8px 32px rgba(22,72,176,.1);transform:translateY(-2px);}
+.case-img{aspect-ratio:16/9;overflow:hidden;}
+.case-img img{width:100%;height:100%;object-fit:cover;}
+.case-body{padding:22px 20px;}
+.case-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:7px;}
+.case-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.35;}
+.case-desc{font-size:13px;color:var(--t2);line-height:1.65;margin-bottom:14px;}
+.case-result{display:flex;gap:8px;flex-wrap:wrap;}
+.cr-pill{background:rgba(16,185,129,.08);border-radius:100px;padding:4px 10px;font-size:11px;font-weight:700;color:#059669;}
+
+/* ── ENGAGEMENT MODEL ── */
+#engagement{background:var(--blue-pale);}
+.eng-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;max-width:1160px;margin:0 auto;}
+.eng-l p{font-size:15px;color:var(--t2);line-height:1.8;margin-bottom:24px;}
+.eng-models{display:flex;flex-direction:column;gap:14px;}
+.eng-model{background:var(--white);border-radius:12px;border:1px solid var(--border);padding:22px 22px;transition:all .3s;}
+.eng-model:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(22,72,176,.08);}
+.em-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:6px;}
+.em-name{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.em-desc{font-size:13px;color:var(--t2);line-height:1.65;}
+.em-price{font-size:13px;font-weight:700;color:var(--navy);margin-top:10px;display:flex;align-items:center;gap:6px;}
+.em-price-tag{background:var(--blue-lt);color:var(--blue);border-radius:100px;padding:2px 9px;font-size:11px;font-weight:600;}
+.eng-r{background:var(--navy);border-radius:16px;padding:36px 32px;}
+.eng-r h3{font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;}
+.eng-r > p{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:28px;line-height:1.7;}
+.eng-steps{display:flex;flex-direction:column;gap:0;}
+.eng-step{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.07);}
+.eng-step:last-child{border-bottom:none;padding-bottom:0;}
+.es-n{width:32px;height:32px;border-radius:50%;border:1.5px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);flex-shrink:0;margin-top:1px;}
+.es-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:3px;}
+.es-desc{font-size:12.5px;color:rgba(255,255,255,.4);line-height:1.5;}
+
+/* ── LEAD FORM ── */
+#consult{background:linear-gradient(135deg,#0D1F35 0%,#1648B0 100%);padding:88px 60px;position:relative;overflow:hidden;}
+#consult::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1920&q=80') center/cover;opacity:.07;}
+.con-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;max-width:1160px;margin:0 auto;}
+.con-l h2{color:#fff;margin-bottom:14px;}
+.con-l p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:28px;}
+.con-perks{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
+.con-perk{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(255,255,255,.55);}
+.con-perk svg{flex-shrink:0;}
+.con-contact{display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;}
+.con-contact-item{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.38);}
+.con-form{background:#fff;border-radius:14px;padding:36px 30px;box-shadow:0 24px 64px rgba(0,0,0,.25);}
+.cf-title{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:4px;}
+.cf-sub{font-size:13px;color:var(--t2);margin-bottom:24px;}
+.f-row{margin-bottom:12px;}
+.f-row label{display:block;font-size:11.5px;font-weight:600;color:var(--t2);margin-bottom:4px;}
+.f-row input,.f-row select,.f-row textarea{width:100%;border:1.5px solid var(--border);border-radius:7px;padding:10px 13px;font-size:13.5px;font-family:inherit;color:var(--navy);background:var(--off);transition:border-color .2s;outline:none;}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{border-color:var(--blue);background:#fff;}
+.f-row textarea{resize:vertical;min-height:80px;}
+.f-row select{appearance:none;}
+.f-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.f-btn{width:100%;background:var(--blue);color:#fff;border:none;padding:13px;border-radius:7px;font-size:13.5px;font-weight:700;cursor:pointer;transition:background .2s;font-family:inherit;margin-top:4px;}
+.f-btn:hover{background:var(--navy);}
+.f-note{font-size:10.5px;color:var(--t3);text-align:center;margin-top:7px;}
+
+/* ── FAQs ── */
+#faqs{background:var(--blue-pale);}
+.faq-intro{text-align:center;max-width:580px;margin:0 auto 44px;}
+.faq-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1160px;margin:0 auto;}
+.faq-item{background:var(--white);border-radius:11px;border:1px solid var(--border);padding:20px;transition:all .25s;}
+.faq-item:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(22,72,176,.07);}
+.faq-q{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:8px;display:flex;justify-content:space-between;gap:12px;line-height:1.35;}
+.faq-icon{color:var(--blue);flex-shrink:0;}
+.faq-a{font-size:13px;color:var(--t2);line-height:1.7;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);}
+.foot-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding:56px 60px 40px;border-bottom:1px solid rgba(255,255,255,.06);}
+.foot-brand{font-size:18px;font-weight:800;color:#fff;margin-bottom:3px;}
+.foot-brand span{color:var(--blue2);}
+.foot-tagline{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.5px;margin-bottom:10px;}
+.foot-about{font-size:12.5px;color:rgba(255,255,255,.22);line-height:1.7;max-width:280px;margin-bottom:20px;}
+.foot-socs{display:flex;gap:7px;}
+.foot-soc{width:34px;height:34px;border-radius:7px;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.25);transition:all .2s;}
+.foot-soc:hover{border-color:rgba(255,255,255,.35);color:#fff;}
+.foot-col h4{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:16px;}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.foot-col a{font-size:12.5px;color:rgba(255,255,255,.27);transition:color .2s;}
+.foot-col a:hover{color:rgba(255,255,255,.75);}
+.foot-bot{display:flex;align-items:center;justify-content:space-between;padding:17px 60px;flex-wrap:wrap;gap:10px;}
+.foot-copy{font-size:11px;color:rgba(255,255,255,.15);}
+.foot-links{display:flex;gap:18px;}
+.foot-links a{font-size:11px;color:rgba(255,255,255,.15);transition:color .2s;}
+.foot-links a:hover{color:rgba(255,255,255,.45);}
+
+/* ── WA ── */
+.wa-btn{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(37,211,102,.4);transition:transform .2s;}
+.wa-btn:hover{transform:scale(1.1);}
+
+/* ── TABLET ── */
+@media(min-width:769px) and (max-width:1100px){
+  nav{padding:0 24px;}
+  .nav-links{display:none;}
+  section,.svc-section,#howwework,#consult{padding:64px 28px;}
+  .divider{margin:0 28px;}
+  .hero-inner{grid-template-columns:1fr;padding:48px 28px;gap:32px;}
+  .hero-r{display:none;}
+  .svc-grid,.svc-grid-rev{grid-template-columns:1fr;direction:ltr;}
+  .ov-grid{grid-template-columns:1fr 1fr;gap:14px;}
+  .hww-steps{grid-template-columns:1fr 1fr;gap:14px;}
+  .res-grid{grid-template-columns:1fr 1fr;}
+  .res-cases{grid-template-columns:1fr;}
+  .eng-grid,.con-inner{grid-template-columns:1fr;gap:36px;}
+  .faq-grid{grid-template-columns:1fr;}
+  .foot-inner{grid-template-columns:1fr 1fr;gap:28px;padding:44px 28px 28px;}
+  .foot-bot{padding:14px 28px;}
+}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  *{max-width:100%;word-break:break-word;}
+  html,body{overflow-x:hidden;width:100%;}
+  nav{padding:0 16px;height:64px;}
+  .nav-links,.nav-phone{display:none;}
+  .nav-logo-img{height:42px;width:42px;border-radius:7px;}
+  section,.svc-section,#howwework,#consult{padding:52px 16px !important;}
+  .divider{margin:0 16px;}
+  #hero{padding-top:64px;min-height:auto;}
+  .hero-inner{grid-template-columns:1fr !important;padding:40px 16px 48px !important;gap:28px;}
+  .hero-r{display:none;}
+  .hero-h{font-size:28px !important;}
+  .hero-p{font-size:14px;}
+  .ov-grid{grid-template-columns:1fr !important;}
+  .svc-grid,.svc-grid-rev{grid-template-columns:1fr !important;direction:ltr;gap:32px;}
+  .hww-steps{grid-template-columns:1fr !important;}
+  .res-grid{grid-template-columns:1fr 1fr !important;}
+  .res-cases{grid-template-columns:1fr !important;}
+  .eng-grid,.con-inner{grid-template-columns:1fr !important;}
+  .faq-grid{grid-template-columns:1fr !important;}
+  .f-2{grid-template-columns:1fr !important;}
+  .foot-inner{grid-template-columns:1fr !important;gap:24px;padding:36px 16px 24px;}
+  .foot-bot{padding:14px 16px;flex-direction:column;text-align:center;gap:7px;}
+  .foot-links{justify-content:center;}
+  h2.sh{font-size:clamp(22px,6vw,32px);}
+  .wa-btn{bottom:14px;right:14px;width:48px;height:48px;}
+}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/919896544879" class="wa-btn" target="_blank" rel="noopener">
+  <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 2C7.373 2 2 7.373 2 14c0 2.104.548 4.08 1.508 5.8L2 26l6.38-1.492A11.94 11.94 0 0014 26c6.627 0 12-5.373 12-12S20.627 2 14 2z" fill="#fff"/><path d="M10.5 8.5c-.3-.7-.6-.72-.88-.73H9c-.28 0-.72.1-1.1.5-.37.4-1.42 1.38-1.42 3.36s1.45 3.9 1.65 4.17c.2.27 2.8 4.48 6.9 6.1 3.42 1.35 4.1 1.08 4.84 1.01.74-.07 2.4-.98 2.74-1.92.34-.94.34-1.75.24-1.92-.1-.17-.37-.27-.77-.47s-2.4-1.18-2.77-1.32c-.37-.14-.64-.2-.91.2-.27.4-1.05 1.32-1.28 1.59-.24.27-.47.3-.87.1-.4-.2-1.68-.62-3.2-1.97-1.18-1.05-1.98-2.35-2.21-2.75-.24-.4-.03-.62.17-.82.18-.18.4-.47.6-.7.2-.24.27-.4.4-.67.14-.27.07-.5-.03-.7-.1-.2-.88-2.18-1.23-2.97z" fill="#25D366"/></svg>
+</a>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo-wrap">
+    <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/ChatGPT_Image_May_27__2026__10_35_51_AM.png" alt="Anandam Ventures" class="nav-logo-img">
+    <div class="nav-brand">
+      <div class="nav-brand-main">Anandam Ventures</div>
+      <div class="nav-brand-sub">Est. 1995 · Panipat</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="index.html#model">90-Day Model</a></li>
+    <li><a href="lahori-adda.html">Lahori Adda</a></li>
+    <li><a href="index.html#directors">Leadership</a></li>
+    <li><a href="index.html#faqs">FAQs</a></li>
+  </ul>
+  <div class="nav-r">
+    <a href="tel:+919896544879" class="nav-phone">+91 98965 44879</a>
+    <a href="#consult" class="nav-cta">Free Consultation</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-l">
+      <div class="hero-est">Est. 1995 · 35 Years · 100+ Projects</div>
+      <h1 class="hero-h">Everything your<br><em>hospitality business</em><br>needs to grow.</h1>
+      <p class="hero-p">From launching a new restaurant to turning around a struggling one — six core services, one experienced team, and a proven track record across North India's most demanding markets.</p>
+      <div class="hero-btns">
+        <a href="#overview" class="btn-primary">Explore Services <svg width="13" height="7" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <a href="#consult" class="btn-secondary">Get Free Consultation</a>
+      </div>
+    </div>
+    <div class="hero-r r">
+      <a href="#s1" class="hero-svc-pill">
+        <div class="hsp-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 21V9L12 3l9 6v12H3z" stroke="#1648B0" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="hsp-name">Restaurant Launch & Setup</div><div class="hsp-tag">Concept to opening day</div></div>
+        <div class="hsp-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      </a>
+      <a href="#s2" class="hero-svc-pill">
+        <div class="hsp-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="hsp-name">Revenue Growth & Turnaround</div><div class="hsp-tag">25–40% growth in 90 days</div></div>
+        <div class="hsp-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      </a>
+      <a href="#s3" class="hero-svc-pill">
+        <div class="hsp-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="hsp-name">Staff Hiring & Training</div><div class="hsp-tag">End-to-end HR for hospitality</div></div>
+        <div class="hsp-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      </a>
+      <a href="#s4" class="hero-svc-pill">
+        <div class="hsp-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#1648B0" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="hsp-name">Marketing & Digital Growth</div><div class="hsp-tag">Google · Zomato · Social media</div></div>
+        <div class="hsp-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      </a>
+      <a href="#s5" class="hero-svc-pill">
+        <div class="hsp-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 21L3 13C3 11.9 3.9 11 5 11H8C9.1 11 10 11.9 10 13V21M14 21V7C14 5.9 14.9 5 16 5H19C20.1 5 21 5.9 21 7V21" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="hsp-name">Expansion & Scaling</div><div class="hsp-tag">Franchise models · Multi-outlet</div></div>
+        <div class="hsp-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      </a>
+      <a href="#s6" class="hero-svc-pill">
+        <div class="hsp-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="16" rx="2" stroke="#1648B0" stroke-width="1.5"/><path d="M8 9h8M8 13h5" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="hsp-name">Website & Digital Presence</div><div class="hsp-tag">Custom restaurant websites</div></div>
+        <div class="hsp-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES OVERVIEW -->
+<section id="overview">
+  <div class="ov-intro r max-w">
+    <p class="chip" style="justify-content:center">Our Services</p>
+    <h2 class="sh" style="text-align:center">Six ways we help your<br><em>hospitality business grow</em></h2>
+    <p>Each service is built on 35 years of doing it ourselves — in real kitchens, with real teams, in real markets. Not textbook consulting.</p>
+  </div>
+  <div class="ov-grid max-w r" style="transition-delay:.1s">
+    <div class="ov-card" onclick="document.querySelector('#s1').scrollIntoView({behavior:'smooth'})">
+      <div class="ov-num">01</div>
+      <div class="ov-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21V9L12 3l9 6v12H3z" stroke="#1648B0" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="ov-name">Restaurant Launch & Setup</div>
+      <div class="ov-desc">From concept to first customer in 45 days. Kitchen, menu, team, vendors — everything handled end-to-end.</div>
+      <div class="ov-link">Learn more <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
+    </div>
+    <div class="ov-card" onclick="document.querySelector('#s2').scrollIntoView({behavior:'smooth'})">
+      <div class="ov-num">02</div>
+      <div class="ov-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="ov-name">Revenue Growth & Turnaround</div>
+      <div class="ov-desc">Struggling restaurant or stagnant growth? We diagnose, fix, and grow. 25–40% revenue increase in 90 days.</div>
+      <div class="ov-link">Learn more <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
+    </div>
+    <div class="ov-card" onclick="document.querySelector('#s3').scrollIntoView({behavior:'smooth'})">
+      <div class="ov-num">03</div>
+      <div class="ov-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="ov-name">Staff Hiring & Training</div>
+      <div class="ov-desc">Recruit, train, and retain the right hospitality team. SOPs, performance standards, and self-sufficient operations.</div>
+      <div class="ov-link">Learn more <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
+    </div>
+    <div class="ov-card" onclick="document.querySelector('#s4').scrollIntoView({behavior:'smooth'})">
+      <div class="ov-num">04</div>
+      <div class="ov-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#1648B0" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="ov-name">Marketing & Digital Growth</div>
+      <div class="ov-desc">Complete digital presence — Google, Zomato, Swiggy, social media. 3x online visibility in 60 days.</div>
+      <div class="ov-link">Learn more <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
+    </div>
+    <div class="ov-card" onclick="document.querySelector('#s5').scrollIntoView({behavior:'smooth'})">
+      <div class="ov-num">05</div>
+      <div class="ov-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21L3 13C3 11.9 3.9 11 5 11H8C9.1 11 10 11.9 10 13V21M14 21V7C14 5.9 14.9 5 16 5H19C20.1 5 21 5.9 21 7V21M3 21H21" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="ov-name">Expansion & Scaling</div>
+      <div class="ov-desc">Franchise models, SOP libraries, multi-outlet management and new city entry strategy. Built to scale.</div>
+      <div class="ov-link">Learn more <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
+    </div>
+    <div class="ov-card" onclick="document.querySelector('#s6').scrollIntoView({behavior:'smooth'})">
+      <div class="ov-num">06</div>
+      <div class="ov-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="16" rx="2" stroke="#1648B0" stroke-width="1.5"/><path d="M8 9h8M8 13h5" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="ov-name">Website & Digital Presence</div>
+      <div class="ov-desc">Custom websites for restaurants, hotels and cafes — designed to convert visitors into customers and bookings.</div>
+      <div class="ov-link">Learn more <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICE 1 -->
+<div class="svc-section" id="s1">
+  <div class="svc-grid max-w">
+    <div class="svc-img-wrap r">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Restaurant interior" loading="lazy">
+      <div class="svc-img-badge"><div class="sib-n">45</div><div class="sib-l">Days to Opening</div></div>
+    </div>
+    <div class="r" style="transition-delay:.15s">
+      <div class="svc-n">Service 01</div>
+      <h2 class="svc-title">Restaurant Launch<br>& <em>Setup</em></h2>
+      <p class="svc-lead">We have opened restaurants from scratch more times than we can count. We know every mistake, every shortcut that backfires, and every decision that determines whether a restaurant opens with momentum or opens with problems. We bring all of that to your launch.</p>
+      <ul class="svc-checklist">
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Concept development, brand positioning and naming</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Kitchen layout design and equipment procurement</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Menu engineering with food costing and margin analysis</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Vendor sourcing and supply chain setup</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Staff recruitment and full pre-opening training</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Grand opening strategy and first 30-day marketing plan</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Zomato, Swiggy and Google My Business setup from Day 1</li>
+      </ul>
+      <div class="svc-outcome">
+        <div class="so-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="#fff" stroke-width="1.5"/></svg></div>
+        <div><div class="so-n">45 days</div><div class="so-l">Average time from agreement to opening</div></div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#consult" class="btn-blue">Start Your Project</a>
+        <a href="index.html#howitworks" class="btn-outline">See Our Process</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 2 -->
+<div class="svc-section" id="s2">
+  <div class="svc-grid svc-grid-rev max-w">
+    <div class="svc-img-wrap r">
+      <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Restaurant operations" loading="lazy">
+      <div class="svc-img-badge"><div class="sib-n">32%</div><div class="sib-l">Avg Revenue Growth</div></div>
+    </div>
+    <div class="r" style="transition-delay:.15s">
+      <div class="svc-n">Service 02</div>
+      <h2 class="svc-title">Revenue Growth<br>& <em>Turnaround</em></h2>
+      <p class="svc-lead">Most struggling restaurants don't have a food problem — they have a systems problem. Wrong menu, inflated food costs, weak digital presence, undertrained team, or poor pricing. We diagnose all of it and fix what matters most within 90 days.</p>
+      <ul class="svc-checklist">
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Complete P&L audit and food cost analysis item-by-item</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Menu revamp — remove dead items, engineer high-margin dishes</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Vendor renegotiation and portion control implementation</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Footfall analysis and average bill improvement strategies</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Staff retraining aligned to service and upselling standards</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Zomato/Swiggy listing overhaul — photos, menu, pricing</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Corporate tie-ups and bulk order systems for guaranteed revenue</li>
+      </ul>
+      <div class="svc-outcome">
+        <div class="so-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="so-n">25–40%</div><div class="so-l">Average monthly revenue growth within 90 days</div></div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#consult" class="btn-blue">Book Free Audit</a>
+        <a href="index.html#model" class="btn-outline">See 90-Day Model</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 3 -->
+<div class="svc-section" id="s3">
+  <div class="svc-grid max-w">
+    <div class="svc-img-wrap r">
+      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80" alt="Team training" loading="lazy">
+      <div class="svc-img-badge"><div class="sib-n">60</div><div class="sib-l">Days to Self-Sufficient Team</div></div>
+    </div>
+    <div class="r" style="transition-delay:.15s">
+      <div class="svc-n">Service 03</div>
+      <h2 class="svc-title">Staff Hiring<br>& <em>Training</em></h2>
+      <p class="svc-lead">The biggest single reason restaurants fail is not food — it's people. Wrong hires, no training, no standards, no accountability. We have built hospitality teams for 35 years. We know who to hire, how to train them, and how to make them stay.</p>
+      <ul class="svc-checklist">
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Role-wise recruitment: chef, sous chef, captain, cashier, manager</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Kitchen training: consistency, hygiene, FIFO, portion control</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Service training: greeting, upselling, complaint handling</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>SOP documentation: every role, every task, written down</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Performance management system and daily checklist setup</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Bulk hiring support for new outlet launches</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Retention strategy so your best people don't leave</li>
+      </ul>
+      <div class="svc-outcome">
+        <div class="so-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="so-n">60 days</div><div class="so-l">To a fully self-sufficient, trained hospitality team</div></div>
+      </div>
+      <a href="#consult" class="btn-blue">Start Hiring</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 4 -->
+<div class="svc-section" id="s4">
+  <div class="svc-grid svc-grid-rev max-w">
+    <div class="svc-img-wrap r">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Digital marketing" loading="lazy">
+      <div class="svc-img-badge"><div class="sib-n">3x</div><div class="sib-l">Online Visibility Growth</div></div>
+    </div>
+    <div class="r" style="transition-delay:.15s">
+      <div class="svc-n">Service 04</div>
+      <h2 class="svc-title">Marketing &<br><em>Digital Growth</em></h2>
+      <p class="svc-lead">Most restaurant owners know they need to be online — but between cooking, managing staff and running the business, it never gets done properly. We handle your entire digital presence so you can focus on the food and the guests.</p>
+      <ul class="svc-checklist">
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Google My Business optimisation — rank in local search</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Zomato & Swiggy — menu photography, listing, ads</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Instagram & Facebook content creation and management</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Festival and seasonal campaign calendars (12 months planned)</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>WhatsApp marketing and customer retention campaigns</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Corporate gifting and bulk order tie-up campaigns</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Monthly performance reports — reach, orders, revenue impact</li>
+      </ul>
+      <div class="svc-outcome">
+        <div class="so-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#fff" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="so-n">3x</div><div class="so-l">Online visibility improvement within 60 days</div></div>
+      </div>
+      <a href="#consult" class="btn-blue">Grow Your Reach</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 5 -->
+<div class="svc-section" id="s5">
+  <div class="svc-grid max-w">
+    <div class="svc-img-wrap r">
+      <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?auto=format&fit=crop&w=800&q=80" alt="Restaurant expansion" loading="lazy">
+      <div class="svc-img-badge"><div class="sib-n">90</div><div class="sib-l">Days to First Expansion</div></div>
+    </div>
+    <div class="r" style="transition-delay:.15s">
+      <div class="svc-n">Service 05</div>
+      <h2 class="svc-title">Expansion<br>& <em>Scaling</em></h2>
+      <p class="svc-lead">Opening your second outlet is fundamentally different from opening your first — because now you have to replicate yourself. Quality, consistency, team culture, and brand standards across multiple locations. We build the systems that make this possible.</p>
+      <ul class="svc-checklist">
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Franchise model development — fee structure, supply chain, brand standards</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>SOP library — complete documented operations manual</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>New city market entry analysis and location strategy</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Central kitchen setup — consistent supply across outlets</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Multi-outlet management structure and reporting systems</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Area manager hiring and training for group operations</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Franchisee selection, onboarding and ongoing support systems</li>
+      </ul>
+      <div class="svc-outcome">
+        <div class="so-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21L3 13C3 11.9 3.9 11 5 11H8C9.1 11 10 11.9 10 13V21M14 21V7C14 5.9 14.9 5 16 5H19C20.1 5 21 5.9 21 7V21M3 21H21" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="so-n">90 days</div><div class="so-l">From decision to first expansion outlet opening</div></div>
+      </div>
+      <a href="#consult" class="btn-blue">Plan Your Expansion</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 6 -->
+<div class="svc-section" id="s6">
+  <div class="svc-grid svc-grid-rev max-w">
+    <div class="svc-img-wrap r">
+      <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80" alt="Website design" loading="lazy">
+      <div class="svc-img-badge"><div class="sib-n">14</div><div class="sib-l">Days to Go Live</div></div>
+    </div>
+    <div class="r" style="transition-delay:.15s">
+      <div class="svc-n">Service 06</div>
+      <h2 class="svc-title">Website &<br><em>Digital Presence</em></h2>
+      <p class="svc-lead">A restaurant without a website in 2025 is invisible to a third of its potential customers. We build fast, beautiful, conversion-optimised websites specifically for hospitality businesses — not generic templates.</p>
+      <ul class="svc-checklist">
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Custom-designed restaurant / hotel / cafe website</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Online menu with photos, descriptions and pricing</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Table booking / reservation integration</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>WhatsApp ordering and enquiry buttons built in</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>SEO — rank on Google for "restaurant in [your city]"</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Mobile-first — looks perfect on every phone</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Fully handed over to you — no monthly fees, you own it</li>
+      </ul>
+      <div class="svc-outcome">
+        <div class="so-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="16" rx="2" stroke="#fff" stroke-width="1.5"/><path d="M8 9h8M8 13h5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="so-n">14 days</div><div class="so-l">From brief to live, SEO-optimised website</div></div>
+      </div>
+      <a href="#consult" class="btn-blue">Get a Website Quote</a>
+    </div>
+  </div>
+</div>
+
+<!-- HOW WE WORK -->
+<section id="howwework">
+  <div class="hww-intro r max-w">
+    <p class="chip chip-w" style="justify-content:center">How We Engage</p>
+    <h2 class="sh sh-w" style="text-align:center">From first call to <em>measurable results.</em></h2>
+    <p style="font-size:15px;color:rgba(255,255,255,.45);text-align:center;margin-top:10px;">Four steps. Full transparency. No surprises.</p>
+  </div>
+  <div class="hww-steps max-w r" style="transition-delay:.1s">
+    <div class="hww-step">
+      <div class="hwws-num">01</div>
+      <div class="hwws-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011 2.96 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="hwws-title">Free Consultation Call</div>
+      <div class="hwws-desc">30-minute call. We understand your business, your challenges, and your goals. No charge, no commitment.</div>
+      <div class="hwws-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.1"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> Day 1</div>
+    </div>
+    <div class="hww-step">
+      <div class="hwws-num">02</div>
+      <div class="hwws-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="hwws-title">On-Site Audit</div>
+      <div class="hwws-desc">Our team visits your outlet. 2–3 days deep-diving operations, financials, team, kitchen and digital presence.</div>
+      <div class="hwws-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.1"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> Days 3–7</div>
+    </div>
+    <div class="hww-step">
+      <div class="hwws-num">03</div>
+      <div class="hwws-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="hwws-title">Strategy Blueprint</div>
+      <div class="hwws-desc">Customised 90-day action plan delivered to you. Not a template — specific actions, timelines and expected outcomes.</div>
+      <div class="hwws-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.1"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> Day 10</div>
+    </div>
+    <div class="hww-step">
+      <div class="hwws-num">04</div>
+      <div class="hwws-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="hwws-title">Execute & Deliver</div>
+      <div class="hwws-desc">We implement alongside your team for 90 days. Weekly reviews, transparent reporting, guaranteed outcomes.</div>
+      <div class="hwws-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.1"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> Days 11–90</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="res-intro r max-w">
+    <p class="chip" style="justify-content:center">Proven Results</p>
+    <h2 class="sh" style="text-align:center">Numbers that speak for<br><em>themselves.</em></h2>
+    <p>Across restaurants, hotels, cafes, dhabas and sweet shops in North India.</p>
+  </div>
+  <div class="res-grid max-w r" style="transition-delay:.1s">
+    <div class="res-card"><div class="rc-n">35<span>+</span></div><div class="rc-l">Years Experience</div><div class="rc-d">Hospitality industry, North India</div></div>
+    <div class="res-card"><div class="rc-n">25<span>–40%</span></div><div class="rc-l">Revenue Growth</div><div class="rc-d">Average increase within 90 days</div></div>
+    <div class="res-card"><div class="rc-n">15<span>–20%</span></div><div class="rc-l">Food Cost Reduction</div><div class="rc-d">Through menu engineering</div></div>
+    <div class="res-card"><div class="rc-n">45</div><div class="rc-l">Days to Open</div><div class="rc-d">Average new restaurant launch time</div></div>
+  </div>
+  <div class="res-cases max-w r" style="transition-delay:.15s;margin-top:24px;">
+    <div class="case-card">
+      <div class="case-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Restaurant case study" loading="lazy"></div>
+      <div class="case-body">
+        <div class="case-tag">Revenue Turnaround</div>
+        <div class="case-title">Family Restaurant · Panipat</div>
+        <div class="case-desc">Restaurant was losing ₹40,000/month. Anandam identified 5 cost leaks, revamped the menu, retrained the team, and relaunched on Zomato. Profitable in 55 days.</div>
+        <div class="case-result"><div class="cr-pill">↑ 32% Revenue</div><div class="cr-pill">Profitable in 55 days</div></div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="case-img"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80" alt="Cafe case study" loading="lazy"></div>
+      <div class="case-body">
+        <div class="case-tag">New Launch</div>
+        <div class="case-title">Cafe · Karnal</div>
+        <div class="case-desc">First-time owner with no hospitality experience. Anandam handled concept, kitchen, team, and digital launch. Opened to full tables on day one.</div>
+        <div class="case-result"><div class="cr-pill">Opened in 42 days</div><div class="cr-pill">Full house, Day 1</div></div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="case-img"><img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?auto=format&fit=crop&w=600&q=80" alt="Sweet shop case study" loading="lazy"></div>
+      <div class="case-body">
+        <div class="case-tag">Expansion</div>
+        <div class="case-title">Sweet Shop Chain · Sonipat</div>
+        <div class="case-desc">Single sweet shop to three outlets in 14 months. Anandam built the franchise model, SOP library and trained the area manager. Zero quality compromise across outlets.</div>
+        <div class="case-result"><div class="cr-pill">3 outlets in 14 months</div><div class="cr-pill">Zero quality drift</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ENGAGEMENT MODEL -->
+<section id="engagement">
+  <div class="eng-grid max-w">
+    <div class="r">
+      <p class="chip">Engagement Models</p>
+      <h2 class="sh" style="margin-bottom:18px;">How we work<br><em>with you</em></h2>
+      <p class="eng-l p">Every business is different. We offer three ways to engage — from a single focused project to a long-term consulting partnership.</p>
+      <div class="eng-models">
+        <div class="eng-model">
+          <div class="em-tag">Most Popular</div>
+          <div class="em-name">90-Day Transformation</div>
+          <div class="em-desc">Our signature programme. Full audit, strategy, implementation and handover. We work on-site with your team for 90 days and deliver guaranteed results.</div>
+          <div class="em-price">Custom pricing based on outlet size <span class="em-price-tag">Free consultation first</span></div>
+        </div>
+        <div class="eng-model">
+          <div class="em-tag">For Specific Needs</div>
+          <div class="em-name">Project-Based Engagement</div>
+          <div class="em-desc">One specific service — new outlet launch, staff training, website build, or digital setup. Fixed scope, fixed timeline, fixed cost. Ideal for businesses that need targeted help.</div>
+          <div class="em-price">Quoted per project <span class="em-price-tag">Starting ₹25,000</span></div>
+        </div>
+        <div class="eng-model">
+          <div class="em-tag">Long-Term</div>
+          <div class="em-name">Ongoing Consulting Retainer</div>
+          <div class="em-desc">Monthly consulting support — strategy calls, performance reviews, marketing guidance, and on-demand advice. For businesses that want a strategic partner, not just a one-time fix.</div>
+          <div class="em-price">Monthly retainer <span class="em-price-tag">Starting ₹15,000/month</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="eng-r r" style="transition-delay:.15s">
+      <h3>What to expect when you work with us</h3>
+      <p>From the first call to the last day of engagement — a consistent, transparent experience.</p>
+      <div class="eng-steps">
+        <div class="eng-step"><div class="es-n">1</div><div><div class="es-title">Honest assessment first</div><div class="es-desc">We tell you what's actually wrong — not what you want to hear. If we can't help, we'll tell you that too.</div></div></div>
+        <div class="eng-step"><div class="es-n">2</div><div><div class="es-title">No generic playbooks</div><div class="es-desc">Every strategy is built specifically for your business, your market, and your team. No templates.</div></div></div>
+        <div class="eng-step"><div class="es-n">3</div><div><div class="es-title">We work on-site, not remotely</div><div class="es-desc">Real change happens in the kitchen and on the floor — not on video calls. Our team is physically present.</div></div></div>
+        <div class="eng-step"><div class="es-n">4</div><div><div class="es-title">Weekly progress reports</div><div class="es-desc">Every week you receive a clear report on what was done, what changed, and what's next. Full visibility.</div></div></div>
+        <div class="eng-step"><div class="es-n">5</div><div><div class="es-title">Results or we work free</div><div class="es-desc">We commit to a minimum 25% revenue improvement in 90 days. If we miss it, we continue without charge.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD FORM -->
+<section id="consult">
+  <div class="con-inner">
+    <div class="r">
+      <p class="chip chip-w">Free Consultation</p>
+      <h2 class="sh sh-w" style="margin-bottom:14px;">Let's talk about<br>your <em>business.</em></h2>
+      <p>No commitment. No pressure. Just 30 minutes of honest advice from 35 years of hospitality experience.</p>
+      <div class="con-perks">
+        <div class="con-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Free 30-minute strategy call — no charge ever</div>
+        <div class="con-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>We work with restaurants, hotels, cafes, QSRs, dhabas & sweet shops</div>
+        <div class="con-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>We'll call you back within 24 hours</div>
+        <div class="con-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Advice specific to your business — no generic playbook</div>
+      </div>
+      <div class="con-contact">
+        <div class="con-contact-item"><svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M16.5 12.5l-2.5-2.5a1 1 0 00-1.4 0l-1 1a7 7 0 01-3.6-3.6l1-1a1 1 0 000-1.4L6.5 2.5A1 1 0 005 2.5l-1.5 1.5C2.5 5 2 6.5 2.5 8A14 14 0 0012 17.5c1.5.5 3 0 4-1l1.5-1.5a1 1 0 000-1.5z" stroke="rgba(255,255,255,.25)" stroke-width="1.3" stroke-linecap="round"/></svg>+91 98965 44879 (WhatsApp preferred)</div>
+        <div class="con-contact-item"><svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="rgba(255,255,255,.25)" stroke-width="1.3"/><path d="M2 5l8 6 8-6" stroke="rgba(255,255,255,.25)" stroke-width="1.3" stroke-linecap="round"/></svg>hello@anandamventures.com</div>
+        <div class="con-contact-item"><svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M10 11a2 2 0 100-4 2 2 0 000 4z" stroke="rgba(255,255,255,.25)" stroke-width="1.3"/><path d="M10 2a7 7 0 017 7c0 5-7 11-7 11S3 14 3 9a7 7 0 017-7z" stroke="rgba(255,255,255,.25)" stroke-width="1.3"/></svg>Bldg 79, Sector 13–17, HUDA, Panipat, Haryana 132103</div>
+      </div>
+    </div>
+    <div class="con-form r" style="transition-delay:.15s">
+      <div class="cf-title">Book a Free Consultation</div>
+      <div class="cf-sub">Fill in your details. We'll call within 24 hours.</div>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="f-2">
+          <div class="f-row"><label>Full Name *</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="f-row"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required></div>
+        </div>
+        <div class="f-row"><label>Business Type *</label>
+          <select name="type" required><option value="">Select your business</option><option>Restaurant</option><option>Hotel</option><option>Cafe</option><option>QSR / Fast Food</option><option>Dhaba</option><option>Sweet Shop</option><option>Bakery</option><option>Cloud Kitchen</option><option>Other</option></select>
+        </div>
+        <div class="f-2">
+          <div class="f-row"><label>Service Interested In</label>
+            <select name="service"><option value="">Select service</option><option>Restaurant Launch & Setup</option><option>Revenue Growth & Turnaround</option><option>Staff Hiring & Training</option><option>Marketing & Digital Growth</option><option>Expansion & Scaling</option><option>Website Design</option><option>Not sure — need advice</option></select>
+          </div>
+          <div class="f-row"><label>City</label><input type="text" name="city" placeholder="Your city"></div>
+        </div>
+        <div class="f-row"><label>Tell us your biggest challenge</label>
+          <textarea name="message" placeholder="Briefly describe what you need help with..."></textarea>
+        </div>
+        <button type="submit" class="f-btn">Book My Free Consultation →</button>
+        <div class="f-note">🔒 100% confidential · No spam · Free advice, always.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQs -->
+<section id="faqs">
+  <div class="faq-intro r max-w">
+    <p class="chip" style="justify-content:center">FAQs</p>
+    <h2 class="sh" style="text-align:center">Service <em>questions answered</em></h2>
+    <p>The most common things people ask us before they start.</p>
+  </div>
+  <div class="faq-grid max-w r" style="transition-delay:.1s">
+    <div class="faq-item"><div class="faq-q">Do you work with first-time restaurant owners?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes — in fact many of our best outcomes have been with first-time owners. You don't bring bad habits. We bring 35 years of expertise. Together the results are excellent.</div></div>
+    <div class="faq-item"><div class="faq-q">How long before I see results?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Most clients see measurable revenue improvement within weeks 5–8. The full transformation is visible by Day 60–90. We commit to a minimum 25% improvement by Day 90.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you only work in Haryana?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">No — our primary market is North India (Haryana, Punjab, Delhi NCR, UP) but we take projects anywhere in India. Digital services like marketing and website design can be done fully remotely for any city.</div></div>
+    <div class="faq-item"><div class="faq-q">How much does a 90-day programme cost?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Pricing is customised based on your outlet size, location, and the services required. The consultation is always free. We give you a transparent quote before any commitment is made.</div></div>
+    <div class="faq-item"><div class="faq-q">What if we don't see the promised results?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">We commit to a minimum 25% revenue improvement. If we don't deliver, we continue working without additional charge until we do. This isn't a marketing line — it's in the agreement.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I hire you for just one specific thing?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes. All six services are available as standalone projects — website, staff training, marketing setup, outlet launch, or expansion planning. You don't need to take the full 90-day programme.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you also offer the Lahori Adda franchise?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes — Lahori Adda is our own chole bhature franchise brand, currently franchising across Haryana's NH-44 corridor. Investment from ₹10 Lakhs. <a href="lahori-adda.html" style="color:var(--blue);font-weight:600;">See the Lahori Adda page →</a></div></div>
+    <div class="faq-item"><div class="faq-q">How is Anandam different from other consultants?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">35 years of real hospitality experience — not MBA graduates with spreadsheets. Our founder has personally opened restaurants, managed teams of hundreds, and run large food operations. We know what actually works on the ground.</div></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">Anandam<span> Ventures</span></div>
+      <div class="foot-tagline">Building India's Next Hospitality Brands.</div>
+      <p class="foot-about">35 years of hospitality excellence. We help restaurants, hotels, cafes, QSRs, sweet shops and dhabas grow — and build our own brands alongside.<br><br>Building No. 79, Sector 13–17, HUDA<br>Panipat, Haryana 132103</p>
+      <div class="foot-socs">
+        <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+        <a href="https://wa.me/919896544879" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col"><h4>Services</h4><ul><li><a href="#s1">Restaurant Launch</a></li><li><a href="#s2">Revenue Growth</a></li><li><a href="#s3">Staff Training</a></li><li><a href="#s4">Digital Marketing</a></li><li><a href="#s5">Expansion</a></li><li><a href="#s6">Website Design</a></li></ul></div>
+    <div class="foot-col"><h4>Platform</h4><ul><li><a href="index.html">Home</a></li><li><a href="index.html#model">90-Day Model</a></li><li><a href="lahori-adda.html">Lahori Adda</a></li><li><a href="index.html#directors">Leadership</a></li><li><a href="index.html#testimonials">Results</a></li><li><a href="index.html#faqs">FAQs</a></li></ul></div>
+    <div class="foot-col"><h4>Contact</h4><ul><li><a href="tel:+919896544879">+91 98965 44879</a></li><li><a href="mailto:hello@anandamventures.com">hello@anandamventures.com</a></li><li><a href="https://wa.me/919896544879">WhatsApp Us</a></li><li><a href="#consult">Free Consultation</a></li></ul></div>
+  </div>
+  <div class="foot-bot">
+    <div class="foot-copy">© 2025 Anandam Ventures · Bldg 79, Sector 13–17, HUDA, Panipat, Haryana 132103</div>
+    <div class="foot-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>80),{passive:true});
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.r').forEach((el,i)=>{if(!el.style.transitionDelay)el.style.transitionDelay=`${(i%4)*.07}s`;io.observe(el);});
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=a.getAttribute('href');if(t==='#')return;const el=document.querySelector(t);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});};}));
+</script>
+</body>
+</html>
