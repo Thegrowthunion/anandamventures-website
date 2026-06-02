@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & FAQs — Anandam Ventures</title>
+<meta name="description" content="Get in touch with Anandam Ventures — hospitality consulting, Lahori Adda franchise enquiries, and website services. Panipat, Haryana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1F35;overflow-x:hidden;font-size:16px;line-height:1.6;width:100%;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;height:auto;}
+
+:root{
+  --navy:#0D1F35;
+  --blue:#1648B0;
+  --blue2:#2B5CE6;
+  --blue-lt:#EBF1FD;
+  --blue-pale:#F4F7FE;
+  --white:#fff;
+  --off:#F8FAFB;
+  --border:#D8E3F0;
+  --t2:#4A6080;
+  --t3:#8A9BB0;
+  --green:#25D366;
+  --gold:#C49B3C;
+}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;background:rgba(8,14,26,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;padding:0 48px;gap:32px;transition:box-shadow .3s;}
+nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.4);}
+.nav-logo-wrap{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.nav-logo-img{height:54px;width:54px;object-fit:cover;object-position:center 22%;border-radius:9px;display:block;}
+.nav-brand{display:flex;flex-direction:column;}
+.nav-brand-main{font-size:13px;font-weight:700;color:rgba(255,255,255,.9);line-height:1.1;}
+.nav-brand-sub{font-size:9px;font-weight:600;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-top:1px;}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1;margin-left:8px;}
+.nav-links a{padding:7px 12px;font-size:12px;font-weight:500;color:rgba(255,255,255,.52);border-radius:6px;transition:all .2s;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.09);}
+.nav-r{margin-left:auto;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-phone{font-size:12px;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:6px;white-space:nowrap;}
+.nav-cta{background:var(--blue);color:#fff;padding:9px 18px;border-radius:7px;font-size:12px;font-weight:600;white-space:nowrap;transition:all .2s;}
+.nav-cta:hover{background:#1D55CC;}
+
+/* ── HERO ── */
+#hero{
+  min-height:52vh;padding-top:76px;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;
+}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(9,14,26,.97) 0%,rgba(22,72,176,.6) 100%);}
+.hero-inner{position:relative;z-index:2;padding:56px 60px;max-width:1280px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.hero-l{}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:5px 14px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:18px;}
+.hero-h{font-size:clamp(36px,5vw,60px);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.5px;margin-bottom:14px;}
+.hero-h em{color:#93C5FD;font-style:normal;}
+.hero-p{font-size:16px;line-height:1.75;color:rgba(255,255,255,.55);margin-bottom:28px;max-width:480px;}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{background:var(--blue);color:#fff;padding:13px 26px;border-radius:8px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-primary:hover{background:#1D55CC;transform:translateY(-1px);}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.75);padding:13px 26px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-ghost:hover{border-color:rgba(255,255,255,.5);color:#fff;}
+.hero-r{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.hero-stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px 18px;backdrop-filter:blur(8px);}
+.hs-n{font-size:28px;font-weight:800;color:#fff;line-height:1;margin-bottom:3px;}
+.hs-l{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.35);}
+
+/* ── SHARED ── */
+section{padding:88px 60px;}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+.chip::before{content:'';display:block;width:16px;height:2px;background:var(--blue);border-radius:2px;}
+.chip-w{color:rgba(255,255,255,.4);}
+.chip-w::before{background:rgba(255,255,255,.3);}
+h2.sh{font-size:clamp(26px,3.5vw,44px);font-weight:800;color:var(--navy);line-height:1.1;letter-spacing:-.3px;}
+h2.sh em{color:var(--blue);font-style:normal;}
+h2.sh-w{color:#fff;}
+h2.sh-w em{color:#93C5FD;}
+.divider{height:1px;background:var(--border);margin:0 60px;}
+.r{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+.r.on{opacity:1;transform:none;}
+.max-w{max-width:1160px;margin-left:auto;margin-right:auto;}
+
+/* ── CONTACT METHODS ── */
+#methods{background:var(--blue-pale);padding:56px 60px;}
+.methods-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.method-card{background:var(--white);border-radius:14px;border:1px solid var(--border);padding:28px 22px;transition:all .3s;cursor:default;}
+.method-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(22,72,176,.1);border-color:var(--blue);}
+.mc-icon{width:52px;height:52px;border-radius:13px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.mc-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--t3);margin-bottom:5px;}
+.mc-value{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:5px;line-height:1.3;}
+.mc-sub{font-size:12.5px;color:var(--t2);line-height:1.5;}
+.mc-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--blue);margin-top:12px;transition:gap .2s;}
+.mc-link:hover{gap:9px;}
+
+/* ── MAIN CONTACT ── */
+#contact{background:var(--white);}
+.con-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.con-form-card{background:var(--blue-pale);border-radius:16px;border:1px solid var(--border);padding:40px 36px;}
+.cf-title{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:4px;}
+.cf-sub{font-size:13px;color:var(--t2);margin-bottom:28px;}
+.f-row{margin-bottom:13px;}
+.f-row label{display:block;font-size:11.5px;font-weight:600;color:var(--t2);margin-bottom:4px;}
+.f-row input,.f-row select,.f-row textarea{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;font-size:13.5px;font-family:inherit;color:var(--navy);background:var(--white);transition:border-color .2s;outline:none;}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{border-color:var(--blue);background:#fff;}
+.f-row textarea{resize:vertical;min-height:100px;}
+.f-row select{appearance:none;cursor:pointer;}
+.f-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.f-btn{width:100%;background:var(--blue);color:#fff;border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;transition:background .2s;font-family:inherit;margin-top:4px;}
+.f-btn:hover{background:var(--navy);}
+.f-note{font-size:11px;color:var(--t3);text-align:center;margin-top:8px;}
+.con-r{}
+.con-r h3{font-size:28px;font-weight:800;color:var(--navy);margin-bottom:10px;line-height:1.15;}
+.con-r h3 em{color:var(--blue);font-style:normal;}
+.con-r > p{font-size:15px;color:var(--t2);line-height:1.8;margin-bottom:32px;}
+.con-items{display:flex;flex-direction:column;gap:20px;margin-bottom:32px;}
+.con-item{display:flex;align-items:flex-start;gap:16px;}
+.ci-icon{width:44px;height:44px;border-radius:11px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ci-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);margin-bottom:3px;}
+.ci-value{font-size:14px;font-weight:600;color:var(--navy);line-height:1.5;}
+.ci-sub{font-size:12px;color:var(--t2);margin-top:2px;}
+.con-hours{background:var(--blue-pale);border-radius:12px;border:1px solid var(--border);padding:20px 22px;margin-bottom:28px;}
+.ch-title{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);margin-bottom:14px;}
+.ch-row{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:13.5px;}
+.ch-row:last-child{border-bottom:none;}
+.ch-day{color:var(--t2);}
+.ch-time{font-weight:600;color:var(--navy);}
+.ch-badge{background:rgba(16,185,129,.1);color:#059669;font-size:11px;font-weight:700;padding:3px 8px;border-radius:100px;}
+.con-socials{display:flex;gap:10px;}
+.con-soc{width:42px;height:42px;border-radius:10px;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--t2);transition:all .2s;}
+.con-soc:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-lt);}
+
+/* ── MAP ── */
+#map-section{background:var(--blue-pale);padding:0;overflow:hidden;}
+.map-grid{display:grid;grid-template-columns:1fr 2fr;}
+.map-info{padding:56px 48px;display:flex;flex-direction:column;justify-content:center;}
+.map-info h3{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:8px;}
+.map-info p{font-size:14px;color:var(--t2);line-height:1.75;margin-bottom:20px;}
+.map-address{background:var(--white);border-radius:12px;border:1px solid var(--border);padding:18px 20px;margin-bottom:18px;}
+.ma-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--t3);margin-bottom:7px;}
+.ma-val{font-size:14px;font-weight:600;color:var(--navy);line-height:1.6;}
+.map-directions{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--blue);}
+.map-directions:hover{text-decoration:underline;}
+.map-embed{min-height:420px;background:var(--border);}
+.map-embed iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(20%);}
+
+/* ── FAQs ── */
+#faqs{background:var(--white);}
+.faq-intro{text-align:center;max-width:640px;margin:0 auto 48px;}
+.faq-intro p{font-size:15px;color:var(--t2);margin-top:10px;line-height:1.75;}
+.faq-cats{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;}
+.faq-cat{padding:8px 18px;border-radius:100px;font-size:12.5px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);color:var(--t2);background:var(--white);transition:all .2s;}
+.faq-cat.active,.faq-cat:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
+.faq-grid{display:flex;flex-direction:column;gap:0;max-width:860px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--border);overflow:hidden;}
+.faq-item:first-child{border-top:1px solid var(--border);}
+.faq-q{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:20px 4px;cursor:pointer;
+  font-size:15px;font-weight:700;color:var(--navy);
+  transition:color .2s;user-select:none;
+}
+.faq-q:hover{color:var(--blue);}
+.faq-q-icon{
+  width:28px;height:28px;border-radius:50%;border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  transition:all .25s;
+}
+.faq-item.open .faq-q{color:var(--blue);}
+.faq-item.open .faq-q-icon{background:var(--blue);border-color:var(--blue);transform:rotate(45deg);}
+.faq-item.open .faq-q-icon svg path{stroke:#fff;}
+.faq-body{
+  max-height:0;overflow:hidden;
+  transition:max-height .4s ease, padding .3s ease;
+  padding:0 4px;
+}
+.faq-item.open .faq-body{max-height:300px;padding:0 4px 20px;}
+.faq-a{font-size:14px;color:var(--t2);line-height:1.8;}
+.faq-a a{color:var(--blue);font-weight:600;}
+.faq-a a:hover{text-decoration:underline;}
+.faq-tag{display:inline-flex;background:var(--blue-lt);color:var(--blue);border-radius:100px;padding:2px 10px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-left:8px;vertical-align:middle;}
+
+/* ── CTA STRIP ── */
+#cta-strip{background:var(--navy);padding:56px 60px;}
+.cta-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;max-width:1160px;margin:0 auto;}
+.cta-l h2{font-size:clamp(24px,3vw,36px);font-weight:800;color:#fff;margin-bottom:6px;line-height:1.2;}
+.cta-l h2 em{color:#93C5FD;font-style:normal;}
+.cta-l p{font-size:14px;color:rgba(255,255,255,.45);}
+.cta-btns{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0;}
+.btn-blue{background:var(--blue);color:#fff;padding:13px 26px;border-radius:8px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .2s;white-space:nowrap;}
+.btn-blue:hover{background:#1D55CC;}
+.btn-outline-w{border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.75);padding:13px 26px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .2s;white-space:nowrap;}
+.btn-outline-w:hover{border-color:rgba(255,255,255,.5);color:#fff;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);}
+.foot-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding:56px 60px 40px;border-bottom:1px solid rgba(255,255,255,.06);}
+.foot-brand{font-size:18px;font-weight:800;color:#fff;margin-bottom:3px;}
+.foot-brand span{color:var(--blue2);}
+.foot-tagline{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.5px;margin-bottom:10px;}
+.foot-about{font-size:12.5px;color:rgba(255,255,255,.22);line-height:1.7;max-width:280px;margin-bottom:20px;}
+.foot-socs{display:flex;gap:7px;}
+.foot-soc{width:34px;height:34px;border-radius:7px;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.25);transition:all .2s;}
+.foot-soc:hover{border-color:rgba(255,255,255,.35);color:#fff;}
+.foot-col h4{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:16px;}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.foot-col a{font-size:12.5px;color:rgba(255,255,255,.27);transition:color .2s;}
+.foot-col a:hover{color:rgba(255,255,255,.75);}
+.foot-bot{display:flex;align-items:center;justify-content:space-between;padding:17px 60px;flex-wrap:wrap;gap:10px;}
+.foot-copy{font-size:11px;color:rgba(255,255,255,.15);}
+.foot-links{display:flex;gap:18px;}
+.foot-links a{font-size:11px;color:rgba(255,255,255,.15);transition:color .2s;}
+.foot-links a:hover{color:rgba(255,255,255,.45);}
+
+/* ── WA ── */
+.wa-btn{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(37,211,102,.4);transition:transform .2s;}
+.wa-btn:hover{transform:scale(1.1);}
+
+/* ── TABLET ── */
+@media(min-width:769px) and (max-width:1100px){
+  nav{padding:0 24px;}
+  .nav-links{display:none;}
+  section,#methods{padding:56px 28px;}
+  .divider{margin:0 28px;}
+  .hero-inner{grid-template-columns:1fr;padding:48px 28px;gap:32px;}
+  .hero-r{grid-template-columns:1fr 1fr;}
+  .methods-grid{grid-template-columns:1fr 1fr;gap:12px;}
+  .con-grid{grid-template-columns:1fr;gap:36px;}
+  .map-grid{grid-template-columns:1fr;}
+  .map-info{padding:40px 28px;}
+  .map-embed{min-height:300px;}
+  .map-embed iframe{min-height:300px;}
+  .cta-inner{grid-template-columns:1fr;gap:24px;}
+  .foot-inner{grid-template-columns:1fr 1fr;gap:28px;padding:44px 28px 28px;}
+  .foot-bot{padding:14px 28px;}
+  .f-2{grid-template-columns:1fr;}
+}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  *{max-width:100%;word-break:break-word;}
+  html,body{overflow-x:hidden;width:100%;}
+  nav{padding:0 16px;height:64px;}
+  .nav-links,.nav-phone{display:none;}
+  .nav-logo-img{height:42px;width:42px;border-radius:7px;}
+  section,#methods{padding:48px 16px !important;}
+  .divider{margin:0 16px;}
+  #hero{padding-top:64px;min-height:auto;}
+  .hero-inner{grid-template-columns:1fr !important;padding:36px 16px 48px !important;gap:24px;}
+  .hero-r{grid-template-columns:1fr 1fr;gap:10px;}
+  .hero-h{font-size:28px !important;}
+  .hero-p{font-size:14px;}
+  .methods-grid{grid-template-columns:1fr 1fr !important;gap:10px;}
+  .method-card{padding:20px 14px;}
+  .mc-icon{width:40px;height:40px;}
+  .mc-value{font-size:14px;}
+  .con-grid{grid-template-columns:1fr !important;}
+  .con-form-card{padding:24px 18px;}
+  .map-grid{grid-template-columns:1fr !important;}
+  .map-info{padding:32px 16px;}
+  .map-embed{min-height:260px;}
+  .map-embed iframe{min-height:260px;}
+  .cta-inner{grid-template-columns:1fr !important;gap:20px;}
+  .cta-btns{flex-direction:column;}
+  .f-2{grid-template-columns:1fr !important;}
+  .foot-inner{grid-template-columns:1fr !important;gap:24px;padding:36px 16px 24px;}
+  .foot-bot{padding:14px 16px;flex-direction:column;text-align:center;gap:7px;}
+  .foot-links{justify-content:center;}
+  h2.sh{font-size:clamp(22px,6vw,32px);}
+  .wa-btn{bottom:14px;right:14px;width:48px;height:48px;}
+  .faq-cats{gap:6px;}
+  .faq-cat{padding:7px 13px;font-size:11.5px;}
+  .faq-q{font-size:14px;}
+}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/919896544879?text=Hello%20Anandam%20Ventures!%20I%20would%20like%20to%20get%20in%20touch." class="wa-btn" target="_blank" rel="noopener">
+  <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 2C7.373 2 2 7.373 2 14c0 2.104.548 4.08 1.508 5.8L2 26l6.38-1.492A11.94 11.94 0 0014 26c6.627 0 12-5.373 12-12S20.627 2 14 2z" fill="#fff"/><path d="M10.5 8.5c-.3-.7-.6-.72-.88-.73H9c-.28 0-.72.1-1.1.5-.37.4-1.42 1.38-1.42 3.36s1.45 3.9 1.65 4.17c.2.27 2.8 4.48 6.9 6.1 3.42 1.35 4.1 1.08 4.84 1.01.74-.07 2.4-.98 2.74-1.92.34-.94.34-1.75.24-1.92-.1-.17-.37-.27-.77-.47s-2.4-1.18-2.77-1.32c-.37-.14-.64-.2-.91.2-.27.4-1.05 1.32-1.28 1.59-.24.27-.47.3-.87.1-.4-.2-1.68-.62-3.2-1.97-1.18-1.05-1.98-2.35-2.21-2.75-.24-.4-.03-.62.17-.82.18-.18.4-.47.6-.7.2-.24.27-.4.4-.67.14-.27.07-.5-.03-.7-.1-.2-.88-2.18-1.23-2.97z" fill="#25D366"/></svg>
+</a>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo-wrap">
+    <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/ChatGPT_Image_May_27__2026__10_35_51_AM.png" alt="Anandam Ventures" class="nav-logo-img">
+    <div class="nav-brand">
+      <div class="nav-brand-main">Anandam Ventures</div>
+      <div class="nav-brand-sub">Est. 1995 · Panipat</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#model">90-Day Model</a></li>
+    <li><a href="lahori-adda.html">Lahori Adda</a></li>
+    <li><a href="index.html#directors">Leadership</a></li>
+    <li><a href="contact.html" class="active">Contact & FAQs</a></li>
+  </ul>
+  <div class="nav-r">
+    <a href="tel:+919896544879" class="nav-phone">+91 98965 44879</a>
+    <a href="#form" class="nav-cta">Get in Touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-l">
+      <div class="hero-tag">Contact & FAQs</div>
+      <h1 class="hero-h">We'd love to<br>hear from <em>you.</em></h1>
+      <p class="hero-p">Whether it's a restaurant project, a Lahori Adda franchise inquiry, a website quote, or just a question — reach out. Our team responds within 24 hours, always.</p>
+      <div class="hero-ctas">
+        <a href="#form" class="btn-primary">Send a Message</a>
+        <a href="https://wa.me/919896544879" class="btn-ghost" target="_blank">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+    <div class="hero-r r">
+      <div class="hero-stat">
+        <div class="hs-n">24h</div>
+        <div class="hs-l">Response Time</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hs-n">Free</div>
+        <div class="hs-l">First Consultation</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hs-n">35+</div>
+        <div class="hs-l">Years Experience</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hs-n">6</div>
+        <div class="hs-l">Core Services</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT METHODS -->
+<section id="methods">
+  <div class="methods-grid max-w r">
+    <div class="method-card">
+      <div class="mc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011 2.96 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="mc-label">Phone</div>
+      <div class="mc-value">+91 98965 44879</div>
+      <div class="mc-sub">Mon–Sat, 9 AM–7 PM. WhatsApp preferred for quick responses.</div>
+      <a href="tel:+919896544879" class="mc-link">Call now <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+    <div class="method-card">
+      <div class="mc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#1648B0" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="mc-label">Email</div>
+      <div class="mc-value">hello@anandamventures.com</div>
+      <div class="mc-sub">For general enquiries, proposals and project discussions. We reply within 24 hours.</div>
+      <a href="mailto:hello@anandamventures.com" class="mc-link">Send email <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+    <div class="method-card">
+      <div class="mc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="mc-label">WhatsApp</div>
+      <div class="mc-value">+91 98965 44879</div>
+      <div class="mc-sub">Fastest way to reach us. Voice notes welcome. Available 9 AM–9 PM daily.</div>
+      <a href="https://wa.me/919896544879" class="mc-link" target="_blank">Chat now <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+    <div class="method-card">
+      <div class="mc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#1648B0" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="#1648B0" stroke-width="1.5"/></svg>
+      </div>
+      <div class="mc-label">Visit Us</div>
+      <div class="mc-value">Panipat, Haryana</div>
+      <div class="mc-sub">Bldg 79, Sector 13–17, HUDA, Panipat, Haryana 132103. By appointment.</div>
+      <a href="#map-section" class="mc-link">Get directions <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MAIN CONTACT SECTION -->
+<section id="contact">
+  <div class="con-grid max-w">
+
+    <!-- FORM -->
+    <div class="con-form-card r" id="form">
+      <div class="cf-title">Send Us a Message</div>
+      <div class="cf-sub">Fill in the form and we'll get back to you within 24 hours.</div>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="f-2">
+          <div class="f-row"><label>Full Name *</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="f-row"><label>Phone Number *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required></div>
+        </div>
+        <div class="f-row"><label>Email Address</label><input type="email" name="email" placeholder="your@email.com"></div>
+        <div class="f-2">
+          <div class="f-row"><label>What is this about? *</label>
+            <select name="subject" required>
+              <option value="">Select topic</option>
+              <option>Restaurant Launch & Setup</option>
+              <option>Revenue Growth / Turnaround</option>
+              <option>Staff Hiring & Training</option>
+              <option>Marketing & Digital Growth</option>
+              <option>Expansion & Scaling</option>
+              <option>Website Design</option>
+              <option>Lahori Adda Franchise</option>
+              <option>General Enquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="f-row"><label>Business Type</label>
+            <select name="business">
+              <option value="">Select type</option>
+              <option>Restaurant</option><option>Hotel</option><option>Cafe</option>
+              <option>QSR / Fast Food</option><option>Dhaba</option>
+              <option>Sweet Shop</option><option>Bakery</option>
+              <option>Cloud Kitchen</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="f-row"><label>City</label><input type="text" name="city" placeholder="Your city / location"></div>
+        <div class="f-row"><label>Your Message *</label>
+          <textarea name="message" placeholder="Tell us about your business and what you're looking for..." required></textarea>
+        </div>
+        <button type="submit" class="f-btn">Send Message →</button>
+        <div class="f-note">🔒 Your information is completely private. No spam, ever.</div>
+      </form>
+    </div>
+
+    <!-- CONTACT DETAILS -->
+    <div class="con-r r" style="transition-delay:.15s">
+      <h3>Let's talk about<br>your <em>business.</em></h3>
+      <p>No commitment. No pressure. Just honest, experienced advice. We work with restaurants, hotels, cafes, QSRs, dhabas, sweet shops, bakeries and cloud kitchens across North India.</p>
+
+      <div class="con-items">
+        <div class="con-item">
+          <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011 2.96 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div>
+            <div class="ci-label">Phone & WhatsApp</div>
+            <div class="ci-value">+91 98965 44879</div>
+            <div class="ci-sub">WhatsApp preferred · Available 9 AM–9 PM daily</div>
+          </div>
+        </div>
+        <div class="con-item">
+          <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#1648B0" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div>
+            <div class="ci-label">Email</div>
+            <div class="ci-value">hello@anandamventures.com</div>
+            <div class="ci-sub">General enquiries · Consulting · Partnerships</div>
+          </div>
+        </div>
+        <div class="con-item">
+          <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#1648B0" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div>
+            <div class="ci-label">Franchise Email</div>
+            <div class="ci-value">franchise@anandamventures.com</div>
+            <div class="ci-sub">Lahori Adda franchise applications only</div>
+          </div>
+        </div>
+        <div class="con-item">
+          <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#1648B0" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="#1648B0" stroke-width="1.5"/></svg></div>
+          <div>
+            <div class="ci-label">Office Address</div>
+            <div class="ci-value">Building No. 79, Sector 13–17</div>
+            <div class="ci-sub">HUDA, Panipat, Haryana 132103<br>Visits by appointment only</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="con-hours">
+        <div class="ch-title">Availability</div>
+        <div class="ch-row"><span class="ch-day">Monday – Friday</span><span class="ch-time">9:00 AM – 7:00 PM <span class="ch-badge">Open</span></span></div>
+        <div class="ch-row"><span class="ch-day">Saturday</span><span class="ch-time">9:00 AM – 5:00 PM <span class="ch-badge">Open</span></span></div>
+        <div class="ch-row"><span class="ch-day">Sunday</span><span class="ch-time">WhatsApp only</span></div>
+        <div class="ch-row"><span class="ch-day">Response time</span><strong class="ch-time" style="color:var(--blue)">Within 24 hours</strong></div>
+      </div>
+
+      <div class="con-socials">
+        <a href="#" class="con-soc" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" class="con-soc" title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="con-soc" title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+        <a href="https://wa.me/919896544879" class="con-soc" title="WhatsApp" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section id="map-section" style="padding:0;">
+  <div class="map-grid">
+    <div class="map-info r">
+      <p class="chip">Find Us</p>
+      <h3>Our Office</h3>
+      <p>We are based in Panipat, Haryana — the heart of North India's NH-44 corridor. Visits are by appointment only. Most client meetings happen at your business location.</p>
+      <div class="map-address">
+        <div class="ma-label">Office Address</div>
+        <div class="ma-val">Building No. 79, Sector 13–17<br>HUDA, Panipat<br>Haryana – 132103</div>
+      </div>
+      <a href="https://maps.google.com/?q=Sector+13+HUDA+Panipat+Haryana" class="map-directions" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#1648B0" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="#1648B0" stroke-width="1.5"/></svg>
+        Get Directions on Google Maps
+      </a>
+    </div>
+    <div class="map-embed">
+      <iframe
+        src="https://maps.google.com/maps?q=Sector+13+HUDA+Panipat+Haryana+132103&t=&z=14&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Anandam Ventures Office Location">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQs -->
+<section id="faqs">
+  <div class="faq-intro r max-w">
+    <p class="chip" style="justify-content:center">Frequently Asked Questions</p>
+    <h2 class="sh" style="text-align:center">Everything you need<br>to <em>know about us</em></h2>
+    <p>From what we do to how we work — all the common questions answered. Can't find what you're looking for? Just ask us directly.</p>
+  </div>
+
+  <div class="faq-cats max-w r" style="transition-delay:.1s">
+    <div class="faq-cat active" onclick="filterFaq('all',this)">All Questions</div>
+    <div class="faq-cat" onclick="filterFaq('general',this)">About Us</div>
+    <div class="faq-cat" onclick="filterFaq('services',this)">Our Services</div>
+    <div class="faq-cat" onclick="filterFaq('model',this)">90-Day Model</div>
+    <div class="faq-cat" onclick="filterFaq('franchise',this)">Lahori Adda Franchise</div>
+    <div class="faq-cat" onclick="filterFaq('website',this)">Website Services</div>
+  </div>
+
+  <div class="faq-grid max-w r" style="transition-delay:.15s" id="faqGrid">
+
+    <!-- GENERAL / ABOUT US -->
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is Anandam Ventures? <span class="faq-tag">About Us</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Anandam Ventures is a multi-venture hospitality company based in Panipat, Haryana. Founded by Mr. Yudhishter Anand with 35 years of hospitality industry experience, we offer three things: hospitality consulting services for restaurants, hotels and food businesses; Lahori Adda — our own authentic chole bhature franchise brand; and custom website design for hospitality businesses.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Who are the founders of Anandam Ventures? <span class="faq-tag">About Us</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Anandam Ventures is co-founded by Mr. Yudhishter Anand and Mrs. Parveen Anand. Mr. Anand brings 35+ years of hospitality experience, having worked with iconic brands including Sukhdev Dhaba (Murthal), Haveli (Karnal), and currently serving as General Manager at Ahuja Sweets, Panipat. Mrs. Parveen Anand leads people, culture and internal operations. Together they bring both operational expertise and values-driven leadership.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What type of businesses do you work with? <span class="faq-tag">About Us</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">We work with hotels, restaurants, cafes, QSRs (quick service restaurants), dhabas, sweet shops, bakeries, and cloud kitchens — across all stages: new launches, growing businesses, and struggling operations needing a turnaround.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Where are you based and do you work outside Haryana? <span class="faq-tag">About Us</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Our office is in Panipat, Haryana. Our primary market is North India — Haryana, Punjab, Delhi NCR, and Uttar Pradesh. We also work with clients across India, and for services like digital marketing and website design, we work fully remotely for clients in any city.</div></div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="faq-item" data-cat="services">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What consulting services do you offer? <span class="faq-tag">Services</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">We offer six core services: (1) Restaurant Launch & Setup — concept to opening day; (2) Revenue Growth & Turnaround — fixing struggling businesses; (3) Staff Hiring & Training — building high-performance hospitality teams; (4) Marketing & Digital Growth — Google, Zomato, Swiggy, social media; (5) Expansion & Scaling — franchise models and multi-outlet growth; (6) Website & Digital Presence — custom restaurant websites. See our <a href="services.html">Services page</a> for full details.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="services">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Is the first consultation really free? <span class="faq-tag">Services</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Yes, completely. We offer a free 30-minute consultation — no charge and no commitment. We understand your business, your challenges, and your goals. After that, if you want to proceed, we give you a transparent quote. There is no obligation to hire us after the consultation.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="services">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Do you work with first-time restaurant owners? <span class="faq-tag">Services</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Absolutely — many of our best outcomes have been with first-time owners. You don't bring bad habits; we bring 35 years of expertise. We handle everything from concept to grand opening so you open with confidence, not guesswork.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="services">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Can I hire you for just one specific service? <span class="faq-tag">Services</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Yes. All six services are available as standalone projects — you can hire us just for a website, just for staff training, just for marketing setup, or just for a new outlet launch. You don't need to take the full 90-day programme if you only need targeted help.</div></div>
+    </div>
+
+    <!-- 90-DAY MODEL -->
+    <div class="faq-item" data-cat="model">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the 90-Day Transformation Model? <span class="faq-tag">90-Day Model</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Our 90-Day Transformation Model is a structured, three-phase programme: Phase 1 (Days 1–30) — complete audit and strategy blueprint; Phase 2 (Days 31–60) — implementation of all systems, retraining, menu revamp, digital overhaul; Phase 3 (Days 61–90) — scaling, corporate tie-ups, performance review and 6-month growth roadmap handover. We work on-site with your team throughout. See the full model on our <a href="index.html#model">homepage</a>.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="model">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What results does the 90-day model guarantee? <span class="faq-tag">90-Day Model</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">We commit to a minimum 25% revenue improvement by Day 90. If we don't deliver, we continue working without additional charge until we do. This commitment is included in the engagement agreement. Our average result across clients is 25–40% revenue growth and 15–20% food cost reduction.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="model">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How much does the 90-day programme cost? <span class="faq-tag">90-Day Model</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Pricing is customised based on your outlet size, type, and location. The consultation is always free. We provide a transparent, fixed-cost quote before any commitment. As a general note — our fee is always significantly less than the incremental revenue you will gain during the programme itself.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="model">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How soon will I see results after starting? <span class="faq-tag">90-Day Model</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Most clients see measurable improvement — higher daily sales, lower food costs, better online visibility — within weeks 5 to 8. The full, sustained transformation is visible by Day 60–90. Some quick wins (like Zomato listing improvements and staff training) often show results within the first two weeks.</div></div>
+    </div>
+
+    <!-- LAHORI ADDA FRANCHISE -->
+    <div class="faq-item" data-cat="franchise">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is Lahori Adda? <span class="faq-tag">Lahori Adda</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Lahori Adda is our own authentic chole bhature franchise brand — rooted in a 1947 Lahori recipe that crossed the border during partition. We are currently franchising 25 outlets across Haryana's NH-44 corridor in Phase 1. Each outlet is backed by our central kitchen masala supply, brand support, and 90-day onboarding. <a href="lahori-adda.html">Learn more on the Lahori Adda page →</a></div></div>
+    </div>
+
+    <div class="faq-item" data-cat="franchise">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the total franchise investment? <span class="faq-tag">Lahori Adda</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">The all-inclusive Lahori Adda franchise investment ranges from ₹10 to ₹20 Lakhs depending on outlet size and location. This includes franchise fee, full setup, brand kit, initial inventory, training, digital setup, and 90-day onboarding support. No hidden costs. The projected payback period is 18–30 months.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="franchise">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Which cities are available for a Lahori Adda franchise? <span class="faq-tag">Lahori Adda</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Phase 1 is now open across Panipat, Karnal, Sonipat, Kurukshetra, and Ambala — the NH-44 corridor in Haryana. Slots are limited per city. Phase 2 (Rohtak, Hisar, Yamunanagar, Faridabad) opens after Phase 1 is complete. Apply now to secure your territory.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="franchise">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Do I need prior hospitality experience to open a Lahori Adda? <span class="faq-tag">Lahori Adda</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">No. We have trained complete first-timers to run successful Lahori Adda outlets. Our 90-day onboarding covers every aspect — kitchen operations, service standards, digital marketing, Zomato/Swiggy setup, and staff management. What matters is the right location, adequate capital, and genuine motivation.</div></div>
+    </div>
+
+    <!-- WEBSITE SERVICES -->
+    <div class="faq-item" data-cat="website">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What does a restaurant website from Anandam include? <span class="faq-tag">Website</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Every website includes: custom design (not a template), full online menu with photos and pricing, table booking or reservation integration, WhatsApp ordering button, Google Maps location, SEO setup to rank for "restaurant in [your city]", mobile-optimised design, and social media links. The site is fully handed over to you — you own it, no monthly fees to us.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="website">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How long does a website take to build and go live? <span class="faq-tag">Website</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">From brief to live website: typically 14 days. This includes design, content setup, SEO optimisation, and launch. We need: your brand details (name, logo if available), menu, photos or the brief to source stock photos, and the domain name (we can help purchase if needed).</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="website">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How much does a restaurant website cost? <span class="faq-tag">Website</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Website pricing is based on the scope — a standard restaurant website with menu and booking typically starts at ₹25,000. Larger projects with e-commerce, multiple pages, or custom features are quoted separately. Contact us with your requirements for a transparent, fixed-price quote. No monthly fees charged by us after handover.</div></div>
+    </div>
+
+    <div class="faq-item" data-cat="website">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Will my website rank on Google? <span class="faq-tag">Website</span>
+        <div class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="faq-body"><div class="faq-a">Every website we build includes foundational SEO — correct page titles, meta descriptions, local business structured data, Google My Business integration, and page speed optimisation. Combined with a Google My Business profile (which we set up as part of the package), most of our clients appear in Google's local search within 2–4 weeks of launch.</div></div>
+    </div>
+
+  </div><!-- /faq-grid -->
+
+  <div style="text-align:center;margin-top:36px;" class="r max-w">
+    <p style="font-size:14px;color:var(--t2);margin-bottom:16px;">Still have a question that's not answered here?</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="#form" class="btn-blue">Ask Us Directly</a>
+      <a href="https://wa.me/919896544879?text=Hi!%20I%20have%20a%20question%20for%20Anandam%20Ventures." class="btn-outline" target="_blank">Ask on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section id="cta-strip">
+  <div class="cta-inner">
+    <div class="cta-l">
+      <h2>Ready to grow your<br><em>hospitality business?</em></h2>
+      <p>Free consultation · 24-hour response · No commitment required</p>
+    </div>
+    <div class="cta-btns">
+      <a href="#form" class="btn-blue">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Send a Message
+      </a>
+      <a href="https://wa.me/919896544879" class="btn-outline-w" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        WhatsApp Us
+      </a>
+      <a href="lahori-adda.html" class="btn-outline-w">Lahori Adda Franchise →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">Anandam<span> Ventures</span></div>
+      <div class="foot-tagline">Building India's Next Hospitality Brands.</div>
+      <p class="foot-about">35 years of hospitality excellence. Consulting, restaurant launches, staff training, digital growth and the Lahori Adda franchise — all under one roof.<br><br>Building No. 79, Sector 13–17, HUDA<br>Panipat, Haryana 132103</p>
+      <div class="foot-socs">
+        <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+        <a href="https://wa.me/919896544879" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html#s1">Restaurant Launch</a></li>
+        <li><a href="services.html#s2">Revenue Growth</a></li>
+        <li><a href="services.html#s3">Staff Training</a></li>
+        <li><a href="services.html#s4">Digital Marketing</a></li>
+        <li><a href="services.html#s5">Expansion</a></li>
+        <li><a href="services.html#s6">Website Design</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#model">90-Day Model</a></li>
+        <li><a href="lahori-adda.html">Lahori Adda</a></li>
+        <li><a href="index.html#directors">Leadership</a></li>
+        <li><a href="contact.html">Contact & FAQs</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+919896544879">+91 98965 44879</a></li>
+        <li><a href="mailto:hello@anandamventures.com">hello@anandamventures.com</a></li>
+        <li><a href="mailto:franchise@anandamventures.com">franchise@anandamventures.com</a></li>
+        <li><a href="https://wa.me/919896544879">WhatsApp Us</a></li>
+        <li><a href="#form">Free Consultation</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <div class="foot-copy">© 2025 Anandam Ventures · Bldg 79, Sector 13–17, HUDA, Panipat, Haryana 132103</div>
+    <div class="foot-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>80),{passive:true});
+
+// Scroll reveal
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.r').forEach((el,i)=>{if(!el.style.transitionDelay)el.style.transitionDelay=`${(i%4)*.07}s`;io.observe(el);});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=a.getAttribute('href');if(t==='#')return;const el=document.querySelector(t);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}}));
+
+// FAQ accordion
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item');
+  const isOpen=item.classList.contains('open');
+  // close all
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  // open this one if it wasn't open
+  if(!isOpen)item.classList.add('open');
+}
+
+// FAQ filter by category
+function filterFaq(cat,btn){
+  document.querySelectorAll('.faq-cat').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const show=cat==='all'||item.dataset.cat===cat;
+    item.style.display=show?'':'none';
+    if(!show)item.classList.remove('open');
+  });
+}
+</script>
+</body>
+</html>
