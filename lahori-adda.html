@@ -3,469 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lahori Adda — Authentic Chole Bhature Franchise | Anandam Ventures</title>
-<meta name="description" content="Own a Lahori Adda franchise — authentic chole bhature brand rooted in a 1947 Lahori recipe. Investment ₹10–20 Lakhs. NH-44 Haryana corridor.">
+<title>Lahori Adda — Coming Soon | Anandam Ventures</title>
+<meta name="description" content="Lahori Adda — authentic chole bhature franchise by Anandam Ventures. Launching soon across NH-44 Haryana. Register your interest today.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;overflow-x:hidden;}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1F35;overflow-x:hidden;font-size:16px;line-height:1.6;width:100%;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1F35;overflow-x:hidden;width:100%;}
 a{text-decoration:none;color:inherit;}
 img{display:block;max-width:100%;height:auto;}
-
 :root{
-  /* ── Main site tokens (identical to index.html) ── */
-  --navy:#0D1F35;
-  --blue:#1648B0;
-  --blue2:#2B5CE6;
-  --blue-lt:#EBF1FD;
-  --blue-pale:#F4F7FE;
-  --white:#fff;
-  --off:#F8FAFB;
-  --border:#D8E3F0;
-  --t2:#4A6080;
-  --t3:#8A9BB0;
-  --green:#25D366;
-  /* ── Lahori Adda brand accent (gold only) ── */
-  --gold:#C49B3C;
-  --gold-lt:rgba(196,155,60,.12);
-  --gold-border:rgba(196,155,60,.25);
-  --saffron:#EF9F27;
+  --navy:#0D1F35;--blue:#1648B0;--blue2:#2B5CE6;--blue-lt:#EBF1FD;--blue-pale:#F4F7FE;
+  --white:#fff;--off:#F8FAFB;--border:#D8E3F0;--t2:#4A6080;--t3:#8A9BB0;
+  --gold:#C49B3C;--saffron:#EF9F27;--dark:#0A0500;
 }
 
-/* ── NAV — identical to index.html ── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;height:76px;
-  background:rgba(8,14,26,.97);backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(255,255,255,.07);
-  display:flex;align-items:center;padding:0 48px;gap:32px;
-  transition:box-shadow .3s;
-}
-nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.4);}
-.nav-logo-wrap{display:flex;align-items:center;gap:12px;flex-shrink:0;margin-right:auto;}
-.nav-logo-img{height:54px;width:54px;object-fit:cover;object-position:center 22%;border-radius:9px;display:block;}
-.nav-brand{display:flex;flex-direction:column;}
-.nav-brand-main{font-size:13px;font-weight:700;color:rgba(255,255,255,.9);line-height:1.1;}
-.nav-brand-sub{font-size:9px;font-weight:600;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-top:1px;}
-.nav-back{display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,255,255,.45);transition:color .2s;}
-.nav-back:hover{color:rgba(255,255,255,.8);}
-.nav-links{display:flex;list-style:none;gap:2px;}
-.nav-links a{padding:7px 12px;font-size:12px;font-weight:500;color:rgba(255,255,255,.52);border-radius:6px;transition:all .2s;white-space:nowrap;}
-.nav-links a:hover{color:#fff;background:rgba(255,255,255,.09);}
-.nav-cta{background:var(--blue);color:#fff;padding:9px 18px;border-radius:7px;font-size:12px;font-weight:600;white-space:nowrap;transition:all .2s;margin-left:8px;}
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;background:#fff;border-bottom:1px solid #D8E3F0;display:flex;align-items:center;padding:0 48px;gap:32px;transition:box-shadow .3s;}
+nav.scrolled{box-shadow:0 4px 24px rgba(22,72,176,.08);}
+.logo-wrap{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-logo-img{height:56px;width:56px;object-fit:cover;border-radius:9px;display:block;border:1px solid rgba(0,0,0,.07);}
+.nav-brand-main{font-size:13px;font-weight:700;color:#0D1F35;line-height:1.1;}
+.nav-brand-sub{font-size:9px;font-weight:600;color:#C49B3C;letter-spacing:2px;text-transform:uppercase;margin-top:1px;}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1;margin-left:8px;}
+.nav-links a{padding:7px 12px;font-size:12px;font-weight:500;color:#4A6080;border-radius:6px;transition:all .2s;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:#0D1F35;background:#F4F7FE;}
+.nav-r{margin-left:auto;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-phone{font-size:12px;color:#4A6080;display:flex;align-items:center;gap:6px;white-space:nowrap;}
+.nav-cta{background:var(--blue);color:#fff;padding:9px 18px;border-radius:7px;font-size:12px;font-weight:600;white-space:nowrap;transition:all .2s;}
 .nav-cta:hover{background:#1D55CC;}
 
-/* ── HERO — keeps Lahori Adda dark identity ── */
+/* ── HERO — COMING SOON ── */
 #hero{
   min-height:100vh;padding-top:76px;
   position:relative;overflow:hidden;
-  display:flex;align-items:flex-end;
-  padding-bottom:80px;
+  display:flex;align-items:center;justify-content:center;
 }
-.hero-bg{
-  position:absolute;inset:0;
-  background-image:url('https://images.unsplash.com/photo-1606491956391-652cf14b0b1f?auto=format&fit=crop&w=1920&q=80');
-  background-size:cover;background-position:center;
-}
-.hero-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(9,14,26,.5) 0%,rgba(9,14,26,.88) 65%,rgba(9,14,26,.97) 100%);
-}
-.hero-inner{position:relative;z-index:2;padding:0 60px;max-width:1280px;width:100%;}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--gold-lt);border:1px solid var(--gold-border);
-  border-radius:100px;padding:6px 16px;
-  font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-  color:#FAC775;margin-bottom:20px;
-}
-.hero-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);}
-.hero-tagline{font-size:14px;font-weight:600;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:10px;letter-spacing:.3px;}
-.hero-tagline::before{content:'';display:block;width:20px;height:2px;background:var(--gold);}
-.hero-h{font-size:clamp(38px,5.5vw,72px);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.5px;margin-bottom:18px;}
-.hero-h em{color:#93C5FD;font-style:normal;}
-.hero-p{font-size:16px;line-height:1.8;color:rgba(255,255,255,.6);max-width:560px;margin-bottom:32px;}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:56px;}
-.btn-primary-hero{background:var(--blue);color:#fff;padding:14px 28px;border-radius:8px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:9px;transition:all .2s;}
-.btn-primary-hero:hover{background:#1D55CC;transform:translateY(-1px);}
-.btn-ghost{border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);padding:14px 28px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:9px;transition:all .2s;}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1606491956391-652cf14b0b1f?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,3,0,.85) 0%,rgba(8,3,0,.92) 60%,rgba(8,3,0,.97) 100%);}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:64px 24px;max-width:840px;width:100%;}
+.cs-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(196,155,60,.12);border:1px solid rgba(196,155,60,.3);border-radius:100px;padding:7px 18px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#FAC775;margin-bottom:28px;}
+.cs-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.la-logo-mark{margin:0 auto 24px;width:120px;height:120px;background:rgba(255,255,255,.04);border:1px solid rgba(196,155,60,.2);border-radius:24px;display:flex;align-items:center;justify-content:center;}
+.la-logo-text{font-size:48px;font-weight:800;color:var(--gold);line-height:1;letter-spacing:-1px;}
+.cs-brand{font-size:clamp(48px,9vw,96px);font-weight:800;color:#fff;letter-spacing:-2px;line-height:.95;margin-bottom:6px;}
+.cs-sub{font-size:clamp(18px,3vw,28px);font-weight:300;color:rgba(255,255,255,.45);letter-spacing:6px;text-transform:uppercase;margin-bottom:20px;}
+.cs-line{width:48px;height:2px;background:rgba(196,155,60,.4);margin:20px auto;border-radius:2px;}
+.cs-tagline{font-size:16px;font-style:italic;color:rgba(255,255,255,.45);margin-bottom:32px;}
+.cs-hl{font-size:clamp(28px,4vw,48px);font-weight:800;color:#fff;line-height:1.12;margin-bottom:14px;letter-spacing:-.3px;}
+.cs-hl em{color:#FAC775;font-style:normal;}
+.cs-desc{font-size:16px;line-height:1.8;color:rgba(255,255,255,.55);max-width:560px;margin:0 auto 40px;}
+.cs-info{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-bottom:44px;}
+.cs-info-item{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.45);}
+.cs-info-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);}
+.cs-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-gold{background:var(--gold);color:#0A0500;padding:14px 30px;border-radius:9px;font-size:13px;font-weight:800;display:inline-flex;align-items:center;gap:9px;transition:all .2s;}
+.btn-gold:hover{background:var(--saffron);transform:translateY(-1px);}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);padding:14px 30px;border-radius:9px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:9px;transition:all .2s;}
 .btn-ghost:hover{border-color:rgba(255,255,255,.5);color:#fff;}
-.hero-stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.1);padding-top:28px;}
-.hero-stat{padding:0 32px;border-right:1px solid rgba(255,255,255,.08);}
-.hero-stat:first-child{padding-left:0;}
-.hero-stat:last-child{border-right:none;}
-.hs-n{font-size:34px;font-weight:800;color:#fff;line-height:1;}
-.hs-l{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;}
 
-/* ── SHARED SECTION TOKENS — same as index.html ── */
-section{padding:88px 60px;}
-.chip{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
-.chip::before{content:'';display:block;width:16px;height:2px;background:var(--blue);border-radius:2px;}
-.chip-gold{color:var(--gold);}
-.chip-gold::before{background:var(--gold);}
-.chip-white{color:rgba(255,255,255,.45);}
-.chip-white::before{background:rgba(255,255,255,.3);}
-h2.sh{font-size:clamp(26px,3.5vw,44px);font-weight:800;color:var(--navy);line-height:1.1;letter-spacing:-.3px;}
-h2.sh em{color:var(--blue);font-style:normal;}
-h2.sh-w{color:#fff;}
-h2.sh-w em{color:#93C5FD;}
-.divider{height:1px;background:var(--border);margin:0 60px;}
-.r{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
-.r.on{opacity:1;transform:none;}
-.btn-blue{background:var(--blue);color:#fff;padding:13px 26px;border-radius:8px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
-.btn-blue:hover{background:var(--navy);transform:translateY(-1px);}
-.btn-outline{border:2px solid var(--border);color:var(--navy);padding:13px 26px;border-radius:8px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
-.btn-outline:hover{border-color:var(--blue);color:var(--blue);}
-
-/* ── BRAND STORY ── */
-#story{background:var(--white);}
+/* ── STORY ── */
+#story{background:#fff;padding:88px 60px;}
 .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;max-width:1160px;margin:0 auto;}
 .story-img{border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;}
 .story-img img{width:100%;height:100%;object-fit:cover;}
-.story-badge{position:absolute;bottom:20px;left:20px;background:var(--navy);border-radius:10px;padding:14px 18px;border:1px solid rgba(255,255,255,.08);}
-.sb-year{font-size:28px;font-weight:800;color:#fff;line-height:1;}
+.story-badge{position:absolute;bottom:20px;left:20px;background:var(--dark);border-radius:10px;padding:14px 18px;border:1px solid rgba(196,155,60,.2);}
+.sb-year{font-size:28px;font-weight:800;color:#FAC775;line-height:1;}
 .sb-l{font-size:9px;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+.chip::before{content:'';display:block;width:16px;height:2px;background:var(--blue);border-radius:2px;}
+h2.sh{font-size:clamp(26px,3.5vw,44px);font-weight:800;color:var(--navy);line-height:1.12;letter-spacing:-.3px;}
+h2.sh em{color:var(--blue);font-style:normal;}
 .story-r p{font-size:15px;line-height:1.85;color:var(--t2);margin-bottom:14px;}
-.story-r strong{color:var(--navy);font-weight:600;}
-.story-quote{background:var(--blue-pale);border-left:3px solid var(--gold);padding:20px 24px;border-radius:0 10px 10px 0;margin:24px 0;}
+.story-quote{background:var(--blue-pale);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0;}
 .story-quote p{font-size:17px;font-weight:700;color:var(--navy);line-height:1.5;}
-.story-quote span{font-size:12px;color:var(--t2);margin-top:6px;display:block;}
+.story-quote span{font-size:12px;color:var(--t2);margin-top:5px;display:block;}
 
-/* ── WHY — navy dark, matching main site's model/stats sections ── */
-#why{background:var(--navy);padding:88px 60px;}
-.why-intro{text-align:center;max-width:640px;margin:0 auto 52px;}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1160px;margin:0 auto;}
-.why-card{
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
-  border-radius:14px;padding:34px 26px;
-  position:relative;overflow:hidden;transition:all .3s;
-}
-.why-card:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);}
-.why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue2));}
-.why-icon{width:48px;height:48px;border-radius:11px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
-.why-n{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:7px;}
-.why-title{font-size:17px;font-weight:700;color:#fff;margin-bottom:9px;line-height:1.25;}
-.why-desc{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75;}
-
-/* ── MENU ── */
-#menu{background:var(--white);}
-.menu-intro{text-align:center;max-width:600px;margin:0 auto 48px;}
-.menu-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
-.menu-tabs{display:flex;gap:8px;justify-content:center;margin-bottom:36px;flex-wrap:wrap;}
-.menu-tab{padding:8px 18px;border-radius:100px;font-size:12.5px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);color:var(--t2);background:#fff;transition:all .2s;}
-.menu-tab.active,.menu-tab:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
-.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1160px;margin:0 auto 36px;}
-.menu-card{background:var(--white);border-radius:14px;border:1px solid var(--border);overflow:hidden;transition:all .3s;}
-.menu-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(22,72,176,.1);border-color:var(--blue);}
-.menu-img{aspect-ratio:3/2;overflow:hidden;position:relative;}
-.menu-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
-.menu-card:hover .menu-img img{transform:scale(1.04);}
-.menu-badge{position:absolute;top:12px;right:12px;background:var(--navy);color:#fff;border-radius:100px;padding:4px 10px;font-size:11px;font-weight:700;}
-.menu-badge-gold{background:var(--gold);color:var(--navy);}
-.menu-badge-blue{background:var(--blue);color:#fff;}
-.menu-body{padding:18px 16px 20px;}
-.menu-cat{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:5px;}
-.menu-name{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:5px;}
-.menu-desc{font-size:13px;color:var(--t2);line-height:1.6;margin-bottom:12px;}
-.menu-footer{display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border);}
-.menu-price{font-size:18px;font-weight:800;color:var(--navy);}
-.menu-tag{font-size:11px;font-weight:600;color:var(--blue);background:var(--blue-lt);padding:3px 9px;border-radius:100px;}
-.menu-cta-row{text-align:center;}
-
-/* ── INVESTMENT ── */
-#investment{background:var(--blue-pale);}
-.inv-intro{text-align:center;max-width:640px;margin:0 auto 52px;}
-.inv-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
-.inv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1160px;margin:0 auto 28px;}
-.inv-card{border-radius:14px;padding:32px 28px;border:1px solid var(--border);}
-.inv-card-main{background:var(--navy);}
-.inv-card-main .inv-title{color:#fff;}
-.inv-card-main .inv-sub{color:rgba(255,255,255,.35);}
-.inv-card-main .inv-items li{border-bottom-color:rgba(255,255,255,.06);color:rgba(255,255,255,.55);}
-.inv-card-main .inv-items li strong{color:#fff;}
-.inv-card-main .inv-total{border-top-color:rgba(255,255,255,.12);}
-.inv-card-main .inv-total-label{color:rgba(255,255,255,.5);}
-.inv-card-main .inv-total-val{color:#fff;}
-.inv-card-sec{background:var(--white);}
-.inv-title{font-size:19px;font-weight:800;margin-bottom:5px;color:var(--navy);}
-.inv-sub{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:22px;}
-.inv-items{list-style:none;display:flex;flex-direction:column;gap:0;}
-.inv-items li{display:flex;align-items:center;justify-content:space-between;font-size:13.5px;color:var(--t2);padding:11px 0;border-bottom:1px solid var(--border);}
-.inv-items li:last-child{border-bottom:none;}
-.inv-items li strong{font-weight:700;color:var(--navy);}
-.inv-total{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:2px solid var(--border);}
-.inv-total-label{font-size:13px;font-weight:700;color:var(--t2);}
-.inv-total-val{font-size:26px;font-weight:800;color:var(--navy);}
-
-/* ROI */
-.roi-section{background:var(--navy);border-radius:16px;padding:40px;max-width:1160px;margin:0 auto;}
-.roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
-.roi-l h3{font-size:26px;font-weight:800;color:#fff;margin-bottom:10px;line-height:1.2;}
-.roi-l h3 em{color:#93C5FD;font-style:normal;}
-.roi-l p{font-size:13.5px;color:rgba(255,255,255,.45);line-height:1.75;margin-bottom:26px;}
-.roi-numbers{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.roi-num{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:16px;}
-.rn-n{font-size:26px;font-weight:800;color:#fff;line-height:1;margin-bottom:3px;}
-.rn-l{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.3);}
-.roi-chart{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:22px 18px;}
-.roi-chart-title{font-size:11px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;}
-.roi-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
-.roi-bar-label{font-size:11.5px;color:rgba(255,255,255,.4);width:96px;flex-shrink:0;}
-.roi-bar-track{flex:1;height:7px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden;}
-.roi-bar-fill{height:100%;border-radius:4px;transition:width 1.2s ease;}
-.roi-bar-val{font-size:11.5px;font-weight:700;color:rgba(255,255,255,.7);width:54px;text-align:right;flex-shrink:0;}
-
-/* ── PACKAGE — matching main site's serve/package sections ── */
-#package{background:var(--white);}
-.pkg-intro{text-align:center;max-width:640px;margin:0 auto 52px;}
-.pkg-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
-.pkg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1160px;margin:0 auto;}
-.pkg-item{background:var(--blue-pale);border-radius:13px;border:1px solid var(--border);padding:26px 20px;text-align:center;transition:all .3s;}
-.pkg-item:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-3px);}
-.pkg-item:hover .pkg-icon{background:rgba(255,255,255,.15);}
-.pkg-item:hover .pkg-name,.pkg-item:hover .pkg-desc{color:#fff;}
-.pkg-icon{width:52px;height:52px;border-radius:12px;background:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;transition:background .3s;}
-.pkg-name{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.25;transition:color .3s;}
-.pkg-desc{font-size:12px;color:var(--t2);line-height:1.55;transition:color .3s;}
-
-/* ── PROCESS — navy, matching main site's 90-day model section ── */
-#process{background:var(--navy);padding:88px 60px;}
-.proc-intro{text-align:center;max-width:640px;margin:0 auto 56px;}
-.proc-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;max-width:1160px;margin:0 auto;position:relative;}
-.proc-steps::before{content:'';position:absolute;top:35px;left:10%;right:10%;height:1px;background:rgba(255,255,255,.08);z-index:0;}
-.proc-step{text-align:center;padding:0 14px;position:relative;z-index:1;}
-.ps-num{width:70px;height:70px;border-radius:50%;border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(255,255,255,.5);margin:0 auto 16px;transition:all .3s;}
-.proc-step:hover .ps-num{background:var(--blue);color:#fff;border-color:var(--blue);}
-.ps-title{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:5px;line-height:1.3;}
-.ps-desc{font-size:12px;color:rgba(255,255,255,.35);line-height:1.5;}
+/* ── WHAT'S COMING ── */
+#coming{background:var(--blue-pale);padding:88px 60px;}
+.coming-intro{text-align:center;max-width:640px;margin:0 auto 52px;}
+.coming-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
+.coming-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1160px;margin:0 auto;}
+.coming-card{background:#fff;border-radius:14px;border:1px solid var(--border);padding:32px 24px;text-align:center;transition:all .3s;}
+.coming-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(22,72,176,.1);border-color:var(--blue);}
+.cc-icon{width:56px;height:56px;border-radius:13px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.cc-name{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.cc-desc{font-size:13px;color:var(--t2);line-height:1.65;}
+.cc-badge{display:inline-flex;background:rgba(16,185,129,.08);color:#059669;border-radius:100px;padding:3px 10px;font-size:10px;font-weight:700;letter-spacing:1px;margin-top:12px;}
 
 /* ── TERRITORY ── */
-#territory{background:var(--white);}
+#territory{background:#fff;padding:88px 60px;}
 .terr-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;max-width:1160px;margin:0 auto;}
-.terr-l p{font-size:14px;color:var(--t2);line-height:1.8;margin-bottom:20px;}
-.terr-phases{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
-.terr-phase{background:var(--blue-pale);border-radius:10px;border:1px solid var(--border);padding:16px 18px;display:flex;align-items:flex-start;gap:14px;}
-.tp-badge{min-width:34px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;letter-spacing:1px;flex-shrink:0;margin-top:1px;}
-.tp-1{background:var(--blue-lt);color:var(--blue);}
-.tp-2{background:var(--gold-lt);color:var(--gold);}
-.tp-3{background:rgba(16,185,129,.1);color:#059669;}
-.tp-title{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:2px;}
-.tp-cities{font-size:12.5px;color:var(--t2);line-height:1.5;}
-.terr-r{background:var(--navy);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column;gap:12px;}
-.terr-r h3{font-size:17px;font-weight:700;color:#fff;margin-bottom:2px;}
-.terr-r p{font-size:12.5px;color:rgba(255,255,255,.35);margin-bottom:12px;}
-.terr-city{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:9px;padding:13px 15px;display:flex;align-items:center;justify-content:space-between;transition:border-color .2s;}
-.terr-city:hover{border-color:rgba(22,72,176,.5);}
-.tc-name{font-size:13.5px;font-weight:600;color:#fff;}
-.tc-status{font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;}
-.tc-open{color:#34D399;}
-.tc-soon{color:rgba(255,255,255,.25);}
-.tc-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
-.tc-dot-open{background:#34D399;}
-.tc-dot-soon{background:rgba(255,255,255,.15);}
-.terr-city-inner{display:flex;align-items:center;gap:8px;}
+.terr-l p{font-size:15px;color:var(--t2);line-height:1.8;margin-bottom:24px;}
+.phase-row{background:var(--blue-pale);border-radius:10px;border:1px solid var(--border);padding:16px 18px;display:flex;align-items:flex-start;gap:14px;margin-bottom:12px;}
+.ph-badge{min-width:32px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;letter-spacing:1px;flex-shrink:0;margin-top:1px;}
+.ph-1{background:var(--blue-lt);color:var(--blue);}
+.ph-2{background:rgba(196,155,60,.12);color:var(--gold);}
+.ph-title{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.ph-cities{font-size:12.5px;color:var(--t2);}
+.terr-r{background:var(--navy);border-radius:16px;padding:32px 28px;}
+.terr-r h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:4px;}
+.terr-r > p{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:18px;}
+.city-row{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:9px;padding:13px 15px;display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;transition:border-color .2s;}
+.city-row:last-child{margin-bottom:0;}
+.city-row:hover{border-color:rgba(196,155,60,.3);}
+.cr-inner{display:flex;align-items:center;gap:8px;}
+.cr-dot{width:6px;height:6px;border-radius:50%;}
+.cr-dot-open{background:#34D399;}
+.cr-dot-soon{background:rgba(255,255,255,.2);}
+.cr-name{font-size:13.5px;font-weight:600;color:#fff;}
+.cr-status{font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;}
+.cr-open{color:#34D399;}
+.cr-soon{color:rgba(255,255,255,.3);}
 
-/* ── TESTIMONIALS — matching main site ── */
-#testimonials{background:var(--blue-pale);}
-.test-intro{text-align:center;max-width:600px;margin:0 auto 44px;}
-.test-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1160px;margin:0 auto;}
-.test-card{background:var(--white);border-radius:14px;border:1px solid var(--border);padding:26px 22px;}
-.test-stars{display:flex;gap:3px;margin-bottom:12px;}
-.test-text{font-size:13.5px;color:var(--t2);line-height:1.75;margin-bottom:14px;font-style:italic;}
-.test-result{display:inline-flex;align-items:center;gap:5px;background:rgba(16,185,129,.08);border-radius:100px;padding:3px 10px;font-size:11px;font-weight:700;color:#059669;margin-bottom:14px;}
-.test-author{display:flex;align-items:center;gap:10px;}
-.test-avatar{width:38px;height:38px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;}
-.test-name{font-size:13.5px;font-weight:700;color:var(--navy);}
-.test-biz{font-size:11.5px;color:var(--t2);}
-
-/* ── APPLY / LEAD FORM — matching main site's midform ── */
-#apply{background:linear-gradient(135deg,#0D1F35 0%,#1648B0 100%);padding:88px 60px;position:relative;overflow:hidden;}
-#apply::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80') center/cover;opacity:.07;}
-.apply-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;max-width:1160px;margin:0 auto;}
-.apply-l h2{color:#fff;margin-bottom:14px;}
-.apply-l p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:26px;}
-.apply-perks{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
-.apply-perk{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(255,255,255,.55);}
-.apply-perk svg{flex-shrink:0;}
-.apply-contact{display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(255,255,255,.08);padding-top:22px;}
-.apply-contact-item{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,.4);}
-.apply-form{background:#fff;border-radius:14px;padding:36px 30px;box-shadow:0 24px 64px rgba(0,0,0,.25);}
-.af-title{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:4px;}
-.af-sub{font-size:13px;color:var(--t2);margin-bottom:24px;}
-
-/* ── FORMS — same as index.html ── */
+/* ── REGISTER INTEREST FORM ── */
+#register{background:linear-gradient(135deg,#0A0500 0%,#2E1204 50%,#1A0B00 100%);padding:88px 60px;position:relative;overflow:hidden;}
+#register::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80') center/cover;opacity:.06;}
+.reg-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;max-width:1160px;margin:0 auto;}
+.reg-l .chip{color:rgba(255,255,255,.4);}
+.reg-l .chip::before{background:rgba(255,255,255,.3);}
+.reg-l h2{color:#fff;margin-bottom:14px;}
+.reg-l h2 em{color:#FAC775;font-style:normal;}
+.reg-l p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:24px;}
+.reg-perks{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
+.reg-perk{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(255,255,255,.55);}
+.reg-wa{display:flex;align-items:center;gap:10px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);border-radius:10px;padding:14px 16px;margin-top:24px;font-size:13px;color:rgba(255,255,255,.65);transition:all .2s;cursor:pointer;}
+.reg-wa:hover{background:rgba(37,211,102,.18);}
+.reg-form-card{background:#fff;border-radius:14px;padding:36px 30px;box-shadow:0 24px 64px rgba(0,0,0,.4);}
+.rf-title{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:4px;}
+.rf-sub{font-size:13px;color:var(--t2);margin-bottom:24px;}
 .f-row{margin-bottom:12px;}
 .f-row label{display:block;font-size:11.5px;font-weight:600;color:var(--t2);margin-bottom:4px;}
 .f-row input,.f-row select,.f-row textarea{width:100%;border:1.5px solid var(--border);border-radius:7px;padding:10px 13px;font-size:13.5px;font-family:inherit;color:var(--navy);background:var(--off);transition:border-color .2s;outline:none;}
-.f-row input:focus,.f-row select:focus,.f-row textarea:focus{border-color:var(--blue);background:#fff;}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{border-color:var(--gold);background:#fff;}
+.f-row select{appearance:none;}
 .f-row textarea{resize:vertical;min-height:80px;}
-.f-row select{appearance:none;cursor:pointer;}
 .f-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.f-btn{width:100%;background:var(--blue);color:#fff;border:none;padding:13px;border-radius:7px;font-size:13.5px;font-weight:700;cursor:pointer;transition:background .2s;font-family:inherit;margin-top:4px;}
-.f-btn:hover{background:var(--navy);}
+.f-btn{width:100%;background:#2E1204;color:#FAC775;border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;font-family:inherit;margin-top:4px;}
+.f-btn:hover{background:var(--gold);color:#0A0500;}
 .f-note{font-size:10.5px;color:var(--t3);text-align:center;margin-top:7px;}
+.r{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+.r.on{opacity:1;transform:none;}
+.divider{height:1px;background:var(--border);margin:0 60px;}
 
-/* ── FAQs — matching main site ── */
-#faqs{background:var(--blue-pale);}
-.faqs-intro{text-align:center;max-width:580px;margin:0 auto 44px;}
-.faqs-intro p{font-size:15px;color:var(--t2);margin-top:10px;}
-.faqs-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1160px;margin:0 auto;}
-.faq-item{background:var(--white);border-radius:11px;border:1px solid var(--border);padding:20px 20px;transition:all .25s;cursor:default;}
-.faq-item:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(22,72,176,.07);}
-.faq-q{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:8px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;line-height:1.35;}
-.faq-icon{color:var(--blue);flex-shrink:0;margin-top:1px;}
-.faq-a{font-size:13px;color:var(--t2);line-height:1.7;}
-
-/* ── FOOTER — identical to index.html ── */
-footer{background:var(--navy);}
-.foot-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding:56px 60px 40px;border-bottom:1px solid rgba(255,255,255,.06);}
-.foot-brand{font-size:18px;font-weight:800;color:#fff;margin-bottom:3px;}
+/* ── FOOTER ── */
+footer{background:#fff;border-top:1px solid #D8E3F0;}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding:56px 60px 40px;border-bottom:1px solid #D8E3F0;}
+.foot-brand{font-size:18px;font-weight:800;color:#0D1F35;margin-bottom:3px;}
 .foot-brand span{color:var(--blue2);}
-.foot-tagline{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.5px;margin-bottom:10px;}
-.foot-about{font-size:12.5px;color:rgba(255,255,255,.22);line-height:1.7;max-width:280px;margin-bottom:20px;}
+.foot-tagline{font-size:11px;font-weight:600;color:#C49B3C;letter-spacing:.5px;margin-bottom:10px;}
+.foot-about{font-size:12.5px;color:#4A6080;line-height:1.7;max-width:280px;margin-bottom:20px;}
 .foot-socs{display:flex;gap:7px;}
-.foot-soc{width:34px;height:34px;border-radius:7px;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.25);transition:all .2s;}
-.foot-soc:hover{border-color:rgba(255,255,255,.35);color:#fff;}
-.foot-col h4{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:16px;}
+.foot-soc{width:34px;height:34px;border-radius:7px;border:1px solid #D8E3F0;display:flex;align-items:center;justify-content:center;color:#4A6080;transition:all .2s;}
+.foot-soc:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-lt);}
+.foot-col h4{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A9BB0;margin-bottom:16px;}
 .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
-.foot-col a{font-size:12.5px;color:rgba(255,255,255,.27);transition:color .2s;}
-.foot-col a:hover{color:rgba(255,255,255,.75);}
-.foot-bot{display:flex;align-items:center;justify-content:space-between;padding:17px 60px;flex-wrap:wrap;gap:10px;}
-.foot-copy{font-size:11px;color:rgba(255,255,255,.15);}
-.foot-credit{display:none;}
+.foot-col a{font-size:12.5px;color:#4A6080;transition:color .2s;}
+.foot-col a:hover{color:#0D1F35;}
+.foot-bot{display:flex;align-items:center;justify-content:space-between;padding:17px 60px;flex-wrap:wrap;gap:10px;border-top:1px solid #D8E3F0;}
+.foot-copy{font-size:11px;color:#8A9BB0;}
 .foot-links{display:flex;gap:18px;}
-.foot-links a{font-size:11px;color:rgba(255,255,255,.15);transition:color .2s;}
-.foot-links a:hover{color:rgba(255,255,255,.45);}
+.foot-links a{font-size:11px;color:#8A9BB0;transition:color .2s;}
+.foot-links a:hover{color:#0D1F35;}
 
-/* ── WHATSAPP ── */
 .wa-btn{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(37,211,102,.4);transition:transform .2s;}
 .wa-btn:hover{transform:scale(1.1);}
 
-/* ── TABLET ── */
 @media(min-width:769px) and (max-width:1100px){
   nav{padding:0 24px;}
-  section,#process,#apply,#why{padding:64px 28px;}
-  .hero-inner{padding:0 28px;}
-  .hero-stats{flex-wrap:wrap;gap:0;}
-  .hero-stat{padding:0 20px;}
-  .story-grid,.inv-grid,.terr-grid,.apply-inner,.roi-grid{grid-template-columns:1fr;gap:32px;}
-  .why-grid,.menu-grid{grid-template-columns:1fr 1fr;gap:14px;}
-  .pkg-grid{grid-template-columns:1fr 1fr;gap:12px;}
-  .proc-steps{grid-template-columns:1fr 1fr 1fr;gap:22px;}
-  .proc-steps::before{display:none;}
-  .test-grid,.faqs-grid{grid-template-columns:1fr;}
-  .foot-inner{grid-template-columns:1fr 1fr;gap:28px;padding:44px 28px 28px;}
+  .nav-links{display:none;}
+  .story-grid,.terr-grid,.reg-inner{grid-template-columns:1fr;gap:36px;}
+  .coming-grid{grid-template-columns:1fr 1fr;}
+  .foot-top{grid-template-columns:1fr 1fr;gap:28px;padding:44px 28px 28px;}
   .foot-bot{padding:14px 28px;}
+  #story,#coming,#territory,#register{padding:64px 28px;}
   .divider{margin:0 28px;}
 }
-
-/* ── MOBILE ── */
 @media(max-width:768px){
   *{max-width:100%;word-break:break-word;}
   html,body{overflow-x:hidden;width:100%;}
-  nav{padding:0 16px;height:64px;}
-  .nav-links{display:none;}
-  .nav-logo-img{height:42px;width:42px;border-radius:7px;}
-  .nav-brand-main{font-size:12px;}
-  section,#process,#apply,#why{padding:52px 16px !important;}
-  .divider{margin:0 16px;}
-  #hero{padding-top:64px;padding-bottom:40px;min-height:auto;}
-  .hero-inner{padding:0 16px;}
-  .hero-h{font-size:28px !important;line-height:1.12;}
-  .hero-p{font-size:14px;max-width:100%;}
-  .hero-btns{gap:9px;}
-  .btn-primary-hero,.btn-ghost{padding:11px 18px;font-size:12px;}
-  .hero-stats{flex-wrap:wrap;gap:20px;padding-top:22px;}
-  .hero-stat{padding:0;border:none;flex:1;min-width:110px;}
-  .hs-n{font-size:26px;}
-  .story-grid,.inv-grid,.terr-grid,.apply-inner,.roi-grid{grid-template-columns:1fr !important;}
-  .why-grid{grid-template-columns:1fr !important;gap:10px;}
-  .menu-grid{grid-template-columns:1fr !important;gap:12px;}
-  .pkg-grid{grid-template-columns:1fr 1fr !important;gap:8px;}
-  .pkg-item{padding:18px 12px;}
-  .proc-steps{grid-template-columns:1fr !important;gap:14px;}
-  .proc-steps::before{display:none;}
-  .proc-step{text-align:left;display:flex;align-items:flex-start;gap:14px;}
-  .ps-num{width:46px;height:46px;flex-shrink:0;font-size:18px;margin:0;}
-  .test-grid{grid-template-columns:1fr !important;}
-  .faqs-grid{grid-template-columns:1fr !important;}
-  .apply-form{padding:24px 16px;}
+  nav{padding:0 16px;height:64px;background:#fff;}
+  .nav-links,.nav-phone{display:none;}
+  .nav-logo-img{height:44px;width:44px;border-radius:8px;}
+  #hero{padding-top:64px;min-height:auto;}
+  .cs-brand{font-size:44px !important;}
+  .cs-sub{font-size:16px !important;letter-spacing:3px;}
+  .cs-info{gap:16px;}
+  #story,#coming,#territory,#register{padding:52px 16px !important;}
+  .story-grid,.terr-grid,.reg-inner{grid-template-columns:1fr !important;}
+  .coming-grid{grid-template-columns:1fr !important;}
   .f-2{grid-template-columns:1fr !important;}
-  .foot-inner{grid-template-columns:1fr !important;gap:24px;padding:36px 16px 24px;}
+  .foot-top{grid-template-columns:1fr !important;gap:24px;padding:36px 16px 24px;}
   .foot-bot{padding:14px 16px;flex-direction:column;text-align:center;gap:7px;}
   .foot-links{justify-content:center;}
+  .divider{margin:0 16px;}
   .wa-btn{bottom:14px;right:14px;width:48px;height:48px;}
+  .reg-form-card{padding:24px 16px;}
   h2.sh{font-size:clamp(22px,6vw,32px);}
-  .roi-numbers{grid-template-columns:1fr 1fr;}
-  .menu-tabs{gap:6px;}
-  .menu-tab{padding:7px 13px;font-size:11.5px;}
 }
 </style>
 </head>
 <body>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/919896544879?text=Hello!%20I%20am%20interested%20in%20Lahori%20Adda%20franchise." class="wa-btn" target="_blank" rel="noopener">
+<a href="https://wa.me/919896544879?text=Hello!%20I%20am%20interested%20in%20the%20Lahori%20Adda%20franchise." class="wa-btn" target="_blank" rel="noopener">
   <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 2C7.373 2 2 7.373 2 14c0 2.104.548 4.08 1.508 5.8L2 26l6.38-1.492A11.94 11.94 0 0014 26c6.627 0 12-5.373 12-12S20.627 2 14 2z" fill="#fff"/><path d="M10.5 8.5c-.3-.7-.6-.72-.88-.73H9c-.28 0-.72.1-1.1.5-.37.4-1.42 1.38-1.42 3.36s1.45 3.9 1.65 4.17c.2.27 2.8 4.48 6.9 6.1 3.42 1.35 4.1 1.08 4.84 1.01.74-.07 2.4-.98 2.74-1.92.34-.94.34-1.75.24-1.92-.1-.17-.37-.27-.77-.47s-2.4-1.18-2.77-1.32c-.37-.14-.64-.2-.91.2-.27.4-1.05 1.32-1.28 1.59-.24.27-.47.3-.87.1-.4-.2-1.68-.62-3.2-1.97-1.18-1.05-1.98-2.35-2.21-2.75-.24-.4-.03-.62.17-.82.18-.18.4-.47.6-.7.2-.24.27-.4.4-.67.14-.27.07-.5-.03-.7-.1-.2-.88-2.18-1.23-2.97z" fill="#25D366"/></svg>
 </a>
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="index.html" class="nav-logo-wrap">
-    <img src="https://raw.githubusercontent.com/Thegrowthunion/anandamventures-website/refs/heads/main/ChatGPT_Image_May_27__2026__10_35_51_AM.png" alt="Anandam Ventures" class="nav-logo-img">
-    <div class="nav-brand">
+  <a href="index.html" class="logo-wrap">
+    <img src="logo.png" alt="Anandam Ventures" class="nav-logo-img">
+    <div>
       <div class="nav-brand-main">Anandam Ventures</div>
-      <div class="nav-brand-sub">Lahori Adda</div>
+      <div class="nav-brand-sub">Est. 1995 · Panipat</div>
     </div>
   </a>
-  <a href="index.html" class="nav-back">
-    <svg width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M14 4H2M2 4L6 1M2 4L6 7" stroke="currentColor" stroke-width="1.4"/></svg>
-    Back to Main
-  </a>
   <ul class="nav-links">
-    <li><a href="#story">Our Story</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#investment">Investment</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#faqs">FAQs</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="lahori-adda.html" class="active">Lahori Adda</a></li>
+    <li><a href="index.html#directors">Leadership</a></li>
+    <li><a href="contact.html">Contact & FAQs</a></li>
   </ul>
-  <a href="#apply" class="nav-cta">Apply for Franchise</a>
+  <div class="nav-r">
+    <a href="tel:+919896544879" class="nav-phone">+91 98965 44879</a>
+    <a href="#register" class="nav-cta">Register Interest</a>
+  </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — COMING SOON -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div class="hero-badge">Franchise Opportunity · NH-44 Corridor, Haryana</div>
-    <p class="hero-tagline">Kuch cheezein border par nahi rukti.</p>
-    <h1 class="hero-h">
-      Own a piece of<br><em>Lahori Adda.</em>
-    </h1>
-    <p class="hero-p">India's most authentic chole bhature franchise — rooted in a Lahori recipe that survived partition in 1947 and has never lost its soul. Now, 25 franchise slots are open across Haryana's NH-44 corridor.</p>
-    <div class="hero-btns">
-      <a href="#apply" class="btn-primary-hero">
-        Apply for Franchise
-        <svg width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg>
-      </a>
-      <a href="#investment" class="btn-ghost">See Investment Details</a>
+    <div class="cs-badge">Coming Soon · Haryana · NH-44 Corridor</div>
+    <div class="cs-brand">LAHORI</div>
+    <div class="cs-sub">Adda</div>
+    <div class="cs-line"></div>
+    <div class="cs-tagline">Kuch cheezein border par nahi rukti.</div>
+    <h1 class="cs-hl">Authentic Chole Bhature.<br><em>Launching across Haryana.</em></h1>
+    <p class="cs-desc">A Lahori recipe that survived partition in 1947, now being brought to a franchise format across NH-44 — backed by 35 years of hospitality expertise from Anandam Ventures.</p>
+    <div class="cs-info">
+      <div class="cs-info-item"><div class="cs-info-dot"></div>Phase 1: Panipat · Karnal · Sonipat</div>
+      <div class="cs-info-item"><div class="cs-info-dot"></div>Investment from ₹10 Lakhs</div>
+      <div class="cs-info-item"><div class="cs-info-dot"></div>25 Franchise Slots Available</div>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><div class="hs-n">₹10L</div><div class="hs-l">Starting Investment</div></div>
-      <div class="hero-stat"><div class="hs-n">18–30</div><div class="hs-l">Months Payback</div></div>
-      <div class="hero-stat"><div class="hs-n">25</div><div class="hs-l">Slots Available</div></div>
-      <div class="hero-stat"><div class="hs-n">NH-44</div><div class="hs-l">Corridor · Haryana</div></div>
+    <div class="cs-btns">
+      <a href="#register" class="btn-gold">Register Your Interest <svg width="13" height="7" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      <a href="https://wa.me/919896544879?text=Hello!%20I%20want%20to%20know%20more%20about%20Lahori%20Adda%20franchise." class="btn-ghost" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        WhatsApp Us
+      </a>
     </div>
   </div>
 </section>
 
 <!-- BRAND STORY -->
-<section id="story" style="background:var(--white);">
+<section id="story">
   <div class="story-grid">
     <div class="story-img r">
-      <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Authentic Lahori Chole Bhature" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Authentic North Indian food" loading="lazy">
       <div class="story-badge"><div class="sb-year">1947</div><div class="sb-l">The Recipe's Origin</div></div>
     </div>
     <div class="r" style="transition-delay:.15s">
@@ -473,13 +271,13 @@ footer{background:var(--navy);}
       <h2 class="sh">A recipe that<br>survived <em>partition.</em></h2>
       <br>
       <div class="story-r">
-        <p>When India was divided in 1947, millions of families crossed the border leaving everything behind — their homes, their cities, their streets. But they carried something that could not be taken away: <strong>their recipes.</strong></p>
-        <p>The chole bhature you find on the streets of Delhi and Haryana today is a direct descendant of Lahori cuisine — brought across by families who had been making it for generations. The deep, slow-cooked chole, the perfectly puffed bhatura fried in the right oil at the right temperature — this is not street food. <strong>This is culinary heritage.</strong></p>
+        <p>When India was divided in 1947, millions of families crossed the border — leaving their homes behind but carrying something no one could take away: <strong>their recipes.</strong></p>
+        <p>Lahori Adda is built on that culinary heritage. Our chole bhature recipe traces directly to Lahore — slow-cooked, deep-flavoured, made with a proprietary masala blend prepared at our central kitchen in Panipat and supplied to every outlet.</p>
         <div class="story-quote">
           <p>"Uss paar ki yaad, iss paar ka swad."</p>
           <span>The memory of that side, the taste of this side.</span>
         </div>
-        <p>Lahori Adda is built on this story. Backed by <strong>35 years of hospitality expertise</strong> from Anandam Ventures, we are bringing this heritage recipe to a franchise format — consistent, authentic, and built to scale across Haryana.</p>
+        <p>Backed by <strong>35 years of hospitality expertise</strong> from Anandam Ventures, we are bringing this heritage recipe to a franchise format — consistent, authentic, and built to scale across Haryana.</p>
       </div>
     </div>
   </div>
@@ -487,506 +285,111 @@ footer{background:var(--navy);}
 
 <div class="divider"></div>
 
-<!-- WHY LAHORI ADDA -->
-<section id="why">
-  <div class="why-intro r">
-    <p class="chip chip-white" style="justify-content:center">Why Lahori Adda</p>
-    <h2 class="sh sh-w" style="text-align:center;margin-bottom:12px;">What makes us <em>different</em></h2>
-    <p style="font-size:15px;color:rgba(255,255,255,.45);text-align:center;">Three things no competitor can claim.</p>
+<!-- WHAT'S COMING -->
+<section id="coming">
+  <div class="coming-intro r">
+    <p class="chip" style="justify-content:center">What We're Building</p>
+    <h2 class="sh" style="text-align:center">Everything a franchisee<br>needs to <em>succeed from Day 1</em></h2>
+    <p>When Lahori Adda launches, every franchise partner gets the full Anandam Ventures support system.</p>
   </div>
-  <div class="why-grid r" style="transition-delay:.1s">
-    <div class="why-card">
-      <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3L3 8v10l10 5 10-5V8L13 3z" stroke="#7EB3FF" stroke-width="1.5" stroke-linejoin="round"/><path d="M3 8l10 5m0 0l10-5m-10 5v10" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="why-n">01</div>
-      <div class="why-title">Central Kitchen. One Recipe. Zero Compromise.</div>
-      <div class="why-desc">Our masala blend is prepared at a central kitchen in Panipat and supplied to every outlet. Every plate of chole bhature at every Lahori Adda tastes exactly the same — whether it's your first day or your 500th.</div>
+  <div class="coming-grid r" style="transition-delay:.1s">
+    <div class="coming-card">
+      <div class="cc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3L3 8v10l10 5 10-5V8L13 3z" stroke="#1648B0" stroke-width="1.5" stroke-linejoin="round"/><path d="M3 8l10 5 10-5M13 13v10" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="cc-name">Central Kitchen Supply</div>
+      <div class="cc-desc">Our proprietary masala blend — the soul of every plate — prepared in Panipat and supplied to all outlets. Consistent taste, every single day.</div>
+      <div class="cc-badge">Core Differentiator</div>
     </div>
-    <div class="why-card">
-      <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3v20M3 13h20" stroke="#7EB3FF" stroke-width="2" stroke-linecap="round"/><circle cx="13" cy="13" r="10" stroke="#7EB3FF" stroke-width="1.5"/></svg></div>
-      <div class="why-n">02</div>
-      <div class="why-title">35 Years of Expertise Behind Every Outlet</div>
-      <div class="why-desc">Anandam Ventures brings institutional hospitality knowledge to every franchisee — from kitchen layout to staff training, Zomato setup to corporate gifting. You open with 35 years of experience on your side.</div>
+    <div class="coming-card">
+      <div class="cc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 22V8l9-5 9 5v14M10 22v-7h6v7" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="cc-name">Complete Setup Support</div>
+      <div class="cc-desc">Kitchen layout, equipment sourcing, brand kit, signage, staff recruitment and training — we handle everything from agreement to opening day.</div>
+      <div class="cc-badge">Included in Package</div>
     </div>
-    <div class="why-card">
-      <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M3 23l5-8 5 5 5-9 5 4" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="why-n">03</div>
-      <div class="why-title">A Story That Sells Itself</div>
-      <div class="why-desc">Every Lahori Adda outlet carries the weight of the 1947 partition story. Customers in Haryana — where that history runs deepest — connect with this brand on an emotional level that no manufactured brand can replicate.</div>
+    <div class="coming-card">
+      <div class="cc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="20" height="20" rx="3" stroke="#1648B0" stroke-width="1.5"/><path d="M8 12h10M8 16h6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="cc-name">Digital & Marketing Launch</div>
+      <div class="cc-desc">Zomato, Swiggy, Google My Business, Instagram — set up, optimised and launched with a first-month campaign to drive your early footfall.</div>
+      <div class="cc-badge">Day 1 Ready</div>
     </div>
-  </div>
-</section>
-
-<!-- MENU -->
-<section id="menu">
-  <div class="menu-intro r">
-    <p class="chip" style="justify-content:center">Our Menu</p>
-    <h2 class="sh" style="text-align:center">The Lahori Adda <em>Experience</em></h2>
-    <p>Every item on the menu is standardised, central-kitchen sourced, and priced for maximum footfall and margin.</p>
-  </div>
-  <div class="menu-tabs r">
-    <div class="menu-tab active" onclick="filterMenu('all',this)">All Items</div>
-    <div class="menu-tab" onclick="filterMenu('main',this)">Main Course</div>
-    <div class="menu-tab" onclick="filterMenu('drinks',this)">Drinks</div>
-    <div class="menu-tab" onclick="filterMenu('sweet',this)">Sweets</div>
-    <div class="menu-tab" onclick="filterMenu('extras',this)">Extras</div>
-    <div class="menu-tab" onclick="filterMenu('snacks',this)">Snacks</div>
-  </div>
-  <div class="menu-grid r" style="transition-delay:.1s" id="menuGrid">
-
-    <div class="menu-card" data-cat="main">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" alt="Chole Bhature Classic" loading="lazy">
-        <div class="menu-badge">Bestseller</div>
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Main Course</div>
-        <div class="menu-name">Chole Bhature Classic</div>
-        <div class="menu-desc">Our signature — slow-cooked Lahori chole with 2 perfectly puffed bhaturas. Made from our central kitchen masala blend. Served with pickle, onion and green chutney.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 120</div><div class="menu-tag">~62% Margin</div></div>
-      </div>
+    <div class="coming-card">
+      <div class="cc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#1648B0" stroke-width="1.5"/><path d="M13 8v5l3 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="cc-name">Onboarding Programme</div>
+      <div class="cc-desc">A structured post-opening support programme — weekly reviews, on-ground visits, marketing support and on-demand guidance for new franchisees.</div>
+      <div class="cc-badge">Full Support</div>
     </div>
-
-    <div class="menu-card" data-cat="main">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80" alt="Chole Bhature Lite" loading="lazy">
-        <div class="menu-badge menu-badge-blue">New</div>
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Main Course</div>
-        <div class="menu-name">Chole Bhature Lite</div>
-        <div class="menu-desc">Same Lahori chole, lower-oil bhatura — baked and lightly pan-fried. Our health-conscious option for urban, office-going customers. Served with the same sides.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 140</div><div class="menu-tag">~65% Margin</div></div>
-      </div>
+    <div class="coming-card">
+      <div class="cc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M3 23l5-8 5 5 5-9 5 4" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="cc-name">Investment: ₹10–20 Lakhs</div>
+      <div class="cc-desc">All-inclusive investment covering franchise fee, full setup, initial inventory, brand kit and training. Transparent pricing — no hidden costs.</div>
+      <div class="cc-badge">All-Inclusive</div>
     </div>
-
-    <div class="menu-card" data-cat="main">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=600&q=80" alt="Kulcha Chole" loading="lazy">
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Main Course</div>
-        <div class="menu-name">Kulcha Chole</div>
-        <div class="menu-desc">Soft, buttery amritsari kulcha served with the same Lahori chole. Appeals to customers who want a lighter bread option. Made fresh at the outlet.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 100</div><div class="menu-tag">~58% Margin</div></div>
-      </div>
-    </div>
-
-    <div class="menu-card" data-cat="drinks">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?auto=format&fit=crop&w=600&q=80" alt="Sweet Lassi" loading="lazy">
-        <div class="menu-badge">Must Have</div>
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Drinks</div>
-        <div class="menu-name">Sweet Lassi</div>
-        <div class="menu-desc">Thick, creamy, sweet lassi made fresh. Non-negotiable accompaniment to any chole bhature meal. Available in regular and large size.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 60</div><div class="menu-tag">~70% Margin</div></div>
-      </div>
-    </div>
-
-    <div class="menu-card" data-cat="drinks">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&q=80" alt="Nimbu Pani" loading="lazy">
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Drinks</div>
-        <div class="menu-name">Nimbu Pani / Shikanji</div>
-        <div class="menu-desc">Fresh lime water — salted or sweet. Seasonal bestseller, especially summer. High margin, zero complexity to prepare.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 40</div><div class="menu-tag">~75% Margin</div></div>
-      </div>
-    </div>
-
-    <div class="menu-card" data-cat="sweet">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1666696068295-46a95f91ebbf?auto=format&fit=crop&w=600&q=80" alt="Gulab Jamun" loading="lazy">
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Sweets</div>
-        <div class="menu-name">Gulab Jamun</div>
-        <div class="menu-desc">Classic gulab jamun in sugar syrup. Served warm. Perfect upsell after every meal — drives average bill up significantly with minimal effort.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 40</div><div class="menu-tag">~68% Margin</div></div>
-      </div>
-    </div>
-
-    <div class="menu-card" data-cat="sweet">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c4?auto=format&fit=crop&w=600&q=80" alt="Lahori Kheer" loading="lazy">
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Sweets</div>
-        <div class="menu-name">Lahori Kheer</div>
-        <div class="menu-desc">Rice pudding cooked slow with whole milk, saffron and cardamom. Premium dessert that positions Lahori Adda above regular chole bhature outlets. Seasonal.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 60</div><div class="menu-tag">~60% Margin</div></div>
-      </div>
-    </div>
-
-    <div class="menu-card" data-cat="extras">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=600&q=80" alt="Raita and sides" loading="lazy">
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Extras</div>
-        <div class="menu-name">Raita / Pickle / Onion</div>
-        <div class="menu-desc">All standard sides — boondi raita, aam pickle, fresh sliced onions with lemon. Each available as add-on to drive per-plate revenue up.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 20–30</div><div class="menu-tag">~80% Margin</div></div>
-      </div>
-    </div>
-
-    <div class="menu-card" data-cat="main">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80" alt="Chole Bhature Family Pack" loading="lazy">
-        <div class="menu-badge">Pack</div>
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Family Pack</div>
-        <div class="menu-name">Lahori Adda Family Pack</div>
-        <div class="menu-desc">4 plates chole bhature + 4 sweet lassis + 2 gulab jamun. Designed for families, offices, and celebrations. Minimum 2 hours advance notice for bulk orders.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 480</div><div class="menu-tag">Best Value</div></div>
-      </div>
-    </div>
-
-    <div class="menu-card" data-cat="snacks">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=600&q=80" alt="Cholle Samose" loading="lazy">
-        <div class="menu-badge menu-badge-gold">Fan Fav</div>
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Snacks</div>
-        <div class="menu-name">Cholle Samose</div>
-        <div class="menu-desc">Crispy, golden samosas served atop our signature Lahori chole, finished with tangy tamarind chutney, green chutney, onions and sev. North India's most-loved street plate — done the Lahori way.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 80</div><div class="menu-tag">~65% Margin</div></div>
-      </div>
-    </div>
-
-    <div class="menu-card" data-cat="snacks">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=80" alt="Bread Pakoda" loading="lazy">
-        <div class="menu-badge menu-badge-blue">New</div>
-      </div>
-      <div class="menu-body">
-        <div class="menu-cat">Snacks</div>
-        <div class="menu-name">Bread Pakoda</div>
-        <div class="menu-desc">Thick bread slices stuffed with spiced potato filling, dipped in seasoned besan batter and deep-fried to a golden crunch. Served with green and tamarind chutneys. A Haryanvi breakfast staple.</div>
-        <div class="menu-footer"><div class="menu-price">₹ 60</div><div class="menu-tag">~68% Margin</div></div>
-      </div>
-    </div>
-
-  
-  </div>
-  <div class="menu-cta-row r">
-    <a href="#apply" class="btn-blue" style="margin:0 auto;">
-      Download Full Menu PDF
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M7 9l-3-3M7 9l3-3M1 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-    </a>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- INVESTMENT -->
-<section id="investment">
-  <div class="inv-intro r">
-    <p class="chip" style="justify-content:center">Franchise Investment</p>
-    <h2 class="sh" style="text-align:center">Transparent numbers.<br><em>No hidden costs.</em></h2>
-    <p style="font-size:15px;color:var(--t2);margin-top:10px;">Every rupee accounted for, upfront. What you see is what you invest.</p>
-  </div>
-  <div class="inv-grid r" style="transition-delay:.1s">
-    <div class="inv-card inv-card-main">
-      <div class="inv-title">Total Investment Breakdown</div>
-      <div class="inv-sub">All-Inclusive Package</div>
-      <ul class="inv-items">
-        <li><span>Franchise Fee (one-time)</span><strong>₹ 2–5 Lakhs</strong></li>
-        <li><span>Setup & Infrastructure</span><strong>₹ 6–12 Lakhs</strong></li>
-        <li><span>Initial Inventory & Stock</span><strong>₹ 1–3 Lakhs</strong></li>
-        <li><span>Working Capital Buffer</span><strong>₹ 1–2 Lakhs</strong></li>
-        <li><span>Training & Onboarding</span><strong>Included</strong></li>
-        <li><span>Brand Kit & Signage</span><strong>Included</strong></li>
-        <li><span>Digital Setup (Zomato/Swiggy)</span><strong>Included</strong></li>
-      </ul>
-      <div class="inv-total">
-        <div class="inv-total-label">Total All-Inclusive</div>
-        <div class="inv-total-val">₹10–20 Lakhs</div>
-      </div>
-    </div>
-    <div class="inv-card inv-card-sec">
-      <div class="inv-title">Monthly Unit Economics</div>
-      <div class="inv-sub">Indicative Projections</div>
-      <ul class="inv-items">
-        <li><span>Daily plates (conservative)</span><strong>80–120 plates</strong></li>
-        <li><span>Avg. bill per customer</span><strong>₹ 160–200</strong></li>
-        <li><span>Monthly gross revenue</span><strong>₹ 3.5–6 Lakhs</strong></li>
-        <li><span>Food cost (our margin model)</span><strong>35–38%</strong></li>
-        <li><span>Rent + ops (est.)</span><strong>₹ 40,000–60,000</strong></li>
-        <li><span>Staff (2–3 people)</span><strong>₹ 25,000–35,000</strong></li>
-        <li><span>Monthly net profit (est.)</span><strong style="color:#059669;font-size:16px">₹ 60K–1.2 Lakhs</strong></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="roi-section r" style="margin-top:28px;transition-delay:.2s">
-    <div class="roi-grid">
-      <div class="roi-l">
-        <h3>Your <em>Return on Investment</em></h3>
-        <p>Based on conservative outlet performance projections in Phase 1 cities. Actual results may vary depending on location, footfall, and execution.</p>
-        <div class="roi-numbers">
-          <div class="roi-num"><div class="rn-n">18–30</div><div class="rn-l">Month Payback Period</div></div>
-          <div class="roi-num"><div class="rn-n">20–30%</div><div class="rn-l">Our Margin on Supply</div></div>
-          <div class="roi-num"><div class="rn-n">60K+</div><div class="rn-l">Monthly Net Profit (est.)</div></div>
-          <div class="roi-num"><div class="rn-n">90</div><div class="rn-l">Days Onboarding Support</div></div>
-        </div>
-      </div>
-      <div class="roi-chart">
-        <div class="roi-chart-title">Revenue vs Cost Split (Monthly)</div>
-        <div class="roi-bar-row">
-          <div class="roi-bar-label">Gross Revenue</div>
-          <div class="roi-bar-track"><div class="roi-bar-fill" style="width:95%;background:#C49B3C;"></div></div>
-          <div class="roi-bar-val">₹5L</div>
-        </div>
-        <div class="roi-bar-row">
-          <div class="roi-bar-label">Food Cost</div>
-          <div class="roi-bar-track"><div class="roi-bar-fill" style="width:38%;background:#EF4444;"></div></div>
-          <div class="roi-bar-val">₹1.9L</div>
-        </div>
-        <div class="roi-bar-row">
-          <div class="roi-bar-label">Rent + Ops</div>
-          <div class="roi-bar-track"><div class="roi-bar-fill" style="width:12%;background:#F97316;"></div></div>
-          <div class="roi-bar-val">₹60K</div>
-        </div>
-        <div class="roi-bar-row">
-          <div class="roi-bar-label">Staff Wages</div>
-          <div class="roi-bar-track"><div class="roi-bar-fill" style="width:7%;background:#EAB308;"></div></div>
-          <div class="roi-bar-val">₹35K</div>
-        </div>
-        <div class="roi-bar-row">
-          <div class="roi-bar-label" style="font-weight:700;color:rgba(255,255,255,.7)">Net Profit</div>
-          <div class="roi-bar-track"><div class="roi-bar-fill" style="width:40%;background:#22C55E;"></div></div>
-          <div class="roi-bar-val" style="color:#22C55E;font-weight:700">₹1L</div>
-        </div>
-        <p style="font-size:10px;color:rgba(255,255,255,.2);margin-top:16px;line-height:1.5;">Indicative projections only. Actual results depend on location, footfall, and management.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- WHAT YOU GET -->
-<section id="package">
-  <div class="pkg-intro r">
-    <p class="chip" style="justify-content:center">Franchise Package</p>
-    <h2 class="sh" style="text-align:center">Everything you need<br>to <em>open & succeed</em></h2>
-    <p style="font-size:15px;color:var(--t2);margin-top:10px;">Your investment covers all of this — no surprises.</p>
-  </div>
-  <div class="pkg-grid r" style="transition-delay:.1s">
-    <div class="pkg-item">
-      <div class="pkg-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3L3 8v10l10 5 10-5V8L13 3z" stroke="#7EB3FF" stroke-width="1.5"/></svg></div>
-      <div class="pkg-name">Brand License & Identity</div>
-      <div class="pkg-desc">Full Lahori Adda brand license, logo kit, signage templates, packaging design. Everything you need to look premium from Day 1.</div>
-    </div>
-    <div class="pkg-item">
-      <div class="pkg-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 22V8l9-5 9 5v14M10 22v-7h6v7" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="pkg-name">Outlet Setup Support</div>
-      <div class="pkg-desc">Kitchen layout design, equipment list, vendor connections, and on-ground setup support from our team. We've opened restaurants — you don't need to figure it out.</div>
-    </div>
-    <div class="pkg-item">
-      <div class="pkg-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3v20M3 13h20" stroke="#7EB3FF" stroke-width="2" stroke-linecap="round"/><circle cx="13" cy="13" r="10" stroke="#7EB3FF" stroke-width="1.5"/></svg></div>
-      <div class="pkg-name">Central Masala Supply</div>
-      <div class="pkg-desc">Our proprietary masala blend — the heart of every Lahori Adda plate — supplied from our Panipat central kitchen. Consistent taste guaranteed.</div>
-    </div>
-    <div class="pkg-item">
-      <div class="pkg-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 20L13 6l8 14H5z" stroke="#7EB3FF" stroke-width="1.5"/></svg></div>
-      <div class="pkg-name">Staff Training</div>
-      <div class="pkg-desc">Full kitchen and service training by Anandam's team. SOP documentation, service standards, and quality checklists — so your team runs like clockwork.</div>
-    </div>
-    <div class="pkg-item">
-      <div class="pkg-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="20" height="20" rx="3" stroke="#7EB3FF" stroke-width="1.5"/><path d="M8 12h10M8 16h6" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="pkg-name">Digital & Marketing Setup</div>
-      <div class="pkg-desc">Zomato, Swiggy, Google My Business, Instagram — all set up, optimised, and handed over with an initial campaign to drive your first month's footfall.</div>
-    </div>
-    <div class="pkg-item">
-      <div class="pkg-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#7EB3FF" stroke-width="1.5"/><path d="M13 8v5l3 3" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="pkg-name">90-Day Support Programme</div>
-      <div class="pkg-desc">Our team stays with you for 90 days — monitoring, troubleshooting, improving. Weekly reviews, real-time support. You are never alone after opening.</div>
-    </div>
-    <div class="pkg-item">
-      <div class="pkg-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M3 23l5-8 5 5 5-9 5 4" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="pkg-name">Corporate Order Tie-Ups</div>
-      <div class="pkg-desc">We connect you with factories, offices, and corporates in your area for bulk orders and tiffin contracts — guaranteed baseline revenue every month.</div>
-    </div>
-    <div class="pkg-item">
-      <div class="pkg-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="#7EB3FF" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#7EB3FF" stroke-width="1.5"/></svg></div>
-      <div class="pkg-name">Franchisee Community</div>
-      <div class="pkg-desc">Join a WhatsApp community of all Lahori Adda franchisees — sharing best practices, festival campaign materials, and monthly network updates.</div>
-    </div>
-  </div>
-</section>
-
-<!-- FRANCHISE PROCESS -->
-<section id="process">
-  <div class="proc-intro r">
-    <p class="chip chip-white" style="justify-content:center">Franchise Process</p>
-    <h2 class="sh sh-w" style="text-align:center;margin-bottom:12px;">From enquiry to <em>open doors.</em></h2>
-    <p style="font-size:15px;color:rgba(212,184,138,.5);text-align:center;">A simple, transparent 5-step process. No guesswork.</p>
-  </div>
-  <div class="proc-steps r" style="transition-delay:.1s">
-    <div class="proc-step">
-      <div class="ps-num">01</div>
-      <div class="ps-title">Submit Enquiry</div>
-      <div class="ps-desc">Fill in the application form. We review every application within 48 hours.</div>
-    </div>
-    <div class="proc-step">
-      <div class="ps-num">02</div>
-      <div class="ps-title">Discovery Call</div>
-      <div class="ps-desc">30-minute call with our franchise team to understand your location, capital, and goals.</div>
-    </div>
-    <div class="proc-step">
-      <div class="ps-num">03</div>
-      <div class="ps-title">Site Visit & Approval</div>
-      <div class="ps-desc">Our team visits your proposed location. We assess footfall, competition, and viability.</div>
-    </div>
-    <div class="proc-step">
-      <div class="ps-num">04</div>
-      <div class="ps-title">Agreement & Setup</div>
-      <div class="ps-desc">Franchise agreement signed, investment received, setup begins. Kitchen, signage, equipment.</div>
-    </div>
-    <div class="proc-step">
-      <div class="ps-num">05</div>
-      <div class="ps-title">Training & Launch</div>
-      <div class="ps-desc">Staff trained, digital presence live, grand opening supported by our team. You're open.</div>
+    <div class="coming-card">
+      <div class="cc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="#1648B0" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#1648B0" stroke-width="1.5"/></svg></div>
+      <div class="cc-name">18–30 Month Payback</div>
+      <div class="cc-desc">Projected payback period of 18–30 months based on conservative outlet performance in Phase 1 cities. Monthly net profit ₹60K–1.2L (est.).</div>
+      <div class="cc-badge">Strong ROI</div>
     </div>
   </div>
 </section>
 
 <!-- TERRITORY -->
-<section id="territory" style="background:var(--white);">
+<section id="territory">
   <div class="terr-grid">
     <div class="r">
-      <p class="chip">Available Territories</p>
-      <h2 class="sh" style="margin-bottom:20px;">NH-44 corridor<br>is <em>open now.</em></h2>
-      <p class="terr-l p">We are building Lahori Adda from the ground up across Haryana's most trafficked highway corridor. Phase 1 has 25 franchise slots. Phase 2 opens after Phase 1 is full.</p>
-      <div class="terr-phases">
-        <div class="terr-phase">
-          <div class="tp-badge tp-1">P1</div>
-          <div><div class="tp-title">Phase 1 — Now Open</div><div class="tp-cities">Panipat · Karnal · Sonipat · Kurukshetra · Ambala · NH-44 Corridor</div></div>
-        </div>
-        <div class="terr-phase">
-          <div class="tp-badge tp-2">P2</div>
-          <div><div class="tp-title">Phase 2 — Q3 2025</div><div class="tp-cities">Rohtak · Hisar · Yamunanagar · Faridabad · Rest of Haryana</div></div>
-        </div>
-        <div class="terr-phase">
-          <div class="tp-badge tp-3">P3</div>
-          <div><div class="tp-title">Phase 3 — 2026</div><div class="tp-cities">Punjab · Himachal Pradesh · Blinkit · Swiggy Instamart · D2C</div></div>
-        </div>
+      <p class="chip">Launch Plan</p>
+      <h2 class="sh" style="margin-bottom:18px;">NH-44 corridor<br>is our <em>starting point.</em></h2>
+      <p class="terr-l p">We are building Lahori Adda phase by phase — starting from where the demand is strongest: Haryana's most trafficked highway corridor. 25 slots, limited cities.</p>
+      <div class="phase-row">
+        <div class="ph-badge ph-1">P1</div>
+        <div><div class="ph-title">Phase 1 — Launching 2025</div><div class="ph-cities">Panipat · Karnal · Sonipat · Kurukshetra · Ambala</div></div>
       </div>
-      <a href="#apply" class="btn-blue" style="margin-top:28px;">Claim Your City <svg width="13" height="7" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      <div class="phase-row">
+        <div class="ph-badge ph-2">P2</div>
+        <div><div class="ph-title">Phase 2 — 2026</div><div class="ph-cities">Rohtak · Hisar · Yamunanagar · Faridabad · Rest of Haryana</div></div>
+      </div>
+      <a href="#register" style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:13px 24px;border-radius:8px;font-size:13px;font-weight:700;margin-top:24px;transition:all .2s;" onmouseover="this.style.background='#0D1F35'" onmouseout="this.style.background='#1648B0'">
+        Register for Your City <svg width="12" height="7" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
     </div>
-    <div class="terr-r r" style="transition-delay:.15s">
-      <h3>Phase 1 City Slots</h3>
-      <p>Limited slots per city. First come, first served.</p>
-      <div class="terr-city">
-        <div class="terr-city-inner"><div class="tc-dot tc-dot-open"></div><div class="tc-name">Panipat</div></div>
-        <div class="tc-status tc-open">Open · 3 slots</div>
-      </div>
-      <div class="terr-city">
-        <div class="terr-city-inner"><div class="tc-dot tc-dot-open"></div><div class="tc-name">Karnal</div></div>
-        <div class="tc-status tc-open">Open · 4 slots</div>
-      </div>
-      <div class="terr-city">
-        <div class="terr-city-inner"><div class="tc-dot tc-dot-open"></div><div class="tc-name">Sonipat</div></div>
-        <div class="tc-status tc-open">Open · 4 slots</div>
-      </div>
-      <div class="terr-city">
-        <div class="terr-city-inner"><div class="tc-dot tc-dot-open"></div><div class="tc-name">Kurukshetra</div></div>
-        <div class="tc-status tc-open">Open · 3 slots</div>
-      </div>
-      <div class="terr-city">
-        <div class="terr-city-inner"><div class="tc-dot tc-dot-open"></div><div class="tc-name">Ambala</div></div>
-        <div class="tc-status tc-open">Open · 4 slots</div>
-      </div>
-      <div class="terr-city" style="opacity:.5">
-        <div class="terr-city-inner"><div class="tc-dot tc-dot-soon"></div><div class="tc-name">Rohtak (Phase 2)</div></div>
-        <div class="tc-status tc-soon">Coming Q3 2025</div>
+    <div class="r" style="transition-delay:.15s">
+      <div class="terr-r">
+        <h3>Phase 1 City Status</h3>
+        <p>Limited franchise slots per city. First registered, first allocated.</p>
+        <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Panipat</div></div><div class="cr-status cr-open">Open — Registering</div></div>
+        <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Karnal</div></div><div class="cr-status cr-open">Open — Registering</div></div>
+        <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Sonipat</div></div><div class="cr-status cr-open">Open — Registering</div></div>
+        <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Kurukshetra</div></div><div class="cr-status cr-open">Open — Registering</div></div>
+        <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Ambala</div></div><div class="cr-status cr-open">Open — Registering</div></div>
+        <div class="city-row" style="opacity:.5"><div class="cr-inner"><div class="cr-dot cr-dot-soon"></div><div class="cr-name">Rohtak (Phase 2)</div></div><div class="cr-status cr-soon">Coming 2026</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="test-intro r">
-    <p class="chip" style="justify-content:center">Franchisee Stories</p>
-    <h2 class="sh" style="text-align:center">What our partners <em>say</em></h2>
-    <p style="font-size:15px;color:var(--t2);margin-top:10px;">Real people, real investments, real results.</p>
-  </div>
-  <div class="test-grid r" style="transition-delay:.1s">
-    <div class="test-card">
-      <div class="test-stars">
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
+<!-- INTEREST FORM -->
+<section id="register">
+  <div class="reg-inner">
+    <div class="reg-l r">
+      <p class="chip">Register Your Interest</p>
+      <h2 class="sh" style="color:#fff;margin-bottom:14px;">Be among the <em>first franchisees.</em></h2>
+      <p>Fill in your details and we will reach out as soon as Lahori Adda franchise applications open in your city. Early registrations get priority territory allocation.</p>
+      <div class="reg-perks">
+        <div class="reg-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#FAC775" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority territory allocation for early registrations</div>
+        <div class="reg-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#FAC775" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Free investor information pack on launch</div>
+        <div class="reg-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#FAC775" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>No commitment required to register</div>
+        <div class="reg-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#FAC775" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct call from our franchise team within 48 hours</div>
       </div>
-      <div class="test-text">"I invested ₹14 Lakhs in my Panipat outlet. By month 4, I was already making ₹80,000 net per month. The brand name itself brings customers — I barely spent on marketing."</div>
-      <div class="test-result">₹80K/month by Month 4</div>
-      <div class="test-author"><div class="test-avatar">RS</div><div><div class="test-name">Ranjit Singh</div><div class="test-biz">Lahori Adda Franchisee · Panipat</div></div></div>
-    </div>
-    <div class="test-card">
-      <div class="test-stars">
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-      </div>
-      <div class="test-text">"The 90-day support was incredible. Yudhishter ji's team visited my outlet three times in the first month. By the time they left, my team was running it perfectly on their own."</div>
-      <div class="test-result">Self-Sufficient Team in 60 Days</div>
-      <div class="test-author"><div class="test-avatar" style="background:#1648B0;">MG</div><div><div class="test-name">Meenakshi Gupta</div><div class="test-biz">Lahori Adda Franchisee · Karnal</div></div></div>
-    </div>
-    <div class="test-card">
-      <div class="test-stars">
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1L2 5.3l4.2-.7z"/></svg>
-      </div>
-      <div class="test-text">"I locked a corporate tiffin contract with a textile factory in Panipat in week 2 — 80 plates every day. That alone covers my food cost. Everything else is profit."</div>
-      <div class="test-result">80 Plates/Day Corporate Contract</div>
-      <div class="test-author"><div class="test-avatar" style="background:#059669;">SP</div><div><div class="test-name">Suresh Pal</div><div class="test-biz">Lahori Adda Franchisee · Sonipat</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- APPLY / LEAD FORM -->
-<section id="apply">
-  <div class="apply-inner">
-    <div class="apply-l r">
-      <p class="chip chip-white">Apply for Franchise</p>
-      <h2 class="sh sh-w" style="margin-bottom:16px;">25 slots.<br><em>Limited cities.</em><br>Apply today.</h2>
-      <p>Phase 1 franchise slots are limited by city. Once a territory is full, it will not reopen. If you are serious about a Lahori Adda franchise, submit your application now.</p>
-      <div class="apply-perks">
-        <div class="apply-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Application reviewed within 48 hours</div>
-        <div class="apply-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Free discovery call with franchise team</div>
-        <div class="apply-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>No commitment required to apply</div>
-        <div class="apply-perk"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="rgba(255,255,255,.2)" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>First-come-first-served territory allocation</div>
-      </div>
-      <div class="apply-contact">
-        <div class="apply-contact-item">
-          <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M16.5 12.5l-2.5-2.5a1 1 0 00-1.4 0l-1 1a7 7 0 01-3.6-3.6l1-1a1 1 0 000-1.4L6.5 2.5A1 1 0 005 2.5l-1.5 1.5C2.5 5 2 6.5 2.5 8A14 14 0 0012 17.5c1.5.5 3 0 4-1l1.5-1.5a1 1 0 000-1.5z" stroke="rgba(255,255,255,.25)" stroke-width="1.3" stroke-linecap="round"/></svg>
-          +91 98965 44879 (WhatsApp preferred)
+      <a href="https://wa.me/919896544879?text=Hello!%20I%20want%20to%20register%20interest%20in%20Lahori%20Adda%20franchise." class="reg-wa" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="#25D366" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <div style="font-weight:700;color:#fff;font-size:13px;">Or WhatsApp us directly</div>
+          <div style="font-size:12px;margin-top:1px;">+91 98965 44879 · Fastest response</div>
         </div>
-        <div class="apply-contact-item">
-          <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="rgba(255,255,255,.25)" stroke-width="1.3"/><path d="M2 5l8 6 8-6" stroke="rgba(255,255,255,.25)" stroke-width="1.3" stroke-linecap="round"/></svg>
-          franchise@anandamventures.com
-        </div>
-      </div>
+      </a>
     </div>
-    <div class="apply-form r" style="transition-delay:.15s">
-      <div class="af-title">Franchise Application</div>
-      <div class="af-sub">Fill in your details. We review every application personally.</div>
+    <div class="reg-form-card r" style="transition-delay:.15s">
+      <div class="rf-title">Register Your Interest</div>
+      <div class="rf-sub">We'll contact you when applications open in your city.</div>
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <div class="f-2">
           <div class="f-row"><label>Full Name *</label><input type="text" name="name" placeholder="Your name" required></div>
@@ -999,120 +402,81 @@ footer{background:var(--navy);}
               <option value="">Select city</option>
               <option>Panipat</option><option>Karnal</option><option>Sonipat</option>
               <option>Kurukshetra</option><option>Ambala</option><option>Rohtak</option>
-              <option>Hisar</option><option>Other (Haryana)</option><option>Outside Haryana</option>
+              <option>Hisar</option><option>Other (Haryana)</option>
             </select>
           </div>
-          <div class="f-row"><label>Investment Readiness *</label>
-            <select name="investment" required>
+          <div class="f-row"><label>Investment Readiness</label>
+            <select name="investment">
               <option value="">Select range</option>
-              <option>₹10–12 Lakhs</option>
-              <option>₹12–15 Lakhs</option>
-              <option>₹15–20 Lakhs</option>
-              <option>Above ₹20 Lakhs</option>
+              <option>₹10–12 Lakhs</option><option>₹12–15 Lakhs</option>
+              <option>₹15–20 Lakhs</option><option>Above ₹20 Lakhs</option>
             </select>
           </div>
         </div>
-        <div class="f-row"><label>Do you have a proposed location?</label>
+        <div class="f-row"><label>Do you have a location in mind?</label>
           <select name="location">
             <option value="">Select one</option>
-            <option>Yes — I have a specific location in mind</option>
+            <option>Yes — I have a specific location</option>
             <option>I have a commercial space available</option>
             <option>No — I need help finding a location</option>
           </select>
         </div>
-        <div class="f-row"><label>About You & Your Motivation</label>
-          <textarea name="message" placeholder="Tell us a little about yourself and why you want to open a Lahori Adda franchise..."></textarea>
+        <div class="f-row"><label>Any questions or details</label>
+          <textarea name="message" placeholder="Tell us a bit about yourself and your interest..."></textarea>
         </div>
-        <button type="submit" class="f-btn">Submit Franchise Application →</button>
-        <div class="f-note">🔒 Your application is reviewed personally. No spam, ever.</div>
+        <button type="submit" class="f-btn">Submit Registration →</button>
+        <div class="f-note">🔒 Your details are completely private. No spam, ever.</div>
       </form>
     </div>
   </div>
 </section>
 
-<div class="divider" style="margin:0 60px;background:rgba(196,155,60,.15);"></div>
-
-<!-- FAQs -->
-<section id="faqs" style="background:var(--warm);">
-  <div class="faqs-intro r">
-    <p class="chip" style="justify-content:center">FAQs</p>
-    <h2 class="sh" style="text-align:center">Franchise <em>Questions</em></h2>
-    <p style="font-size:15px;color:var(--t2);margin-top:10px;">Everything you need to know before investing.</p>
-  </div>
-  <div class="faqs-grid r" style="transition-delay:.1s">
-    <div class="faq-item"><div class="faq-q">What is the total franchise investment?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#7EB3FF" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#7EB3FF" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">The all-inclusive franchise investment ranges from ₹10 to ₹20 Lakhs depending on outlet size and location. This covers the franchise fee, full setup, initial inventory, working capital buffer, brand kit, training, and digital setup. No hidden costs.</div></div>
-    <div class="faq-item"><div class="faq-q">How long does it take to open after signing?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#7EB3FF" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#7EB3FF" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Typically 30–45 days from agreement signing to opening day — depending on your location's readiness and equipment procurement. Our team works alongside you throughout to make this as fast as possible.</div></div>
-    <div class="faq-item"><div class="faq-q">Do I need prior hospitality experience?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#7EB3FF" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#7EB3FF" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">No. We have trained complete first-timers to run successful outlets. Our 90-day onboarding covers everything — from kitchen operations to customer service to digital marketing. Motivation and capital matter more than prior experience.</div></div>
-    <div class="faq-item"><div class="faq-q">What is the projected payback period?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#7EB3FF" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#7EB3FF" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">18 to 30 months, based on conservative projections. Franchisees in high-footfall locations have recovered their investment faster. These are projections — actual results depend on location, management, and local market conditions.</div></div>
-    <div class="faq-item"><div class="faq-q">How does the masala supply work?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#7EB3FF" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#7EB3FF" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Our proprietary masala blend is prepared at our central kitchen in Panipat and supplied to all franchisees on a regular schedule. You cannot replicate the recipe independently — this protects the brand's consistency and your competitive advantage.</div></div>
-    <div class="faq-item"><div class="faq-q">What ongoing support do I receive after opening?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#7EB3FF" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#7EB3FF" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Full 90-day on-ground support after opening. After that, ongoing support via WhatsApp franchise community, monthly performance review calls, and access to our team for any issues. You are never managing alone.</div></div>
-    <div class="faq-item"><div class="faq-q">Is there a minimum monthly purchase commitment?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#7EB3FF" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#7EB3FF" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes — there is a minimum monthly supply purchase commitment as per the franchise agreement. This ensures brand standards are maintained and supply chain integrity is preserved. The minimum is set realistically based on your outlet size.</div></div>
-    <div class="faq-item"><div class="faq-q">Can I open multiple outlets?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#7EB3FF" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#7EB3FF" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes. Multi-outlet franchisees get preferential terms on subsequent outlets. We encourage successful franchisees to expand within their territory or into adjacent cities. Several of our existing partners are already planning their second outlets.</div></div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
-  <div class="foot-inner">
+  <div class="foot-top">
     <div>
-      <div class="foot-brand">Anandam<span> Ventures</span></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <img src="logo.png" alt="Anandam Ventures" style="height:44px;width:44px;object-fit:cover;border-radius:8px;border:1px solid #D8E3F0;">
+        <div class="foot-brand">Anandam<span style="color:var(--blue2);"> Ventures</span></div>
+      </div>
       <div class="foot-tagline">Building India's Next Hospitality Brands.</div>
-      <p class="foot-about">Lahori Adda is an authentic chole bhature franchise by Anandam Ventures — rooted in a 1947 Lahori recipe, built for Haryana's NH-44 corridor.<br><br>Building No. 79, Sector 13–17, HUDA<br>Panipat, Haryana 132103</p>
+      <p class="foot-about">Lahori Adda is an authentic chole bhature franchise by Anandam Ventures — rooted in a 1947 Lahori recipe, launching across Haryana's NH-44 corridor.<br><br>Bldg 79, Sector 13–17, HUDA, Panipat, Haryana 132103</p>
       <div class="foot-socs">
         <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
         <a href="#" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="https://wa.me/919896544879" class="foot-soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
-    <div class="foot-col"><h4>Franchise</h4><ul><li><a href="#story">Our Story</a></li><li><a href="#why">Why Lahori Adda</a></li><li><a href="#investment">Investment</a></li><li><a href="#package">What You Get</a></li><li><a href="#process">Process</a></li><li><a href="#territory">Available Cities</a></li></ul></div>
-    <div class="foot-col"><h4>Brand</h4><ul><li><a href="#menu">Our Menu</a></li><li><a href="#testimonials">Franchisee Stories</a></li><li><a href="#faqs">FAQs</a></li><li><a href="index.html">← Anandam Ventures</a></li></ul></div>
-    <div class="foot-col"><h4>Contact</h4><ul><li><a href="tel:+919896544879">+91 98965 44879</a></li><li><a href="mailto:franchise@anandamventures.com">franchise@anandamventures.com</a></li><li><a href="https://wa.me/919896544879">WhatsApp Us</a></li></ul></div>
+    <div class="foot-col"><h4>Lahori Adda</h4><ul>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#coming">What's Coming</a></li>
+      <li><a href="#territory">Launch Cities</a></li>
+      <li><a href="#register">Register Interest</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>Anandam Ventures</h4><ul>
+      <li><a href="index.html">Homepage</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html#directors">Leadership</a></li>
+      <li><a href="contact.html">Contact & FAQs</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>Contact</h4><ul>
+      <li><a href="tel:+919896544879">+91 98965 44879</a></li>
+      <li><a href="mailto:franchise@anandamventures.com">franchise@anandamventures.com</a></li>
+      <li><a href="https://wa.me/919896544879">WhatsApp Us</a></li>
+    </ul></div>
   </div>
   <div class="foot-bot">
     <div class="foot-copy">© 2025 Lahori Adda · Anandam Ventures · Panipat, Haryana 132103</div>
-    <div class="foot-links"><a href="#">Privacy Policy</a><a href="#">Franchise Disclosure</a></div>
+    <div class="foot-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
   </div>
 </footer>
 
 <script>
-// Nav scroll
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>80),{passive:true});
-
-// Scroll reveal
 const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.r').forEach((el,i)=>{if(!el.style.transitionDelay)el.style.transitionDelay=`${(i%4)*.07}s`;io.observe(el);});
-
-// Menu filter
-function filterMenu(cat, btn) {
-  document.querySelectorAll('.menu-tab').forEach(t=>t.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.menu-card').forEach(card=>{
-    if(cat==='all'||card.dataset.cat===cat){
-      card.style.display='';
-    } else {
-      card.style.display='none';
-    }
-  });
-}
-
-// ROI bar animation
-const roiObs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.querySelectorAll('.roi-bar-fill').forEach(b=>{
-        const w=b.style.width;
-        b.style.width='0';
-        setTimeout(()=>b.style.width=w,100);
-      });
-      roiObs.unobserve(e.target);
-    }
-  });
-},{threshold:.3});
-document.querySelectorAll('.roi-chart').forEach(el=>roiObs.observe(el));
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=a.getAttribute('href');if(t==='#')return;e.preventDefault();document.querySelector(t)?.scrollIntoView({behavior:'smooth'});}));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=a.getAttribute('href');if(t==='#')return;const el=document.querySelector(t);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}}));
 </script>
 </body>
 </html>
