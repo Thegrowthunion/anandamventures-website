@@ -32,7 +32,7 @@ img{display:block;max-width:100%;height:auto;}
 /* ── LOGO ── */
 .logo-wrap{display:flex;align-items:center;flex-shrink:0;}
 .nav-logo-img{
-  height:58px;width:58px;
+  height:68px;width:68px;
   object-fit:cover;object-position:center center;
   border-radius:10px;display:block;flex-shrink:0;
 }
@@ -77,7 +77,7 @@ img{display:block;max-width:100%;height:auto;}
   border-radius:8px;font-size:10px;font-weight:800;color:#fff;
 }
 .bt-name{font-size:12.5px;font-weight:500;color:rgba(255,255,255,.45);}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;background:#ffffff;border-bottom:1px solid #D8E3F0;display:flex;align-items:center;padding:0 48px;gap:32px;transition:box-shadow .3s;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:84px;background:#ffffff;border-bottom:1px solid #D8E3F0;display:flex;align-items:center;padding:0 48px;gap:32px;transition:box-shadow .3s;}
 nav.scrolled{box-shadow:0 4px 24px rgba(22,72,176,.08);}
 .nav-links{display:flex;list-style:none;gap:2px;flex:1;}
 .nav-links a{padding:7px 12px;font-size:12px;font-weight:500;color:#4A6080;border-radius:6px;transition:all .2s;white-space:nowrap;}
@@ -89,7 +89,7 @@ nav.scrolled{box-shadow:0 4px 24px rgba(22,72,176,.08);}
 
 /* ── HERO (no form, full editorial) ── */
 #hero{
-  min-height:100vh;padding-top:76px;
+  min-height:100vh;padding-top:84px;
   position:relative;overflow:hidden;
   display:flex;align-items:center;
 }
@@ -365,19 +365,50 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
 }
 
 /* ── MOBILE ── */
+
+/* ── HAMBURGER + MOBILE MENU ── */
+.nav-hamburger{
+  display:none;
+  flex-direction:column;justify-content:space-between;
+  width:40px;height:40px;background:none;
+  border:1.5px solid #D8E3F0;border-radius:8px;
+  cursor:pointer;padding:10px 9px;flex-shrink:0;
+}
+.nav-hamburger span{display:block;width:100%;height:2px;background:#0D1F35;border-radius:2px;transition:all .3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(9px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg);}
+.mobile-menu{
+  display:none;
+  position:fixed;top:72px;left:0;right:0;bottom:0;
+  background:#fff;z-index:199;
+  flex-direction:column;
+  padding:12px 16px 48px;
+  border-top:2px solid #1648B0;
+  overflow-y:auto;
+}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:2px;}
+.mm-link{display:block;padding:15px 18px;font-size:16px;font-weight:600;color:#0D1F35;border-radius:10px;transition:all .2s;border-bottom:1px solid #F4F7FE;}
+.mm-link:hover,.mm-link.active{background:#EBF1FD;color:#1648B0;border-color:#EBF1FD;}
+.mm-divider{height:1px;background:#D8E3F0;margin:14px 0;}
+.mm-tel{display:flex;align-items:center;gap:10px;padding:13px 18px;font-size:14px;color:#4A6080;font-weight:500;border-radius:10px;background:#F8FAFB;margin-bottom:8px;}
+.mm-cta{display:block;background:#1648B0;color:#fff;padding:15px 20px;border-radius:10px;font-size:15px;font-weight:700;text-align:center;margin-top:4px;}
+
 @media(max-width:768px){
   *{max-width:100%;word-break:break-word;}
   html,body{overflow-x:hidden;width:100%;}
-  nav{padding:0 16px;height:64px;background:#fff;}
+  nav{padding:0 16px;height:72px;background:#fff;}
   .nav-hamburger{display:flex;}
-  .nav-links,.nav-phone{display:none;}
-  .nav-logo-img{height:46px;width:46px;border-radius:8px;}
+  .nav-logo-img{height:58px;width:58px;border-radius:10px;}
+  #hero{padding-top:72px;}
+    .nav-links,.nav-phone{display:none;}
+  .nav-logo-img{height:58px;width:58px;border-radius:10px;}
   .nav-cta{padding:7px 13px;font-size:11px;}
   section{padding:48px 16px !important;}
   .divider{margin:0 16px;}
   #directors,#midform{padding:48px 16px !important;}
   #stats{padding:36px 16px !important;}
-  #hero{padding-top:76px;min-height:auto;}
+  #hero{padding-top:84px;min-height:auto;}
   .hero-inner{grid-template-columns:1fr !important;padding:36px 16px 44px !important;gap:28px;}
   .hero-h{font-size:28px !important;line-height:1.12;}
   .hero-tag{font-size:12px;}
@@ -427,31 +458,7 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
   .svc-head,.about-pills{flex-wrap:wrap;}
 }
 
-/* ── MOBILE MENU ── */
-.nav-hamburger{
-  display:none;
-  flex-direction:column;justify-content:center;gap:5px;
-  width:36px;height:36px;background:none;
-  border:1.5px solid #D8E3F0;border-radius:7px;
-  cursor:pointer;padding:0 7px;flex-shrink:0;
-}
-.nav-hamburger span{display:block;height:2px;width:100%;background:#0D1F35;border-radius:2px;transition:all .25s;}
-.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
-.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-.mobile-menu{
-  display:none;position:fixed;top:64px;left:0;right:0;bottom:0;
-  background:#fff;z-index:198;
-  flex-direction:column;padding:16px 16px 40px;
-  border-top:1px solid #D8E3F0;overflow-y:auto;
-}
-.mobile-menu.open{display:flex;}
-.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:2px;}
-.mm-link{display:block;padding:14px 16px;font-size:15px;font-weight:600;color:#0D1F35;border-radius:9px;transition:background .2s;}
-.mm-link:hover,.mm-link.active{background:#F4F7FE;color:#1648B0;}
-.mm-divider{height:1px;background:#D8E3F0;margin:12px 0;}
-.mm-cta{display:block;background:#1648B0;color:#fff;padding:14px 20px;border-radius:9px;font-size:14px;font-weight:700;text-align:center;margin-top:8px;transition:background .2s;}
-.mm-cta:hover{background:#0D1F35;}
+
 .mm-tel{display:flex;align-items:center;gap:8px;padding:12px 16px;font-size:14px;color:#4A6080;font-weight:500;}
 </style>
 </head>
@@ -484,17 +491,23 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- MOBILE MENU -->
+<!-- MOBILE MENU PANEL -->
 <div class="mobile-menu" id="mobileMenu">
   <ul>
     <li><a href="index.html" class="mm-link active">Home</a></li>
     <li><a href="services.html" class="mm-link">Services</a></li>
     <li><a href="lahori-adda.html" class="mm-link">Lahori Adda</a></li>
     <li><a href="index.html#directors" class="mm-link">Leadership</a></li>
-    <li><a href="contact.html" class="mm-link">Contact & FAQs</a></li>
+    <li><a href="contact.html" class="mm-link">Contact &amp; FAQs</a></li>
   </ul>
   <div class="mm-divider"></div>
+  <a href="tel:+919896544879" class="mm-tel">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011 2.96 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg>
+    +91 98965 44879
+  </a>
+  <a href="contact.html" class="mm-cta">Book Free Consultation</a>
+</div>
+
   <a href="tel:+919896544879" class="mm-tel">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011 2.96 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#4A6080" stroke-width="1.5" stroke-linecap="round"/></svg>
     +91 98965 44879
@@ -1007,28 +1020,21 @@ document.querySelectorAll('.r').forEach((el,i)=>{if(!el.style.transitionDelay)el
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=a.getAttribute('href');if(t==='#')return;e.preventDefault();document.querySelector(t)?.scrollIntoView({behavior:'smooth'});}));
 
 // ── MOBILE MENU TOGGLE ──────────────────────────────────────────────────────
-const hamburger = document.getElementById('navHamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-if(hamburger && mobileMenu){
-  hamburger.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    hamburger.classList.remove('open');
-    document.body.style.overflow = '';
-  }));
-  // Close on outside scroll / resize
-  window.addEventListener('resize', () => {
-    if(window.innerWidth > 768){
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
+;
 }
+
+
+;(function(){
+  var btn  = document.getElementById('navHamburger');
+  var menu = document.getElementById('mobileMenu');
+  if(!btn || !menu) return;
+  function open(){  menu.style.display='flex'; btn.classList.add('open');    document.body.style.overflow='hidden'; }
+  function close(){ menu.style.display='none'; btn.classList.remove('open'); document.body.style.overflow=''; }
+  btn.addEventListener('click', function(e){ e.stopPropagation(); menu.style.display==='flex' ? close() : open(); });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+  document.addEventListener('click', function(e){ if(menu.style.display==='flex' && !menu.contains(e.target) && e.target!==btn) close(); });
+  window.addEventListener('resize', function(){ if(window.innerWidth>768) close(); });
+})();
 
 </script>
 </body>
