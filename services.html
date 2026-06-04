@@ -34,9 +34,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;background:#ffff
 nav.scrolled{box-shadow:0 4px 24px rgba(22,72,176,.08);}
 .nav-logo-wrap{display:flex;align-items:center;gap:12px;flex-shrink:0;}
 .nav-logo-img{height:54px;width:54px;object-fit:cover;object-position:center 22%;border-radius:9px;display:block;}
-.nav-brand{display:flex;flex-direction:column;}
-.nav-brand-main{font-size:13px;font-weight:700;color:#0D1F35;line-height:1.1;}
-.nav-brand-sub{font-size:9px;font-weight:600;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-top:1px;}
+
+
+
 .nav-links{display:flex;list-style:none;gap:2px;flex:1;margin-left:8px;}
 .nav-links a{padding:7px 12px;font-size:12px;font-weight:500;color:#4A6080;border-radius:6px;transition:all .2s;white-space:nowrap;}
 .nav-links a:hover,.nav-links a.active{color:#0D1F35;background:#F4F7FE;}
@@ -296,15 +296,11 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
   <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 2C7.373 2 2 7.373 2 14c0 2.104.548 4.08 1.508 5.8L2 26l6.38-1.492A11.94 11.94 0 0014 26c6.627 0 12-5.373 12-12S20.627 2 14 2z" fill="#fff"/><path d="M10.5 8.5c-.3-.7-.6-.72-.88-.73H9c-.28 0-.72.1-1.1.5-.37.4-1.42 1.38-1.42 3.36s1.45 3.9 1.65 4.17c.2.27 2.8 4.48 6.9 6.1 3.42 1.35 4.1 1.08 4.84 1.01.74-.07 2.4-.98 2.74-1.92.34-.94.34-1.75.24-1.92-.1-.17-.37-.27-.77-.47s-2.4-1.18-2.77-1.32c-.37-.14-.64-.2-.91.2-.27.4-1.05 1.32-1.28 1.59-.24.27-.47.3-.87.1-.4-.2-1.68-.62-3.2-1.97-1.18-1.05-1.98-2.35-2.21-2.75-.24-.4-.03-.62.17-.82.18-.18.4-.47.6-.7.2-.24.27-.4.4-.67.14-.27.07-.5-.03-.7-.1-.2-.88-2.18-1.23-2.97z" fill="#25D366"/></svg>
 </a>
 
-<!-- NAV -->
 
+<!-- NAV -->
 <nav id="nav">
   <a href="index.html" class="logo-wrap">
     <img src="logo.png" alt="Anandam Ventures" class="nav-logo-img">
-    <div class="nav-brand">
-      <div class="nav-brand-main">Anandam Ventures</div>
-      <div class="nav-brand-sub">Est. 1995 · Panipat</div>
-    </div>
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
@@ -320,13 +316,15 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
 </nav>
 
 
+
+
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-l">
-      <div class="hero-est">Est. 1995 · 35 Years · 100+ Projects</div>
+      <div class="hero-est">North India · 35 Years · 100+ Projects</div>
       <h1 class="hero-h">Everything your<br><em>hospitality business</em><br>needs to grow.</h1>
       <p class="hero-p">From launching a new restaurant to turning around a struggling one — six core services, one experienced team, and a proven track record across North India's most demanding markets.</p>
       <div class="hero-btns">
@@ -342,7 +340,7 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
       </a>
       <a href="#s2" class="hero-svc-pill">
         <div class="hsp-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <div><div class="hsp-name">Revenue Growth & Turnaround</div><div class="hsp-tag">25–40% growth in 90 days</div></div>
+        <div><div class="hsp-name">Revenue Growth & Turnaround</div><div class="hsp-tag">Significant growth through our work together</div></div>
         <div class="hsp-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
       </a>
       <a href="#s3" class="hero-svc-pill">
@@ -388,7 +386,7 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
       <div class="ov-num">02</div>
       <div class="ov-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       <div class="ov-name">Revenue Growth & Turnaround</div>
-      <div class="ov-desc">Struggling restaurant or stagnant growth? We diagnose, fix, and grow. 25–40% revenue increase in 90 days.</div>
+      <div class="ov-desc">Struggling restaurant or stagnant growth? We diagnose, fix, and grow. consistent revenue growth through our work together.</div>
       <div class="ov-link">Learn more <svg width="12" height="6" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
     </div>
     <div class="ov-card" onclick="document.querySelector('#s3').scrollIntoView({behavior:'smooth'})">
@@ -466,7 +464,7 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
     <div class="r" style="transition-delay:.15s">
       <div class="svc-n">Service 02</div>
       <h2 class="svc-title">Revenue Growth<br>& <em>Turnaround</em></h2>
-      <p class="svc-lead">Most struggling restaurants don't have a food problem — they have a systems problem. Wrong menu, inflated food costs, weak digital presence, undertrained team, or poor pricing. We diagnose all of it and fix what matters most within 90 days.</p>
+      <p class="svc-lead">Most struggling restaurants don't have a food problem — they have a systems problem. Wrong menu, inflated food costs, weak digital presence, undertrained team, or poor pricing. We diagnose all of it and fix what matters most through our consulting engagement.</p>
       <ul class="svc-checklist">
         <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Complete P&L audit and food cost analysis item-by-item</li>
         <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Menu revamp — remove dead items, engineer high-margin dishes</li>
@@ -474,15 +472,15 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
         <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Footfall analysis and average bill improvement strategies</li>
         <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Staff retraining aligned to service and upselling standards</li>
         <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Zomato/Swiggy listing overhaul — photos, menu, pricing</li>
-        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Corporate tie-ups and bulk order systems for guaranteed revenue</li>
+        <li><div class="sc-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>Corporate tie-ups and bulk order systems for expected revenue</li>
       </ul>
       <div class="svc-outcome">
         <div class="so-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <div><div class="so-n">25–40%</div><div class="so-l">Average monthly revenue growth within 90 days</div></div>
+        <div><div class="so-n">Significant</div><div class="so-l">Average revenue growth across client engagements</div></div>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;">
         <a href="#consult" class="btn-blue">Book Free Audit</a>
-        <a href="index.html#model" class="btn-outline">See 90-Day Model</a>
+        <a href="index.html#model" class="btn-outline">See Consulting Approach</a>
       </div>
     </div>
   </div>
@@ -568,7 +566,7 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
       </ul>
       <div class="svc-outcome">
         <div class="so-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21L3 13C3 11.9 3.9 11 5 11H8C9.1 11 10 11.9 10 13V21M14 21V7C14 5.9 14.9 5 16 5H19C20.1 5 21 5.9 21 7V21M3 21H21" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <div><div class="so-n">90 days</div><div class="so-l">From decision to first expansion outlet opening</div></div>
+        <div><div class="so-n">the engagement period</div><div class="so-l">From decision to first expansion outlet opening</div></div>
       </div>
       <a href="#consult" class="btn-blue">Plan Your Expansion</a>
     </div>
@@ -630,15 +628,15 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
       <div class="hwws-num">03</div>
       <div class="hwws-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       <div class="hwws-title">Strategy Blueprint</div>
-      <div class="hwws-desc">Customised 90-day action plan delivered to you. Not a template — specific actions, timelines and expected outcomes.</div>
+      <div class="hwws-desc">Customised consulting action plan delivered to you. Not a template — specific actions, timelines and expected outcomes.</div>
       <div class="hwws-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.1"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> Day 10</div>
     </div>
     <div class="hww-step">
       <div class="hwws-num">04</div>
       <div class="hwws-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#1648B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       <div class="hwws-title">Execute & Deliver</div>
-      <div class="hwws-desc">We implement alongside your team for 90 days. Weekly reviews, transparent reporting, guaranteed outcomes.</div>
-      <div class="hwws-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.1"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> Days 11–90</div>
+      <div class="hwws-desc">We implement alongside your team for the agreed engagement period. Weekly reviews, transparent reporting, measurable outcomes.</div>
+      <div class="hwws-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.1"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> Through the Engagement</div>
     </div>
   </div>
 </section>
@@ -652,7 +650,7 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
   </div>
   <div class="res-grid max-w r" style="transition-delay:.1s">
     <div class="res-card"><div class="rc-n">35<span>+</span></div><div class="rc-l">Years Experience</div><div class="rc-d">Hospitality industry, North India</div></div>
-    <div class="res-card"><div class="rc-n">25<span>–40%</span></div><div class="rc-l">Revenue Growth</div><div class="rc-d">Average increase within 90 days</div></div>
+    <div class="res-card"><div class="rc-n">25<span>–40%</span></div><div class="rc-l">Revenue Growth</div><div class="rc-d">Average increase through our consulting engagement</div></div>
     <div class="res-card"><div class="rc-n">15<span>–20%</span></div><div class="rc-l">Food Cost Reduction</div><div class="rc-d">Through menu engineering</div></div>
     <div class="res-card"><div class="rc-n">45</div><div class="rc-l">Days to Open</div><div class="rc-d">Average new restaurant launch time</div></div>
   </div>
@@ -662,8 +660,8 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
       <div class="case-body">
         <div class="case-tag">Revenue Turnaround</div>
         <div class="case-title">Family Restaurant · Panipat</div>
-        <div class="case-desc">Restaurant was losing ₹40,000/month. Anandam identified 5 cost leaks, revamped the menu, retrained the team, and relaunched on Zomato. Profitable in 55 days.</div>
-        <div class="case-result"><div class="cr-pill">↑ 32% Revenue</div><div class="cr-pill">Profitable in 55 days</div></div>
+        <div class="case-desc">Restaurant was losing money every month. Anandam identified 5 cost leaks, revamped the menu, retrained the team, and relaunched on Zomato. Profitable — Fast.</div>
+        <div class="case-result"><div class="cr-pill">↑ 32% Revenue</div><div class="cr-pill">Profitable — Fast</div></div>
       </div>
     </div>
     <div class="case-card">
@@ -699,21 +697,21 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
       <div class="eng-models">
         <div class="eng-model">
           <div class="em-tag">Most Popular</div>
-          <div class="em-name">90-Day Transformation</div>
-          <div class="em-desc">Our signature programme. Full audit, strategy, implementation and handover. We work on-site with your team for 90 days and deliver guaranteed results.</div>
-          <div class="em-price">Custom pricing based on outlet size <span class="em-price-tag">Free consultation first</span></div>
+          <div class="em-name">Full Consulting Engagement</div>
+          <div class="em-desc">Our signature approach. Complete audit, customised strategy, hands-on implementation and a structured handover. We work on-site with your team for a defined period — start to measurable results.</div>
+          
         </div>
         <div class="eng-model">
           <div class="em-tag">For Specific Needs</div>
           <div class="em-name">Project-Based Engagement</div>
           <div class="em-desc">One specific service — new outlet launch, staff training, website build, or digital setup. Fixed scope, fixed timeline, fixed cost. Ideal for businesses that need targeted help.</div>
-          <div class="em-price">Quoted per project <span class="em-price-tag">Starting ₹25,000</span></div>
+          
         </div>
         <div class="eng-model">
           <div class="em-tag">Long-Term</div>
           <div class="em-name">Ongoing Consulting Retainer</div>
           <div class="em-desc">Monthly consulting support — strategy calls, performance reviews, marketing guidance, and on-demand advice. For businesses that want a strategic partner, not just a one-time fix.</div>
-          <div class="em-price">Monthly retainer <span class="em-price-tag">Starting ₹15,000/month</span></div>
+          
         </div>
       </div>
     </div>
@@ -725,7 +723,7 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
         <div class="eng-step"><div class="es-n">2</div><div><div class="es-title">No generic playbooks</div><div class="es-desc">Every strategy is built specifically for your business, your market, and your team. No templates.</div></div></div>
         <div class="eng-step"><div class="es-n">3</div><div><div class="es-title">We work on-site, not remotely</div><div class="es-desc">Real change happens in the kitchen and on the floor — not on video calls. Our team is physically present.</div></div></div>
         <div class="eng-step"><div class="es-n">4</div><div><div class="es-title">Weekly progress reports</div><div class="es-desc">Every week you receive a clear report on what was done, what changed, and what's next. Full visibility.</div></div></div>
-        <div class="eng-step"><div class="es-n">5</div><div><div class="es-title">Results or we work free</div><div class="es-desc">We commit to a minimum 25% revenue improvement in 90 days. If we miss it, we continue without charge.</div></div></div>
+        <div class="eng-step"><div class="es-n">5</div><div><div class="es-title">Results or we work free</div><div class="es-desc">Our engagements consistently deliver meaningful revenue improvement through our work together. If we miss it, we continue without charge.</div></div></div>
       </div>
     </div>
   </div>
@@ -788,12 +786,12 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
   </div>
   <div class="faq-grid max-w r" style="transition-delay:.1s">
     <div class="faq-item"><div class="faq-q">Do you work with first-time restaurant owners?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes — in fact many of our best outcomes have been with first-time owners. You don't bring bad habits. We bring 35 years of expertise. Together the results are excellent.</div></div>
-    <div class="faq-item"><div class="faq-q">How long before I see results?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Most clients see measurable revenue improvement within weeks 5–8. The full transformation is visible by Day 60–90. We commit to a minimum 25% improvement by Day 90.</div></div>
+    <div class="faq-item"><div class="faq-q">How long before I see results?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Most clients see measurable revenue improvement within weeks 5–8. The full transformation is visible by end of engagement. We commit to a minimum 25% improvement by Engagement end.</div></div>
     <div class="faq-item"><div class="faq-q">Do you only work in Haryana?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">No — our primary market is North India (Haryana, Punjab, Delhi NCR, UP) but we take projects anywhere in India. Digital services like marketing and website design can be done fully remotely for any city.</div></div>
-    <div class="faq-item"><div class="faq-q">How much does a 90-day programme cost?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Pricing is customised based on your outlet size, location, and the services required. The consultation is always free. We give you a transparent quote before any commitment is made.</div></div>
-    <div class="faq-item"><div class="faq-q">What if we don't see the promised results?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">We commit to a minimum 25% revenue improvement. If we don't deliver, we continue working without additional charge until we do. This isn't a marketing line — it's in the agreement.</div></div>
-    <div class="faq-item"><div class="faq-q">Can I hire you for just one specific thing?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes. All six services are available as standalone projects — website, staff training, marketing setup, outlet launch, or expansion planning. You don't need to take the full 90-day programme.</div></div>
-    <div class="faq-item"><div class="faq-q">Do you also offer the Lahori Adda franchise?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes — Lahori Adda is our own chole bhature franchise brand, currently franchising across Haryana's NH-44 corridor. Investment from ₹10 Lakhs. <a href="lahori-adda.html" style="color:var(--blue);font-weight:600;">See the Lahori Adda page →</a></div></div>
+    <div class="faq-item"><div class="faq-q">How much does a consulting programme cost?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Pricing is customised based on your outlet size, location, and the services required. The consultation is always free. We give you a transparent quote before any commitment is made.</div></div>
+    <div class="faq-item"><div class="faq-q">What if we don't see the promised results?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Our engagements consistently deliver meaningful revenue improvement. If we don't deliver, we continue working without additional charge until we do. This isn't a marketing line — it's in the agreement.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I hire you for just one specific thing?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes. All six services are available as standalone projects — website, staff training, marketing setup, outlet launch, or expansion planning. You don't need to take the full consulting programme.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you also offer the Lahori Adda franchise?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">Yes — Lahori Adda is our own chole bhature franchise brand, currently franchising across Haryana's NH-44 corridor. Limited Franchise Slots. <a href="lahori-adda.html" style="color:var(--blue);font-weight:600;">See the Lahori Adda page →</a></div></div>
     <div class="faq-item"><div class="faq-q">How is Anandam different from other consultants?<svg class="faq-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#1648B0" stroke-width="1.2"/><path d="M9 6v3l2 2" stroke="#1648B0" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="faq-a">35 years of real hospitality experience — not MBA graduates with spreadsheets. Our founder has personally opened restaurants, managed teams of hundreds, and run large food operations. We know what actually works on the ground.</div></div>
   </div>
 </section>
@@ -805,9 +803,6 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
     <div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
         <img src="logo.png" alt="Anandam Ventures" style="height:44px;width:44px;object-fit:cover;border-radius:8px;border:1px solid #D8E3F0;">
-        <div>
-          <div class="foot-brand">Anandam<span> Ventures</span></div>
-        </div>
       </div>
       <div class="foot-tagline">Building India's Next Hospitality Brands.</div>
       <p class="foot-about">35 years of hospitality excellence. Consulting, restaurant launches, staff training, digital growth and the Lahori Adda franchise — all under one roof.<br><br>Building No. 79, Sector 13–17, HUDA<br>Panipat, Haryana 132103</p>
