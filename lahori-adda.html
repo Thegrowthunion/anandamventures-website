@@ -205,33 +205,6 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
 /* ================================================================
    MOBILE NAV  —  hamburger + full-screen menu
    ================================================================ */
-.nav-hamburger {
-  display: none;               /* hidden on desktop */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  width: 42px; height: 42px;
-  background: none;
-  border: 1.5px solid #D8E3F0;
-  border-radius: 9px;
-  cursor: pointer;
-  padding: 0;
-  flex-shrink: 0;
-  margin-left: auto;
-  -webkit-tap-highlight-color: transparent;
-}
-.nav-hamburger span {
-  display: block;
-  width: 22px; height: 2px;
-  background: #0D1F35;
-  border-radius: 2px;
-  transition: transform .25s ease, opacity .2s ease;
-  pointer-events: none;
-}
-.nav-hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.nav-hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* full-screen overlay */
 .mob-nav {
@@ -318,11 +291,12 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
   -webkit-tap-highlight-color: transparent;
 }
 .mob-nav-cta:hover { background: #0D1F35; 
-  /* ── mobile nav overrides ── */
-  .nav-links   { display: none !important; }
-  .nav-phone   { display: none !important; }
-  .nav-cta     { display: none !important; }
-  .nav-hamburger { display: flex !important; }
+  /* ── hamburger: show on mobile, hide desktop items ── */
+  .nav-hamburger { display: flex !important; margin-left: auto; }
+  .nav-links     { display: none !important; }
+  .nav-phone     { display: none !important; }
+  .nav-cta       { display: none !important; }
+  .nav-r         { display: none !important; }
 }
 
 </style>
