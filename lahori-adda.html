@@ -299,6 +299,100 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
   .nav-r         { display: none !important; }
 }
 
+
+/* ── LAHORI ADDA MENU SECTION ── */
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.menu-item-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(196,155,60,.18);
+  border-radius: 14px;
+  padding: 26px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background .25s, border-color .25s, transform .25s;
+}
+.menu-item-card:hover {
+  background: rgba(255,255,255,.07);
+  border-color: rgba(196,155,60,.4);
+  transform: translateY(-3px);
+}
+.mic-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.mic-icon { font-size: 28px; line-height: 1; }
+.mic-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: rgba(196,155,60,.15);
+  color: #FAC775;
+  border: 1px solid rgba(196,155,60,.25);
+  border-radius: 100px;
+  padding: 3px 10px;
+}
+.mic-badge-blue {
+  background: rgba(22,72,176,.2);
+  color: #93C5FD;
+  border-color: rgba(22,72,176,.3);
+}
+.mic-badge-green {
+  background: rgba(16,185,129,.1);
+  color: #6EE7B7;
+  border-color: rgba(16,185,129,.2);
+}
+.mic-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+.mic-desc {
+  font-size: 12.5px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.65;
+  flex: 1;
+}
+.mic-footer {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.mic-price {
+  font-size: 26px;
+  font-weight: 800;
+  color: #FAC775;
+  line-height: 1;
+}
+.mic-unit {
+  font-size: 11px;
+  color: rgba(255,255,255,.3);
+  font-weight: 500;
+}
+@media(max-width:768px) {
+  .menu-items-grid { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+  .menu-item-card  { padding: 18px 14px; }
+  .mic-name        { font-size: 13.5px; }
+  .mic-price       { font-size: 22px; }
+  #menu            { padding: 52px 16px !important; }
+}
+@media(max-width:400px) {
+  .menu-items-grid { grid-template-columns: 1fr !important; }
+}
+
 </style>
 </head>
 <body>
@@ -373,9 +467,9 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
     <h1 class="cs-hl">Authentic Chole Bhature.<br><em>Launching across Haryana.</em></h1>
     <p class="cs-desc">A Lahori recipe that survived partition in 1947, now being brought to a franchise format across NH-44 — backed by 35 years of hospitality expertise from Anandam Ventures.</p>
     <div class="cs-info">
-      <div class="cs-info-item"><div class="cs-info-dot"></div>Phase 1: Panipat · Karnal · Sonipat</div>
-      <div class="cs-info-item"><div class="cs-info-dot"></div>Limited Franchise Slots</div>
-      <div class="cs-info-item"><div class="cs-info-dot"></div>25 Franchise Slots Available</div>
+      <div class="cs-info-item"><div class="cs-info-dot"></div>Open across Entire Haryana</div>
+      <div class="cs-info-item"><div class="cs-info-dot"></div>Chole Bhature ₹60 · Lassi ₹40</div>
+      <div class="cs-info-item"><div class="cs-info-dot"></div>Investment upto ₹10 Lakhs</div>
     </div>
     <div class="cs-btns">
       <a href="#register" class="btn-gold">Register Your Interest <svg width="13" height="7" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg></a>
@@ -410,6 +504,127 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
     </div>
   </div>
 </section>
+
+<div class="divider"></div>
+
+<!-- OUR MENU -->
+<section id="menu" style="background:var(--dark);padding:88px 60px;">
+  <div style="max-width:1160px;margin:0 auto;">
+
+    <div class="r" style="text-align:center;margin-bottom:52px;">
+      <div style="display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(196,155,60,.7);margin-bottom:14px;">
+        <span style="display:block;width:16px;height:2px;background:var(--gold);border-radius:2px;"></span>
+        Our Menu
+      </div>
+      <h2 style="font-size:clamp(28px,4vw,46px);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-.3px;margin-bottom:12px;">
+        Simple. Authentic. <span style="color:#FAC775;">Affordable.</span>
+      </h2>
+      <p style="font-size:15px;color:rgba(255,255,255,.45);max-width:520px;margin:0 auto;line-height:1.75;">
+        Every item on our menu carries the flavour of Lahore — prepared fresh, served with pride.
+      </p>
+    </div>
+
+    <!-- MENU GRID -->
+    <div class="menu-items-grid r" style="transition-delay:.1s;">
+
+      <!-- Chole Bhature -->
+      <div class="menu-item-card">
+        <div class="mic-top">
+          <div class="mic-icon">🍽️</div>
+          <div class="mic-badge">Bestseller</div>
+        </div>
+        <div class="mic-name">Chole Bhature</div>
+        <div class="mic-desc">Our signature — fluffy bhature with slow-cooked Lahori chole. The dish that defines us.</div>
+        <div class="mic-footer">
+          <div class="mic-price">₹60</div>
+          <div class="mic-unit">per plate</div>
+        </div>
+      </div>
+
+      <!-- Chole Kulche -->
+      <div class="menu-item-card">
+        <div class="mic-top">
+          <div class="mic-icon">🫓</div>
+          <div class="mic-badge mic-badge-blue">Fan Fav</div>
+        </div>
+        <div class="mic-name">Chole Kulche</div>
+        <div class="mic-desc">Soft, baked kulcha served with the same rich chole. A lighter alternative, equally beloved.</div>
+        <div class="mic-footer">
+          <div class="mic-price">₹60</div>
+          <div class="mic-unit">per plate</div>
+        </div>
+      </div>
+
+      <!-- Lassi -->
+      <div class="menu-item-card">
+        <div class="mic-top">
+          <div class="mic-icon">🥛</div>
+          <div class="mic-badge">Must Try</div>
+        </div>
+        <div class="mic-name">Lassi</div>
+        <div class="mic-desc">Thick, chilled Punjabi lassi — the perfect companion to a hot plate of bhature.</div>
+        <div class="mic-footer">
+          <div class="mic-price">₹40</div>
+          <div class="mic-unit">per glass</div>
+        </div>
+      </div>
+
+      <!-- Nimbu Pani / Shikanji -->
+      <div class="menu-item-card">
+        <div class="mic-top">
+          <div class="mic-icon">🍋</div>
+          <div class="mic-badge mic-badge-green">Refresher</div>
+        </div>
+        <div class="mic-name">Nimbu Pani / Shikanji</div>
+        <div class="mic-desc">Fresh lime water with masala, served chilled. The classic Indian street refresher.</div>
+        <div class="mic-footer">
+          <div class="mic-price">₹20</div>
+          <div class="mic-unit">per glass</div>
+        </div>
+      </div>
+
+      <!-- Thandi Kheer / Lahori Phirni / Fruit Custard -->
+      <div class="menu-item-card">
+        <div class="mic-top">
+          <div class="mic-icon">🍮</div>
+          <div class="mic-badge">Sweet Finish</div>
+        </div>
+        <div class="mic-name">Thandi Kheer / Lahori Phirni / Fruit Custard</div>
+        <div class="mic-desc">Chilled dessert served in a cup — creamy kheer, traditional Lahori phirni, or fruit custard.</div>
+        <div class="mic-footer">
+          <div class="mic-price">₹40</div>
+          <div class="mic-unit">per cup</div>
+        </div>
+      </div>
+
+      <!-- Raita -->
+      <div class="menu-item-card">
+        <div class="mic-top">
+          <div class="mic-icon">🥣</div>
+          <div class="mic-badge mic-badge-blue">Side</div>
+        </div>
+        <div class="mic-name">Raita</div>
+        <div class="mic-desc">Cool, creamy boondi raita — the perfect balance to the richness of chole bhature.</div>
+        <div class="mic-footer">
+          <div class="mic-price">₹20</div>
+          <div class="mic-unit">per bowl</div>
+        </div>
+      </div>
+
+    </div><!-- /menu-items-grid -->
+
+    <!-- MENU NOTE -->
+    <div class="r" style="transition-delay:.2s;text-align:center;margin-top:40px;padding:22px 28px;background:rgba(196,155,60,.07);border:1px solid rgba(196,155,60,.18);border-radius:12px;max-width:680px;margin-left:auto;margin-right:auto;">
+      <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.8;">
+        <span style="color:#FAC775;font-weight:700;">Simple pricing. No surprises.</span><br>
+        Our menu is designed to be accessible to everyone — quality food at honest prices. All items prepared fresh daily at every outlet using our central kitchen masala supply.
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- /OUR MENU -->
+
 
 <div class="divider"></div>
 
@@ -465,15 +680,11 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
   <div class="terr-grid">
     <div class="r">
       <p class="chip">Launch Plan</p>
-      <h2 class="sh" style="margin-bottom:18px;">NH-44 corridor<br>is our <em>starting point.</em></h2>
-      <p class="terr-l p">We are building Lahori Adda phase by phase — starting from where the demand is strongest: Haryana's most trafficked highway corridor. 25 slots, limited cities.</p>
+      <h2 class="sh" style="margin-bottom:18px;">Entire Haryana<br>is <em>now open.</em></h2>
+      <p class="terr-l p">Lahori Adda franchise is now open across the entire state of Haryana. Whether you are in the NH-44 corridor or anywhere else in the state — your city is ready.</p>
       <div class="phase-row">
-        <div class="ph-badge ph-1">P1</div>
-        <div><div class="ph-title">Phase 1 — Launching 2025</div><div class="ph-cities">Panipat · Karnal · Sonipat · Kurukshetra · Ambala</div></div>
-      </div>
-      <div class="phase-row">
-        <div class="ph-badge ph-2">P2</div>
-        <div><div class="ph-title">Phase 2 — 2026</div><div class="ph-cities">Rohtak · Hisar · Yamunanagar · Faridabad · Rest of Haryana</div></div>
+        <div class="ph-badge ph-1">OPEN</div>
+        <div><div class="ph-title">Entire Haryana — Now Open</div><div class="ph-cities">Panipat · Karnal · Sonipat · Kurukshetra · Ambala · Rohtak · Hisar · Yamunanagar · Faridabad · Rewari · Bhiwani · Sirsa · All cities</div></div>
       </div>
       <a href="#register" style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:13px 24px;border-radius:8px;font-size:13px;font-weight:700;margin-top:24px;transition:all .2s;" onmouseover="this.style.background='#0D1F35'" onmouseout="this.style.background='#1648B0'">
         Register for Your City <svg width="12" height="7" viewBox="0 0 14 8" fill="none"><path d="M0 4H12M12 4L8 1M12 4L8 7" stroke="currentColor" stroke-width="1.5"/></svg>
@@ -481,14 +692,14 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
     </div>
     <div class="r" style="transition-delay:.15s">
       <div class="terr-r">
-        <h3>Phase 1 City Status</h3>
-        <p>Limited franchise slots per city. First registered, first allocated.</p>
+        <h3>Available Across Haryana</h3>
+        <p>All cities open — register now to secure your territory.</p>
         <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Panipat</div></div><div class="cr-status cr-open">Open — Registering</div></div>
         <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Karnal</div></div><div class="cr-status cr-open">Open — Registering</div></div>
-        <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Sonipat</div></div><div class="cr-status cr-open">Open — Registering</div></div>
-        <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Kurukshetra</div></div><div class="cr-status cr-open">Open — Registering</div></div>
+        <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Rohtak</div></div><div class="cr-status cr-open">Open — Registering</div></div>
+        <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Hisar</div></div><div class="cr-status cr-open">Open — Registering</div></div>
         <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">Ambala</div></div><div class="cr-status cr-open">Open — Registering</div></div>
-        <div class="city-row" style="opacity:.5"><div class="cr-inner"><div class="cr-dot cr-dot-soon"></div><div class="cr-name">Rohtak (Phase 2)</div></div><div class="cr-status cr-soon">Coming 2026</div></div>
+        <div class="city-row"><div class="cr-inner"><div class="cr-dot cr-dot-open"></div><div class="cr-name">All Other Haryana Cities</div></div><div class="cr-status cr-open">Open — Registering</div></div>
       </div>
     </div>
   </div>
@@ -577,6 +788,7 @@ footer{background:#fff;border-top:1px solid #D8E3F0;}
     </div>
     <div class="foot-col"><h4>Lahori Adda</h4><ul>
       <li><a href="#story">Our Story</a></li>
+      <li><a href="#menu">Menu & Prices</a></li>
       <li><a href="#coming">What's Coming</a></li>
       <li><a href="#territory">Launch Cities</a></li>
       <li><a href="#register">Register Interest</a></li>
